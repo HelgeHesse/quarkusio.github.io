@@ -5,146 +5,196 @@
         <title>Quarkus</title>
         <link>https://quarkus.io</link>
         <description>Quarkus: Supersonic Subatomic Java</description>
-        <lastBuildDate>Tue, 20 Oct 2020 09:12:56 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 19 May 2023 21:31:16 +0000</lastBuildDate>
         
         <item>
-            <title>Kafka - How to fail gracefully</title>
+            <title>Quarkus Newsletter #32 - May</title>
             <link>
-                https://quarkus.io/blog/kafka-failure-strategy/
+                https://quarkus.io/blog/quarkus-newsletter-32/
             </link>
             <description>
-                Failures are inevitable. There is nothing we can do about that, and that also applies to Kafka applications. Your application may contain a faulty component misbehaving once in a while, or unable to process a specific Kafka record. In this post, we are going to see how we can manage...
+                The May newsletter has beens sent. Get a deep dive into the Quarkus 3 release. Learn how to implement built-in and custom Role-Based Access Control (RBAC) in Quarkus to ensure secure REST API access with the "Implementing RBAC in Quarkus" article by Aashreya Shankar. Read about "Dynamic Data Processing Using...
             </description>
-            <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+            <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
             <guid>
-                https://quarkus.io/blog/kafka-failure-strategy/
+                https://quarkus.io/blog/quarkus-newsletter-32/
             </guid>
+            
+            
+            
+            <author>James Cobb (https://twitter.com/insectengine)</author>
+            
         </item>
         
         <item>
-            <title>Micrometer is recommended for metrics with Quarkus 1.9</title>
+            <title>Using Pact and Quarkus to Tame Microservices Testing</title>
             <link>
-                https://quarkus.io/blog/micrometer-metrics/
+                https://quarkus.io/blog/pact-and-quarkus-3/
             </link>
             <description>
-                Though Quarkus offers extensions for MicroProfile, including metrics, we&#8217;re now recommending the use of the Micrometer extension for metrics in Quarkus with the release of 1.9. Brief MicroProfile Metrics History During the creation of the MicroProfile Metrics specification in 2017, Dropwizard Metrics was the most popular metrics library at that...
+                In a microservices architecture, making sure each microservices works is (relatively) easy. The microservices are usually small, and easy to test. But how do you make sure the microservices work together? How do you know if the system as a whole works? One answer is contract testing. Contract testing gives...
             </description>
-            <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+            <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
             <guid>
-                https://quarkus.io/blog/micrometer-metrics/
+                https://quarkus.io/blog/pact-and-quarkus-3/
             </guid>
+            
+            
+            
+            <author>Holly Cummins (https://twitter.com/holly_cummins)</author>
+            
         </item>
         
         <item>
-            <title>Mutiny - How does retry... retries?</title>
+            <title>Quarkus 3.0.3.Final released - Maintenance release</title>
             <link>
-                https://quarkus.io/blog/uni-retry/
+                https://quarkus.io/blog/quarkus-3-0-3-final-released/
             </link>
             <description>
-                Last week, David, a Quarkus user, asked me about retrying an asynchronous operation. David has a picky remote HTTP service, which sometimes misbehaves. Easy answer! Just do: uni.onFailure().retry().atMost(x). But, David is curious, and asked me a second question: how does retry work? Well, that’s simple; it just retries&#8230;&#8203; As you...
+                We released Quarkus 3.0.3.Final, the second maintenance release of our 3.0 release train (as our first public release for 3.0 was 3.0.1.Final). As usual, it contains bugfixes and documentation improvements. It should be a safe upgrade for anyone already using 3.0. If you are not already using 3.0, please refer...
             </description>
-            <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
+            <pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate>
             <guid>
-                https://quarkus.io/blog/uni-retry/
+                https://quarkus.io/blog/quarkus-3-0-3-final-released/
             </guid>
+            
+            
+            
+            <author>Guillaume Smet (https://twitter.com/gsmet_)</author>
+            
         </item>
         
         <item>
-            <title>Quarkus Tools for IntelliJ 1.2.0 released!</title>
+            <title>MEF and Sofis use Quarkus as core component of a new innovative architecture</title>
             <link>
-                https://quarkus.io/blog/intellij-quarkus-tools-1.2.0/
+                https://quarkus.io/blog/ministry-of-economy-finance-uruguay-adopts-quarkus/
             </link>
             <description>
-                We are very pleased to announce the 1.2.0 release of Quarkus Tools for IntelliJ. This release brings enhanced support for Eclipse Microprofile. Eclipse Microprofile Reactive Messaging If your application is based on Eclipse Microprofile Reactive Messaging, properties are enabled for: @Connector annotation @Outgoing annotation @Incoming annotation Here is an example...
+                About us The Ministry of Economy and Finance (MEF) of Uruguay is a government ministry. Website: https://www.gub.uy/ministerio-economia-finanzas Sofis Solutions is a company with more than 18 years of experience in the digital transformation of Latin American organizations and technological inclusion. Focuses mainly on projects for the development of digital government...
             </description>
-            <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+            <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
             <guid>
-                https://quarkus.io/blog/intellij-quarkus-tools-1.2.0/
+                https://quarkus.io/blog/ministry-of-economy-finance-uruguay-adopts-quarkus/
             </guid>
+            
+            
+            
+            <author>Fabricio Gregorio</author>
+            
         </item>
         
         <item>
-            <title>Quarkus 1.8.3.Final released - Bugfixes</title>
+            <title>Quarkus 2.16.7.Final released - Maintenance release</title>
             <link>
-                https://quarkus.io/blog/quarkus-1-8-3-final-released/
+                https://quarkus.io/blog/quarkus-2-16-7-final-released/
             </link>
             <description>
-                Today, we released Quarkus 1.8.3.Final which contains a fix for an annoying regression and some other fixes. It is a safe upgrade for everyone using Quarkus 1.8. What&#8217;s new? This release is a maintenance release that fixes various bugs found in 1.8.2.Final and provides some documentation updates. The main change...
+                We released Quarkus 2.16.6.Final, the seventh maintenance release of our 2.16 release train. As usual, it contains bugfixes and documentation improvements. It should be a safe upgrade for anyone already using 2.16. If you are not already using 2.16, please refer to our migration guide. Full changelog You can get...
             </description>
-            <pubDate>Fri, 09 Oct 2020 00:00:00 +0000</pubDate>
+            <pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate>
             <guid>
-                https://quarkus.io/blog/quarkus-1-8-3-final-released/
+                https://quarkus.io/blog/quarkus-2-16-7-final-released/
             </guid>
+            
+            
+            
+            <author>Guillaume Smet (https://twitter.com/gsmet_)</author>
+            
         </item>
         
         <item>
-            <title>Emitter - Bridging the imperative and the reactive worlds</title>
+            <title>Quarkus 3.0.2.Final released - Maintenance release</title>
             <link>
-                https://quarkus.io/blog/reactive-messaging-emitter/
+                https://quarkus.io/blog/quarkus-3-0-2-final-released/
             </link>
             <description>
-                In a previous blog post about Kafka and Avro, we used an emitter to send Kafka messages. In this post, we are going look at this emitter construct a little bit more closely. Injecting an Emitter Injecting an emitter is straightforward. You indicate the targeted channel, i.e., where do you...
+                We released Quarkus 3.0.2.Final, the first maintenance release of our 3.0 release train (as our first public release for 3.0 was 3.0.1.Final). As usual, it contains bugfixes and documentation improvements. It should be a safe upgrade for anyone already using 3.0. If you are not already using 3.0, please refer...
             </description>
-            <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
+            <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
             <guid>
-                https://quarkus.io/blog/reactive-messaging-emitter/
+                https://quarkus.io/blog/quarkus-3-0-2-final-released/
             </guid>
+            
+            
+            
+            <author>Guillaume Smet (https://twitter.com/gsmet_)</author>
+            
         </item>
         
         <item>
-            <title>Quarkus 1.8.2.Final released - Bugfixes</title>
+            <title>Quarkus 3.0, our new major release, is here!</title>
             <link>
-                https://quarkus.io/blog/quarkus-1-8-2-final-released/
+                https://quarkus.io/blog/quarkus-3-0-final-released/
             </link>
             <description>
-                Today, we released Quarkus 1.8.2.Final with some bugfixes and documentation improvements. It is a safe upgrade for everyone using Quarkus 1.8. What&#8217;s new? This release is a maintenance release that fixes various bugs found in 1.8.1.Final and provides some documentation updates. You can get the full changelog of 1.8.2.Final on...
+                Quarkus 3.0 is the result of a lot of work and dedication from the community. Quarkus continues to be an Open Source stack to write Java applications offering unparalleled startup time, memory footprint, and developer experience. The development of Quarkus 3 started last year on March 18, 2022, with the...
             </description>
-            <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
+            <pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate>
             <guid>
-                https://quarkus.io/blog/quarkus-1-8-2-final-released/
+                https://quarkus.io/blog/quarkus-3-0-final-released/
             </guid>
+            
+            
+            
+            <author>Guillaume Smet (https://twitter.com/gsmet_)</author>
+            
         </item>
         
         <item>
-            <title>Contributing to Quarkus for the first time</title>
+            <title>New Features for Qute Templating Engine Support in Quarkus Tools for Visual Studio Code 1.13.0</title>
             <link>
-                https://quarkus.io/blog/contributing-for-the-first-time/
+                https://quarkus.io/blog/vscode-quarkus-1.13.0-released/
             </link>
             <description>
-                Hacktoberfest has begun and Quarkus, as a lot of other Open Source projects, is a perfect place to make your contributions to fulfill this 4 PR challenge in meaningful way. Today, Monday, at 6:30pm CEST, I will make a live stream on How to contribute to Quarkus for the first...
+                Quarkus Tools for Visual Studio Code 1.13.0 has been released on the VS Code Marketplace and Open VSX. This release focuses on Qute Templating Engine Support by introducing support for more sections and improving template validation. New Features Notable Qute features included in Quarkus Tools for Visual Studio Code 1.13.0...
             </description>
-            <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+            <pubDate>Wed, 19 Apr 2023 00:00:00 +0000</pubDate>
             <guid>
-                https://quarkus.io/blog/contributing-for-the-first-time/
+                https://quarkus.io/blog/vscode-quarkus-1.13.0-released/
             </guid>
+            
+            
+            
+            <author>Jessica He (https://twitter.com/JessicaJjhe)</author>
+            
         </item>
         
         <item>
-            <title>Biased locking removed from Java - does it affect you ?</title>
+            <title>Quarkus Newsletter #31 - April</title>
             <link>
-                https://quarkus.io/blog/biased-locking-help/
+                https://quarkus.io/blog/quarkus-newsletter-31/
             </link>
             <description>
-                Last week we became aware that the OpenJDK team in Java 15 have disabled biased locking (JEP 374) in the Java virtual machine. This is a change from previous versions and could potentially have a negative impact on Java application&#8217;s performance. Red Hat&#8217;s own performance teams are currently running performance...
+                It&#8217;s time for the April Newsletter. Read Willem Meints&#8217;s article "Quarkus: Jave revisited!" where shares his experience with Java using Quarkus after a long hiatus. Learn why Sebastian Daschner thinks Quarkus is a great choice for Enterprise Java in his great video. Learn how to deploy a Quarkus application to...
             </description>
-            <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
+            <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
             <guid>
-                https://quarkus.io/blog/biased-locking-help/
+                https://quarkus.io/blog/quarkus-newsletter-31/
             </guid>
+            
+            
+            
+            <author>James Cobb (https://twitter.com/insectengine)</author>
+            
         </item>
         
         <item>
-            <title>Concurrent asynchronous actions with Mutiny</title>
+            <title>Quarkus 3.0.0.CR2 released</title>
             <link>
-                https://quarkus.io/blog/mutiny-concurrent-uni/
+                https://quarkus.io/blog/quarkus-3-0-0-cr2-released/
             </link>
             <description>
-                This week, I&#8217;ve been asked about a widespread use case around concurrency. This user wanted to call two microservices in parallel, and when both results are received, join them and continue the processing. Basically, the following pattern: In a non-reactive approach, both calls would block the caller thread, and, except...
+                Today, we released Quarkus 3.0.0.CR2, our last step before building the 3.0.0.Final bits. Please try it with your applications, the update is easy in a lot of cases, and report any problem to us by creating a GitHub issue. To upgrade your application to Quarkus 3.0, see the instructions below....
             </description>
-            <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
+            <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
             <guid>
-                https://quarkus.io/blog/mutiny-concurrent-uni/
+                https://quarkus.io/blog/quarkus-3-0-0-cr2-released/
             </guid>
+            
+            
+            
+            <author>Guillaume Smet (https://twitter.com/gsmet_)</author>
+            
         </item>
         
     </channel>
