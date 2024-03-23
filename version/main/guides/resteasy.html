@@ -9,7 +9,8 @@
   <title>RESTEasy Classic - main - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/version/main/guides/resteasy" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/version/main/guides/resteasy" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/version/main/guides/resteasy" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/version/main/guides/resteasy" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/version/main/guides/resteasy" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/version/main/guides/resteasy" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/version/main/guides/resteasy">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/version/main/guides/resteasy">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/version/main/guides/resteasy">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/version/main/guides/resteasy">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" selected>Main - SNAPSHOT</option>
         
         
-        <option value="latest" >3.0 - Latest</option>
+        
+        <option value="latest" >3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" >2.13</option>
+        
         
         
         </select>
@@ -158,43 +177,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">RESTEasy Classic </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#architecture">Architecture</a></li>
-<li><a href="#creating-the-maven-project">Creating the Maven project</a></li>
-<li><a href="#creating-your-first-json-rest-service">Creating your first JSON REST service</a>
-<ul class="sectlevel2">
-<li><a href="#json">Configuring JSON support</a></li>
-<li><a href="#links">JSON Hypertext Application Language (HAL) support</a></li>
-</ul>
-</li>
-<li><a href="#creating-a-frontend">Creating a frontend</a></li>
-<li><a href="#building-a-native-executable">Building a native executable</a></li>
-<li><a href="#about-serialization">About serialization</a></li>
-<li><a href="#using-response">Using Response</a></li>
-<li><a href="#reactive">Being reactive</a></li>
-<li><a href="#http-filters-and-interceptors">HTTP filters and interceptors</a></li>
-<li><a href="#cors-filter">CORS filter</a></li>
-<li><a href="#gzip-support">GZip Support</a></li>
-<li><a href="#multipart-support">Multipart Support</a></li>
-<li><a href="#servlet-compatibility">Servlet compatibility</a></li>
-<li><a href="#resteasy-and-rest-client-interactions">RESTEasy and REST Client interactions</a></li>
-<li><a href="#whats-different-from-jakarta-ee-development">What&#8217;s Different from Jakarta EE Development</a>
-<ul class="sectlevel2">
-<li><a href="#no-need-for-application-class">No Need for <code>Application</code> Class</a></li>
-<li><a href="#only-a-single-jakarta-rest-application">Only a single Jakarta REST application</a></li>
-<li><a href="#support-limitations-of-jakarta-rest-application">Support limitations of Jakarta REST application</a></li>
-<li><a href="#lifecycle-of-resources">Lifecycle of Resources</a></li>
-</ul>
-</li>
-<li><a href="#includeexclude-jakarta-rest-classes-with-build-time-conditions">Include/Exclude Jakarta REST classes with build time conditions</a></li>
-<li><a href="#conclusion">Conclusion</a></li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">RESTEasy Classic </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="admonitionblock warning">
@@ -205,12 +191,14 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>This guide is about <a href="https://resteasy.dev">RESTEasy Classic</a> which used to be the default Jakarta REST (formerly known as JAX-RS) implementation until Quarkus 2.8.</p>
+<p>This guide is about <a href="https://resteasy.dev">RESTEasy Classic</a>, which used to be the default Jakarta REST (formerly known as JAX-RS) implementation until Quarkus 2.8.</p>
 </div>
 <div class="paragraph">
-<p>It is now recommended to use RESTEasy Reactive, which supports both traditional blocking workloads and reactive workloads equally well.
-For more information about RESTEasy Reactive,
-please see the <a href="rest-json">introductory REST JSON guide</a> or the <a href="resteasy-reactive">RESTEasy Reactive reference documentation</a>.</p>
+<p>It is now recommended to use Quarkus REST (formerly RESTEasy Reactive), which supports both traditional blocking workloads and reactive workloads equally well.</p>
+</div>
+<div class="paragraph">
+<p>For more information about Quarkus REST,
+please see the <a href="rest-json">introductory REST JSON guide</a> or the <a href="rest">Quarkus REST reference documentation</a>.</p>
 </div>
 </td>
 </tr>
@@ -223,7 +211,7 @@ please see the <a href="rest-json">introductory REST JSON guide</a> or the <a hr
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-there is another guide if you need a <a href="rest-client">REST client based on RESTEasy Classic</a> (including support for JSON).
+There is another guide if you need a <a href="resteasy-client">REST client based on RESTEasy Classic</a> (including support for JSON).
 </td>
 </tr>
 </table>
@@ -234,10 +222,10 @@ there is another guide if you need a <a href="rest-client">REST client based on 
 <h2 id="architecture"><a class="anchor" href="#architecture"></a>Architecture</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The application built in this guide is quite simple: the user can add elements in a list using a form and the list is updated.</p>
+<p>The application created in this guide is straightforward: users can add elements to a list through a form, and the list gets updated accordingly.</p>
 </div>
 <div class="paragraph">
-<p>All the information between the browser and the server are formatted as JSON.</p>
+<p>All the information between the browser and the server is formatted as JSON.</p>
 </div>
 </div>
 </div>
@@ -262,7 +250,7 @@ cd rest-json-quickstart</code></pre>
 <p>To create a Gradle project, add the <code>--gradle</code> or <code>--gradle-kotlin-dsl</code> option.</p>
 </div>
 <div class="paragraph">
-<p><em>For more information about how to install the Quarkus CLI and use it, please refer to <a href="cli-tooling">the Quarkus CLI guide</a>.</em></p>
+<p>For more information about how to install and use the Quarkus CLI, see the <a href="cli-tooling">Quarkus CLI</a> guide.</p>
 </div>
 </div>
 </div>
@@ -271,7 +259,7 @@ cd rest-json-quickstart</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:999-SNAPSHOT:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus:quarkus-maven-plugin:999-SNAPSHOT:create \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=rest-json-quickstart \
     -Dextensions='resteasy-jackson' \
@@ -285,8 +273,21 @@ cd rest-json-quickstart</code></pre>
 </div>
 </div>
 <div class="paragraph">
+<p>For Windows users:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If using cmd, (don&#8217;t use backward slash <code>\</code> and put everything on the same line)</p>
+</li>
+<li>
+<p>If using Powershell, wrap <code>-D</code> parameters in double quotes e.g. <code>"-DprojectArtifactId=rest-json-quickstart"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
 <p>This command generates a new project importing the RESTEasy/Jakarta REST and <a href="https://github.com/FasterXML/jackson">Jackson</a> extensions,
-and in particular adds the following dependency:</p>
+and in particular, adds the following dependency:</p>
 </div>
 <div class="listingblock primary asciidoc-tabs-target-sync-cli asciidoc-tabs-target-sync-maven">
 <div class="title">pom.xml</div>
@@ -311,14 +312,14 @@ and in particular adds the following dependency:</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>To improve user experience, Quarkus registers the three Jackson <a href="https://github.com/FasterXML/jackson-modules-java8">Java 8 modules</a> so you don&#8217;t need to do it manually.</p>
+<p>To improve user experience, Quarkus registers the three Jackson <a href="https://github.com/FasterXML/jackson-modules-java8">Java 8 modules</a>, so you do not need to do it manually.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Quarkus also supports <a href="https://eclipse-ee4j.github.io/jsonb-api/">JSON-B</a> so, if you prefer JSON-B over Jackson, you can create a project relying on the RESTEasy JSON-B extension instead:</p>
+<p>Quarkus also supports <a href="https://eclipse-ee4j.github.io/jsonb-api/">JSON-B</a>, so if you prefer JSON-B over Jackson, you can create a project relying on the RESTEasy JSON-B extension instead:</p>
 </div>
 <div class="sidebarblock primary asciidoc-tabs-sync-cli">
 <div class="content">
@@ -335,7 +336,7 @@ cd rest-json-quickstart</code></pre>
 <p>To create a Gradle project, add the <code>--gradle</code> or <code>--gradle-kotlin-dsl</code> option.</p>
 </div>
 <div class="paragraph">
-<p><em>For more information about how to install the Quarkus CLI and use it, please refer to <a href="cli-tooling">the Quarkus CLI guide</a>.</em></p>
+<p>For more information about how to install and use the Quarkus CLI, see the <a href="cli-tooling">Quarkus CLI</a> guide.</p>
 </div>
 </div>
 </div>
@@ -344,7 +345,7 @@ cd rest-json-quickstart</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:999-SNAPSHOT:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus:quarkus-maven-plugin:999-SNAPSHOT:create \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=rest-json-quickstart \
     -Dextensions='resteasy-jsonb' \
@@ -358,8 +359,21 @@ cd rest-json-quickstart</code></pre>
 </div>
 </div>
 <div class="paragraph">
+<p>For Windows users:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If using cmd, (don&#8217;t use backward slash <code>\</code> and put everything on the same line)</p>
+</li>
+<li>
+<p>If using Powershell, wrap <code>-D</code> parameters in double quotes e.g. <code>"-DprojectArtifactId=rest-json-quickstart"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
 <p>This command generates a new project importing the RESTEasy/Jakarta REST and <a href="https://eclipse-ee4j.github.io/jsonb-api/">JSON-B</a> extensions,
-and in particular adds the following dependency:</p>
+and in particular, adds the following dependency:</p>
 </div>
 <div class="listingblock primary asciidoc-tabs-target-sync-cli asciidoc-tabs-target-sync-maven">
 <div class="title">pom.xml</div>
@@ -379,13 +393,13 @@ and in particular adds the following dependency:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="creating-your-first-json-rest-service"><a class="anchor" href="#creating-your-first-json-rest-service"></a>Creating your first JSON REST service</h2>
+<h2 id="creating-the-first-json-rest-service"><a class="anchor" href="#creating-the-first-json-rest-service"></a>Creating the first JSON REST service</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this example, we will create an application to manage a list of fruits.</p>
 </div>
 <div class="paragraph">
-<p>First, let&#8217;s create the <code>Fruit</code> bean as follows:</p>
+<p>First, let us create the <code>Fruit</code> bean as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -407,7 +421,8 @@ public class Fruit {
 </div>
 </div>
 <div class="paragraph">
-<p>Nothing fancy. One important thing to note is that having a default constructor is required by the JSON serialization layer.</p>
+<p>Nothing fancy.
+One important thing to note is that having a default constructor is required by the JSON serialization layer.</p>
 </div>
 <div class="paragraph">
 <p>Now, create the <code>org.acme.rest.json.FruitResource</code> class as follows:</p>
@@ -469,18 +484,16 @@ depending on the extension you chose when initializing the project.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>When a JSON extension is installed such as <code>quarkus-resteasy-jackson</code> or <code>quarkus-resteasy-jsonb</code>, Quarkus will use the <code>application/json</code> media type
-by default for most return values, unless the media type is explicitly set via
-<code>@Produces</code> or <code>@Consumes</code> annotations (there are some exceptions for well known types, such as <code>String</code> and <code>File</code>, which default to <code>text/plain</code> and <code>application/octet-stream</code>
-respectively).</p>
+<p>When a JSON extension like <code>quarkus-resteasy-jackson</code> or <code>quarkus-resteasy-jsonb</code> is installed, Quarkus defaults to the <code>application/json</code> media type for most return values.
+This can be overridden using <code>@Produces</code> or <code>@Consumes</code> annotations, except for certain well-known types like <code>String</code> (defaulting to <code>text/plain</code>) and <code>File</code> (defaulting to <code>application/octet-stream</code>).</p>
 </div>
 <div class="paragraph">
-<p>If you don&#8217;t want JSON by default you can set <code>quarkus.resteasy-json.default-json=false</code> and the default will change back to being auto-negotiated. If you set this
-you will need to add <code>@Produces(MediaType.APPLICATION_JSON)</code> and <code>@Consumes(MediaType.APPLICATION_JSON)</code> to your endpoints in order to use JSON.</p>
+<p>To disable the default JSON behavior, set <code>quarkus.resteasy-json.default-json=false</code>, and the default will return to auto-negotiation.
+In this case, you must include <code>@Produces(MediaType.APPLICATION_JSON)</code> and <code>@Consumes(MediaType.APPLICATION_JSON)</code> annotations in your endpoints to use JSON.</p>
 </div>
 <div class="paragraph">
-<p>If you don&#8217;t rely on the JSON default, it is heavily recommended to annotate your endpoints with the <code>@Produces</code> and <code>@Consumes</code> annotations to define precisely the expected content-types.
-It will allow to narrow down the number of Jakarta REST providers (which can be seen as converters) included in the native executable.</p>
+<p>If you don&#8217;t depend on the JSON default, it&#8217;s highly advisable to use <code>@Produces</code> and <code>@Consumes</code> annotations on your endpoints to specify the expected content types precisely.
+This helps reduce the number of Jakarta REST providers (essentially converters) included in the native executable.</p>
 </div>
 </td>
 </tr>
@@ -491,29 +504,34 @@ It will allow to narrow down the number of Jakarta REST providers (which can be 
 <div class="sect3">
 <h4 id="jackson"><a class="anchor" href="#jackson"></a>Jackson</h4>
 <div class="paragraph">
-<p>In Quarkus, the default Jackson <code>ObjectMapper</code> obtained via CDI (and consumed by the Quarkus extensions) is configured to ignore unknown properties
-(by disabling the <code>DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES</code> feature).</p>
+<p>In Quarkus, the default Jackson <code>ObjectMapper</code> obtained via CDI (utilized by Quarkus extensions) is set to ignore unknown properties (by disabling <code>DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES</code>).</p>
 </div>
 <div class="paragraph">
-<p>You can restore the default behavior of Jackson by setting <code>quarkus.jackson.fail-on-unknown-properties=true</code> in your <code>application.properties</code>
-or on a per-class basis via <code>@JsonIgnoreProperties(ignoreUnknown = false)</code>.</p>
+<p>To revert to Jackson&#8217;s default behavior, set <code>quarkus.jackson.fail-on-unknown-properties=true</code> in your <code>application.properties</code>, or set it on a per-class basis with <code>@JsonIgnoreProperties(ignoreUnknown = false)</code>.</p>
 </div>
 <div class="paragraph">
-<p>Furthermore, the <code>ObjectMapper</code> is configured to format dates and time in ISO-8601
-(by disabling the <code>SerializationFeature.WRITE_DATES_AS_TIMESTAMPS</code> feature).</p>
+<p>Additionally, the <code>ObjectMapper</code> formats dates and times in ISO-8601 (by disabling <code>SerializationFeature.WRITE_DATES_AS_TIMESTAMPS</code>).</p>
 </div>
 <div class="paragraph">
-<p>The default behaviour of Jackson can be restored by setting <code>quarkus.jackson.write-dates-as-timestamps=true</code>
-in your <code>application.properties</code>. If you want to change the format for a single field, you can use the
-<code>@JsonFormat</code> annotation.</p>
+<p>To restore Jackson&#8217;s default behavior, use <code>quarkus.jackson.write-dates-as-timestamps=true</code> in your <code>application.properties</code>.
+For custom date format on a single field, use the <code>@JsonFormat</code> annotation.</p>
 </div>
 <div class="paragraph">
-<p>Also, Quarkus makes it very easy to configure various Jackson settings via CDI beans.
-The simplest (and suggested) approach is to define a CDI bean of type <code>io.quarkus.jackson.ObjectMapperCustomizer</code>
-inside of which any Jackson configuration can be applied.</p>
+<p>Quarkus simplifies Jackson configuration via CDI beans. Create a CDI bean of type <code>io.quarkus.jackson.ObjectMapperCustomizer</code> to apply various Jackson settings. Here&#8217;s an example for registering a custom module:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@ApplicationScoped
+public class MyObjectMapperCustomizer implements ObjectMapperCustomizer {
+    @Override
+    public void customize(ObjectMapper objectMapper) {
+        // Add custom Jackson configuration here
+    }
+}</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>An example where a custom module needs to be registered would look like so:</p>
+<p>This approach is recommended for configuring Jackson settings.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -533,7 +551,7 @@ public class RegisterCustomModuleCustomizer implements ObjectMapperCustomizer {
 <div class="paragraph">
 <p>Users can even provide their own <code>ObjectMapper</code> bean if they so choose.
 If this is done, it is very important to manually inject and apply all <code>io.quarkus.jackson.ObjectMapperCustomizer</code> beans in the CDI producer that produces <code>ObjectMapper</code>.
-Failure to do so will prevent Jackson specific customizations provided by various extensions from being applied.</p>
+Failure to do so will prevent Jackson-specific customizations provided by various extensions from being applied.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -567,10 +585,10 @@ public class CustomObjectMapper {
 <p>As stated above, Quarkus provides the option of using JSON-B instead of Jackson via the use of the <code>quarkus-resteasy-jsonb</code> extension.</p>
 </div>
 <div class="paragraph">
-<p>Following the same approach as described in the previous section, JSON-B can be configured using a <code>io.quarkus.jsonb.JsonbConfigCustomizer</code> bean.</p>
+<p>Following the same approach described in the previous section, JSON-B can be configured using an <code>io.quarkus.jsonb.JsonbConfigCustomizer</code> bean.</p>
 </div>
 <div class="paragraph">
-<p>If for example a custom serializer named <code>FooSerializer</code> for type <code>com.example.Foo</code> needs to be registered with JSON-B, the addition of a bean like the following would suffice:</p>
+<p>If, for example, a custom serializer named <code>FooSerializer</code> for type <code>com.example.Foo</code> needs to be registered with JSON-B, the addition of a bean like the following would suffice:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -589,7 +607,7 @@ public class FooSerializerRegistrationCustomizer implements JsonbConfigCustomize
 </div>
 </div>
 <div class="paragraph">
-<p>A more advanced option would be to directly provide a bean of <code>jakarta.json.bind.JsonbConfig</code> (with a <code>Dependent</code> scope) or in the extreme case to provide a bean of type <code>jakarta.json.bind.Jsonb</code> (with a <code>Singleton</code> scope).
+<p>A more advanced option would be to directly provide a bean of <code>jakarta.json.bind.JsonbConfig</code> (with a <code>Dependent</code> scope) or, in the extreme case, to provide a bean of type <code>jakarta.json.bind.Jsonb</code> (with a <code>Singleton</code> scope).
 If the latter approach is leveraged it is very important to manually inject and apply all <code>io.quarkus.jsonb.JsonbConfigCustomizer</code> beans in the CDI producer that produces <code>jakarta.json.bind.Jsonb</code>.
 Failure to do so will prevent JSON-B specific customizations provided by various extensions from being applied.</p>
 </div>
@@ -673,7 +691,7 @@ public class RecordsResource {
 </div>
 </div>
 <div class="paragraph">
-<p>Now, the endpoints <code>/records</code> and <code>/records/first</code> will accept the media type both <code>json</code> and <code>hal+json</code> to print the records in Hal format.</p>
+<p>Now, the endpoints <code>/records</code> and <code>/records/first</code> will accept the media type, both <code>json</code> and <code>hal+json</code>, to print the records in Hal format.</p>
 </div>
 <div class="paragraph">
 <p>For example, if we invoke the <code>/records</code> endpoint using curl to return a list of records, the HAL format will look like as follows:</p>
@@ -748,9 +766,9 @@ public class RecordsResource {
 <h2 id="creating-a-frontend"><a class="anchor" href="#creating-a-frontend"></a>Creating a frontend</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Now let&#8217;s add a simple web page to interact with our <code>FruitResource</code>.
+<p>Now let us add a simple web page to interact with our <code>FruitResource</code>.
 Quarkus automatically serves static resources located under the <code>META-INF/resources</code> directory.
-In the <code>src/main/resources/META-INF/resources</code> directory, add a <code>fruits.html</code> file with the content from this <a href="https://github.com/quarkusio/quarkus-quickstarts/blob/main/rest-json-quickstart/src/main/resources/META-INF/resources/fruits.html">fruits.html</a> file in it.</p>
+In the <code>src/main/resources/META-INF/resources</code> directory, add a <code>fruits.html</code> file with the content from this <a href="https://github.com/quarkusio/quarkus-quickstarts/blob/development/rest-json-quickstart/src/main/resources/META-INF/resources/fruits.html">fruits.html</a> file in it.</p>
 </div>
 <div class="paragraph">
 <p>You can now interact with your REST service:</p>
@@ -809,7 +827,7 @@ In the <code>src/main/resources/META-INF/resources</code> directory, add a <code
 <div class="listingblock secondary asciidoc-tabs-sync-gradle">
 <div class="title">Gradle</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./gradlew build -Dquarkus.package.type=native</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./gradlew build -Dquarkus.native.enabled=true</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -829,7 +847,7 @@ In the <code>src/main/resources/META-INF/resources</code> directory, add a <code
 <div class="paragraph">
 <p>When using native executables with GraalVM, all classes that will be used with reflection need to be registered.
 The good news is that Quarkus does that work for you most of the time.
-So far, we haven&#8217;t registered any class, not even <code>Fruit</code>, for reflection usage and everything is working fine.</p>
+So far, we have not registered any class, not even <code>Fruit</code>, for reflection usage, and everything is working fine.</p>
 </div>
 <div class="paragraph">
 <p>Quarkus performs some magic when it is capable of inferring the serialized types from the REST methods.
@@ -844,8 +862,7 @@ public List&lt;Fruit&gt; list() {
 </div>
 </div>
 <div class="paragraph">
-<p>Quarkus does that for you automatically by analyzing the REST methods at build time
-and that&#8217;s why we didn&#8217;t need any reflection registration in the first part of this guide.</p>
+<p>Quarkus does that for you automatically by analyzing the REST methods at build time, and that is why we did not need any reflection registration in the first part of this guide.</p>
 </div>
 <div class="paragraph">
 <p>Another common pattern in the Jakarta REST world is to use the <code>Response</code> object.
@@ -854,10 +871,10 @@ and that&#8217;s why we didn&#8217;t need any reflection registration in the fir
 <div class="ulist">
 <ul>
 <li>
-<p>you can return different entity types depending on what happens in your method (a <code>Legume</code> or an <code>Error</code> for instance);</p>
+<p>You can return different entity types depending on what happens in your method (a <code>Legume</code> or an <code>Error</code> for instance).</p>
 </li>
 <li>
-<p>you can set the attributes of the <code>Response</code> (the status comes to mind in the case of an error).</p>
+<p>You can set the attributes of the <code>Response</code> (the status comes to mind in the case of an error).</p>
 </li>
 </ul>
 </div>
@@ -873,8 +890,8 @@ public Response list() {
 </div>
 </div>
 <div class="paragraph">
-<p>It is not possible for Quarkus to determine at build time the type included in the <code>Response</code> as the information is not available.
-In this case, Quarkus won&#8217;t be able to automatically register for reflection the required classes.</p>
+<p>Quarkus cannot determine at build time the type included in the <code>Response</code> as the information is not available.
+In this case, Quarkus won&#8217;t be able to register for reflection in the required classes automatically.</p>
 </div>
 <div class="paragraph">
 <p>This leads us to our next section.</p>
@@ -882,10 +899,10 @@ In this case, Quarkus won&#8217;t be able to automatically register for reflecti
 </div>
 </div>
 <div class="sect1">
-<h2 id="using-response"><a class="anchor" href="#using-response"></a>Using Response</h2>
+<h2 id="using-response"><a class="anchor" href="#using-response"></a>Using response</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Let&#8217;s create the <code>Legume</code> class which will be serialized as JSON, following the same model as for our <code>Fruit</code> class:</p>
+<p>Let us create the <code>Legume</code> class, which will be serialized as JSON, following the same model as for our <code>Fruit</code> class:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -907,7 +924,7 @@ public class Legume {
 </div>
 </div>
 <div class="paragraph">
-<p>Now let&#8217;s create a <code>LegumeResource</code> REST service with only one method which returns the list of legumes.</p>
+<p>Now let&#8217;s create a <code>LegumeResource</code> REST service with only one method that returns the list of legumes.</p>
 </div>
 <div class="paragraph">
 <p>This method returns a <code>Response</code> and not a list of <code>Legume</code>.</p>
@@ -947,9 +964,9 @@ public class LegumeResource {
 </div>
 </div>
 <div class="paragraph">
-<p>Now let&#8217;s add a simple web page to display our list of legumes.
+<p>Now, let us add a simple web page to display our list of legumes.
 In the <code>src/main/resources/META-INF/resources</code> directory, add a <code>legumes.html</code> file with the content from this
-<a href="https://github.com/quarkusio/quarkus-quickstarts/blob/main/rest-json-quickstart/src/main/resources/META-INF/resources/legumes.html">legumes.html</a> file in it.</p>
+<a href="https://github.com/quarkusio/quarkus-quickstarts/blob/development/rest-json-quickstart/src/main/resources/META-INF/resources/legumes.html">legumes.html</a> file in it.</p>
 </div>
 <div class="paragraph">
 <p>Open a browser to <a href="http://localhost:8080/legumes.html" class="bare">http://localhost:8080/legumes.html</a>, and you will see our list of legumes.</p>
@@ -976,7 +993,7 @@ In the <code>src/main/resources/META-INF/resources</code> directory, add a <code
 <div class="listingblock secondary asciidoc-tabs-sync-gradle">
 <div class="title">Gradle</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./gradlew build -Dquarkus.package.type=native</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./gradlew build -Dquarkus.native.enabled=true</code></pre>
 </div>
 </div>
 </li>
@@ -989,10 +1006,10 @@ In the <code>src/main/resources/META-INF/resources</code> directory, add a <code
 </ul>
 </div>
 <div class="paragraph">
-<p>No legumes there.</p>
+<p>There are no legumes there.</p>
 </div>
 <div class="paragraph">
-<p>As mentioned above, the issue is that Quarkus was not able to determine the <code>Legume</code> class will require some reflection by analyzing the REST endpoints.
+<p>As mentioned above, the issue is that Quarkus could not determine the <code>Legume</code> class, which will require some reflection by analyzing the REST endpoints.
 The JSON serialization library tries to get the list of fields of <code>Legume</code> and gets an empty list, so it does not serialize the fields' data.</p>
 </div>
 <div class="admonitionblock note">
@@ -1004,7 +1021,7 @@ The JSON serialization library tries to get the list of fields of <code>Legume</
 <td class="content">
 <div class="paragraph">
 <p>At the moment, when JSON-B or Jackson tries to get the list of fields of a class, if the class is not registered for reflection, no exception will be thrown.
-GraalVM will simply return an empty list of fields.</p>
+GraalVM will return an empty list of fields.</p>
 </div>
 <div class="paragraph">
 <p>Hopefully, this will change in the future and make the error more obvious.</p>
@@ -1033,13 +1050,14 @@ public class Legume {
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-The <code>@RegisterForReflection</code> annotation instructs Quarkus to keep the class and its members during the native compilation. More details about the <code>@RegisterForReflection</code> annotation can be found on the <a href="writing-native-applications-tips#registerForReflection">native application tips</a> page.
+The <code>@RegisterForReflection</code> annotation instructs Quarkus to keep the class and its members during the native compilation.
+More details about the <code>@RegisterForReflection</code> annotation can be found on the <a href="writing-native-applications-tips#registerForReflection">native application tips</a> page.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s do that and follow the same steps as before:</p>
+<p>Let us do that and follow the same steps as before:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1063,7 +1081,7 @@ The <code>@RegisterForReflection</code> annotation instructs Quarkus to keep the
 <div class="listingblock secondary asciidoc-tabs-sync-gradle">
 <div class="title">Gradle</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./gradlew build -Dquarkus.package.type=native</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./gradlew build -Dquarkus.native.enabled=true</code></pre>
 </div>
 </div>
 </li>
@@ -1091,7 +1109,7 @@ The <code>@RegisterForReflection</code> annotation instructs Quarkus to keep the
 </td>
 <td class="content">
 <div class="paragraph">
-<p>For reactive workloads, please always use <a href="resteasy-reactive">RESTEasy Reactive</a>.</p>
+<p>For reactive workloads, please always use <a href="rest">Quarkus REST</a>.</p>
 </div>
 </td>
 </tr>
@@ -1153,13 +1171,12 @@ Use <code>Multi</code> when you have multiple items that may be emitted asynchro
 <div class="sectionbody">
 <div class="paragraph">
 <p>Both HTTP request and response can be intercepted by providing <code>ContainerRequestFilter</code> or <code>ContainerResponseFilter</code>
-implementations respectively. These filters are suitable for processing the metadata associated with a message: HTTP
-headers, query parameters, media type, and other metadata. They also have the capability to abort the request
-processing, for instance when the user does not have the permissions to access the endpoint.</p>
+implementations respectively.
+These filters are suitable for processing the metadata associated with a message: HTTP headers, query parameters, media type, and other metadata.
+They also can abort the request processing, for instance, when the user does not have permission to access the endpoint.</p>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s use <code>ContainerRequestFilter</code> to add logging capability to our service. We can do that by implementing
-<code>ContainerRequestFilter</code> and annotating it with the <code>@Provider</code> annotation:</p>
+<p>Let&#8217;s use <code>ContainerRequestFilter</code> to add logging capability to our service. We can do that by implementing <code>ContainerRequestFilter</code> and annotating it with the <code>@Provider</code> annotation:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1219,8 +1236,8 @@ allows restricted resources on a web page to be requested from another domain ou
 was served.</p>
 </div>
 <div class="paragraph">
-<p>Quarkus comes with a CORS filter. Read the <a href="http-reference#cors-filter">HTTP Reference Documentation</a> to learn
-how to use it.</p>
+<p>Quarkus includes a CORS filter at the HTTP layer level.
+For more information about the CORS filters and their usage, see the <a href="security-cors#cors-filter">CORS filter</a> section of the Quarkus "Cross-origin resource sharing" guide.</p>
 </div>
 </div>
 </div>
@@ -1244,13 +1261,15 @@ quarkus.resteasy.gzip.max-input=10M <i class="conum" data-value="2"></i><b>(2)</
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Configure the upper limit on deflated request body. This is useful to mitigate potential attacks by limiting their reach. The default value is <code>10M</code>.
-This configuration option would recognize strings in this format (shown as a regular expression): <code>[0-9]+[KkMmGgTtPpEeZzYy]?</code>. If no suffix is given, assume bytes.</td>
+<td>Configure the upper limit on the deflated request body.
+This is useful to mitigate potential attacks by limiting their reach. The default value is <code>10M</code>.
+This configuration option would recognize strings in this format (shown as a regular expression): <code>[0-9]+[KkMmGgTtPpEeZzYy]?</code>.
+If no suffix is given, assume bytes.</td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Once GZip support has been enabled you can use it on an endpoint by adding the <code>@org.jboss.resteasy.annotations.GZIP</code> annotation to your endpoint method.</p>
+<p>Once GZip support has been enabled, you can use it on an endpoint by adding the <code>@org.jboss.resteasy.annotations.GZIP</code> annotation to your endpoint method.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1259,7 +1278,8 @@ This configuration option would recognize strings in this format (shown as a reg
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-There is also the <code>quarkus.http.enable-compression</code> configuration property which enables HTTP response compression globally. If enabled then a response body is compressed if the <code>Content-Type</code> HTTP header is set and the value is a compressed media type as configured via the <code>quarkus.http.compress-media-types</code> configuration property.
+There is also the <code>quarkus.http.enable-compression</code> configuration property, which enables HTTP response compression globally.
+If enabled, a response body is compressed if the <code>Content-Type</code> HTTP header is set and the value is a compressed media type configured via the <code>quarkus.http.compress-media-types</code> configuration property.
 </td>
 </tr>
 </table>
@@ -1281,10 +1301,10 @@ There is also the <code>quarkus.http.enable-compression</code> configuration pro
 <div class="paragraph">
 <p>You can configure this behavior with the following configuration properties:</p>
 </div>
-<div class="paragraph configuration-legend">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime <input type="search" id="config-search-0" placeholder="FILTER CONFIGURATION" disabled></p>
 </div>
-<table class="tableblock frame-all grid-all stretch configuration-reference searchable">
+<table class="tableblock frame-all grid-all stretch configuration-reference searchable configuration-reference-all-rows">
 <colgroup>
 <col style="width: 80%;">
 <col style="width: 10%;">
@@ -1296,37 +1316,45 @@ There is also the <code>quarkus.http.enable-compression</code> configuration pro
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a id="quarkus-resteasy-multipart_quarkus.resteasy.multipart.input-part.default-charset"></a><code><a href="#quarkus-resteasy-multipart_quarkus.resteasy.multipart.input-part.default-charset">quarkus.resteasy.multipart.input-part.default-charset</a></code></p>
+<p><a id="quarkus-resteasy-multipart_quarkus-resteasy-multipart-input-part-default-charset"></a><code><a href="#quarkus-resteasy-multipart_quarkus-resteasy-multipart-input-part-default-charset">quarkus.resteasy.multipart.input-part.default-charset</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-1" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
-<p>Default charset.
-Note that the default value is UTF-8 which is different from RESTEasy&#8217;s default value US-ASCII.</p>
+<p>Default charset.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-28310">QUARKUS_RESTEASY_MULTIPART_INPUT_PART_DEFAULT_CHARSET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-28310" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Note that the default value is UTF-8 which is different from RESTEasy&#8217;s default value US-ASCII.</p>
+</div>
+<div class="paragraph">
+<p>Environment variable: <code id="env-var-45619">QUARKUS_RESTEASY_MULTIPART_INPUT_PART_DEFAULT_CHARSET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-45619" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html">Charset</a></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>UTF-8</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a id="quarkus-resteasy-multipart_quarkus.resteasy.multipart.input-part.default-content-type"></a><code><a href="#quarkus-resteasy-multipart_quarkus.resteasy.multipart.input-part.default-content-type">quarkus.resteasy.multipart.input-part.default-content-type</a></code></p>
+<p><a id="quarkus-resteasy-multipart_quarkus-resteasy-multipart-input-part-default-content-type"></a><code><a href="#quarkus-resteasy-multipart_quarkus-resteasy-multipart-input-part-default-content-type">quarkus.resteasy.multipart.input-part.default-content-type</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-2" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The default content-type.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-28311">QUARKUS_RESTEASY_MULTIPART_INPUT_PART_DEFAULT_CONTENT_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-28311" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-45620">QUARKUS_RESTEASY_MULTIPART_INPUT_PART_DEFAULT_CONTENT_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-45620" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>text/plain</code></p></td>
@@ -1342,8 +1370,11 @@ Note that the default value is UTF-8 which is different from RESTEasy&#8217;s de
 <p>In Quarkus, RESTEasy can either run directly on top of the Vert.x HTTP server, or on top of Undertow if you have any servlet dependency.</p>
 </div>
 <div class="paragraph">
-<p>As a result, certain classes, such as <code>HttpServletRequest</code> are not always available for injection. Most use-cases for this particular
-class are covered by Jakarta REST equivalents, except for getting the remote client&#8217;s IP. RESTEasy comes with a replacement API which you can inject:
+<p>As a result, certain classes, such as <code>HttpServletRequest</code> are not always available for injection.
+Most use cases for this particular class are covered by Jakarta REST equivalents, except for getting the remote client&#8217;s IP.</p>
+</div>
+<div class="paragraph">
+<p>RESTEasy comes with a replacement API that you can inject:
 <a href="https://docs.jboss.org/resteasy/docs/4.5.6.Final/javadocs/org/jboss/resteasy/spi/HttpRequest.html"><code>HttpRequest</code></a>, which has the methods
 <a href="https://docs.jboss.org/resteasy/docs/4.5.6.Final/javadocs/org/jboss/resteasy/spi/HttpRequest.html#getRemoteAddress--"><code>getRemoteAddress()</code></a>
 and <a href="https://docs.jboss.org/resteasy/docs/4.5.6.Final/javadocs/org/jboss/resteasy/spi/HttpRequest.html#getRemoteHost--"><code>getRemoteHost()</code></a>
@@ -1355,11 +1386,11 @@ to solve this problem.</p>
 <h2 id="resteasy-and-rest-client-interactions"><a class="anchor" href="#resteasy-and-rest-client-interactions"></a>RESTEasy and REST Client interactions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In Quarkus, the RESTEasy extension and <a href="rest-client">the REST Client extension</a> share the same infrastructure.
+<p>In Quarkus, the RESTEasy extension and <a href="resteasy-client">the REST Client extension</a> share the same infrastructure.
 One important consequence of this consideration is that they share the same list of providers (in the Jakarta REST meaning of the word).</p>
 </div>
 <div class="paragraph">
-<p>For instance, if you declare a <code>WriterInterceptor</code>, it will by default intercept both the servers calls and the client calls,
+<p>For instance, if you declare a <code>WriterInterceptor</code>, it will, by default, intercept both the servers calls and the client calls,
 which might not be the desired behavior.</p>
 </div>
 <div class="paragraph">
@@ -1383,39 +1414,47 @@ which might not be the desired behavior.</p>
 <div class="sect2">
 <h3 id="no-need-for-application-class"><a class="anchor" href="#no-need-for-application-class"></a>No Need for <code>Application</code> Class</h3>
 <div class="paragraph">
-<p>Configuration via an application-supplied subclass of <code>Application</code> is supported, but not required.</p>
+<p>Configuration via an application-supplied subclass of <code>Application</code> is supported but not required.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="only-a-single-jakarta-rest-application"><a class="anchor" href="#only-a-single-jakarta-rest-application"></a>Only a single Jakarta REST application</h3>
 <div class="paragraph">
-<p>In contrast to Jakarta REST (and RESTeasy) running in a standard servlet-container, Quarkus only supports the deployment of a single Jakarta REST application.
+<p>In contrast to Jakarta REST (and RESTeasy) running in a standard servlet container, Quarkus only supports the deployment of a single Jakarta REST application.
 If multiple Jakarta REST <code>Application</code> classes are defined, the build will fail with the message <code>Multiple classes have been annotated with @ApplicationPath which is currently not supported</code>.</p>
 </div>
 <div class="paragraph">
-<p>If multiple Jakarta REST applications are defined, the property <code>quarkus.resteasy.ignore-application-classes=true</code> can be used to ignore all explicit <code>Application</code> classes. This makes all resource-classes available via the application-path as defined by <code>quarkus.resteasy.path</code> (default: <code>/</code>).</p>
+<p>If multiple Jakarta REST applications are defined, the property <code>quarkus.resteasy.ignore-application-classes=true</code> can be used to ignore all explicit <code>Application</code> classes.
+This makes all resource-classes available via the application-path as defined by <code>quarkus.resteasy.path</code> (default: <code>/</code>).</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="support-limitations-of-jakarta-rest-application"><a class="anchor" href="#support-limitations-of-jakarta-rest-application"></a>Support limitations of Jakarta REST application</h3>
 <div class="paragraph">
-<p>The RESTEasy extension doesn&#8217;t support the method <code>getProperties()</code> of the class <code>jakarta.ws.rs.core.Application</code>. Moreover, it only relies on the methods <code>getClasses()</code> and <code>getSingletons()</code> to filter out the annotated resource, provider and feature classes.
-It doesn&#8217;t filter out the built-in resource, provider and feature classes and also the resource, provider and feature classes registered by the other extensions.
-Finally, the objects returned by the method <code>getSingletons()</code> are ignored, only the classes are taken into account to filter out the resource, provider and feature classes, in other words the method <code>getSingletons()</code> is actually managed the same way as <code>getClasses()</code>.</p>
+<p>The RESTEasy extension doesn&#8217;t support the method <code>getProperties()</code> of the class <code>jakarta.ws.rs.core.Application</code>.
+Moreover, it only relies on the methods <code>getClasses()</code> and <code>getSingletons()</code> to filter out the annotated resource, provider, and feature classes.
+It does not filter out the built-in resource, provider, and feature classes and also the resource, provider, and feature classes registered by the other extensions.
+Finally, the objects returned by the method <code>getSingletons()</code> are ignored, only the classes are taken into account to filter out the resource, provider and feature classes, in other words the method <code>getSingletons()</code> is managed the same way as <code>getClasses()</code>.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="lifecycle-of-resources"><a class="anchor" href="#lifecycle-of-resources"></a>Lifecycle of Resources</h3>
 <div class="paragraph">
-<p>In Quarkus all Jakarta REST resources are treated as CDI beans.
+<p>In Quarkus, all Jakarta REST resources are treated as CDI beans.
 It&#8217;s possible to inject other beans via <code>@Inject</code>, bind interceptors using bindings such as <code>@Transactional</code>, define <code>@PostConstruct</code> callbacks, etc.</p>
 </div>
 <div class="paragraph">
-<p>If there is no scope annotation declared on the resource class then the scope is defaulted.
-The default scope can be controlled through the <code>quarkus.resteasy.singleton-resources</code> property.
-If set to <code>true</code> (default) then a <strong>single instance</strong> of a resource class is created to service all requests (as defined by <code>@jakarta.inject.Singleton</code>).
-If set to <code>false</code> then a <strong>new instance</strong> of the resource class is created per each request.
-An explicit CDI scope annotation (<code>@RequestScoped</code>, <code>@ApplicationScoped</code>, etc.) always overrides the default behavior and specifies the lifecycle of resource instances.</p>
+<p>If no scope annotation is declared on the resource class, then the scope is defaulted.
+The <code>quarkus.resteasy.singleton-resources</code> property can control the default scope.</p>
+</div>
+<div class="paragraph">
+<p>If set to <code>true</code> (default), then a <strong>single instance</strong> of a resource class is created to service all requests (as defined by <code>@jakarta.inject.Singleton</code>).</p>
+</div>
+<div class="paragraph">
+<p>If set to <code>false</code>, then a <strong>new instance</strong> of the resource class is created per each request.</p>
+</div>
+<div class="paragraph">
+<p>An explicit CDI scope annotation (<code>@RequestScoped</code>, <code>@ApplicationScoped</code>, etc.) always overrides the default behavior and specifies the lifecycle of resource instances.</p>
 </div>
 </div>
 </div>
@@ -1452,19 +1491,98 @@ public class ResourceForApp1Only {
 <h2 id="conclusion"><a class="anchor" href="#conclusion"></a>Conclusion</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Creating JSON REST services with Quarkus is easy as it relies on proven and well known technologies.</p>
+<p>Creating JSON REST services with Quarkus is easy as it relies on proven and well-known technologies.</p>
 </div>
 <div class="paragraph">
 <p>As usual, Quarkus further simplifies things under the hood when running your application as a native executable.</p>
 </div>
 <div class="paragraph">
-<p>There is only one thing to remember: if you use <code>Response</code> and Quarkus can&#8217;t determine the beans that are serialized, you need to annotate them with <code>@RegisterForReflection</code>.</p>
+<p>There is only one thing to remember: if you use <code>Response</code> and Quarkus cannot determine the beans that are serialized, you need to annotate them with <code>@RegisterForReflection</code>.</p>
 </div>
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#creating-the-maven-project">Creating the Maven project</a></li>
+<li><a href="#creating-the-first-json-rest-service">Creating the first JSON REST service</a>
+<ul class="sectlevel2">
+<li><a href="#json">Configuring JSON support</a></li>
+<li><a href="#links">JSON Hypertext Application Language (HAL) support</a></li>
+</ul>
+</li>
+<li><a href="#creating-a-frontend">Creating a frontend</a></li>
+<li><a href="#building-a-native-executable">Building a native executable</a></li>
+<li><a href="#about-serialization">About serialization</a></li>
+<li><a href="#using-response">Using response</a></li>
+<li><a href="#reactive">Being reactive</a></li>
+<li><a href="#http-filters-and-interceptors">HTTP filters and interceptors</a></li>
+<li><a href="#cors-filter">CORS filter</a></li>
+<li><a href="#gzip-support">GZip Support</a></li>
+<li><a href="#multipart-support">Multipart Support</a></li>
+<li><a href="#servlet-compatibility">Servlet compatibility</a></li>
+<li><a href="#resteasy-and-rest-client-interactions">RESTEasy and REST Client interactions</a></li>
+<li><a href="#whats-different-from-jakarta-ee-development">What&#8217;s Different from Jakarta EE Development</a>
+<ul class="sectlevel2">
+<li><a href="#no-need-for-application-class">No Need for <code>Application</code> Class</a></li>
+<li><a href="#only-a-single-jakarta-rest-application">Only a single Jakarta REST application</a></li>
+<li><a href="#support-limitations-of-jakarta-rest-application">Support limitations of Jakarta REST application</a></li>
+<li><a href="#lifecycle-of-resources">Lifecycle of Resources</a></li>
+</ul>
+</li>
+<li><a href="#includeexclude-jakarta-rest-classes-with-build-time-conditions">Include/Exclude Jakarta REST classes with build time conditions</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></div>
+    </div>
   </div>
-</div>
+  <h2>Related content</h2>
+  <div class="grid-wrapper relations">
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same extensions</h3>
+      <ul class="related-content">
+      
+        
+        <li class="reference"><a href="/version/main/guides/security-authorize-web-endpoints-reference">Authorization of web endpoints</a></li>
+      </ul>
+    </div>
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same topics</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/version/main/guides/resteasy-client">Using the legacy REST Client</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/resteasy-client-multipart">Using the legacy REST Client with Multipart</a></li>
+      
+        
+        <li class="reference"><a href="/version/main/guides/security-authorize-web-endpoints-reference">Authorization of web endpoints</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/rest-data-panache">Generating Jakarta REST resources with Panache</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/rest-migration">Migrating to Quarkus REST (formerly RESTEasy Reactive)</a></li>
+      
+        
+        <li class="howto"><a href="/version/main/guides/rest-virtual-threads">Use virtual threads in REST applications</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/openapi-swaggerui">Using OpenAPI and Swagger UI</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/rest-client">Using the REST Client</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/rest-json">Writing JSON REST Services</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/rest">Writing REST Services with Quarkus REST (formerly RESTEasy Reactive)</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   </div>
 
@@ -1512,6 +1630,14 @@ public class ResourceForApp1Only {
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -1592,6 +1718,10 @@ public class ResourceForApp1Only {
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -1654,12 +1784,12 @@ public class ResourceForApp1Only {
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

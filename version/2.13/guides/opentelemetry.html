@@ -9,7 +9,8 @@
   <title>Using OpenTelemetry - 2.13 - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/version/2.13/guides/opentelemetry" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/version/2.13/guides/opentelemetry" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/version/2.13/guides/opentelemetry" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/version/2.13/guides/opentelemetry" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/version/2.13/guides/opentelemetry" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/version/2.13/guides/opentelemetry" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/version/2.13/guides/opentelemetry">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/version/2.13/guides/opentelemetry">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/version/2.13/guides/opentelemetry">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/version/2.13/guides/opentelemetry">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" >Main - SNAPSHOT</option>
         
         
-        <option value="latest" >3.0 - Latest</option>
+        
+        <option value="latest" >3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" selected>2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,43 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Using OpenTelemetry </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#architecture">Architecture</a></li>
-<li><a href="#solution">Solution</a></li>
-<li><a href="#creating-the-maven-project">Creating the Maven project</a>
-<ul class="sectlevel2">
-<li><a href="#examine-the-jax-rs-resource">Examine the JAX-RS resource</a></li>
-<li><a href="#create-the-configuration">Create the configuration</a></li>
-</ul>
-</li>
-<li><a href="#run-the-application">Run the application</a>
-<ul class="sectlevel2">
-<li><a href="#jdbc">JDBC</a></li>
-</ul>
-</li>
-<li><a href="#additional-configuration">Additional configuration</a>
-<ul class="sectlevel2">
-<li><a href="#id-generator">ID Generator</a></li>
-<li><a href="#propagators">Propagators</a></li>
-<li><a href="#resource">Resource</a></li>
-<li><a href="#sampler">Sampler</a></li>
-</ul>
-</li>
-<li><a href="#additional-instrumentation">Additional instrumentation</a>
-<ul class="sectlevel2">
-<li><a href="#cdi">CDI</a></li>
-<li><a href="#smallrye-reactive-messaging-kafka">SmallRye Reactive Messaging - Kafka</a></li>
-</ul>
-</li>
-<li><a href="#configuration-reference">OpenTelemetry Configuration Reference</a></li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Using OpenTelemetry </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -272,6 +258,7 @@ However, you can skip right to the completed example.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus create app org.acme:opentelemetry-quickstart \
+    --stream=2.13 \
     --extension='resteasy-reactive,quarkus-opentelemetry-exporter-otlp' \
     --no-code
 cd opentelemetry-quickstart</code></pre>
@@ -290,7 +277,8 @@ cd opentelemetry-quickstart</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.13.7.Final:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.13.9.Final:create \
+    -DplatformVersion=2.13.9.Final \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=opentelemetry-quickstart \
     -Dextensions='resteasy-reactive,quarkus-opentelemetry-exporter-otlp' \
@@ -853,10 +841,10 @@ which retrieves the OpenTelemetry <code>Context</code> to extract the current sp
 <div class="sect1">
 <h2 id="configuration-reference"><a class="anchor" href="#configuration-reference"></a>OpenTelemetry Configuration Reference</h2>
 <div class="sectionbody">
-<div class="paragraph configuration-legend">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime <input type="search" id="config-search-0" placeholder="FILTER CONFIGURATION" disabled></p>
 </div>
-<table class="tableblock frame-all grid-all stretch configuration-reference searchable">
+<table class="tableblock frame-all grid-all stretch configuration-reference searchable configuration-reference-all-rows">
 <colgroup>
 <col style="width: 80%;">
 <col style="width: 10%;">
@@ -868,29 +856,32 @@ which retrieves the OpenTelemetry <code>Context</code> to extract the current sp
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-opentelemetry_quarkus.opentelemetry.enabled"></a><code><a href="#quarkus-opentelemetry_quarkus.opentelemetry.enabled">quarkus.opentelemetry.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-1" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>OpenTelemetry support.
 OpenTelemetry support is enabled by default.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12969">QUARKUS_OPENTELEMETRY_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12969" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13649">QUARKUS_OPENTELEMETRY_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13649" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-opentelemetry_quarkus.opentelemetry.propagators"></a><code><a href="#quarkus-opentelemetry_quarkus.opentelemetry.propagators">quarkus.opentelemetry.propagators</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-2" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Comma separated list of OpenTelemetry propagators which must be supported.
@@ -898,53 +889,62 @@ Valid values are <code>b3, b3multi, baggage, jaeger, ottrace, tracecontext, xray
 Default value is <code>traceContext,baggage</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12970">QUARKUS_OPENTELEMETRY_PROPAGATORS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12970" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13650">QUARKUS_OPENTELEMETRY_PROPAGATORS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13650" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>tracecontext,baggage</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-opentelemetry_quarkus.opentelemetry.tracer.enabled"></a><code><a href="#quarkus-opentelemetry_quarkus.opentelemetry.tracer.enabled">quarkus.opentelemetry.tracer.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-3" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Support for tracing with OpenTelemetry.
 Support for tracing will be enabled if OpenTelemetry support is enabled and either this value is true, or this value is unset.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12971">QUARKUS_OPENTELEMETRY_TRACER_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12971" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13651">QUARKUS_OPENTELEMETRY_TRACER_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13651" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-opentelemetry_quarkus.opentelemetry.tracer.resource-attributes"></a><code><a href="#quarkus-opentelemetry_quarkus.opentelemetry.tracer.resource-attributes">quarkus.opentelemetry.tracer.resource-attributes</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-4" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>A comma separated list of name=value resource attributes that represents the entity producing telemetry (eg. <code>service.name=authservice</code>).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12972">QUARKUS_OPENTELEMETRY_TRACER_RESOURCE_ATTRIBUTES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12972" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13652">QUARKUS_OPENTELEMETRY_TRACER_RESOURCE_ATTRIBUTES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13652" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-opentelemetry_quarkus.opentelemetry.tracer.sampler"></a><code><a href="#quarkus-opentelemetry_quarkus.opentelemetry.tracer.sampler">quarkus.opentelemetry.tracer.sampler</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-5" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The sampler to use for tracing.
@@ -952,32 +952,35 @@ Valid values are <code>off, on, ratio</code>.
 Defaults to <code>on</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12973">QUARKUS_OPENTELEMETRY_TRACER_SAMPLER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12973" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13653">QUARKUS_OPENTELEMETRY_TRACER_SAMPLER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13653" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>on</code></p></td>
 </tr>
-<tr>
+<tr class="">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-opentelemetry_quarkus.opentelemetry.tracer.sampler.ratio"></a><code><a href="#quarkus-opentelemetry_quarkus.opentelemetry.tracer.sampler.ratio">quarkus.opentelemetry.tracer.sampler.ratio</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-non-collapsible-desc-6" class="openblock description">
 <div class="content">
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12974">QUARKUS_OPENTELEMETRY_TRACER_SAMPLER_RATIO</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12974" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13654">QUARKUS_OPENTELEMETRY_TRACER_SAMPLER_RATIO</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13654" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">double</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-opentelemetry_quarkus.opentelemetry.tracer.sampler.parent-based"></a><code><a href="#quarkus-opentelemetry_quarkus.opentelemetry.tracer.sampler.parent-based">quarkus.opentelemetry.tracer.sampler.parent-based</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-7" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If the sampler to use for tracing is parent based.
@@ -985,55 +988,64 @@ Valid values are <code>true, false</code>.
 Defaults to <code>true</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12975">QUARKUS_OPENTELEMETRY_TRACER_SAMPLER_PARENT_BASED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12975" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13655">QUARKUS_OPENTELEMETRY_TRACER_SAMPLER_PARENT_BASED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13655" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-opentelemetry_quarkus.opentelemetry.tracer.suppress-non-application-uris"></a><code><a href="#quarkus-opentelemetry_quarkus.opentelemetry.tracer.suppress-non-application-uris">quarkus.opentelemetry.tracer.suppress-non-application-uris</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-8" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Suppress non-application uris from trace collection. This will suppress tracing of <code>/q</code> endpoints.
 Suppressing non-application uris is enabled by default.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12976">QUARKUS_OPENTELEMETRY_TRACER_SUPPRESS_NON_APPLICATION_URIS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12976" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13656">QUARKUS_OPENTELEMETRY_TRACER_SUPPRESS_NON_APPLICATION_URIS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13656" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-opentelemetry_quarkus.opentelemetry.tracer.include-static-resources"></a><code><a href="#quarkus-opentelemetry_quarkus.opentelemetry.tracer.include-static-resources">quarkus.opentelemetry.tracer.include-static-resources</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-9" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Include static resources from trace collection.
 Include static resources is disabled by default.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12977">QUARKUS_OPENTELEMETRY_TRACER_INCLUDE_STATIC_RESOURCES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12977" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13657">QUARKUS_OPENTELEMETRY_TRACER_INCLUDE_STATIC_RESOURCES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13657" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph configuration-legend">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime <input type="search" id="config-search-1" placeholder="FILTER CONFIGURATION" disabled></p>
 </div>
-<table class="tableblock frame-all grid-all stretch configuration-reference searchable">
+<table class="tableblock frame-all grid-all stretch configuration-reference searchable configuration-reference-all-rows">
 <colgroup>
 <col style="width: 80%;">
 <col style="width: 10%;">
@@ -1045,90 +1057,105 @@ Include static resources is disabled by default.</p>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-opentelemetry-exporter-otlp_quarkus.opentelemetry.tracer.exporter.otlp.enabled"></a><code><a href="#quarkus-opentelemetry-exporter-otlp_quarkus.opentelemetry.tracer.exporter.otlp.enabled">quarkus.opentelemetry.tracer.exporter.otlp.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-10" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>OTLP SpanExporter support.
 OTLP SpanExporter support is enabled by default.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12978">QUARKUS_OPENTELEMETRY_TRACER_EXPORTER_OTLP_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12978" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13658">QUARKUS_OPENTELEMETRY_TRACER_EXPORTER_OTLP_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13658" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-opentelemetry-exporter-otlp_quarkus.opentelemetry.tracer.exporter.otlp.endpoint"></a><code><a href="#quarkus-opentelemetry-exporter-otlp_quarkus.opentelemetry.tracer.exporter.otlp.endpoint">quarkus.opentelemetry.tracer.exporter.otlp.endpoint</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-11" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The OTLP endpoint to connect to. The endpoint must start with either http:// or https://.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12979">QUARKUS_OPENTELEMETRY_TRACER_EXPORTER_OTLP_ENDPOINT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12979" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13659">QUARKUS_OPENTELEMETRY_TRACER_EXPORTER_OTLP_ENDPOINT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13659" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-opentelemetry-exporter-otlp_quarkus.opentelemetry.tracer.exporter.otlp.headers"></a><code><a href="#quarkus-opentelemetry-exporter-otlp_quarkus.opentelemetry.tracer.exporter.otlp.headers">quarkus.opentelemetry.tracer.exporter.otlp.headers</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-12" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Key-value pairs to be used as headers associated with gRPC requests. The format is similar to the <code>OTEL_EXPORTER_OTLP_HEADERS</code> environment variable, a list of key-value pairs separated by the "=" character. See <a href="https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/protocol/exporter.md#specifying-headers-via-environment-variables">Specifying headers</a> for more details.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12980">QUARKUS_OPENTELEMETRY_TRACER_EXPORTER_OTLP_HEADERS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12980" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13660">QUARKUS_OPENTELEMETRY_TRACER_EXPORTER_OTLP_HEADERS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13660" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-opentelemetry-exporter-otlp_quarkus.opentelemetry.tracer.exporter.otlp.export-timeout"></a><code><a href="#quarkus-opentelemetry-exporter-otlp_quarkus.opentelemetry.tracer.exporter.otlp.export-timeout">quarkus.opentelemetry.tracer.exporter.otlp.export-timeout</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-13" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The maximum amount of time to wait for the collector to process exported spans before an exception is thrown. A value of <code>0</code> will disable the timeout: the exporter will continue waiting until either exported spans are processed, or the connection fails, or is closed for some other reason.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12981">QUARKUS_OPENTELEMETRY_TRACER_EXPORTER_OTLP_EXPORT_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12981" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13661">QUARKUS_OPENTELEMETRY_TRACER_EXPORTER_OTLP_EXPORT_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13661" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-opentelemetry-exporter-otlp" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-{summaryTableId}" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>10S</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-opentelemetry-exporter-otlp_quarkus.opentelemetry.tracer.exporter.otlp.compression"></a><code><a href="#quarkus-opentelemetry-exporter-otlp_quarkus.opentelemetry.tracer.exporter.otlp.compression">quarkus.opentelemetry.tracer.exporter.otlp.compression</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-14" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Compression method to be used by exporter to compress the payload.
 See <a href="https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/protocol/exporter.md#opentelemetry-protocol-exporter">Configuration Options</a> for the supported compression methods.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12982">QUARKUS_OPENTELEMETRY_TRACER_EXPORTER_OTLP_COMPRESSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12982" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13662">QUARKUS_OPENTELEMETRY_TRACER_EXPORTER_OTLP_COMPRESSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13662" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
@@ -1159,8 +1186,41 @@ Otherwise, <code>PT</code> is implicitly prepended to the value to obtain a stan
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#creating-the-maven-project">Creating the Maven project</a>
+<ul class="sectlevel2">
+<li><a href="#examine-the-jax-rs-resource">Examine the JAX-RS resource</a></li>
+<li><a href="#create-the-configuration">Create the configuration</a></li>
+</ul>
+</li>
+<li><a href="#run-the-application">Run the application</a>
+<ul class="sectlevel2">
+<li><a href="#jdbc">JDBC</a></li>
+</ul>
+</li>
+<li><a href="#additional-configuration">Additional configuration</a>
+<ul class="sectlevel2">
+<li><a href="#id-generator">ID Generator</a></li>
+<li><a href="#propagators">Propagators</a></li>
+<li><a href="#resource">Resource</a></li>
+<li><a href="#sampler">Sampler</a></li>
+</ul>
+</li>
+<li><a href="#additional-instrumentation">Additional instrumentation</a>
+<ul class="sectlevel2">
+<li><a href="#cdi">CDI</a></li>
+<li><a href="#smallrye-reactive-messaging-kafka">SmallRye Reactive Messaging - Kafka</a></li>
+</ul>
+</li>
+<li><a href="#configuration-reference">OpenTelemetry Configuration Reference</a></li>
+</ul></div>
+    </div>
   </div>
-</div>
+  </div>
 
   </div>
 
@@ -1208,6 +1268,14 @@ Otherwise, <code>PT</code> is implicitly prepended to the value to obtain a stan
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -1288,6 +1356,10 @@ Otherwise, <code>PT</code> is implicitly prepended to the value to obtain a stan
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -1350,12 +1422,12 @@ Otherwise, <code>PT</code> is implicitly prepended to the value to obtain a stan
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

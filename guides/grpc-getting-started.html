@@ -9,7 +9,8 @@
   <title>Getting Started with gRPC - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/guides/grpc-getting-started" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/guides/grpc-getting-started" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/guides/grpc-getting-started" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/guides/grpc-getting-started" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/guides/grpc-getting-started" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/guides/grpc-getting-started" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/guides/grpc-getting-started">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/guides/grpc-getting-started">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/guides/grpc-getting-started">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/guides/grpc-getting-started">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" >Main - SNAPSHOT</option>
         
         
-        <option value="latest" selected>3.0 - Latest</option>
+        
+        <option value="latest" selected>3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" >2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,32 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Getting Started with gRPC </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#solution">Solution</a></li>
-<li><a href="#configuring-your-project">Configuring your project</a>
-<ul class="sectlevel2">
-<li><a href="#proto-files-with-imports"><code>proto</code> files with imports</a></li>
-<li><a href="#proto-files-from-dependencies"><code>proto</code> files from dependencies</a></li>
-</ul>
-</li>
-<li><a href="#different-grpc-implementations-types">Different gRPC implementations / types</a></li>
-<li><a href="#implementing-a-grpc-service">Implementing a gRPC service</a>
-<ul class="sectlevel2">
-<li><a href="#implementing-a-service">Implementing a service</a></li>
-<li><a href="#the-grpc-server">The gRPC server</a></li>
-</ul>
-</li>
-<li><a href="#consuming-a-grpc-service">Consuming a gRPC service</a></li>
-<li><a href="#packaging-the-application">Packaging the application</a></li>
-<li><a href="#protobuf-maven-plugin">Generating Java files from proto with protobuf-maven-plugin</a></li>
-<li><a href="#grpc-classes-from-dependencies">gRPC classes from dependencies</a></li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Getting Started with gRPC </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -216,14 +213,21 @@ However, you can go right to the completed example.</p>
 <h2 id="configuring-your-project"><a class="anchor" href="#configuring-your-project"></a>Configuring your project</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Edit the <code>pom.xml</code> file to add the Quarkus gRPC extension dependency (just under <code>&lt;dependencies&gt;</code>):</p>
+<p>Add the Quarkus gRPC extension to your build file:</p>
 </div>
-<div class="listingblock">
+<div class="listingblock primary asciidoc-tabs-target-sync-cli asciidoc-tabs-target-sync-maven">
+<div class="title">pom.xml</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
-  &lt;groupId&gt;io.quarkus&lt;/groupId&gt;
-  &lt;artifactId&gt;quarkus-grpc&lt;/artifactId&gt;
+    &lt;groupId&gt;io.quarkus&lt;/groupId&gt;
+    &lt;artifactId&gt;quarkus-grpc&lt;/artifactId&gt;
 &lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary asciidoc-tabs-target-sync-gradle">
+<div class="title">build.gradle</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.quarkus:quarkus-grpc")</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -231,7 +235,8 @@ However, you can go right to the completed example.</p>
 In this guide we will follow a reactive approach.
 Under the <code>dependencies</code> section of your <code>pom.xml</code> file, make sure you have the RESTEasy Reactive dependency:</p>
 </div>
-<div class="listingblock">
+<div class="listingblock primary asciidoc-tabs-target-sync-cli asciidoc-tabs-target-sync-maven">
+<div class="title">pom.xml</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
     &lt;groupId&gt;io.quarkus&lt;/groupId&gt;
@@ -239,8 +244,14 @@ Under the <code>dependencies</code> section of your <code>pom.xml</code> file, m
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
+<div class="listingblock secondary asciidoc-tabs-target-sync-gradle">
+<div class="title">build.gradle</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.quarkus:quarkus-resteasy-reactive")</code></pre>
+</div>
+</div>
 <div class="paragraph">
-<p>Make sure you have <code>generate-code</code> goal of <code>quarkus-maven-plugin</code> enabled in your <code>pom.xml</code>.
+<p>If you are using Maven, make sure you have the <code>generate-code</code> goal of <code>quarkus-maven-plugin</code> enabled in your <code>pom.xml</code>.
 If you wish to generate code from different <code>proto</code> files for tests, also add the <code>generate-code-tests</code> goal.
 Please note that no additional task/goal is required for the Gradle plugin.</p>
 </div>
@@ -277,10 +288,6 @@ If this retrieved version does not work in your context, you can either force to
 <code>-Dquarkus.grpc.protoc-os-classifier=your-os-classifier</code> (e.g. <code>osx-x86_64</code>).
 You can also download the suitable binary and specify the location via
 <code>-Dquarkus.grpc.protoc-path=/path/to/protoc</code>.</p>
-</div>
-<div class="paragraph">
-<p>Alternatively to using the <code>generate-code</code> goal of the <code>quarkus-maven-plugin</code>, you can use <code>protobuf-maven-plugin</code> to generate these files.
-See the <a href="#protobuf-maven-plugin">Generating Java files from proto with protobuf-maven-plugin</a> section for more information.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s start with a simple <em>Hello</em> service.
@@ -360,111 +367,6 @@ In a terminal, run:</p>
 </div>
 <div class="paragraph">
 <p>These are the classes we are going to use.</p>
-</div>
-<div class="sect2">
-<h3 id="proto-files-with-imports"><a class="anchor" href="#proto-files-with-imports"></a><code>proto</code> files with imports</h3>
-<div class="paragraph">
-<p>Protocol Buffers specification provides a way to import <code>proto</code> files.
-The Quarkus code generation mechanism lets you control the scope of dependencies to scan for possible imports by setting the <code>quarkus.generate-code.grpc.scan-for-imports</code> property to one of the following:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>all</code> - scan all the dependencies</p>
-</li>
-<li>
-<p><code>none</code> - don&#8217;t scan the dependencies, use only what is defined in the <code>src/main/proto</code> or <code>src/test/proto</code></p>
-</li>
-<li>
-<p><code>groupId1:artifactId1,groupId2:artifactId2</code> - scan only the dependencies with group id and artifact id in the list.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>If not specified, the property is set to <code>com.google.protobuf:protobuf-java</code>.
-To override it, set the <code>quarkus.generate-code.grpc.scan-for-imports</code> property in your application.properties to the desired value, e.g.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.generate-code.grpc.scan-for-imports=all</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="proto-files-from-dependencies"><a class="anchor" href="#proto-files-from-dependencies"></a><code>proto</code> files from dependencies</h3>
-<div class="paragraph">
-<p>In some cases, you may want to use <code>proto</code> files from a different project to generate the gRPC stubs. In this case:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Add a dependency on the artifact that contains the proto file to your project</p>
-</li>
-<li>
-<p>In <code>application.properties</code>, specify the dependencies you want to scan for proto files.</p>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.generate-code.grpc.scan-for-proto=&lt;groupId&gt;:&lt;artifactId&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The value of the property may be <code>none</code>, which is the default value, or a comma separated list of <code>groupId:artifactId</code> coordinates.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<code>option java_generic_services = true;</code> will automatically be removed from proto file containing it.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>If the dependency contains a lot of proto files and you want to generate classes for only a subset of them, you can specify glob patterns per dependency. The path to match are relative to the path <code>src/main/resources</code> in the dependency.</p>
-</div>
-<div class="paragraph">
-<p>For instance, having the following properties in your <code>application.properties</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.generate-code.grpc.scan-for-proto-includes."&lt;groupId&gt;\:&lt;artifactId&gt;"=foo/**,bar/**,banana/a-proto.proto
-quarkus.generate-code.grpc.scan-for-proto-excludes."&lt;groupId&gt;\:&lt;artifactId&gt;"=foo/private/**,bar/another-proto.proto</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>will include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>all files in the <code>foo/</code> directory and its subdirectories except for files in <code>foo/private/</code> and its subdirectories,</p>
-</li>
-<li>
-<p>all files in the <code>bar/</code> directory and its subdirectories except for <code>another-proto.proto</code>.</p>
-</li>
-<li>
-<p><code>banana/a-proto.proto</code> file.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<code>:</code> character in the property keys must be escaped.
-</td>
-</tr>
-</table>
-</div>
 </div>
 </div>
 </div>
@@ -718,157 +620,80 @@ In the <code>src/main/resources/application.properties</code> file, add the foll
 <div class="sectionbody">
 <div class="paragraph">
 <p>Like any other Quarkus applications, you can package it with: <code>mvn package</code>.
-You can also package the application into a native executable with: <code>mvn package -Pnative</code>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="protobuf-maven-plugin"><a class="anchor" href="#protobuf-maven-plugin"></a>Generating Java files from proto with protobuf-maven-plugin</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Alternatively to using Quarkus code generation to generate stubs for <code>proto</code> files, you can also use
-<code>protobuf-maven-plugin</code>.</p>
-</div>
-<div class="paragraph">
-<p>To do it, first define the 2 following properties in the <code>&lt;properties&gt;</code> section:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;grpc.version&gt;1.54.0&lt;/grpc.version&gt;
-&lt;protoc.version&gt;3.22.0&lt;/protoc.version&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>They configure the gRPC version and the <code>protoc</code> version.</p>
-</div>
-<div class="paragraph">
-<p>Then, add to the <code>build</code> section the <code>os-maven-plugin</code> extension and the <code>protobuf-maven-plugin</code> configuration.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;build&gt;
-    &lt;extensions&gt;
-        &lt;extension&gt;
-            &lt;groupId&gt;kr.motd.maven&lt;/groupId&gt;
-            &lt;artifactId&gt;os-maven-plugin&lt;/artifactId&gt;
-            &lt;version&gt;${os-maven-plugin-version}&lt;/version&gt;
-        &lt;/extension&gt;
-    &lt;/extensions&gt;
-
-    &lt;plugins&gt;
-        &lt;plugin&gt;
-            &lt;groupId&gt;org.xolstice.maven.plugins&lt;/groupId&gt;
-            &lt;artifactId&gt;protobuf-maven-plugin&lt;/artifactId&gt;      <i class="conum" data-value="1"></i><b>(1)</b>
-            &lt;version&gt;${protobuf-maven-plugin-version}&lt;/version&gt;
-            &lt;configuration&gt;
-                &lt;protocArtifact&gt;com.google.protobuf:protoc:${protoc.version}:exe:${os.detected.classifier}&lt;/protocArtifact&gt; <i class="conum" data-value="2"></i><b>(2)</b>
-                &lt;pluginId&gt;grpc-java&lt;/pluginId&gt;
-                &lt;pluginArtifact&gt;io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}&lt;/pluginArtifact&gt;
-                &lt;protocPlugins&gt;
-                    &lt;protocPlugin&gt;
-                        &lt;id&gt;quarkus-grpc-protoc-plugin&lt;/id&gt;
-                        &lt;groupId&gt;io.quarkus&lt;/groupId&gt;
-                        &lt;artifactId&gt;quarkus-grpc-protoc-plugin&lt;/artifactId&gt;
-                        &lt;version&gt;3.0.3.Final&lt;/version&gt;
-                        &lt;mainClass&gt;io.quarkus.grpc.protoc.plugin.MutinyGrpcGenerator&lt;/mainClass&gt;
-                    &lt;/protocPlugin&gt;
-                &lt;/protocPlugins&gt;
-            &lt;/configuration&gt;
-            &lt;executions&gt;
-                &lt;execution&gt;
-                    &lt;id&gt;compile&lt;/id&gt;
-                    &lt;goals&gt;
-                        &lt;goal&gt;compile&lt;/goal&gt;
-                        &lt;goal&gt;compile-custom&lt;/goal&gt;
-                    &lt;/goals&gt;
-                &lt;/execution&gt;
-                &lt;execution&gt;
-                    &lt;id&gt;test-compile&lt;/id&gt;
-                    &lt;goals&gt;
-                        &lt;goal&gt;test-compile&lt;/goal&gt;
-                        &lt;goal&gt;test-compile-custom&lt;/goal&gt;
-                    &lt;/goals&gt;
-                &lt;/execution&gt;
-            &lt;/executions&gt;
-        &lt;/plugin&gt;
-
-        &lt;!-- ... --&gt;
-    &lt;/plugins&gt;
-&lt;/build&gt;</code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The <code>protobuf-maven-plugin</code> that generates stub classes from your gRPC service definition (<code>proto</code> files).</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>The class generation uses a tool named <code>protoc</code>, which is OS-specific.
-That&#8217;s why we use the <code>os-maven-plugin</code> to target the executable compatible with the operating system.</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-This configuration instructs the <code>protobuf-maven-plugin</code> to generate the default gRPC classes and classes using Mutiny to fit with the Quarkus development experience.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-When using <code>protobuf-maven-plugin</code>, instead of the <code>quarkus-maven-plugin</code>, every time you update the <code>proto</code> files, you need to re-generate the classes (using <code>mvn compile</code>).
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="grpc-classes-from-dependencies"><a class="anchor" href="#grpc-classes-from-dependencies"></a>gRPC classes from dependencies</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>When gRPC classes - the classes generated from <code>proto</code> files - are in a dependency of the application, then the dependency needs a Jandex index.
-The <code>jandex-maven-plugin</code> can be used to create a Jandex index. More information on this topic can be found in the <a href="cdi-reference#bean_discovery">Bean Discovery</a> section of the CDI guide.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;build&gt;
-    &lt;plugins&gt;
-        &lt;plugin&gt;
-            &lt;groupId&gt;io.smallrye&lt;/groupId&gt;
-            &lt;artifactId&gt;jandex-maven-plugin&lt;/artifactId&gt;
-            &lt;version&gt;3.0.5&lt;/version&gt;
-            &lt;executions&gt;
-                &lt;execution&gt;
-                &lt;id&gt;make-index&lt;/id&gt;
-                &lt;goals&gt;
-                    &lt;goal&gt;jandex&lt;/goal&gt;
-                &lt;/goals&gt;
-                &lt;/execution&gt;
-            &lt;/executions&gt;
-        &lt;/plugin&gt;
-    &lt;/plugins&gt;
-&lt;/build&gt;</code></pre>
-</div>
+You can also package the application into a native executable with: <code>mvn package -Dnative</code>.</p>
 </div>
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#solution">Solution</a></li>
+<li><a href="#configuring-your-project">Configuring your project</a></li>
+<li><a href="#different-grpc-implementations-types">Different gRPC implementations / types</a></li>
+<li><a href="#implementing-a-grpc-service">Implementing a gRPC service</a>
+<ul class="sectlevel2">
+<li><a href="#implementing-a-service">Implementing a service</a></li>
+<li><a href="#the-grpc-server">The gRPC server</a></li>
+</ul>
+</li>
+<li><a href="#consuming-a-grpc-service">Consuming a gRPC service</a></li>
+<li><a href="#packaging-the-application">Packaging the application</a></li>
+</ul></div>
+    </div>
   </div>
-</div>
+  <h2>Related content</h2>
+  <div class="grid-wrapper relations">
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same extensions</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/guides/grpc-service-consumption">Consuming a gRPC Service</a></li>
+      
+        
+        <li class="guide"><a href="/guides/grpc-kubernetes">Deploying your gRPC Service in Kubernetes</a></li>
+      
+        
+        <li class="guide"><a href="/guides/grpc">gRPC</a></li>
+      
+        
+        <li class="reference"><a href="/guides/grpc-generation-reference">gRPC code generation reference guide</a></li>
+      
+        
+        <li class="guide"><a href="/guides/grpc-service-implementation">Implementing a gRPC Service</a></li>
+      
+        
+        <li class="guide"><a href="/guides/grpc-virtual-threads">Quarkus Virtual Thread support for gRPC services</a></li>
+      </ul>
+    </div>
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same topics</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/guides/grpc-service-consumption">Consuming a gRPC Service</a></li>
+      
+        
+        <li class="guide"><a href="/guides/grpc-kubernetes">Deploying your gRPC Service in Kubernetes</a></li>
+      
+        
+        <li class="guide"><a href="/guides/grpc">gRPC</a></li>
+      
+        
+        <li class="reference"><a href="/guides/grpc-generation-reference">gRPC code generation reference guide</a></li>
+      
+        
+        <li class="guide"><a href="/guides/grpc-service-implementation">Implementing a gRPC Service</a></li>
+      
+        
+        <li class="guide"><a href="/guides/grpc-virtual-threads">Quarkus Virtual Thread support for gRPC services</a></li>
+      
+        
+        <li class="guide"><a href="/guides/grpc-xds">Using xDS gRPC</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   </div>
 
@@ -916,6 +741,14 @@ The <code>jandex-maven-plugin</code> can be used to create a Jandex index. More 
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -996,6 +829,10 @@ The <code>jandex-maven-plugin</code> can be used to create a Jandex index. More 
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -1058,12 +895,12 @@ The <code>jandex-maven-plugin</code> can be used to create a Jandex index. More 
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

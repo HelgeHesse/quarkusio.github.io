@@ -9,7 +9,8 @@
   <title>Quarkus Insights - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/insights/" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/insights/" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/insights/" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/insights/" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/insights/" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="insights">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/insights/" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/insights/">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/insights/">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/insights/">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/insights/">日本語</a></li>
@@ -147,9 +149,10 @@
       <div class="streamingiconblock">
       <h4 class="mt-0">View the Podcast on these platforms</h4>
       <ul>
-      <li><a href="https://facebook.com/quarkusio" target="_blank"><img src="/assets/images/insights/streamingicon_facebook.png" alt="facebook icon"></a></li>
-      <li><a href="https://twitch.tv/quarkusio" target="_blank"><img src="/assets/images/insights/streamingicon_twitch.png" alt="twitch icon"></a></li>
-      <li><a href="https://youtube.com/quarkusio" target="_blank"><img src="/assets/images/insights/streamingicon_youtube.png" alt="youtube icon"></a></li>
+      <li><a href="https://facebook.com/quarkusio" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a></li>
+      <li><a href="https://twitch.tv/quarkusio" target="_blank"><i class="fab fa-twitch fa-3x"></i></a></li>
+      <li><a href="https://youtube.com/quarkusio" target="_blank"><i class="fab fa-youtube fa-3x"></i></a></li>
+      <li><a href="https://www.linkedin.com/company/quarkusio/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a></li>
     </ul>
     <p><a href="https://feeds.listenbox.app/rss/9w4VBtq9s1v/audio.rss" target="_blank">RSS Audio Feed</a>&nbsp;|&nbsp;<a href="https://feeds.listenbox.app/rss/9w4VBtq9s1v/video.rss" target="_blank">RSS Video Feed</a></p>
     </div>
@@ -166,17 +169,17 @@
   
       <div class="card-static">
         <div>
-          <p class="title">EPISODE #129: Quarkus plugins: JBang!</a></p>
-          <div class="metatext">Streaming Date: May 15, 2023</div>
-          <div class="metatext">Guest(s): Ioannis Kanellos</div>
+          <p class="title">EPISODE #159: Hibernate ORM 6.4 vector search with LangChain4j</a></p>
+          <div class="metatext">Streaming Date: March 25, 2024</div>
+          <div class="metatext">Guest(s): Christian Beikov</div>
         </div>
       </div>
   
       <div class="card-static">
         <div>
-          <p class="title">EPISODE #135: Quarkus + JDK Flight recorder/Cryostat</a></p>
-          <div class="metatext">Streaming Date: June 26, 2023</div>
-          <div class="metatext">Guest(s): Andrew Azores & Robert Toyonaga</div>
+          <p class="title">Long Running Actions (LRA) for MicroProfile in Quarkus</a></p>
+          <div class="metatext">Streaming Date: April 1, 2024</div>
+          <div class="metatext">Guest(s): Martin Štefanko</div>
         </div>
       </div>
   
@@ -189,6 +192,276 @@
       <h3 class="mt-0">Archived Podcast Videos</h3>
     </div>
 
+  
+      <div class="card">
+        <a href="https://youtube.com/live/QS4nT6ffVRA" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #158: What's new in Hibernate ORM 6.4</a></p>
+          <div class="metatext">Streaming Date: March 18, 2024</div>
+          <div class="metatext">Guest(s): Christian Beikov</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/_ySDxHRYaF4" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #157: Eclipse Vert.X&#174; 101 - the fundamentals</a></p>
+          <div class="metatext">Streaming Date: March 11, 2024</div>
+          <div class="metatext">Guest(s): Julien Ponge & Julien Viet</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/LLn_lRL54LY" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #156: Quarkus 3.8 Launch</a></p>
+          <div class="metatext">Streaming Date: March 04, 2024</div>
+          <div class="metatext">Guest(s): The Quarkus Team</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/_ylTaPcNHg0" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #155: Quarkus Observability</a></p>
+          <div class="metatext">Streaming Date: February 29, 2024</div>
+          <div class="metatext">Guest(s): Bruno Baptista</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/cZCIQFJVv_Q" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #154: Using Hiberate to greatly improve search on Quarkus.io </a></p>
+          <div class="metatext">Streaming Date: February 19, 2024</div>
+          <div class="metatext">Guest(s): Yoann Rodière & Marko Bekhta</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/3yHATj2sqbI" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #153: Virtual Threads in Quarkus</a></p>
+          <div class="metatext">Streaming Date: February 12, 2024</div>
+          <div class="metatext">Guest(s): Clement Escoffier & Ozan Günalp </div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/W_QREL1nEGI" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #152: What's new with Superheroes</a></p>
+          <div class="metatext">Streaming Date: February 5, 2024</div>
+          <div class="metatext">Guest(s): Eric Deandrea</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/BlJk1-SNv9s" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #151: Get ready for Quarkus 3.7+: Auto-migrate to Java 17+ now using OpenRewrite</a></p>
+          <div class="metatext">Streaming Date: January 29, 2024</div>
+          <div class="metatext">Guest(s): Tim te Beek, Adriano Machado, & Guillaume Smet</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/5WAf6Forodc" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #150: What’s new in Debezium</a></p>
+          <div class="metatext">Streaming Date: January 22, 2023</div>
+          <div class="metatext">Guest(s): Chris Cranford & Jakub Čecháček</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/0wvWd2woBJ8" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #149: Citrus Test framework in Quarkus</a></p>
+          <div class="metatext">Streaming Date: January 15, 2023</div>
+          <div class="metatext">Guest(s): Christoph Deppsich</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/Op-PD6m-zPo" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #148: Microcks and Quarkus</a></p>
+          <div class="metatext">Streaming Date: December 11, 2023</div>
+          <div class="metatext">Guest(s): Laurent Broudoux & Clement Escoffier</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/rbdF9z15KYM" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #147: New stuff in Hibernate 6.2</a></p>
+          <div class="metatext">Streaming Date: December 06, 2023</div>
+          <div class="metatext">Guest(s): Christian Beikov</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/FIN9HmHRiNk" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #146: Quarkus in the Wild with Antoine Sabot-Durand</a></p>
+          <div class="metatext">Streaming Date: November 27, 2023</div>
+          <div class="metatext">Guest(s): Antoine Sabot-Durand</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/0-e4wkRwTIo" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #145: What’s new in Hibernate Search</a></p>
+          <div class="metatext">Streaming Date: November 20, 2023</div>
+          <div class="metatext">Guest(s): Yoann Rodiere</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/Sc9PayXQb7E" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #144: Mandrel and OpenJDK</a></p>
+          <div class="metatext">Streaming Date: November 13, 2023</div>
+          <div class="metatext">Guest(s): Andrew Dinn</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/KmPyJDrWtcY" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #143: Dance with Quarkus Security</a></p>
+          <div class="metatext">Streaming Date: November 6, 2023</div>
+          <div class="metatext">Guest(s): Sergey Beryozkin & Stéphane Épardaud</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/6aGD-gFNQzk" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #142: JVM profiling on Quarkus</a></p>
+          <div class="metatext">Streaming Date: October 23, 2023</div>
+          <div class="metatext">Guest(s): Daniele Zonca, Francesco Nigro, & Sanne Grinovero</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/rEZutvXrdsU" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #141: Pulsar Integration in Quarkus</a></p>
+          <div class="metatext">Streaming Date:  October 16, 2023</div>
+          <div class="metatext">Guest(s): Matteo Merli, Clement Escoffier & Ozan Günalp</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/ad6AbZbvsXk" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #140: Contributing to Quarkus Community Panel</a></p>
+          <div class="metatext">Streaming Date: October 9, 2023</div>
+          <div class="metatext">Guest(s): Emil Lefkof, Antonio Goncalves, & Loïc Mathieu</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/nnu1k3WKtaM" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #139: Quarkus Web Bundler</a></p>
+          <div class="metatext">Streaming Date: September 25, 2023</div>
+          <div class="metatext">Guest(s): Andy Damevin & Erik Jan de Wit</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/C9JDsIrcTWI" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #138: The Quarkus Frontend rainbow. Why is Quarkus the best framework for full stack developers?</a></p>
+          <div class="metatext">Streaming Date: September 11, 2023</div>
+          <div class="metatext">Guest(s): Andy Damevin & Stéphane Épardaud</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/yoU1ruBSXSA" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #137: Comparing Native Java REST API Frameworks</a></p>
+          <div class="metatext">Streaming Date: August 21, 2023</div>
+          <div class="metatext">Guest(s): Matt Raible</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/uXHuNexQNAE" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #136: Quarkus Component Testing</a></p>
+          <div class="metatext">Streaming Date: August 7, 2023</div>
+          <div class="metatext">Guest(s): Martin Kouba</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/HTD_1HGI48I" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #135: What’s new in Quarkus’ gRPC?</a></p>
+          <div class="metatext">Streaming Date: July 24, 2023</div>
+          <div class="metatext">Guest(s): Aleš Justin</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/JLsZYYnIB-Q" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #134: Quarkus in the Wild with AXA</a></p>
+          <div class="metatext">Streaming Date: July 10, 2023</div>
+          <div class="metatext">Guest(s): Guillaume Thomas</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/HEy-ad4v6dY" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #133: Quarkus + JDK Flight recorder/Cryostat</a></p>
+          <div class="metatext">Streaming Date: June 26, 2023</div>
+          <div class="metatext">Guest(s): Andrew Azores & Robert Toyonaga</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/dUV-kUrZ5m0" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #132: Quarkiverse Extension Spotlight: Quarkus CXF extension</a></p>
+          <div class="metatext">Streaming Date: June 21, 2023</div>
+          <div class="metatext">Guest(s): Shumon Sharif and Peter Palaga join us to discuss how the CXF extension is critical for implementing SOAP clients and JAX-WS services.</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/6lPTwV4mvVU" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #131: What’s new with Hibernate 6 and Quarkus</a></p>
+          <div class="metatext">Streaming Date: June 14, 2023</div>
+          <div class="metatext">Guest(s): Steve Ebersole & Gavin King</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/nXnxcl4v9eg" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #130: Sebastian Daschner’s Quarkus wishlist</a></p>
+          <div class="metatext">Streaming Date: May 22, 2023</div>
+          <div class="metatext">Guest(s): Sebastian Daschner</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <a href="https://youtube.com/live/iskDa-i82RU" target="_blank"></a>
+        <div>
+          <p class="title">EPISODE #129: Quarkus plugins: JBang!</a></p>
+          <div class="metatext">Streaming Date: May 15, 2023</div>
+          <div class="metatext">Guest(s): Ioannis Kanellos</div>
+        </div>
+      </div>
   
       <div class="card">
         <a href="https://youtube.com/live/p4g9HVcc6ro" target="_blank"></a>
@@ -974,7 +1247,7 @@
       </div>
   
       <div class="card">
-        <a href="https://www.youtube.com/watch?v=qDThVyuAMMk" target="_blank"></a>
+        <a href="https://youtube.com/live/R5texNJH4s4" target="_blank"></a>
         <div>
           <p class="title">EPISODE #41: Going to Funqy town</a></p>
           <div class="metatext">Streaming Date: March 24, 2021</div>
@@ -1405,6 +1678,14 @@
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
           
           
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
+          
+          
         </ul>
       </div>
     
@@ -1483,6 +1764,10 @@
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -1545,12 +1830,12 @@
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

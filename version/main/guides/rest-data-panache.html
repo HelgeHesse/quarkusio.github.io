@@ -9,7 +9,8 @@
   <title>Generating Jakarta REST resources with Panache - main - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/version/main/guides/rest-data-panache" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/version/main/guides/rest-data-panache" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/version/main/guides/rest-data-panache" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/version/main/guides/rest-data-panache" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/version/main/guides/rest-data-panache" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/version/main/guides/rest-data-panache" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/version/main/guides/rest-data-panache">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/version/main/guides/rest-data-panache">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/version/main/guides/rest-data-panache">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/version/main/guides/rest-data-panache">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" selected>Main - SNAPSHOT</option>
         
         
-        <option value="latest" >3.0 - Latest</option>
+        
+        <option value="latest" >3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" >2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,46 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Generating Jakarta REST resources with Panache </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#setting-up-rest-data-with-panache">Setting up REST Data with Panache</a>
-<ul class="sectlevel2">
-<li><a href="#hr-hibernate-orm">Hibernate ORM</a></li>
-<li><a href="#hr-hibernate-reactive">Hibernate Reactive</a></li>
-<li><a href="#hr-mongodb">MongoDB</a></li>
-</ul>
-</li>
-<li><a href="#hr-generating-resources">Generating resources</a>
-<ul class="sectlevel2">
-<li><a href="#panacheentityresource">PanacheEntityResource</a></li>
-<li><a href="#panacherepositoryresource">PanacheRepositoryResource</a></li>
-<li><a href="#panachemongoentityresource">PanacheMongoEntityResource</a></li>
-<li><a href="#panachemongorepositoryresource">PanacheMongoRepositoryResource</a></li>
-<li><a href="#the-generated-resource">The generated resource</a></li>
-</ul>
-</li>
-<li><a href="#resource-customisation">Resource customisation</a>
-<ul class="sectlevel2">
-<li><a href="#available-options">Available options</a></li>
-</ul>
-</li>
-<li><a href="#adding-additional-methods-to-the-generated-resource">Adding additional methods to the generated resource</a></li>
-<li><a href="#securing-endpoints">Securing endpoints</a></li>
-<li><a href="#query-parameters-to-list-entities">Query parameters to list entities</a></li>
-<li><a href="#complex-filtering-to-list-entities-using-namedquery">Complex filtering to list entities using @NamedQuery</a></li>
-<li><a href="#resource-method-beforeafter-listeners">Resource Method Before/After Listeners</a></li>
-<li><a href="#response-body-examples">Response body examples</a>
-<ul class="sectlevel2">
-<li><a href="#get-people1">GET /people/1</a></li>
-<li><a href="#get-peoplepage0size2">GET /people?page=0&amp;size=2</a></li>
-</ul>
-</li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Generating Jakarta REST resources with Panache </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -265,7 +248,7 @@ Please, check out the next compatibility table to use the right one according to
 <p>A JDBC driver extension (<code>quarkus-jdbc-postgresql</code>, <code>quarkus-jdbc-h2</code>, <code>quarkus-jdbc-mariadb</code>, &#8230;&#8203;)</p>
 </li>
 <li>
-<p>One of the RESTEasy JSON serialization extensions (the extension supports both RESTEasy Classic and RESTEasy Reactive)</p>
+<p>One of the RESTEasy JSON serialization extensions (the extension supports both Quarkus REST (formerly RESTEasy Reactive) and RESTEasy Classic)</p>
 </li>
 </ul>
 </div>
@@ -284,10 +267,10 @@ Please, check out the next compatibility table to use the right one according to
     &lt;artifactId&gt;quarkus-jdbc-postgresql&lt;/artifactId&gt;
 &lt;/dependency&gt;
 
-&lt;!-- Use this if you are using RESTEasy Reactive --&gt;
+&lt;!-- Use this if you are using Quarkus REST --&gt;
 &lt;dependency&gt;
     &lt;groupId&gt;io.quarkus&lt;/groupId&gt;
-    &lt;artifactId&gt;quarkus-resteasy-reactive-jackson&lt;/artifactId&gt;
+    &lt;artifactId&gt;quarkus-rest-jackson&lt;/artifactId&gt;
 &lt;/dependency&gt;
 
 &lt;!-- Use this if you are going to use RESTEasy Classic --&gt;
@@ -305,8 +288,8 @@ Please, check out the next compatibility table to use the right one according to
 <pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.quarkus:quarkus-hibernate-orm-rest-data-panache")
 implementation("io.quarkus:quarkus-jdbc-postgresql")
 
-// Use this if you are using RESTEasy Reactive
-implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
+// Use this if you are using Quarkus REST
+implementation("io.quarkus:quarkus-rest-jackson")
 
 // Use this if you are going to use RESTEasy Classic
 // implementation("io.quarkus:quarkus-resteasy-jackson")</code></pre>
@@ -323,7 +306,7 @@ implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
 </ul>
 </div>
 <div class="paragraph">
-<p>To see the Hibernate ORM REST Data with Panache in action, you can check out the <a href="https://github.com/quarkusio/quarkus-quickstarts/tree/main/hibernate-orm-rest-data-panache-quickstart">hibernate-orm-rest-data-panache-quickstart</a> quickstart.</p>
+<p>To see the Hibernate ORM REST Data with Panache in action, you can check out the <a href="https://github.com/quarkusio/quarkus-quickstarts/tree/development/hibernate-orm-rest-data-panache-quickstart">hibernate-orm-rest-data-panache-quickstart</a> quickstart.</p>
 </div>
 </div>
 <div class="sect2">
@@ -341,7 +324,7 @@ implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
 <p>A Vert.x reactive database driver extension (<code>quarkus-reactive-pg-client</code>, <code>quarkus-reactive-mysql-client</code>, &#8230;&#8203;)</p>
 </li>
 <li>
-<p>One of the RESTEasy Reactive serialization extensions (<code>quarkus-resteasy-reactive-jsonb</code>, <code>quarkus-resteasy-reactive-jackson</code>, &#8230;&#8203;)</p>
+<p>One of the Quarkus REST serialization extensions (<code>quarkus-rest-jsonb</code>, <code>quarkus-rest-jackson</code>, &#8230;&#8203;)</p>
 </li>
 </ul>
 </div>
@@ -359,10 +342,10 @@ implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
         &lt;groupId&gt;io.quarkus&lt;/groupId&gt;
         &lt;artifactId&gt;quarkus-reactive-pg-client&lt;/artifactId&gt;
     &lt;/dependency&gt;
-   &lt;!-- Use this if you are using RESTEasy Reactive Jackson for serialization --&gt;
+   &lt;!-- Use this if you are using REST Jackson for serialization --&gt;
     &lt;dependency&gt;
         &lt;groupId&gt;io.quarkus&lt;/groupId&gt;
-        &lt;artifactId&gt;quarkus-resteasy-reactive-jackson&lt;/artifactId&gt;
+        &lt;artifactId&gt;quarkus-rest-jackson&lt;/artifactId&gt;
     &lt;/dependency&gt;
 &lt;/dependencies&gt;</code></pre>
 </div>
@@ -390,7 +373,7 @@ implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
 <p>MongoDB REST Data with Panache extension (<code>quarkus-mongodb-rest-data-panache</code>)</p>
 </li>
 <li>
-<p>One of the RESTEasy JSON serialization extensions (<code>quarkus-resteasy-reactive-jackson</code> or <code>quarkus-resteasy-reactive-jsonb</code>)</p>
+<p>One of the RESTEasy JSON serialization extensions (<code>quarkus-rest-jackson</code> or <code>quarkus-rest-jsonb</code>)</p>
 </li>
 </ul>
 </div>
@@ -405,10 +388,10 @@ implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
     &lt;artifactId&gt;quarkus-mongodb-rest-data-panache&lt;/artifactId&gt;
 &lt;/dependency&gt;
 
-&lt;!-- Use this if you are using RESTEasy Reactive --&gt;
+&lt;!-- Use this if you are using Quarkus REST --&gt;
 &lt;dependency&gt;
     &lt;groupId&gt;io.quarkus&lt;/groupId&gt;
-    &lt;artifactId&gt;quarkus-resteasy-reactive-jackson&lt;/artifactId&gt;
+    &lt;artifactId&gt;quarkus-rest-jackson&lt;/artifactId&gt;
 &lt;/dependency&gt;
 
 &lt;!-- Use this if you are going to use RESTEasy Classic --&gt;
@@ -425,8 +408,8 @@ implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.quarkus:quarkus-mongodb-rest-data-panache")
 
-// Use this if you are using RESTEasy Reactive
-implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
+// Use this if you are using Quarkus REST
+implementation("io.quarkus:quarkus-rest-jackson")
 
 // Use this if you are going to use RESTEasy Classic
 // implementation("io.quarkus:quarkus-resteasy-jackson")</code></pre>
@@ -1002,9 +985,169 @@ Here are a couple of examples of how a response body would look like for the <co
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="includeexclude-jakarta-rest-classes"><a class="anchor" href="#includeexclude-jakarta-rest-classes"></a>Include/Exclude Jakarta REST classes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="using-build-time-conditions"><a class="anchor" href="#using-build-time-conditions"></a>Using Build time conditions</h3>
+<div class="paragraph">
+<p>Quarkus enables the inclusion or exclusion of Jakarta REST Resources, Providers and Features directly thanks to build time conditions in the same that it does for CDI beans.
+Thus, the REST Data with Panache interfaces can be annotated with profile conditions (<code>@io.quarkus.arc.profile.IfBuildProfile</code> or <code>@io.quarkus.arc.profile.UnlessBuildProfile</code>) and/or with property conditions (<code>io.quarkus.arc.properties.IfBuildProperty</code> or <code>io.quarkus.arc.properties.UnlessBuildProperty</code>) to indicate to Quarkus at build time under which conditions the generated Jakarta REST classes should be included.</p>
+</div>
+<div class="paragraph">
+<p>In the following example, Quarkus will include the generated resource from the <code>PeopleResource</code> interface if and only if the build profile <code>app1</code> has been enabled.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@IfBuildProfile("app1")
+public interface PeopleResource extends PanacheEntityResource&lt;Person, Long&gt; {
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="using-a-runtime-property"><a class="anchor" href="#using-a-runtime-property"></a>Using a runtime property</h3>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+This option is only available when using the Quarkus REST Quarkus extension.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Quarkus can also conditionally disable the generated Jakarta REST Resources based on the value of runtime properties using the <code>@io.quarkus.resteasy.reactive.server.EndpointDisabled</code> annotation.</p>
+</div>
+<div class="paragraph">
+<p>In the following example, Quarkus will exclude the generated resource from the <code>PeopleResource</code> interface at runtime if the application has <code>some.property</code> configured to <code>"disable"</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EndpointDisabled(name = "some.property", stringValue = "disable")
+public interface PeopleResource extends PanacheEntityResource&lt;Person, Long&gt; {
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#setting-up-rest-data-with-panache">Setting up REST Data with Panache</a>
+<ul class="sectlevel2">
+<li><a href="#hr-hibernate-orm">Hibernate ORM</a></li>
+<li><a href="#hr-hibernate-reactive">Hibernate Reactive</a></li>
+<li><a href="#hr-mongodb">MongoDB</a></li>
+</ul>
+</li>
+<li><a href="#hr-generating-resources">Generating resources</a>
+<ul class="sectlevel2">
+<li><a href="#panacheentityresource">PanacheEntityResource</a></li>
+<li><a href="#panacherepositoryresource">PanacheRepositoryResource</a></li>
+<li><a href="#panachemongoentityresource">PanacheMongoEntityResource</a></li>
+<li><a href="#panachemongorepositoryresource">PanacheMongoRepositoryResource</a></li>
+<li><a href="#the-generated-resource">The generated resource</a></li>
+</ul>
+</li>
+<li><a href="#resource-customisation">Resource customisation</a>
+<ul class="sectlevel2">
+<li><a href="#available-options">Available options</a></li>
+</ul>
+</li>
+<li><a href="#adding-additional-methods-to-the-generated-resource">Adding additional methods to the generated resource</a></li>
+<li><a href="#securing-endpoints">Securing endpoints</a></li>
+<li><a href="#query-parameters-to-list-entities">Query parameters to list entities</a></li>
+<li><a href="#complex-filtering-to-list-entities-using-namedquery">Complex filtering to list entities using @NamedQuery</a></li>
+<li><a href="#resource-method-beforeafter-listeners">Resource Method Before/After Listeners</a></li>
+<li><a href="#response-body-examples">Response body examples</a>
+<ul class="sectlevel2">
+<li><a href="#get-people1">GET /people/1</a></li>
+<li><a href="#get-peoplepage0size2">GET /people?page=0&amp;size=2</a></li>
+</ul>
+</li>
+<li><a href="#includeexclude-jakarta-rest-classes">Include/Exclude Jakarta REST classes</a>
+<ul class="sectlevel2">
+<li><a href="#using-build-time-conditions">Using Build time conditions</a></li>
+<li><a href="#using-a-runtime-property">Using a runtime property</a></li>
+</ul>
+</li>
+</ul></div>
     </div>
   </div>
-</div>
+  <h2>Related content</h2>
+  <div class="grid-wrapper relations">
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same topics</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-orm-panache">Simplified Hibernate ORM with Panache</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-orm-panache-kotlin">Simplified Hibernate ORM with Panache and Kotlin</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/mongodb-panache">Simplified MongoDB with Panache</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/mongodb-panache-kotlin">Simplified MongoDB with Panache and Kotlin</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-orm">Using Hibernate ORM and Jakarta Persistence</a></li>
+      
+        
+        <li class="reference"><a href="/version/main/guides/datasource">Configure data sources in Quarkus</a></li>
+      
+        
+        <li class="howto"><a href="/version/main/guides/security-jpa">Quarkus Security with Jakarta Persistence</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-reactive-panache">Simplified Hibernate Reactive with Panache</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-search-orm-elasticsearch">Use Hibernate Search with Hibernate ORM and Elasticsearch/OpenSearch</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/security-jdbc">Using Security with JDBC</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/mongodb">Using the MongoDB Client</a></li>
+      
+        
+        <li class="reference"><a href="/version/main/guides/security-authorize-web-endpoints-reference">Authorization of web endpoints</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/elasticsearch">Connecting to an Elasticsearch cluster</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/elasticsearch-dev-services">Dev Services for Elasticsearch</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/redis-dev-services">Dev Services for Redis</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/rest-migration">Migrating to Quarkus REST (formerly RESTEasy Reactive)</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/reactive-sql-clients">Reactive SQL Clients</a></li>
+      
+        
+        <li class="reference"><a href="/version/main/guides/redis-reference">Redis Extension Reference Guide</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/resteasy">RESTEasy Classic</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-search-standalone-elasticsearch">Use Hibernate Search in Standalone mode with Elasticsearch/OpenSearch</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   </div>
 
@@ -1052,6 +1195,14 @@ Here are a couple of examples of how a response body would look like for the <co
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -1132,6 +1283,10 @@ Here are a couple of examples of how a response body would look like for the <co
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -1194,12 +1349,12 @@ Here are a couple of examples of how a response body would look like for the <co
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

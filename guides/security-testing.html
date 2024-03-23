@@ -9,7 +9,8 @@
   <title>Security Testing - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/guides/security-testing" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/guides/security-testing" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/guides/security-testing" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/guides/security-testing" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/guides/security-testing" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/guides/security-testing" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/guides/security-testing">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/guides/security-testing">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/guides/security-testing">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/guides/security-testing">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" >Main - SNAPSHOT</option>
         
         
-        <option value="latest" selected>3.0 - Latest</option>
+        
+        <option value="latest" selected>3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" >2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,22 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Security Testing </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#configuring-user-information">Configuring User Information</a></li>
-<li><a href="#testing-security">Test Security Extension</a>
-<ul class="sectlevel2">
-<li><a href="#mixing-security-tests">Mixing security tests</a></li>
-</ul>
-</li>
-<li><a href="#use-wiremock-for-integration-testing">Use Wiremock for Integration Testing</a></li>
-<li><a href="#references">References</a></li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Security Testing </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -273,7 +280,7 @@ disable authorization while also providing an identity to run the test under, wh
 identity to be present.</p>
 </div>
 <div class="paragraph">
-<p>See <a href="security-oidc-bearer-authentication-concept#integration-testing-security-annotation">OpenID Connect Bearer Token Integration testing</a>, <a href="security-oidc-code-flow-authentication-concept#integration-testing-security-annotation">OpenID Connect Authorization Code Flow Integration testing</a> and <a href="security-jwt#integration-testing-security-annotation">SmallRye JWT Integration testing</a> for more details about testing the endpoint code which depends on the injected <code>JsonWebToken</code>.</p>
+<p>See <a href="security-oidc-bearer-token-authentication#integration-testing-security-annotation">OpenID Connect Bearer Token Integration testing</a>, <a href="security-oidc-code-flow-authentication#integration-testing-security-annotation">OpenID Connect Authorization Code Flow Integration testing</a> and <a href="security-jwt#integration-testing-security-annotation">SmallRye JWT Integration testing</a> for more details about testing the endpoint code which depends on the injected <code>JsonWebToken</code>.</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -331,7 +338,7 @@ for example by setting <code>quarkus.http.auth.basic=true</code> or <code>%test.
 <div class="sectionbody">
 <div class="paragraph">
 <p>You can also use Wiremock to mock the authorization OAuth2 and OIDC services:
-See <a href="security-oauth2#integration-testing">OAuth2 Integration testing</a>, <a href="security-oidc-bearer-authentication-concept#integration-testing-wiremock">OpenID Connect Bearer Token Integration testing</a>, <a href="security-oidc-code-flow-authentication-concept#integration-testing-wiremock">OpenID Connect Authorization Code Flow Integration testing</a> and <a href="security-jwt#integration-testing-wiremock">SmallRye JWT Integration testing</a> for more details.</p>
+See <a href="security-oauth2#integration-testing">OAuth2 Integration testing</a>, <a href="security-oidc-bearer-token-authentication#integration-testing-wiremock">OpenID Connect Bearer Token Integration testing</a>, <a href="security-oidc-code-flow-authentication#integration-testing-wiremock">OpenID Connect Authorization Code Flow Integration testing</a> and <a href="security-jwt#integration-testing-wiremock">SmallRye JWT Integration testing</a> for more details.</p>
 </div>
 </div>
 </div>
@@ -341,15 +348,95 @@ See <a href="security-oauth2#integration-testing">OAuth2 Integration testing</a>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="security-overview-concept">Quarkus Security overview</a></p>
+<p><a href="security-overview">Quarkus Security overview</a></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#configuring-user-information">Configuring User Information</a></li>
+<li><a href="#testing-security">Test Security Extension</a>
+<ul class="sectlevel2">
+<li><a href="#mixing-security-tests">Mixing security tests</a></li>
+</ul>
+</li>
+<li><a href="#use-wiremock-for-integration-testing">Use Wiremock for Integration Testing</a></li>
+<li><a href="#references">References</a></li>
+</ul></div>
+    </div>
   </div>
-</div>
+  <h2>Related content</h2>
+  <div class="grid-wrapper relations">
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same topics</h3>
+      <ul class="related-content">
+      
+        
+        <li class="howto"><a href="/guides/security-openid-connect-dev-services">Dev Services and Dev UI for OpenID Connect (OIDC)</a></li>
+      
+        
+        <li class="concepts"><a href="/guides/security-authentication-mechanisms">Authentication mechanisms in Quarkus</a></li>
+      
+        
+        <li class="reference"><a href="/guides/security-authorize-web-endpoints-reference">Authorization of web endpoints</a></li>
+      
+        
+        <li class="concepts"><a href="/guides/security-basic-authentication">Basic authentication</a></li>
+      
+        
+        <li class="guide"><a href="/guides/security-jwt-build">Build, Sign and Encrypt JSON Web Tokens</a></li>
+      
+        
+        <li class="concepts"><a href="/guides/security-openid-connect-providers">Configuring Well-Known OpenID Connect Providers</a></li>
+      
+        
+        <li class="guide"><a href="/guides/continuous-testing">Continuous Testing</a></li>
+      
+        
+        <li class="guide"><a href="/guides/security-csrf-prevention">Cross-Site Request Forgery Prevention</a></li>
+      
+        
+        <li class="guide"><a href="/guides/amqp-dev-services">Dev Services for AMQP</a></li>
+      
+        
+        <li class="guide"><a href="/guides/apicurio-registry-dev-services">Dev Services for Apicurio Registry</a></li>
+      
+        
+        <li class="guide"><a href="/guides/databases-dev-services">Dev Services for Databases</a></li>
+      
+        
+        <li class="guide"><a href="/guides/elasticsearch-dev-services">Dev Services for Elasticsearch</a></li>
+      
+        
+        <li class="guide"><a href="/guides/infinispan-dev-services">Dev Services for Infinispan</a></li>
+      
+        
+        <li class="guide"><a href="/guides/kafka-dev-services">Dev Services for Kafka</a></li>
+      
+        
+        <li class="guide"><a href="/guides/kubernetes-dev-services">Dev Services for Kubernetes</a></li>
+      
+        
+        <li class="guide"><a href="/guides/pulsar-dev-services">Dev Services for Pulsar</a></li>
+      
+        
+        <li class="guide"><a href="/guides/rabbitmq-dev-services">Dev Services for RabbitMQ</a></li>
+      
+        
+        <li class="guide"><a href="/guides/redis-dev-services">Dev Services for Redis</a></li>
+      
+        
+        <li class="guide"><a href="/guides/dev-services">Dev Services Overview</a></li>
+      
+        
+        <li class="guide"><a href="/guides/dev-ui">Dev UI for extension developers</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   </div>
 
@@ -397,6 +484,14 @@ See <a href="security-oauth2#integration-testing">OAuth2 Integration testing</a>
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -477,6 +572,10 @@ See <a href="security-oauth2#integration-testing">OAuth2 Integration testing</a>
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -539,12 +638,12 @@ See <a href="security-oauth2#integration-testing">OAuth2 Integration testing</a>
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

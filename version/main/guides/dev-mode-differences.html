@@ -9,7 +9,8 @@
   <title>How dev mode differs from a production application - main - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/version/main/guides/dev-mode-differences" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/version/main/guides/dev-mode-differences" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/version/main/guides/dev-mode-differences" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/version/main/guides/dev-mode-differences" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/version/main/guides/dev-mode-differences" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/version/main/guides/dev-mode-differences" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/version/main/guides/dev-mode-differences">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/version/main/guides/dev-mode-differences">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/version/main/guides/dev-mode-differences">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/version/main/guides/dev-mode-differences">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" selected>Main - SNAPSHOT</option>
         
         
-        <option value="latest" >3.0 - Latest</option>
+        
+        <option value="latest" >3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" >2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,34 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">How dev mode differs from a production application </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#intro">Intro</a></li>
-<li><a href="#architectural-differences">Architectural differences</a></li>
-<li><a href="#dev-mode-features">Dev-mode features</a>
-<ul class="sectlevel2">
-<li><a href="#live-reload">Live reload</a></li>
-<li><a href="#dev-ui">Dev UI</a></li>
-<li><a href="#error-pages">Error pages</a></li>
-<li><a href="#database-import-scripts">Database import scripts</a></li>
-<li><a href="#dev-services">Dev Services</a></li>
-<li><a href="#swagger-ui">Swagger UI</a></li>
-<li><a href="#graphql-ui">GraphQL UI</a></li>
-<li><a href="#health-ui">Health UI</a></li>
-<li><a href="#mock-mailer">Mock mailer</a></li>
-<li><a href="#grpc">gRPC</a></li>
-<li><a href="#others">Others</a></li>
-</ul>
-</li>
-<li><a href="#performance-implications">Performance implications</a></li>
-<li><a href="#security-implications">Security implications</a></li>
-<li><a href="#native-executable">Native executable</a></li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">How dev mode differs from a production application </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -266,7 +261,7 @@ Examples of such operations are:</p>
 <div class="paragraph">
 <p>A new Dev UI has been implemented in Quarkus 3.x.
 Not all the features are available yet.
-You can still access the previous version of the Dev UI using: <a href="http://localhost:8080/q/dev-v1/" class="bare">http://localhost:8080/q/dev-v1/</a>.</p>
+You can still access the previous version of the Dev UI using: <a href="http://localhost:8080/q/dev-ui/" class="bare">http://localhost:8080/q/dev-ui/</a>.</p>
 </div>
 </td>
 </tr>
@@ -351,6 +346,20 @@ Thus, when running the production application, build time operations are not per
 Furthermore, the purpose built ClassLoader that comes with the <a href="maven-tooling#fast-jar">fast-jar</a> package type ensures that class lookup is done as fast as possible while also keeping
 the minimum amount of jars in memory.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Since optimal performance is never an objective of dev mode, in the interest of improving startup time, the JVM&#8217;s C2 compiler is disabled in dev mode.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -371,8 +380,100 @@ while also giving access to operations that could be destructive (either by expo
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#intro">Intro</a></li>
+<li><a href="#architectural-differences">Architectural differences</a></li>
+<li><a href="#dev-mode-features">Dev-mode features</a>
+<ul class="sectlevel2">
+<li><a href="#live-reload">Live reload</a></li>
+<li><a href="#dev-ui">Dev UI</a></li>
+<li><a href="#error-pages">Error pages</a></li>
+<li><a href="#database-import-scripts">Database import scripts</a></li>
+<li><a href="#dev-services">Dev Services</a></li>
+<li><a href="#swagger-ui">Swagger UI</a></li>
+<li><a href="#graphql-ui">GraphQL UI</a></li>
+<li><a href="#health-ui">Health UI</a></li>
+<li><a href="#mock-mailer">Mock mailer</a></li>
+<li><a href="#grpc">gRPC</a></li>
+<li><a href="#others">Others</a></li>
+</ul>
+</li>
+<li><a href="#performance-implications">Performance implications</a></li>
+<li><a href="#security-implications">Security implications</a></li>
+<li><a href="#native-executable">Native executable</a></li>
+</ul></div>
+    </div>
   </div>
-</div>
+  <h2>Related content</h2>
+  <div class="grid-wrapper relations">
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same topics</h3>
+      <ul class="related-content">
+      
+        
+        <li class="reference"><a href="/version/main/guides/class-loading-reference">Class Loading Reference</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/continuous-testing">Continuous Testing</a></li>
+      
+        
+        <li class="howto"><a href="/version/main/guides/doc-contribute-docs-howto">Contribute to Quarkus documentation</a></li>
+      
+        
+        <li class="tutorial"><a href="/version/main/guides/doc-create-tutorial">Creating a tutorial</a></li>
+      
+        
+        <li class="howto"><a href="/version/main/guides/security-openid-connect-dev-services">Dev Services and Dev UI for OpenID Connect (OIDC)</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/amqp-dev-services">Dev Services for AMQP</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/apicurio-registry-dev-services">Dev Services for Apicurio Registry</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/databases-dev-services">Dev Services for Databases</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/elasticsearch-dev-services">Dev Services for Elasticsearch</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/infinispan-dev-services">Dev Services for Infinispan</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka-dev-services">Dev Services for Kafka</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kubernetes-dev-services">Dev Services for Kubernetes</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/pulsar-dev-services">Dev Services for Pulsar</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/rabbitmq-dev-services">Dev Services for RabbitMQ</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/redis-dev-services">Dev Services for Redis</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/dev-services">Dev Services Overview</a></li>
+      
+        
+        <li class="concepts"><a href="/version/main/guides/duplicated-context">Duplicated context, context locals, asynchronous processing and propagation</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka-dev-ui">Kafka Dev UI</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/performance-measure">Measuring Performance</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/platform">Platform</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   </div>
 
@@ -420,6 +521,14 @@ while also giving access to operations that could be destructive (either by expo
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -500,6 +609,10 @@ while also giving access to operations that could be destructive (either by expo
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -562,12 +675,12 @@ while also giving access to operations that could be destructive (either by expo
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -9,7 +9,8 @@
   <title>Creating Your First Application - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/guides/getting-started" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/guides/getting-started" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/guides/getting-started" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/guides/getting-started" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/guides/getting-started" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/guides/getting-started" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/guides/getting-started">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/guides/getting-started">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/guides/getting-started">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/guides/getting-started">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" >Main - SNAPSHOT</option>
         
         
-        <option value="latest" selected>3.0 - Latest</option>
+        
+        <option value="latest" selected>3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" >2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,35 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Creating Your First Application </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#prerequisites">1. Prerequisites</a></li>
-<li><a href="#architecture">2. Architecture</a></li>
-<li><a href="#solution">3. Solution</a></li>
-<li><a href="#bootstrapping-the-project">4. Bootstrapping the project</a>
-<ul class="sectlevel2">
-<li><a href="#the-jakarta-rest-resources">4.1. The Jakarta REST resources</a></li>
-</ul>
-</li>
-<li><a href="#running-the-application">5. Running the application</a></li>
-<li><a href="#using-injection">6. Using injection</a></li>
-<li><a href="#development-mode">7. Development Mode</a></li>
-<li><a href="#testing">8. Testing</a></li>
-<li><a href="#working-with-multi-module-project-or-external-modules">9. Working with multi-module project or external modules</a></li>
-<li><a href="#packaging-and-run-the-application">10. Packaging and run the application</a></li>
-<li><a href="#banner">11. Configuring the banner</a></li>
-<li><a href="#non-application-endpoints">12. Non Application endpoints</a>
-<ul class="sectlevel2">
-<li><a href="#info-endpoint">12.1. Info endpoint</a></li>
-</ul>
-</li>
-<li><a href="#whats-next">13. What&#8217;s next?</a></li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Creating Your First Application </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -230,10 +224,10 @@ This guide covers:</p>
 <p>An IDE</p>
 </li>
 <li>
-<p>JDK 11+ installed with <code>JAVA_HOME</code> configured appropriately</p>
+<p>JDK 17+ installed with <code>JAVA_HOME</code> configured appropriately</p>
 </li>
 <li>
-<p>Apache Maven 3.8.8</p>
+<p>Apache Maven 3.9.6</p>
 </li>
 <li>
 <p>Optionally the <a href="cli-tooling">Quarkus CLI</a> if you want to use it</p>
@@ -304,9 +298,6 @@ dependency injection, this endpoint uses a <code>greeting</code> bean.</p>
 <div class="paragraph">
 <p>The easiest way to create a new Quarkus project is to open a terminal and run the following command:</p>
 </div>
-<div class="paragraph">
-<p>For Linux &amp; MacOS users</p>
-</div>
 <div class="sidebarblock primary asciidoc-tabs-sync-cli">
 <div class="content">
 <div class="title">CLI</div>
@@ -321,7 +312,7 @@ cd getting-started</code></pre>
 <p>To create a Gradle project, add the <code>--gradle</code> or <code>--gradle-kotlin-dsl</code> option.</p>
 </div>
 <div class="paragraph">
-<p><em>For more information about how to install the Quarkus CLI and use it, please refer to <a href="cli-tooling">the Quarkus CLI guide</a>.</em></p>
+<p>For more information about how to install and use the Quarkus CLI, see the <a href="cli-tooling">Quarkus CLI</a> guide.</p>
 </div>
 </div>
 </div>
@@ -330,7 +321,7 @@ cd getting-started</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:3.0.3.Final:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:3.8.3:create \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=getting-started \
     -Dextensions='resteasy-reactive'
@@ -348,10 +339,10 @@ cd getting-started</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p>If using cmd , (don&#8217;t use backward slash <code>\</code> and put everything on the same line)</p>
+<p>If using cmd, (don&#8217;t use backward slash <code>\</code> and put everything on the same line)</p>
 </li>
 <li>
-<p>If using Powershell , wrap <code>-D</code> parameters in double quotes e.g. <code>"-DprojectArtifactId=getting-started"</code></p>
+<p>If using Powershell, wrap <code>-D</code> parameters in double quotes e.g. <code>"-DprojectArtifactId=getting-started"</code></p>
 </li>
 </ul>
 </div>
@@ -845,7 +836,7 @@ As a result, most of the Quarkus extensions will not work properly if this build
 </div>
 <div class="paragraph">
 <p>However, when working with a multi-module project, be sure to read the <code>Working with multi-module projects</code> section of the
-<a href="maven-tooling#multi-module-maven">Maven</a> or <a href="gradle-tooling#multi-module-maven">Gradle</a> guides.</p>
+<a href="maven-tooling#multi-module-maven">Maven</a> or <a href="gradle-tooling#multi-module-gradle">Gradle</a> guides.</p>
 </div>
 <div class="paragraph">
 <p>If you plan to use external modules (for example, an external library for all your domain objects),
@@ -940,7 +931,7 @@ Furthermore, users can supply a custom banner by placing the banner file in <cod
 <div class="sectionbody">
 <div class="paragraph">
 <p>Various Quarkus extensions contribute non-application endpoints that provide different kinds of information about the application.
-Examples of such extensions are the <a href="smallrye-health">health</a>, <a href="micrometer">metrics</a>, <a href="openapi-swaggerui">OpenAPI</a> and info extensions.</p>
+Examples of such extensions are the <a href="smallrye-health">health</a>, <a href="telemetry-micrometer">metrics</a>, <a href="openapi-swaggerui">OpenAPI</a> and info extensions.</p>
 </div>
 <div class="paragraph">
 <p>These non application endpoints are normally accessible under the <code>/q</code> prefix like so:</p>
@@ -969,12 +960,15 @@ Examples of such extensions are the <a href="smallrye-health">health</a>, <a hre
 <div class="paragraph">
 <p>If the application contains the <code>quarkus-info</code> extension, then Quarkus will by default expose the <code>/q/info</code> endpoint which provides information about the build, java version, version control, and operating system. The level of detail of the exposed information is configurable.</p>
 </div>
+<div class="paragraph">
+<p>All CDI beans implementing the <code>InfoContributor</code> will be picked up and their data will be append to the endpoint.</p>
+</div>
 <div class="sect3">
 <h4 id="configuration-reference"><a class="anchor" href="#configuration-reference"></a>12.1.1. Configuration Reference</h4>
-<div class="paragraph configuration-legend">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime <input type="search" id="config-search-0" placeholder="FILTER CONFIGURATION" disabled></p>
 </div>
-<table class="tableblock frame-all grid-all stretch configuration-reference searchable">
+<table class="tableblock frame-all grid-all stretch configuration-reference searchable configuration-reference-all-rows">
 <colgroup>
 <col style="width: 80%;">
 <col style="width: 10%;">
@@ -986,140 +980,164 @@ Examples of such extensions are the <a href="smallrye-health">health</a>, <a hre
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus.info.enabled"></a><code><a href="#quarkus-info_quarkus.info.enabled">quarkus.info.enabled</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus-info-enabled"></a><code><a href="#quarkus-info_quarkus-info-enabled">quarkus.info.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-1" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Whether the info endpoint will be enabled</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-5531">QUARKUS_INFO_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5531" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-5886">QUARKUS_INFO_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5886" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus.info.path"></a><code><a href="#quarkus-info_quarkus.info.path">quarkus.info.path</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus-info-path"></a><code><a href="#quarkus-info_quarkus-info-path">quarkus.info.path</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-2" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The path under which the info endpoint will be located</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-5532">QUARKUS_INFO_PATH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5532" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-5887">QUARKUS_INFO_PATH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5887" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>info</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus.info.git.enabled"></a><code><a href="#quarkus-info_quarkus.info.git.enabled">quarkus.info.git.enabled</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus-info-git-enabled"></a><code><a href="#quarkus-info_quarkus-info-git-enabled">quarkus.info.git.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-3" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Whether git info will be included in the info endpoint</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-5533">QUARKUS_INFO_GIT_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5533" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-5888">QUARKUS_INFO_GIT_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5888" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus.info.git.mode"></a><code><a href="#quarkus-info_quarkus.info.git.mode">quarkus.info.git.mode</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus-info-git-mode"></a><code><a href="#quarkus-info_quarkus-info-git-mode">quarkus.info.git.mode</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-4" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Controls how much information is present in the git section</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-5534">QUARKUS_INFO_GIT_MODE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5534" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-5889">QUARKUS_INFO_GIT_MODE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5889" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><code>standard</code>, <code>full</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>standard</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus.info.build.enabled"></a><code><a href="#quarkus-info_quarkus.info.build.enabled">quarkus.info.build.enabled</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus-info-build-enabled"></a><code><a href="#quarkus-info_quarkus-info-build-enabled">quarkus.info.build.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-5" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Whether build info will be included in the info endpoint</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-5535">QUARKUS_INFO_BUILD_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5535" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-5890">QUARKUS_INFO_BUILD_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5890" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus.info.os.enabled"></a><code><a href="#quarkus-info_quarkus.info.os.enabled">quarkus.info.os.enabled</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus-info-os-enabled"></a><code><a href="#quarkus-info_quarkus-info-os-enabled">quarkus.info.os.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-6" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Whether os info will be included in the info endpoint</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-5536">QUARKUS_INFO_OS_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5536" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-5891">QUARKUS_INFO_OS_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5891" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus.info.java.enabled"></a><code><a href="#quarkus-info_quarkus.info.java.enabled">quarkus.info.java.enabled</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus-info-java-enabled"></a><code><a href="#quarkus-info_quarkus-info-java-enabled">quarkus.info.java.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-7" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Whether java info will be included in the info endpoint</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-5537">QUARKUS_INFO_JAVA_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5537" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-5892">QUARKUS_INFO_JAVA_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5892" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus.info.build-additional-properties"></a><code><a href="#quarkus-info_quarkus.info.build-additional-properties">quarkus.info.build</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-info_quarkus-info-build-additional-properties"></a><code><a href="#quarkus-info_quarkus-info-build-additional-properties">quarkus.info.build</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-8" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Additional properties to be added to the build section</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-5538">QUARKUS_INFO_BUILD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5538" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-5893">QUARKUS_INFO_BUILD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-5893" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>Map&lt;String,String&gt;</code></p></td>
 <td class="tableblock halign-left valign-middle"></td>
@@ -1136,8 +1154,9 @@ Examples of such extensions are the <a href="smallrye-health">health</a>, <a hre
 <div class="paragraph">
 <p>This guide covered the creation of an application using Quarkus.
 However, there is much more.
-We recommend continuing the journey with the <a href="building-native-image">building a native executable guide</a>, where you learn about creating a native executable and packaging it in a container.
-If you are interested in reactive, we recommend the <a href="getting-started-reactive">Getting Started with Reactive guide</a>, where you can see how to implement reactive applications with Quarkus.</p>
+We recommend continuing the journey by creating <a href="getting-started-dev-services">your second Quarkus application</a>, with dev services and persistence.
+You can learn about creating a native executable and packaging it in a container with the <a href="building-native-image">building a native executable guide</a>.
+If you are interested in reactive, we recommend the <a href="getting-started-reactive">getting started with reactive guide</a>, where you can see how to implement reactive applications with Quarkus.</p>
 </div>
 <div class="paragraph">
 <p>In addition, the <a href="tooling">tooling guide</a> document explains how to:</p>
@@ -1161,8 +1180,50 @@ If you are interested in reactive, we recommend the <a href="getting-started-rea
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#prerequisites">1. Prerequisites</a></li>
+<li><a href="#architecture">2. Architecture</a></li>
+<li><a href="#solution">3. Solution</a></li>
+<li><a href="#bootstrapping-the-project">4. Bootstrapping the project</a>
+<ul class="sectlevel2">
+<li><a href="#the-jakarta-rest-resources">4.1. The Jakarta REST resources</a></li>
+</ul>
+</li>
+<li><a href="#running-the-application">5. Running the application</a></li>
+<li><a href="#using-injection">6. Using injection</a></li>
+<li><a href="#development-mode">7. Development Mode</a></li>
+<li><a href="#testing">8. Testing</a></li>
+<li><a href="#working-with-multi-module-project-or-external-modules">9. Working with multi-module project or external modules</a></li>
+<li><a href="#packaging-and-run-the-application">10. Packaging and run the application</a></li>
+<li><a href="#banner">11. Configuring the banner</a></li>
+<li><a href="#non-application-endpoints">12. Non Application endpoints</a>
+<ul class="sectlevel2">
+<li><a href="#info-endpoint">12.1. Info endpoint</a></li>
+</ul>
+</li>
+<li><a href="#whats-next">13. What&#8217;s next?</a></li>
+</ul></div>
+    </div>
   </div>
-</div>
+  <h2>Related content</h2>
+  <div class="grid-wrapper relations">
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same topics</h3>
+      <ul class="related-content">
+      
+        
+        <li class="tutorial"><a href="/guides/getting-started-reactive">Getting Started With Reactive</a></li>
+      
+        
+        <li class="guide"><a href="/guides/getting-started-testing">Testing Your Application</a></li>
+      
+        
+        <li class="tutorial"><a href="/guides/getting-started-dev-services">Your second Quarkus application</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   </div>
 
@@ -1210,6 +1271,14 @@ If you are interested in reactive, we recommend the <a href="getting-started-rea
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -1290,6 +1359,10 @@ If you are interested in reactive, we recommend the <a href="getting-started-rea
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -1352,12 +1425,12 @@ If you are interested in reactive, we recommend the <a href="getting-started-rea
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

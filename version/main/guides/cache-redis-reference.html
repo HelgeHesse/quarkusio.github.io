@@ -9,7 +9,8 @@
   <title>Redis Cache - main - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/version/main/guides/cache-redis-reference" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/version/main/guides/cache-redis-reference" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/version/main/guides/cache-redis-reference" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/version/main/guides/cache-redis-reference" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/version/main/guides/cache-redis-reference" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/version/main/guides/cache-redis-reference" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/version/main/guides/cache-redis-reference">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/version/main/guides/cache-redis-reference">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/version/main/guides/cache-redis-reference">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/version/main/guides/cache-redis-reference">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,7 +147,23 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" selected>Main - SNAPSHOT</option>
+        
+        
+        
+        <option value="latest" >3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
         
         
         
@@ -156,19 +175,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Redis Cache </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#redis-as-cache-backend">Redis as cache backend</a></li>
-<li><a href="#use-the-redis-backend">Use the Redis backend</a></li>
-<li><a href="#redis-cache-configuration-reference">Configure the Redis backend</a></li>
-<li><a href="#configure-the-redis-key">Configure the Redis key</a></li>
-<li><a href="#enable-optimistic-locking">Enable optimistic locking</a></li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Redis Cache </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -317,23 +327,23 @@ quarkus.cache.redis.expensiveResourceCache.value-type=org.acme.Supes</code></pre
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties"># Default configuration
-quarkus.cache.redis.ttl=10s
+quarkus.cache.redis.expire-after-write=10s
 
 # Configuration for `expensiveResourceCache`
-quarkus.cache.redis.expensiveResourceCache.ttl=1h</code></pre>
+quarkus.cache.redis.expensiveResourceCache.expire-after-write=1h</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>If the <code>ttl</code> is not configured, the entry won&#8217;t be evicted.
+<p>If the <code>expire-after-write</code> is not configured, the entry won&#8217;t be evicted.
 You would need to invalidate the values using the <code>@CacheInvalidateAll</code> or <code>@CacheInvalidate</code> annotations.</p>
 </div>
 <div class="paragraph">
 <p>The following table lists the supported properties:</p>
 </div>
-<div class="paragraph configuration-legend">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime <input type="search" id="config-search-0" placeholder="FILTER CONFIGURATION" disabled></p>
 </div>
-<table class="tableblock frame-all grid-all stretch configuration-reference searchable">
+<table class="tableblock frame-all grid-all stretch configuration-reference searchable configuration-reference-all-rows">
 <colgroup>
 <col style="width: 80%;">
 <col style="width: 10%;">
@@ -345,196 +355,271 @@ You would need to invalidate the values using the <code>@CacheInvalidateAll</cod
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-cache-redis_quarkus.cache.redis.client-name"></a><code><a href="#quarkus-cache-redis_quarkus.cache.redis.client-name">quarkus.cache.redis.client-name</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-cache-redis_quarkus-cache-redis-client-name"></a><code><a href="#quarkus-cache-redis_quarkus-cache-redis-client-name">quarkus.cache.redis.client-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-1" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The name of the named Redis client to be used for communicating with Redis. If not set, use the default Redis client.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25066">QUARKUS_CACHE_REDIS_CLIENT_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25066" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-42249">QUARKUS_CACHE_REDIS_CLIENT_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42249" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-cache-redis_quarkus.cache.redis.value-type"></a><code><a href="#quarkus-cache-redis_quarkus.cache.redis.value-type">quarkus.cache.redis.value-type</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-cache-redis_quarkus-cache-redis-value-type"></a><code><a href="#quarkus-cache-redis_quarkus-cache-redis-value-type">quarkus.cache.redis.value-type</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-2" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The default type of the value stored in the cache.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25067">QUARKUS_CACHE_REDIS_VALUE_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25067" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-42250">QUARKUS_CACHE_REDIS_VALUE_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42250" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-cache-redis_quarkus.cache.redis.key-type"></a><code><a href="#quarkus-cache-redis_quarkus.cache.redis.key-type">quarkus.cache.redis.key-type</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-cache-redis_quarkus-cache-redis-key-type"></a><code><a href="#quarkus-cache-redis_quarkus-cache-redis-key-type">quarkus.cache.redis.key-type</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-3" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The key type, <code>String</code> by default.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25068">QUARKUS_CACHE_REDIS_KEY_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25068" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-42251">QUARKUS_CACHE_REDIS_KEY_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42251" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a id="quarkus-cache-redis_quarkus.cache.redis.ttl"></a><code><a href="#quarkus-cache-redis_quarkus.cache.redis.ttl">quarkus.cache.redis.ttl</a></code></p>
+<p><a id="quarkus-cache-redis_quarkus-cache-redis-expire-after-write"></a><code><a href="#quarkus-cache-redis_quarkus-cache-redis-expire-after-write">quarkus.cache.redis.expire-after-write</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-4" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
-<p>The default time to live of the item stored in the cache</p>
+<p>Specifies that each entry should be automatically removed from the cache once a fixed duration has elapsed after the entry&#8217;s creation, or the most recent replacement of its value.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25069">QUARKUS_CACHE_REDIS_TTL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25069" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-42252">QUARKUS_CACHE_REDIS_EXPIRE_AFTER_WRITE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42252" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-cache-redis" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-{summaryTableId}"><span class="icon"><i class="fa fa-question-circle" title="More information about the Duration format"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a id="quarkus-cache-redis_quarkus.cache.redis.prefix"></a><code><a href="#quarkus-cache-redis_quarkus.cache.redis.prefix">quarkus.cache.redis.prefix</a></code></p>
+<p><a id="quarkus-cache-redis_quarkus-cache-redis-expire-after-access"></a><code><a href="#quarkus-cache-redis_quarkus-cache-redis-expire-after-access">quarkus.cache.redis.expire-after-access</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-5" class="openblock description description-collapsed">
+<div class="content">
+<div class="paragraph">
+<p>Specifies that each entry should be automatically removed from the cache once a fixed duration has elapsed after the last access of its value.</p>
+</div>
+<div class="paragraph">
+<p>Environment variable: <code id="env-var-42253">QUARKUS_CACHE_REDIS_EXPIRE_AFTER_ACCESS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42253" title="Copy to clipboard" do-not-collapse="true"></button></p>
+</div>
+</div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
+  <a href="#duration-note-anchor-{summaryTableId}"><span class="icon"><i class="fa fa-question-circle" title="More information about the Duration format"></i></span></a></p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-cache-redis_quarkus-cache-redis-prefix"></a><code><a href="#quarkus-cache-redis_quarkus-cache-redis-prefix">quarkus.cache.redis.prefix</a></code></p>
+</div>
+<div id="conf-collapsible-desc-6" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>the key prefix allowing to identify the keys belonging to the cache. If not set, use "cache:$cache-name"</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25070">QUARKUS_CACHE_REDIS_PREFIX</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25070" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-42254">QUARKUS_CACHE_REDIS_PREFIX</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42254" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a id="quarkus-cache-redis_quarkus.cache.redis.use-optimistic-locking"></a><code><a href="#quarkus-cache-redis_quarkus.cache.redis.use-optimistic-locking">quarkus.cache.redis.use-optimistic-locking</a></code></p>
+<p><a id="quarkus-cache-redis_quarkus-cache-redis-use-optimistic-locking"></a><code><a href="#quarkus-cache-redis_quarkus-cache-redis-use-optimistic-locking">quarkus.cache.redis.use-optimistic-locking</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-7" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Whether the access to the cache should be using optimistic locking. See <a href="https://redis.io/docs/manual/transactions/#optimistic-locking-using-check-and-set">Redis Optimistic Locking</a> for details. Default is <code>false</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25071">QUARKUS_CACHE_REDIS_USE_OPTIMISTIC_LOCKING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25071" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-42255">QUARKUS_CACHE_REDIS_USE_OPTIMISTIC_LOCKING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42255" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
 <tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><a id="quarkus-cache-redis_quarkus.cache.redis.caches-config-additional-configuration-applied-to-a-specific-redis-cache-highest-precedence"></a><a href="#quarkus-cache-redis_quarkus.cache.redis.caches-config-additional-configuration-applied-to-a-specific-redis-cache-highest-precedence">Additional configuration applied to a specific Redis cache (highest precedence)</a></p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><a id="quarkus-cache-redis_quarkus-cache-redis-caches-config-additional-configuration-applied-to-a-specific-redis-cache-highest-precedence"></a><a href="#quarkus-cache-redis_quarkus-cache-redis-caches-config-additional-configuration-applied-to-a-specific-redis-cache-highest-precedence">Additional configuration applied to a specific Redis cache (highest precedence)</a></p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-cache-redis_quarkus.cache.redis.-cache-name-.value-type"></a><code><a href="#quarkus-cache-redis_quarkus.cache.redis.-cache-name-.value-type">quarkus.cache.redis."cache-name".value-type</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-cache-redis_quarkus-cache-redis-cache-name-value-type"></a><code><a href="#quarkus-cache-redis_quarkus-cache-redis-cache-name-value-type">quarkus.cache.redis."cache-name".value-type</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-8" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The default type of the value stored in the cache.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25072">QUARKUS_CACHE_REDIS__CACHE_NAME__VALUE_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25072" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-42256">QUARKUS_CACHE_REDIS__CACHE_NAME__VALUE_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42256" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-cache-redis_quarkus.cache.redis.-cache-name-.key-type"></a><code><a href="#quarkus-cache-redis_quarkus.cache.redis.-cache-name-.key-type">quarkus.cache.redis."cache-name".key-type</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-cache-redis_quarkus-cache-redis-cache-name-key-type"></a><code><a href="#quarkus-cache-redis_quarkus-cache-redis-cache-name-key-type">quarkus.cache.redis."cache-name".key-type</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-9" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The key type, <code>String</code> by default.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25073">QUARKUS_CACHE_REDIS__CACHE_NAME__KEY_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25073" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-42257">QUARKUS_CACHE_REDIS__CACHE_NAME__KEY_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42257" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a id="quarkus-cache-redis_quarkus.cache.redis.-cache-name-.ttl"></a><code><a href="#quarkus-cache-redis_quarkus.cache.redis.-cache-name-.ttl">quarkus.cache.redis."cache-name".ttl</a></code></p>
+<p><a id="quarkus-cache-redis_quarkus-cache-redis-cache-name-expire-after-write"></a><code><a href="#quarkus-cache-redis_quarkus-cache-redis-cache-name-expire-after-write">quarkus.cache.redis."cache-name".expire-after-write</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-10" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
-<p>The default time to live of the item stored in the cache</p>
+<p>Specifies that each entry should be automatically removed from the cache once a fixed duration has elapsed after the entry&#8217;s creation, or the most recent replacement of its value.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25074">QUARKUS_CACHE_REDIS__CACHE_NAME__TTL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25074" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-42258">QUARKUS_CACHE_REDIS__CACHE_NAME__EXPIRE_AFTER_WRITE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42258" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-cache-redis" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-{summaryTableId}"><span class="icon"><i class="fa fa-question-circle" title="More information about the Duration format"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a id="quarkus-cache-redis_quarkus.cache.redis.-cache-name-.prefix"></a><code><a href="#quarkus-cache-redis_quarkus.cache.redis.-cache-name-.prefix">quarkus.cache.redis."cache-name".prefix</a></code></p>
+<p><a id="quarkus-cache-redis_quarkus-cache-redis-cache-name-expire-after-access"></a><code><a href="#quarkus-cache-redis_quarkus-cache-redis-cache-name-expire-after-access">quarkus.cache.redis."cache-name".expire-after-access</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-11" class="openblock description description-collapsed">
+<div class="content">
+<div class="paragraph">
+<p>Specifies that each entry should be automatically removed from the cache once a fixed duration has elapsed after the last access of its value.</p>
+</div>
+<div class="paragraph">
+<p>Environment variable: <code id="env-var-42259">QUARKUS_CACHE_REDIS__CACHE_NAME__EXPIRE_AFTER_ACCESS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42259" title="Copy to clipboard" do-not-collapse="true"></button></p>
+</div>
+</div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
+  <a href="#duration-note-anchor-{summaryTableId}"><span class="icon"><i class="fa fa-question-circle" title="More information about the Duration format"></i></span></a></p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-cache-redis_quarkus-cache-redis-cache-name-prefix"></a><code><a href="#quarkus-cache-redis_quarkus-cache-redis-cache-name-prefix">quarkus.cache.redis."cache-name".prefix</a></code></p>
+</div>
+<div id="conf-collapsible-desc-12" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>the key prefix allowing to identify the keys belonging to the cache. If not set, use "cache:$cache-name"</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25075">QUARKUS_CACHE_REDIS__CACHE_NAME__PREFIX</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25075" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-42260">QUARKUS_CACHE_REDIS__CACHE_NAME__PREFIX</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42260" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a id="quarkus-cache-redis_quarkus.cache.redis.-cache-name-.use-optimistic-locking"></a><code><a href="#quarkus-cache-redis_quarkus.cache.redis.-cache-name-.use-optimistic-locking">quarkus.cache.redis."cache-name".use-optimistic-locking</a></code></p>
+<p><a id="quarkus-cache-redis_quarkus-cache-redis-cache-name-use-optimistic-locking"></a><code><a href="#quarkus-cache-redis_quarkus-cache-redis-cache-name-use-optimistic-locking">quarkus.cache.redis."cache-name".use-optimistic-locking</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-13" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Whether the access to the cache should be using optimistic locking. See <a href="https://redis.io/docs/manual/transactions/#optimistic-locking-using-check-and-set">Redis Optimistic Locking</a> for details. Default is <code>false</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25076">QUARKUS_CACHE_REDIS__CACHE_NAME__USE_OPTIMISTIC_LOCKING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25076" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-42261">QUARKUS_CACHE_REDIS__CACHE_NAME__USE_OPTIMISTIC_LOCKING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42261" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
@@ -550,13 +635,34 @@ You would need to invalidate the values using the <code>@CacheInvalidateAll</cod
 <td class="content">
 <div class="title">About the Duration format</div>
 <div class="paragraph">
-<p>The format for durations uses the standard <code>java.time.Duration</code> format.
-You can learn more about it in the <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html#parse-java.lang.CharSequence-">Duration#parse() javadoc</a>.</p>
+<p>To write duration values, use the standard <code>java.time.Duration</code> format.
+See the <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html#parse(java.lang.CharSequence)">Duration#parse() Java API documentation</a> for more information.</p>
 </div>
 <div class="paragraph">
-<p>You can also provide duration values starting with a number.
-In this case, if the value consists only of a number, the converter treats the value as seconds.
-Otherwise, <code>PT</code> is implicitly prepended to the value to obtain a standard <code>java.time.Duration</code> format.</p>
+<p>You can also use a simplified format, starting with a number:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the value is only a number, it represents time in seconds.</p>
+</li>
+<li>
+<p>If the value is a number followed by <code>ms</code>, it represents time in milliseconds.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In other cases, the simplified format is translated to the <code>java.time.Duration</code> format for parsing:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the value is a number followed by <code>h</code>, <code>m</code>, or <code>s</code>, it is prefixed with <code>PT</code>.</p>
+</li>
+<li>
+<p>If the value is a number followed by <code>d</code>, it is prefixed with <code>P</code>.</p>
+</li>
+</ul>
 </div>
 </td>
 </tr>
@@ -613,8 +719,99 @@ quarkus.cache.redis.expensiveResourceCache.use-optimistic-locking=true</code></p
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#redis-as-cache-backend">Redis as cache backend</a></li>
+<li><a href="#use-the-redis-backend">Use the Redis backend</a></li>
+<li><a href="#redis-cache-configuration-reference">Configure the Redis backend</a></li>
+<li><a href="#configure-the-redis-key">Configure the Redis key</a></li>
+<li><a href="#enable-optimistic-locking">Enable optimistic locking</a></li>
+</ul></div>
+    </div>
   </div>
-</div>
+  <h2>Related content</h2>
+  <div class="grid-wrapper relations">
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same extensions</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/version/main/guides/redis-dev-services">Dev Services for Redis</a></li>
+      
+        
+        <li class="reference"><a href="/version/main/guides/redis-reference">Redis Extension Reference Guide</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/redis">Using the Redis Client</a></li>
+      </ul>
+    </div>
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same topics</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/version/main/guides/cache">Application Data Caching</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/redis-dev-services">Dev Services for Redis</a></li>
+      
+        
+        <li class="reference"><a href="/version/main/guides/redis-reference">Redis Extension Reference Guide</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/redis">Using the Redis Client</a></li>
+      
+        
+        <li class="reference"><a href="/version/main/guides/datasource">Configure data sources in Quarkus</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/elasticsearch">Connecting to an Elasticsearch cluster</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/databases-dev-services">Dev Services for Databases</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/elasticsearch-dev-services">Dev Services for Elasticsearch</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/infinispan-dev-services">Dev Services for Infinispan</a></li>
+      
+        
+        <li class="reference"><a href="/version/main/guides/infinispan-client-reference">Infinispan Client Extension Reference Guide</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/lra">Narayana LRA Participant Support</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/reactive-sql-clients">Reactive SQL Clients</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-orm-panache">Simplified Hibernate ORM with Panache</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-orm-panache-kotlin">Simplified Hibernate ORM with Panache and Kotlin</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-reactive-panache">Simplified Hibernate Reactive with Panache</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/mongodb-panache">Simplified MongoDB with Panache</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/mongodb-panache-kotlin">Simplified MongoDB with Panache and Kotlin</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-search-standalone-elasticsearch">Use Hibernate Search in Standalone mode with Elasticsearch/OpenSearch</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-search-orm-elasticsearch">Use Hibernate Search with Hibernate ORM and Elasticsearch/OpenSearch</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/flyway">Using Flyway</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   </div>
 
@@ -662,6 +859,14 @@ quarkus.cache.redis.expensiveResourceCache.use-optimistic-locking=true</code></p
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -742,6 +947,10 @@ quarkus.cache.redis.expensiveResourceCache.use-optimistic-locking=true</code></p
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -804,12 +1013,12 @@ quarkus.cache.redis.expensiveResourceCache.use-optimistic-locking=true</code></p
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -9,7 +9,8 @@
   <title>Native Reference Guide - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/guides/native-reference" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/guides/native-reference" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/guides/native-reference" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/guides/native-reference" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/guides/native-reference" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/guides/native-reference" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/guides/native-reference">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/guides/native-reference">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/guides/native-reference">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/guides/native-reference">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" >Main - SNAPSHOT</option>
         
         
-        <option value="latest" selected>3.0 - Latest</option>
+        
+        <option value="latest" selected>3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" >2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,54 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Native Reference Guide </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#native-memory-management">Native Memory Management</a>
-<ul class="sectlevel2">
-<li><a href="#garbage-collectors">Garbage Collectors</a></li>
-<li><a href="#memory-management-options">Memory Management Options</a></li>
-<li><a href="#gc-logging">GC Logging</a></li>
-<li><a href="#rss">Resident Set Size (RSS)</a></li>
-</ul>
-</li>
-<li><a href="#inspecting-and-debugging">Inspecting and Debugging Native Executables</a>
-<ul class="sectlevel2">
-<li><a href="#requirements-and-assumptions">Requirements and Assumptions</a></li>
-<li><a href="#bootstrapping-the-project">Bootstrapping the project</a></li>
-<li><a href="#configure-quarkus-properties">Configure Quarkus properties</a></li>
-<li><a href="#first-debugging-steps">First Debugging Steps</a></li>
-<li><a href="#inspecting-native-executables">Inspecting Native Executables</a></li>
-<li><a href="#native-reports">Native Reports</a></li>
-<li><a href="#build-time-vs-run-time-initialization">Build-time vs Run-time Initialization</a></li>
-<li><a href="#profiling">Profile Runtime Behaviour</a></li>
-<li><a href="#debug-info">Debugging Native Crashes</a></li>
-</ul>
-</li>
-<li><a href="#native-faq">Frequently Asked Questions</a>
-<ul class="sectlevel2">
-<li><a href="#why-is-the-process-of-generating-a-native-executable-slow">Why is the process of generating a native executable slow?</a></li>
-<li><a href="#i-get-a-analysiserrorparsingerror-when-building-a-native-executable-due-to-an-unresolvedelementexception-what-can-i-do">I get a <code>AnalysisError\$ParsingError</code> when building a native executable due to an <code>UnresolvedElementException</code>, what can I do?</a></li>
-<li><a href="#i-get-an-outofmemoryerror-oome-building-native-executables-what-can-i-do">I get an <code>OutOfMemoryError</code> (OOME) building native executables, what can I do?</a></li>
-<li><a href="#why-is-runtime-performance-of-a-native-executable-inferior-compared-to-jvm-mode">Why is runtime performance of a native executable inferior compared to JVM mode?</a></li>
-<li><a href="#why-are-native-executables-big">Why are native executables “big”?</a></li>
-<li><a href="#what-version-of-mandrel-was-used-to-generate-a-binary">What version of Mandrel was used to generate a binary?</a></li>
-<li><a href="#how-do-i-enable-gc-logging-in-native-executables">How do I enable GC logging in native executables?</a></li>
-<li><a href="#heap-dumps">Can I get a heap dump of a native executable? e.g. if it runs out of memory</a></li>
-<li><a href="#can-i-build-and-run-this-examples-outside-a-container-in-linux">Can I build and run this examples outside a container in Linux?</a></li>
-<li><a href="#generating-flame-graphs-is-slow-or-produces-errors-what-can-i-do">Generating flame graphs is slow, or produces errors, what can I do?</a></li>
-<li><a href="#i-think-ive-found-a-bug-in-native-image-how-can-i-debug-it-with-the-ide">I think I’ve found a bug in native-image, how can I debug it with the IDE?</a></li>
-<li><a href="#can-i-use-jfrjmc-to-debug-or-profile-native-binaries">Can I use JFR/JMC to debug or profile native binaries?</a></li>
-<li><a href="#how-can-we-troubleshoot-performance-problems-only-reproducible-in-production">How can we troubleshoot performance problems only reproducible in production?</a></li>
-<li><a href="#what-information-helps-most-debug-issues-that-happen-either-at-build-time-or-run-time">What information helps most debug issues that happen either at build-time or run-time?</a></li>
-<li><a href="#build-stalled-for-minutes-barely-using-any-cpu">Build stalled for minutes, barely using any CPU</a></li>
-</ul>
-</li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Native Reference Guide </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -238,10 +213,13 @@ These are the high level sections to be found in this guide:</p>
 <h2 id="native-memory-management"><a class="anchor" href="#native-memory-management"></a>Native Memory Management</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Memory management for Quarkus native executables is enabled by GraalVM’s SubstrateVM runtime system.
-The memory management component in GraalVM is explained in detail
-<a href="https://www.graalvm.org/22.3/reference-manual/native-image/optimizations-and-performance/MemoryManagement">here</a>.
-This guide complements the information available in the GraalVM website with further observations particularly relevant to Quarkus applications.</p>
+<p>Memory management for Quarkus native executables is enabled by GraalVM’s SubstrateVM runtime system.</p>
+</div>
+<div class="paragraph">
+<p>For detailed explanations about the memory management component in GraalVM, see the <a href="https://www.graalvm.org/jdk21/reference-manual/native-image/optimizations-and-performance/MemoryManagement">GraalVM Memory Management</a> guide.</p>
+</div>
+<div class="paragraph">
+<p>This guide complements the information available in the GraalVM website with further observations particularly relevant to Quarkus applications.</p>
 </div>
 <div class="sect2">
 <h3 id="garbage-collectors"><a class="anchor" href="#garbage-collectors"></a>Garbage Collectors</h3>
@@ -337,8 +315,7 @@ To build Quarkus native with epsilon GC, pass the following argument at build ti
 <div class="sect2">
 <h3 id="memory-management-options"><a class="anchor" href="#memory-management-options"></a>Memory Management Options</h3>
 <div class="paragraph">
-<p>Options to control maximum heap size, young space and other typical use cases found in the JVM can be found in
-<a href="https://www.graalvm.org/22.3/reference-manual/native-image/optimizations-and-performance/MemoryManagement">the GraalVM memory management guide</a>.
+<p>For information about options to control maximum heap size, young space, and other typical use cases found in the JVM, see the <a href="https://www.graalvm.org/jdk21/reference-manual/native-image/optimizations-and-performance/MemoryManagement">GraalVM Memory Management</a> guide.
 Setting the maximum heap size, either as a percentage or an explicit value, is generally recommended.</p>
 </div>
 </div>
@@ -506,10 +483,7 @@ With default optimizations the stack traces obtained with <code>perf</code> mayb
 <div class="paragraph">
 <p>How come this Quarkus native executable consumes ~35MB RSS on startup?
 To get an understanding of this number, this section will use <code>perf</code> to trace calls to <code>syscalls:sys_enter_mmap</code>.
-Assuming the default
-<a href="https://www.graalvm.org/22.3/reference-manual/native-image/MemoryManagement/#serial-garbage-collector">Serial Garbage Collector</a>
-is in use,
-this system call is particularly interesting for native executables generated by GraalVM&#8217;s <code>native-image</code> because of how it allocates heap.
+Assuming the default <a href="https://www.graalvm.org/jdk21/reference-manual/native-image/optimizations-and-performance/MemoryManagement/#serial-garbage-collector">GraalVM Serial Garbage Collector</a> is in use, this system call is particularly interesting for native executables generated by GraalVM&#8217;s <code>native-image</code> because of how it allocates heap.
 In native executables generated by GraalVM&#8217;s <code>native-image</code>, the heap is allocated using either aligned or unaligned heap chunks.
 All non-array objects get allocated in thread local aligned chunks.
 Each of these are 1MB in size by default.
@@ -825,7 +799,7 @@ so the flamegraph can be generated just like this:</p>
 <div class="paragraph">
 <p>This shows that most of the memory requested using <code>malloc</code> comes from epoll in Java NIO,
 but the overall amount allocated via <code>malloc</code> is barely 268KB.
-This amount of 274,269 bytes can be observed by hoovering on top of <code>all</code> at the bottom of flamegraph
+This amount of 274,269 bytes can be observed by hovering on top of <code>all</code> at the bottom of flamegraph
 (you might need to ask the browser to open the flamegraph in a different tab or window to observe this).
 This is very small compared with the amount allocated for the heap with <code>mmap</code>.</p>
 </div>
@@ -880,10 +854,10 @@ You can find instructions on how to quickly set up this application in this guid
 <div class="ulist">
 <ul>
 <li>
-<p>JDK 11 installed with <code>JAVA_HOME</code> configured appropriately</p>
+<p>JDK 17 installed with <code>JAVA_HOME</code> configured appropriately</p>
 </li>
 <li>
-<p>Apache Maven 3.8.8</p>
+<p>Apache Maven 3.9.6</p>
 </li>
 <li>
 <p>A working container runtime (Docker, podman)</p>
@@ -940,7 +914,7 @@ cd debugging-native</code></pre>
 <p>To create a Gradle project, add the <code>--gradle</code> or <code>--gradle-kotlin-dsl</code> option.</p>
 </div>
 <div class="paragraph">
-<p><em>For more information about how to install the Quarkus CLI and use it, please refer to <a href="cli-tooling">the Quarkus CLI guide</a>.</em></p>
+<p>For more information about how to install and use the Quarkus CLI, see the <a href="cli-tooling">Quarkus CLI</a> guide.</p>
 </div>
 </div>
 </div>
@@ -949,7 +923,7 @@ cd debugging-native</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:3.0.3.Final:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:3.8.3:create \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=debugging-native \
     -Dextensions='resteasy-reactive,container-image-docker'
@@ -960,6 +934,19 @@ cd debugging-native</code></pre>
 <p>To create a Gradle project, add the <code>-DbuildTool=gradle</code> or <code>-DbuildTool=gradle-kotlin-dsl</code> option.</p>
 </div>
 </div>
+</div>
+<div class="paragraph">
+<p>For Windows users:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If using cmd, (don&#8217;t use backward slash <code>\</code> and put everything on the same line)</p>
+</li>
+<li>
+<p>If using Powershell, wrap <code>-D</code> parameters in double quotes e.g. <code>"-DprojectArtifactId=debugging-native"</code></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>For Windows users</p>
@@ -986,26 +973,10 @@ So, go ahead and add the following options to that file:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.native.container-build=true
-quarkus.native.builder-image=quay.io/quarkus/ubi-quarkus-mandrel-builder-image:22.3-java17
+quarkus.native.builder-image=quay.io/quarkus/ubi-quarkus-mandrel-builder-image:jdk-21
 quarkus.container-image.build=true
 quarkus.container-image.group=test</code></pre>
 </div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Starting with 22.3, Mandrel does not provide a <code>-java11</code> version anymore.
-Note, however,  that this doesn&#8217;t mean that you may no longer produce native executables with Mandrel for Java 11 projects.
-You can still compile your Java 11 projects using OpenJDK 11 and produce native executables from the resulting Java 11 bytecode using the <code>-java17</code> Mandrel builder images.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 </div>
 <div class="sect2">
@@ -1317,8 +1288,8 @@ we need the following cypher script which will import the data within the CSV fi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">CREATE CONSTRAINT unique_vm_id ON (v:VM) ASSERT v.vmId IS UNIQUE;
-CREATE CONSTRAINT unique_method_id ON (m:Method) ASSERT m.methodId IS UNIQUE;
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">CREATE CONSTRAINT unique_vm_id FOR (v:VM) REQUIRE v.vmId IS UNIQUE;
+CREATE CONSTRAINT unique_method_id FOR (m:Method) REQUIRE m.methodId IS UNIQUE;
 
 LOAD CSV WITH HEADERS FROM 'file:///reports/call_tree_vm.csv' AS row
 MERGE (v:VM {vmId: row.Id, name: row.Name})
@@ -1509,7 +1480,7 @@ These are called expert options and you can learn more about them by running:</p
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker run quay.io/quarkus/ubi-quarkus-mandrel-builder-image:22.3-java17 --expert-options-all</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker run quay.io/quarkus/ubi-quarkus-mandrel-builder-image:jdk-21 --expert-options-all</code></pre>
 </div>
 </div>
 <div class="admonitionblock warning">
@@ -2481,8 +2452,8 @@ Source directories searched: /data/target/debugging-native-1.0.0-SNAPSHOT-native
 <p>We can now examine line <code>169</code> and get a first hint of what might be wrong
 (in this case we see that it fails at the first read from src which contains the address <code>0x0000</code>),
 or walk up the stack using <code>gdb</code>’s <code>up</code> command to see what part of our code led to this situation.
-To learn more about using gdb to debug native executables see
-<a href="https://www.graalvm.org/22.3/reference-manual/native-image/debugging-and-diagnostics/DebugInfo/">here</a>.</p>
+For more information about using <code>gdb</code> to debug native executables, see the
+<a href="https://www.graalvm.org/jdk21/reference-manual/native-image/debugging-and-diagnostics/DebugInfo/">GraalVM Debug Info Feature</a> guide.</p>
 </div>
 </div>
 </div>
@@ -2513,6 +2484,21 @@ However, there are certain features that can have an exponential effect.
 For example, when registering types and methods for reflection access,
 the analysis can’t easily see what’s behind those types or methods,
 so it has to do more work to complete the analysis step.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="native-faq-experimental-options"><a class="anchor" href="#native-faq-experimental-options"></a>I get a warning about using experimental options, what can I do?</h3>
+<div class="paragraph">
+<p>Starting with Mandrel 23.1 and GraalVM for JDK 21, the native executable generation process will warn about the use of experimental options with a message like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Warning: The option '-H:ReflectionConfigurationResources=META-INF/native-image/io.micrometer/micrometer-core/reflect-config.json' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the mentioned option is added by a third party library like in the example above, you should consider opening an issue in the library&#8217;s repository to ask for the option to be removed.
+If the option is added by your application, you should consider either removing it (if it&#8217;s not necessary) or wrapping it between <code>-H:+UnlockExperimentalVMOptions</code> and <code>-H:-UnlockExperimentalVMOptions</code>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2841,15 +2827,42 @@ so you can remote debug this process by adding the <code>--vm.agentlib:jdwp=tran
 <p><a href="https://docs.oracle.com/javacomponents/jmc-5-4/jfr-runtime-guide/about.htm#JFRUH170">Java Flight Recorder (JFR)</a> and
 <a href="https://www.oracle.com/java/technologies/jdk-mission-control.html">JDK Mission Control (JMC)</a>
 can be used to profile native binaries since GraalVM CE 21.2.0.
-However, JFR in GraalVM is currently significantly limited in capabilities compared to HotSpot.
-The custom event API is fully supported, but many VM level features are unavailable.
-They will be added in future releases. Current limitations are:</p>
+However, JFR in GraalVM is currently limited in capabilities compared to HotSpot.
+The custom event API is fully supported, but some VM level features are unavailable.
+More events and JFR features will continue to be added in later releases.
+The following table outlines Native Image JFR support and limitations by version.</p>
 </div>
-<div class="ulist">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 41.6666%;">
+<col style="width: 41.6668%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">GraalVM Version</th>
+<th class="tableblock halign-left valign-top">Supports</th>
+<th class="tableblock halign-left valign-top">Limitations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GraalVM CE 21.3 and Mandrel 21.3</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
-<p>Minimal VM level events</p>
+<p>Minimal VM Level events</p>
 </li>
+<li>
+<p>Custom events API</p>
+</li>
+<li>
+<p>Start recordings upon executabe run or JFR Recording API</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
 <li>
 <p>No old object sampling</p>
 </li>
@@ -2857,19 +2870,77 @@ They will be added in future releases. Current limitations are:</p>
 <p>No stacktrace tracing</p>
 </li>
 <li>
-<p>No Streaming API for JDK 17</p>
+<p>No event streaming</p>
 </li>
 </ul>
-</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GraalVM CE 22.3 and Mandrel 22.3</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Everything from GraalVM CE 21.3</p>
+</li>
+<li>
+<p>Additional monitor and thread events</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>No old object sampling</p>
+</li>
+<li>
+<p>No stacktrace tracing</p>
+</li>
+<li>
+<p>No event streaming</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GraalVM CE for JDK 17/20 and Mandrel 23.0</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Everything from GraalVM CE 22.3</p>
+</li>
+<li>
+<p>Additional monitor, thread, container, and allocation events</p>
+</li>
+<li>
+<p>Stacktraces</p>
+</li>
+<li>
+<p>Sampling based method profiling</p>
+</li>
+<li>
+<p>Event streaming</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>No old object sampling</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
-<p>To use JFR add the application property: <code>-Dquarkus.native.enable-vm-inspection=true</code>.
+<p>To add JFR support to your Quarkus executable, add the application property: <code>-Dquarkus.native.monitoring=jfr</code>.
 E.g.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./mvnw package -DskipTests -Dnative -Dquarkus.native.container-build=true \
-    -Dquarkus.native.builder-image=quay.io/quarkus/ubi-quarkus-mandrel-builder-image:22.3-java17 \
-    -Dquarkus.native.enable-vm-inspection=true</code></pre>
+    -Dquarkus.native.builder-image=quay.io/quarkus/ubi-quarkus-mandrel-builder-image:jdk-21 \
+    -Dquarkus.native.monitoring=jfr</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2883,7 +2954,7 @@ E.g.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>For more details on using JFR, see <a href="https://www.graalvm.org/22.3/reference-manual/native-image/debugging-and-diagnostics/JFR/">here</a>.</p>
+<p>For more information about using JFR, see the <a href="https://www.graalvm.org/jdk21/reference-manual/native-image/debugging-and-diagnostics/JFR/">GraalVM JDK Flight Recorder (JFR) with Native Image</a> guide.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2946,11 +3017,118 @@ you will obtain precise <a href="#profiling">profiling information</a> as well.<
 <p>The proper solution is to increase the entropy available for the system. That is specific for each OS vendor and virtualization solution though.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="work-around-missing-cpu-features"><a class="anchor" href="#work-around-missing-cpu-features"></a>Work around missing CPU features</h3>
+<div class="paragraph">
+<p>When building on recent machines and running your native executable on older machines, you may see the following failure when starting the application:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">The current machine does not support all of the following CPU features that are required by the image: [CX8, CMOV, FXSR, MMX, SSE, SSE2, SSE3, SSSE3, SSE4_1, SSE4_2, POPCNT, LZCNT, AVX, AVX2, BMI1, BMI2, FMA].
+Please rebuild the executable with an appropriate setting of the -march option.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This error message means that the native compilation used more advanced instruction sets, not supported by the CPU running the application.
+To work around that issue, add the following line to the <code>application.properties</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.native.additional-build-args=-march=compatibility</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, rebuild your native executable.
+This setting forces the native compilation to use an older instruction set, increasing the chance of compatibility.</p>
+</div>
+<div class="paragraph">
+<p>To explicitly define the target architecture run <code>native-image -march=list</code> to get the supported configurations and then set <code>-march</code> to one of them, e.g., <code>quarkus.native.additional-build-args=-march=x86-64-v4</code>.
+If you are targeting an AMD64 host, <code>-march=x86-64-v2</code> would work in most cases.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>march</code> parameter is only available on GraalVM 23+.
+</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#native-memory-management">Native Memory Management</a>
+<ul class="sectlevel2">
+<li><a href="#garbage-collectors">Garbage Collectors</a></li>
+<li><a href="#memory-management-options">Memory Management Options</a></li>
+<li><a href="#gc-logging">GC Logging</a></li>
+<li><a href="#rss">Resident Set Size (RSS)</a></li>
+</ul>
+</li>
+<li><a href="#inspecting-and-debugging">Inspecting and Debugging Native Executables</a>
+<ul class="sectlevel2">
+<li><a href="#requirements-and-assumptions">Requirements and Assumptions</a></li>
+<li><a href="#bootstrapping-the-project">Bootstrapping the project</a></li>
+<li><a href="#configure-quarkus-properties">Configure Quarkus properties</a></li>
+<li><a href="#first-debugging-steps">First Debugging Steps</a></li>
+<li><a href="#inspecting-native-executables">Inspecting Native Executables</a></li>
+<li><a href="#native-reports">Native Reports</a></li>
+<li><a href="#build-time-vs-run-time-initialization">Build-time vs Run-time Initialization</a></li>
+<li><a href="#profiling">Profile Runtime Behaviour</a></li>
+<li><a href="#debug-info">Debugging Native Crashes</a></li>
+</ul>
+</li>
+<li><a href="#native-faq">Frequently Asked Questions</a>
+<ul class="sectlevel2">
+<li><a href="#why-is-the-process-of-generating-a-native-executable-slow">Why is the process of generating a native executable slow?</a></li>
+<li><a href="#native-faq-experimental-options">I get a warning about using experimental options, what can I do?</a></li>
+<li><a href="#i-get-a-analysiserrorparsingerror-when-building-a-native-executable-due-to-an-unresolvedelementexception-what-can-i-do">I get a <code>AnalysisError\$ParsingError</code> when building a native executable due to an <code>UnresolvedElementException</code>, what can I do?</a></li>
+<li><a href="#i-get-an-outofmemoryerror-oome-building-native-executables-what-can-i-do">I get an <code>OutOfMemoryError</code> (OOME) building native executables, what can I do?</a></li>
+<li><a href="#why-is-runtime-performance-of-a-native-executable-inferior-compared-to-jvm-mode">Why is runtime performance of a native executable inferior compared to JVM mode?</a></li>
+<li><a href="#why-are-native-executables-big">Why are native executables “big”?</a></li>
+<li><a href="#what-version-of-mandrel-was-used-to-generate-a-binary">What version of Mandrel was used to generate a binary?</a></li>
+<li><a href="#how-do-i-enable-gc-logging-in-native-executables">How do I enable GC logging in native executables?</a></li>
+<li><a href="#heap-dumps">Can I get a heap dump of a native executable? e.g. if it runs out of memory</a></li>
+<li><a href="#can-i-build-and-run-this-examples-outside-a-container-in-linux">Can I build and run this examples outside a container in Linux?</a></li>
+<li><a href="#generating-flame-graphs-is-slow-or-produces-errors-what-can-i-do">Generating flame graphs is slow, or produces errors, what can I do?</a></li>
+<li><a href="#i-think-ive-found-a-bug-in-native-image-how-can-i-debug-it-with-the-ide">I think I’ve found a bug in native-image, how can I debug it with the IDE?</a></li>
+<li><a href="#can-i-use-jfrjmc-to-debug-or-profile-native-binaries">Can I use JFR/JMC to debug or profile native binaries?</a></li>
+<li><a href="#how-can-we-troubleshoot-performance-problems-only-reproducible-in-production">How can we troubleshoot performance problems only reproducible in production?</a></li>
+<li><a href="#what-information-helps-most-debug-issues-that-happen-either-at-build-time-or-run-time">What information helps most debug issues that happen either at build-time or run-time?</a></li>
+<li><a href="#build-stalled-for-minutes-barely-using-any-cpu">Build stalled for minutes, barely using any CPU</a></li>
+<li><a href="#work-around-missing-cpu-features">Work around missing CPU features</a></li>
+</ul>
+</li>
+</ul></div>
+    </div>
   </div>
-</div>
+  <h2>Related content</h2>
+  <div class="grid-wrapper relations">
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same topics</h3>
+      <ul class="related-content">
+      
+        
+        <li class="tutorial"><a href="/guides/building-native-image">Building a Native Executable</a></li>
+      
+        
+        <li class="guide"><a href="/guides/upx">Compressing native executables using UPX</a></li>
+      
+        
+        <li class="guide"><a href="/guides/writing-native-applications-tips">Tips for writing native applications</a></li>
+      
+        
+        <li class="guide"><a href="/guides/native-and-ssl">Using SSL With Native Executables</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   </div>
 
@@ -2998,6 +3176,14 @@ you will obtain precise <a href="#profiling">profiling information</a> as well.<
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -3078,6 +3264,10 @@ you will obtain precise <a href="#profiling">profiling information</a> as well.<
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -3140,12 +3330,12 @@ you will obtain precise <a href="#profiling">profiling information</a> as well.<
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

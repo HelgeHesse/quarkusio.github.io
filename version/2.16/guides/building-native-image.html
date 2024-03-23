@@ -9,7 +9,8 @@
   <title>Building a Native Executable - 2.16 - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/version/2.16/guides/building-native-image" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/version/2.16/guides/building-native-image" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/version/2.16/guides/building-native-image" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/version/2.16/guides/building-native-image" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/version/2.16/guides/building-native-image" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/version/2.16/guides/building-native-image" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/version/2.16/guides/building-native-image">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/version/2.16/guides/building-native-image">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/version/2.16/guides/building-native-image">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/version/2.16/guides/building-native-image">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" >Main - SNAPSHOT</option>
         
         
-        <option value="latest" >3.0 - Latest</option>
+        
+        <option value="latest" >3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" selected>2.16</option>
+        
         
         
         <option value="2.13" >2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,50 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Building a Native Executable </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#graalvm">GraalVM</a></li>
-<li><a href="#prerequisites">Prerequisites</a>
-<ul class="sectlevel2">
-<li><a href="#configuring-graalvm">Configuring GraalVM</a></li>
-</ul>
-</li>
-<li><a href="#solution">Solution</a></li>
-<li><a href="#producing-a-native-executable">Producing a native executable</a>
-<ul class="sectlevel2">
-<li><a href="#build-fully-static-native-executables">Build fully static native executables</a></li>
-</ul>
-</li>
-<li><a href="#testing-the-native-executable">Testing the native executable</a>
-<ul class="sectlevel2">
-<li><a href="#profiles">Profiles</a></li>
-<li><a href="#java-preview-features">Java preview features</a></li>
-<li><a href="#excluding-tests-when-running-as-a-native-executable">Excluding tests when running as a native executable</a></li>
-<li><a href="#testing-an-existing-native-executable">Testing an existing native executable</a></li>
-</ul>
-</li>
-<li><a href="#container-runtime">Creating a Linux executable without GraalVM installed</a></li>
-<li><a href="#creating-a-container">Creating a container</a>
-<ul class="sectlevel2">
-<li><a href="#using-the-container-image-extensions">Using the container-image extensions</a></li>
-<li><a href="#manually-using-the-micro-base-image">Manually using the micro base image</a></li>
-<li><a href="#manually-using-the-minimal-base-image">Manually using the minimal base image</a></li>
-<li><a href="#multistage-docker">Using a multi-stage Docker build</a></li>
-<li><a href="#using-a-distroless-base-image">Using a Distroless base image</a></li>
-<li><a href="#build-a-container-image-from-scratch">Build a container image from scratch</a></li>
-<li><a href="#compress-native-images">Compress native images</a></li>
-<li><a href="#separating-java-and-native-image-compilation">Separating Java and native image compilation</a></li>
-</ul>
-</li>
-<li><a href="#debugging-native-executable">Debugging native executable</a></li>
-<li><a href="#configuration-reference">Configuring the Native Executable</a></li>
-<li><a href="#whats-next">What&#8217;s next?</a></li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Building a Native Executable </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -483,7 +462,7 @@ sudo apt-get install build-essential libz-dev zlib1g-dev</code></pre>
 <p>We recommend that you follow the instructions in the next sections and package the application step by step. However, you can go right to the completed example.</p>
 </div>
 <div class="paragraph">
-<p>Clone the Git repository: <code>git clone <a href="https://github.com/quarkusio/quarkus-quickstarts.git" class="bare">https://github.com/quarkusio/quarkus-quickstarts.git</a></code>, or download an <a href="https://github.com/quarkusio/quarkus-quickstarts/archive/main.zip">archive</a>.</p>
+<p>Clone the Git repository: <code>git clone <a href="https://github.com/quarkusio/quarkus-quickstarts.git" class="bare">https://github.com/quarkusio/quarkus-quickstarts.git</a></code>, or download an <a href="https://github.com/quarkusio/quarkus-quickstarts/archive/2.16.zip">archive</a>.</p>
 </div>
 <div class="paragraph">
 <p>The solution is located in the <code>getting-started</code> directory.</p>
@@ -1656,7 +1635,7 @@ These are provided in <code>application.properties</code> the same as any other 
 <div class="paragraph configuration-legend">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
 </div>
-<table class="tableblock frame-all grid-all stretch configuration-reference">
+<table class="tableblock frame-all grid-all stretch configuration-reference configuration-reference-all-rows">
 <colgroup>
 <col style="width: 80%;">
 <col style="width: 10%;">
@@ -1668,455 +1647,533 @@ These are provided in <code>application.properties</code> the same as any other 
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.additional-build-args"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.additional-build-args">quarkus.native.additional-build-args</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-1" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Comma-separated, additional arguments to pass to the build process. If an argument includes the <code>,</code> symbol, it needs to be escaped, e.g. <code>\\,</code></p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17514">QUARKUS_NATIVE_ADDITIONAL_BUILD_ARGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17514" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18292">QUARKUS_NATIVE_ADDITIONAL_BUILD_ARGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18292" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.enable-http-url-handler"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.enable-http-url-handler">quarkus.native.enable-http-url-handler</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-2" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If the HTTP url handler should be enabled, allowing you to do URL.openConnection() for HTTP URLs</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17515">QUARKUS_NATIVE_ENABLE_HTTP_URL_HANDLER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17515" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18293">QUARKUS_NATIVE_ENABLE_HTTP_URL_HANDLER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18293" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.enable-https-url-handler"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.enable-https-url-handler">quarkus.native.enable-https-url-handler</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-3" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If the HTTPS url handler should be enabled, allowing you to do URL.openConnection() for HTTPS URLs</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17516">QUARKUS_NATIVE_ENABLE_HTTPS_URL_HANDLER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17516" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18294">QUARKUS_NATIVE_ENABLE_HTTPS_URL_HANDLER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18294" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.headless"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.headless">quarkus.native.headless</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-4" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The default value for java.awt.headless JVM option. Switching this option affects linking of awt libraries.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17517">QUARKUS_NATIVE_HEADLESS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17517" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18295">QUARKUS_NATIVE_HEADLESS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18295" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.file-encoding"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.file-encoding">quarkus.native.file-encoding</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-5" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Defines the file encoding as in <code>-Dfile.encoding=&#8230;&#8203;</code>. Native image runtime uses the host&#8217;s (i.e. build time) value of <code>file.encoding</code> system property. We intentionally default this to UTF-8 to avoid platform specific defaults to be picked up which can then result in inconsistent behavior in the generated native executable.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17518">QUARKUS_NATIVE_FILE_ENCODING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17518" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18296">QUARKUS_NATIVE_FILE_ENCODING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18296" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>UTF-8</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.add-all-charsets"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.add-all-charsets">quarkus.native.add-all-charsets</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-6" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If all character sets should be added to the native image. This increases image size</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17519">QUARKUS_NATIVE_ADD_ALL_CHARSETS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17519" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18297">QUARKUS_NATIVE_ADD_ALL_CHARSETS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18297" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.graalvm-home"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.graalvm-home">quarkus.native.graalvm-home</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-7" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The location of the Graal distribution</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17520">QUARKUS_NATIVE_GRAALVM_HOME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17520" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18298">QUARKUS_NATIVE_GRAALVM_HOME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18298" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>${GRAALVM_HOME:}</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.java-home"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.java-home">quarkus.native.java-home</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-8" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The location of the JDK</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17521">QUARKUS_NATIVE_JAVA_HOME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17521" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18299">QUARKUS_NATIVE_JAVA_HOME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18299" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html">File</a></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>${java.home}</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.native-image-xmx"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.native-image-xmx">quarkus.native.native-image-xmx</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-9" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The maximum Java heap to be used during the native image generation</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17522">QUARKUS_NATIVE_NATIVE_IMAGE_XMX</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17522" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18300">QUARKUS_NATIVE_NATIVE_IMAGE_XMX</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18300" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.debug-build-process"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.debug-build-process">quarkus.native.debug-build-process</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-10" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If the native image build should wait for a debugger to be attached before running. This is an advanced option and is generally only intended for those familiar with GraalVM internals</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17523">QUARKUS_NATIVE_DEBUG_BUILD_PROCESS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17523" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18301">QUARKUS_NATIVE_DEBUG_BUILD_PROCESS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18301" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.publish-debug-build-process-port"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.publish-debug-build-process-port">quarkus.native.publish-debug-build-process-port</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-11" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If the debug port should be published when building with docker and debug-build-process is true</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17524">QUARKUS_NATIVE_PUBLISH_DEBUG_BUILD_PROCESS_PORT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17524" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18302">QUARKUS_NATIVE_PUBLISH_DEBUG_BUILD_PROCESS_PORT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18302" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.enable-isolates"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.enable-isolates">quarkus.native.enable-isolates</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-12" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If isolates should be enabled</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17525">QUARKUS_NATIVE_ENABLE_ISOLATES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17525" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18303">QUARKUS_NATIVE_ENABLE_ISOLATES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18303" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.enable-fallback-images"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.enable-fallback-images">quarkus.native.enable-fallback-images</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-13" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If a JVM based 'fallback image' should be created if native image fails. This is not recommended, as this is functionally the same as just running the application in a JVM</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17526">QUARKUS_NATIVE_ENABLE_FALLBACK_IMAGES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17526" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18304">QUARKUS_NATIVE_ENABLE_FALLBACK_IMAGES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18304" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.auto-service-loader-registration"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.auto-service-loader-registration">quarkus.native.auto-service-loader-registration</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-14" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If all META-INF/services entries should be automatically registered</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17527">QUARKUS_NATIVE_AUTO_SERVICE_LOADER_REGISTRATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17527" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18305">QUARKUS_NATIVE_AUTO_SERVICE_LOADER_REGISTRATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18305" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.dump-proxies"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.dump-proxies">quarkus.native.dump-proxies</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-15" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If the bytecode of all proxies should be dumped for inspection</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17528">QUARKUS_NATIVE_DUMP_PROXIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17528" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18306">QUARKUS_NATIVE_DUMP_PROXIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18306" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.container-build"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.container-build">quarkus.native.container-build</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-16" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If this build should be done using a container runtime. Unless container-runtime is also set, docker will be used by default. If docker is not available or is an alias to podman, podman will be used instead as the default.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17529">QUARKUS_NATIVE_CONTAINER_BUILD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17529" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18307">QUARKUS_NATIVE_CONTAINER_BUILD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18307" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.remote-container-build"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.remote-container-build">quarkus.native.remote-container-build</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-17" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If this build is done using a remote docker daemon.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17530">QUARKUS_NATIVE_REMOTE_CONTAINER_BUILD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17530" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18308">QUARKUS_NATIVE_REMOTE_CONTAINER_BUILD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18308" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.builder-image"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.builder-image">quarkus.native.builder-image</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-18" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The docker image to use to do the image build. It can be one of <code>graalvm</code>, <code>mandrel</code>, or the full image path, e.g. <code>quay.io/quarkus/ubi-quarkus-mandrel-builder-image:22.3-java17</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17531">QUARKUS_NATIVE_BUILDER_IMAGE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17531" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18309">QUARKUS_NATIVE_BUILDER_IMAGE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18309" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>${platform.quarkus.native.builder-image}</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.container-runtime"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.container-runtime">quarkus.native.container-runtime</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-19" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The container runtime (e.g. docker) that is used to do an image based build. If this is set then a container build is always done.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17532">QUARKUS_NATIVE_CONTAINER_RUNTIME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17532" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18310">QUARKUS_NATIVE_CONTAINER_RUNTIME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18310" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><code>docker</code>, <code>podman</code>, <code>unavailable</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.container-runtime-options"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.container-runtime-options">quarkus.native.container-runtime-options</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-20" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Options to pass to the container runtime</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17533">QUARKUS_NATIVE_CONTAINER_RUNTIME_OPTIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17533" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18311">QUARKUS_NATIVE_CONTAINER_RUNTIME_OPTIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18311" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.monitoring"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.monitoring">quarkus.native.monitoring</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-21" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Enable monitoring options that allow the VM to be inspected at run time.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17534">QUARKUS_NATIVE_MONITORING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17534" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18312">QUARKUS_NATIVE_MONITORING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18312" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of MonitoringOption</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.full-stack-traces"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.full-stack-traces">quarkus.native.full-stack-traces</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-22" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If full stack traces are enabled in the resulting image</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17535">QUARKUS_NATIVE_FULL_STACK_TRACES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17535" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18313">QUARKUS_NATIVE_FULL_STACK_TRACES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18313" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.enable-reports"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.enable-reports">quarkus.native.enable-reports</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-23" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If the reports on call paths and included packages/classes/methods should be generated</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17536">QUARKUS_NATIVE_ENABLE_REPORTS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17536" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18314">QUARKUS_NATIVE_ENABLE_REPORTS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18314" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.report-exception-stack-traces"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.report-exception-stack-traces">quarkus.native.report-exception-stack-traces</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-24" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If exceptions should be reported with a full stack trace</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17537">QUARKUS_NATIVE_REPORT_EXCEPTION_STACK_TRACES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17537" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18315">QUARKUS_NATIVE_REPORT_EXCEPTION_STACK_TRACES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18315" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.report-errors-at-runtime"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.report-errors-at-runtime">quarkus.native.report-errors-at-runtime</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-25" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If errors should be reported at runtime. This is a more relaxed setting, however it is not recommended as it means your application may fail at runtime if an unsupported feature is used by accident.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17538">QUARKUS_NATIVE_REPORT_ERRORS_AT_RUNTIME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17538" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18316">QUARKUS_NATIVE_REPORT_ERRORS_AT_RUNTIME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18316" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.reuse-existing"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.reuse-existing">quarkus.native.reuse-existing</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-26" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Don&#8217;t build a native image if it already exists. This is useful if you have already built an image and you want to use Quarkus to deploy it somewhere. Note that this is not able to detect if the existing image is outdated, if you have modified source or config and want a new image you must not use this flag.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17539">QUARKUS_NATIVE_REUSE_EXISTING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17539" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18317">QUARKUS_NATIVE_REUSE_EXISTING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18317" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.resources.includes"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.resources.includes">quarkus.native.resources.includes</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-27" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>A comma separated list of globs to match resource paths that should be added to the native image.
@@ -2131,18 +2188,21 @@ Note that there are three levels of escaping when passing this option via <code>
 Note that Quarkus extensions typically include the resources they require by themselves. This option is useful in situations when the built-in functionality is not sufficient.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17540">QUARKUS_NATIVE_RESOURCES_INCLUDES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17540" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18318">QUARKUS_NATIVE_RESOURCES_INCLUDES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18318" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.resources.excludes"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.resources.excludes">quarkus.native.resources.excludes</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-28" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>A comma separated list of globs to match resource paths that should <strong>not</strong> be added to the native image.
@@ -2152,77 +2212,92 @@ By default, no resources are excluded.
 Example: Given that you have <code>src/main/resources/red.png</code> and <code>src/main/resources/foo/green.png</code> in your source tree and one of your dependency JARs contains <code>bar/blue.png</code> file, with the following configuration quarkus.native.resources.includes = **/*.png quarkus.native.resources.excludes = foo/**,**/green.png  the resource <code>red.png</code> will be available in the native image while the resources <code>foo/green.png</code> and <code>bar/blue.png</code> will not be available in the native image.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17541">QUARKUS_NATIVE_RESOURCES_EXCLUDES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17541" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18319">QUARKUS_NATIVE_RESOURCES_EXCLUDES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18319" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.debug.enabled"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.debug.enabled">quarkus.native.debug.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-29" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If debug is enabled and debug symbols are generated. The symbols will be generated in a separate .debug file.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17542">QUARKUS_NATIVE_DEBUG_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17542" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18320">QUARKUS_NATIVE_DEBUG_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18320" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.enable-dashboard-dump"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.enable-dashboard-dump">quarkus.native.enable-dashboard-dump</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-30" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Generate the report files for GraalVM Dashboard.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17543">QUARKUS_NATIVE_ENABLE_DASHBOARD_DUMP</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17543" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18321">QUARKUS_NATIVE_ENABLE_DASHBOARD_DUMP</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18321" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.compression.level"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.compression.level">quarkus.native.compression.level</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-31" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The compression level in [1, 10]. 10 means <em>best</em> Higher compression level requires more time to compress the executable.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17544">QUARKUS_NATIVE_COMPRESSION_LEVEL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17544" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18322">QUARKUS_NATIVE_COMPRESSION_LEVEL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18322" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-native-pkg-native-config_quarkus.native.compression.additional-args"></a><code><a href="#quarkus-native-pkg-native-config_quarkus.native.compression.additional-args">quarkus.native.compression.additional-args</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-32" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Allows passing extra arguments to the UPX command line (like --brute). The arguments are comma-separated. The exhaustive list of parameters can be found in <a href="https://github.com/upx/upx/blob/devel/doc/upx.pod">https://github.com/upx/upx/blob/devel/doc/upx.pod</a>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-17545">QUARKUS_NATIVE_COMPRESSION_ADDITIONAL_ARGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-17545" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-18323">QUARKUS_NATIVE_COMPRESSION_ADDITIONAL_ARGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-18323" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
@@ -2245,8 +2320,48 @@ However, there is much more.</p>
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#graalvm">GraalVM</a></li>
+<li><a href="#prerequisites">Prerequisites</a>
+<ul class="sectlevel2">
+<li><a href="#configuring-graalvm">Configuring GraalVM</a></li>
+</ul>
+</li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#producing-a-native-executable">Producing a native executable</a>
+<ul class="sectlevel2">
+<li><a href="#build-fully-static-native-executables">Build fully static native executables</a></li>
+</ul>
+</li>
+<li><a href="#testing-the-native-executable">Testing the native executable</a>
+<ul class="sectlevel2">
+<li><a href="#profiles">Profiles</a></li>
+<li><a href="#java-preview-features">Java preview features</a></li>
+<li><a href="#excluding-tests-when-running-as-a-native-executable">Excluding tests when running as a native executable</a></li>
+<li><a href="#testing-an-existing-native-executable">Testing an existing native executable</a></li>
+</ul>
+</li>
+<li><a href="#container-runtime">Creating a Linux executable without GraalVM installed</a></li>
+<li><a href="#creating-a-container">Creating a container</a>
+<ul class="sectlevel2">
+<li><a href="#using-the-container-image-extensions">Using the container-image extensions</a></li>
+<li><a href="#manually-using-the-micro-base-image">Manually using the micro base image</a></li>
+<li><a href="#manually-using-the-minimal-base-image">Manually using the minimal base image</a></li>
+<li><a href="#multistage-docker">Using a multi-stage Docker build</a></li>
+<li><a href="#using-a-distroless-base-image">Using a Distroless base image</a></li>
+<li><a href="#build-a-container-image-from-scratch">Build a container image from scratch</a></li>
+<li><a href="#compress-native-images">Compress native images</a></li>
+<li><a href="#separating-java-and-native-image-compilation">Separating Java and native image compilation</a></li>
+</ul>
+</li>
+<li><a href="#debugging-native-executable">Debugging native executable</a></li>
+<li><a href="#configuration-reference">Configuring the Native Executable</a></li>
+<li><a href="#whats-next">What&#8217;s next?</a></li>
+</ul></div>
+    </div>
   </div>
-</div>
+  </div>
 
   </div>
 
@@ -2294,6 +2409,14 @@ However, there is much more.</p>
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -2374,6 +2497,10 @@ However, there is much more.</p>
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -2436,12 +2563,12 @@ However, there is much more.</p>
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

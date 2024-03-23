@@ -9,7 +9,8 @@
   <title>Using the MongoDB Client - 2.13 - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/version/2.13/guides/mongodb" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/version/2.13/guides/mongodb" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/version/2.13/guides/mongodb" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/version/2.13/guides/mongodb" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/version/2.13/guides/mongodb" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/version/2.13/guides/mongodb" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/version/2.13/guides/mongodb">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/version/2.13/guides/mongodb">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/version/2.13/guides/mongodb">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/version/2.13/guides/mongodb">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" >Main - SNAPSHOT</option>
         
         
-        <option value="latest" >3.0 - Latest</option>
+        
+        <option value="latest" >3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" selected>2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,44 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Using the MongoDB Client </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#architecture">Architecture</a></li>
-<li><a href="#solution">Solution</a></li>
-<li><a href="#creating-the-maven-project">Creating the Maven project</a></li>
-<li><a href="#creating-your-first-json-rest-service">Creating your first JSON REST service</a></li>
-<li><a href="#configuring-the-mongodb-database">Configuring the MongoDB database</a>
-<ul class="sectlevel2">
-<li><a href="#dev-services">Dev Services (Configuration Free Databases)</a></li>
-</ul>
-</li>
-<li><a href="#multiple-mongodb-clients">Multiple MongoDB Clients</a>
-<ul class="sectlevel2">
-<li><a href="#named-mongo-client-injection">Named Mongo client Injection</a></li>
-</ul>
-</li>
-<li><a href="#running-a-mongodb-database">Running a MongoDB Database</a></li>
-<li><a href="#creating-a-frontend">Creating a frontend</a></li>
-<li><a href="#reactive">Reactive MongoDB Client</a></li>
-<li><a href="#simplifying-mongodb-client-usage-using-bson-codec">Simplifying MongoDB Client usage using BSON codec</a></li>
-<li><a href="#the-pojo-codec">The POJO Codec</a></li>
-<li><a href="#simplifying-mongodb-with-panache">Simplifying MongoDB with Panache</a></li>
-<li><a href="#schema-migration-with-liquibase">Schema migration with Liquibase</a></li>
-<li><a href="#connection-health-check">Connection Health Check</a></li>
-<li><a href="#metrics">Metrics</a></li>
-<li><a href="#tracing">Tracing</a></li>
-<li><a href="#testing-helpers">Testing helpers</a></li>
-<li><a href="#the-legacy-client">The legacy client</a></li>
-<li><a href="#building-a-native-executable">Building a native executable</a></li>
-<li><a href="#using-mongosrv-urls">Using mongo+srv:// urls</a></li>
-<li><a href="#configuration-reference">Configuration Reference</a></li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Using the MongoDB Client </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -281,6 +266,7 @@ However, you can go right to the completed example.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus create app org.acme:mongodb-quickstart \
+    --stream=2.13 \
     --extension='resteasy-reactive-jackson,mongodb-client' \
     --no-code
 cd mongodb-quickstart</code></pre>
@@ -299,7 +285,8 @@ cd mongodb-quickstart</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.13.7.Final:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.13.9.Final:create \
+    -DplatformVersion=2.13.9.Final \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=mongodb-quickstart \
     -Dextensions='resteasy-reactive-jackson,mongodb-client' \
@@ -570,7 +557,7 @@ and automatically configure the connection.</p>
 <div class="paragraph configuration-legend">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
 </div>
-<table class="tableblock frame-all grid-all stretch configuration-reference">
+<table class="tableblock frame-all grid-all stretch configuration-reference configuration-reference-all-rows">
 <colgroup>
 <col style="width: 80%;">
 <col style="width: 10%;">
@@ -582,71 +569,83 @@ and automatically configure the connection.</p>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-mongodb-config-group-dev-services-build-time-config_quarkus.mongodb.devservices.enabled"></a><code><a href="#quarkus-mongodb-config-group-dev-services-build-time-config_quarkus.mongodb.devservices.enabled">quarkus.mongodb.devservices.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-1" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If DevServices has been explicitly enabled or disabled. DevServices is generally enabled by default, unless there is an existing configuration present. When DevServices is enabled Quarkus will attempt to automatically configure and start a database when running in Dev or Test mode.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12806">QUARKUS_MONGODB_DEVSERVICES_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12806" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13482">QUARKUS_MONGODB_DEVSERVICES_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13482" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-mongodb-config-group-dev-services-build-time-config_quarkus.mongodb.devservices.image-name"></a><code><a href="#quarkus-mongodb-config-group-dev-services-build-time-config_quarkus.mongodb.devservices.image-name">quarkus.mongodb.devservices.image-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-2" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The container image name to use, for container based DevServices providers.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12807">QUARKUS_MONGODB_DEVSERVICES_IMAGE_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12807" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13483">QUARKUS_MONGODB_DEVSERVICES_IMAGE_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13483" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-mongodb-config-group-dev-services-build-time-config_quarkus.mongodb.devservices.port"></a><code><a href="#quarkus-mongodb-config-group-dev-services-build-time-config_quarkus.mongodb.devservices.port">quarkus.mongodb.devservices.port</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-3" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Optional fixed port the dev service will listen to.
 If not defined, the port will be chosen randomly.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12808">QUARKUS_MONGODB_DEVSERVICES_PORT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12808" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13484">QUARKUS_MONGODB_DEVSERVICES_PORT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13484" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-mongodb-config-group-dev-services-build-time-config_quarkus.mongodb.devservices.properties-properties"></a><code><a href="#quarkus-mongodb-config-group-dev-services-build-time-config_quarkus.mongodb.devservices.properties-properties">quarkus.mongodb.devservices.properties</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-4" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Generic properties that are added to the connection URL.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12809">QUARKUS_MONGODB_DEVSERVICES_PROPERTIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12809" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13485">QUARKUS_MONGODB_DEVSERVICES_PROPERTIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13485" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>Map&lt;String,String&gt;</code></p></td>
 <td class="tableblock halign-left valign-middle"></td>
@@ -1339,10 +1338,10 @@ quarkus.mongodb.native.dns.lookup-timeout=10s # the default is 5s</code></pre>
 <div class="sect1">
 <h2 id="configuration-reference"><a class="anchor" href="#configuration-reference"></a>Configuration Reference</h2>
 <div class="sectionbody">
-<div class="paragraph configuration-legend">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime <input type="search" id="config-search-0" placeholder="FILTER CONFIGURATION" disabled></p>
 </div>
-<table class="tableblock frame-all grid-all stretch configuration-reference searchable">
+<table class="tableblock frame-all grid-all stretch configuration-reference searchable configuration-reference-all-rows">
 <colgroup>
 <col style="width: 80%;">
 <col style="width: 10%;">
@@ -1354,131 +1353,152 @@ quarkus.mongodb.native.dns.lookup-timeout=10s # the default is 5s</code></pre>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-mongodb_quarkus.mongodb.health.enabled"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.health.enabled">quarkus.mongodb.health.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-5" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Whether a health check is published in case the smallrye-health extension is present.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12810">QUARKUS_MONGODB_HEALTH_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12810" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13486">QUARKUS_MONGODB_HEALTH_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13486" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-mongodb_quarkus.mongodb.metrics.enabled"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.metrics.enabled">quarkus.mongodb.metrics.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-6" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Whether metrics are published in case a metrics extension is present.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12811">QUARKUS_MONGODB_METRICS_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12811" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13487">QUARKUS_MONGODB_METRICS_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13487" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-mongodb_quarkus.mongodb.tracing.enabled"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.tracing.enabled">quarkus.mongodb.tracing.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-7" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Whether tracing spans of driver commands are sent in case the smallrye-opentracing extension is present.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12812">QUARKUS_MONGODB_TRACING_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12812" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13488">QUARKUS_MONGODB_TRACING_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13488" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-mongodb_quarkus.mongodb.force-default-clients"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.force-default-clients">quarkus.mongodb.force-default-clients</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-8" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If set to true, the default clients will always be created even if there are no injection points that use them</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12813">QUARKUS_MONGODB_FORCE_DEFAULT_CLIENTS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12813" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13489">QUARKUS_MONGODB_FORCE_DEFAULT_CLIENTS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13489" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-mongodb_quarkus.mongodb.devservices.enabled"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.devservices.enabled">quarkus.mongodb.devservices.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-9" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If DevServices has been explicitly enabled or disabled. DevServices is generally enabled by default, unless there is an existing configuration present. When DevServices is enabled Quarkus will attempt to automatically configure and start a database when running in Dev or Test mode.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12814">QUARKUS_MONGODB_DEVSERVICES_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12814" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13490">QUARKUS_MONGODB_DEVSERVICES_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13490" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-mongodb_quarkus.mongodb.devservices.image-name"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.devservices.image-name">quarkus.mongodb.devservices.image-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-10" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The container image name to use, for container based DevServices providers.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12815">QUARKUS_MONGODB_DEVSERVICES_IMAGE_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12815" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13491">QUARKUS_MONGODB_DEVSERVICES_IMAGE_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13491" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-mongodb_quarkus.mongodb.devservices.port"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.devservices.port">quarkus.mongodb.devservices.port</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-11" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Optional fixed port the dev service will listen to.
 If not defined, the port will be chosen randomly.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12816">QUARKUS_MONGODB_DEVSERVICES_PORT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12816" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13492">QUARKUS_MONGODB_DEVSERVICES_PORT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13492" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.connection-string"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.connection-string">quarkus.mongodb.connection-string</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-12" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the connection string. The format is: <code>mongodb://[username:password@]host1[:port1][,host2[:port2],&#8230;&#8203;[,hostN[:portN]]][/[database.collection][?options]]</code>
@@ -1496,453 +1516,531 @@ An alternative format, using the <code>mongodb&#43;srv</code> protocol, is:  mon
  - <code>?options</code> are connection options. Note that if <code>database</code> is absent there is still a <code>/</code> required between the last host and the <code>?</code> introducing the options. Options are name=value pairs and the pairs are separated by "&amp;". Additionally with the mongodb&#43;srv protocol, TXT records are looked up from a Domain Name Server for the given host, and the text value of each one is prepended to any options on the URI itself. Because the last specified value for any option wins, that means that options provided on the URI will override any that are provided via TXT records.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12817">QUARKUS_MONGODB_CONNECTION_STRING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12817" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13493">QUARKUS_MONGODB_CONNECTION_STRING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13493" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.hosts"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.hosts">quarkus.mongodb.hosts</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-13" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the MongoDB server addressed (one if single mode). The addresses are passed as <code>host:port</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12818">QUARKUS_MONGODB_HOSTS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12818" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13494">QUARKUS_MONGODB_HOSTS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13494" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>127.0.0.1:27017</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.database"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.database">quarkus.mongodb.database</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-14" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configure the database name.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12819">QUARKUS_MONGODB_DATABASE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12819" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13495">QUARKUS_MONGODB_DATABASE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13495" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.application-name"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.application-name">quarkus.mongodb.application-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-15" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the application name.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12820">QUARKUS_MONGODB_APPLICATION_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12820" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13496">QUARKUS_MONGODB_APPLICATION_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13496" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.max-pool-size"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.max-pool-size">quarkus.mongodb.max-pool-size</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-16" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the maximum number of connections in the connection pool.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12821">QUARKUS_MONGODB_MAX_POOL_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12821" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13497">QUARKUS_MONGODB_MAX_POOL_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13497" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.min-pool-size"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.min-pool-size">quarkus.mongodb.min-pool-size</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-17" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the minimum number of connections in the connection pool.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12822">QUARKUS_MONGODB_MIN_POOL_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12822" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13498">QUARKUS_MONGODB_MIN_POOL_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13498" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.max-connection-idle-time"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.max-connection-idle-time">quarkus.mongodb.max-connection-idle-time</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-18" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Maximum idle time of a pooled connection. A connection that exceeds this limit will be closed.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12823">QUARKUS_MONGODB_MAX_CONNECTION_IDLE_TIME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12823" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13499">QUARKUS_MONGODB_MAX_CONNECTION_IDLE_TIME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13499" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.max-connection-life-time"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.max-connection-life-time">quarkus.mongodb.max-connection-life-time</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-19" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Maximum lifetime of a pooled connection. A connection that exceeds this limit will be closed.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12824">QUARKUS_MONGODB_MAX_CONNECTION_LIFE_TIME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12824" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13500">QUARKUS_MONGODB_MAX_CONNECTION_LIFE_TIME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13500" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.maintenance-frequency"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.maintenance-frequency">quarkus.mongodb.maintenance-frequency</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-20" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the time period between runs of the maintenance job.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12825">QUARKUS_MONGODB_MAINTENANCE_FREQUENCY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12825" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13501">QUARKUS_MONGODB_MAINTENANCE_FREQUENCY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13501" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.maintenance-initial-delay"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.maintenance-initial-delay">quarkus.mongodb.maintenance-initial-delay</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-21" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures period of time to wait before running the first maintenance job on the connection pool.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12826">QUARKUS_MONGODB_MAINTENANCE_INITIAL_DELAY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12826" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13502">QUARKUS_MONGODB_MAINTENANCE_INITIAL_DELAY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13502" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.connect-timeout"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.connect-timeout">quarkus.mongodb.connect-timeout</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-22" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>How long a connection can take to be opened before timing out.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12827">QUARKUS_MONGODB_CONNECT_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12827" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13503">QUARKUS_MONGODB_CONNECT_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13503" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.read-timeout"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.read-timeout">quarkus.mongodb.read-timeout</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-23" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>How long a socket read can take before timing out.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12828">QUARKUS_MONGODB_READ_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12828" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13504">QUARKUS_MONGODB_READ_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13504" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.tls-insecure"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.tls-insecure">quarkus.mongodb.tls-insecure</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-24" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If connecting with TLS, this option enables insecure TLS connections.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12829">QUARKUS_MONGODB_TLS_INSECURE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12829" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13505">QUARKUS_MONGODB_TLS_INSECURE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13505" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.tls"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.tls">quarkus.mongodb.tls</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-25" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Whether to connect using TLS.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12830">QUARKUS_MONGODB_TLS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12830" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13506">QUARKUS_MONGODB_TLS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13506" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.replica-set-name"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.replica-set-name">quarkus.mongodb.replica-set-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-26" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Implies that the hosts given are a seed list, and the driver will attempt to find all members of the set.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12831">QUARKUS_MONGODB_REPLICA_SET_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12831" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13507">QUARKUS_MONGODB_REPLICA_SET_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13507" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.server-selection-timeout"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.server-selection-timeout">quarkus.mongodb.server-selection-timeout</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-27" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>How long the driver will wait for server selection to succeed before throwing an exception.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12832">QUARKUS_MONGODB_SERVER_SELECTION_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12832" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13508">QUARKUS_MONGODB_SERVER_SELECTION_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13508" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.local-threshold"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.local-threshold">quarkus.mongodb.local-threshold</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-28" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>When choosing among multiple MongoDB servers to send a request, the driver will only send that request to a server whose ping time is less than or equal to the server with the fastest ping time plus the local threshold.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12833">QUARKUS_MONGODB_LOCAL_THRESHOLD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12833" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13509">QUARKUS_MONGODB_LOCAL_THRESHOLD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13509" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.heartbeat-frequency"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.heartbeat-frequency">quarkus.mongodb.heartbeat-frequency</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-29" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The frequency that the driver will attempt to determine the current state of each server in the cluster.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12834">QUARKUS_MONGODB_HEARTBEAT_FREQUENCY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12834" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13510">QUARKUS_MONGODB_HEARTBEAT_FREQUENCY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13510" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.read-concern"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.read-concern">quarkus.mongodb.read-concern</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-30" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the read concern. Supported values are: <code>local|majority|linearizable|snapshot|available</code></p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12835">QUARKUS_MONGODB_READ_CONCERN</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12835" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13511">QUARKUS_MONGODB_READ_CONCERN</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13511" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.read-preference"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.read-preference">quarkus.mongodb.read-preference</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-31" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the read preferences. Supported values are: <code>primary|primaryPreferred|secondary|secondaryPreferred|nearest</code></p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12836">QUARKUS_MONGODB_READ_PREFERENCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12836" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13512">QUARKUS_MONGODB_READ_PREFERENCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13512" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.health.database"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.health.database">quarkus.mongodb.health.database</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-32" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The database used during the readiness health checks</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12837">QUARKUS_MONGODB_HEALTH_DATABASE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12837" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13513">QUARKUS_MONGODB_HEALTH_DATABASE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13513" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>admin</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.dns.server-host"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.dns.server-host">quarkus.mongodb.dns.server-host</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-33" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>This property configures the DNS server. If the server is not set, it tries to read the first <code>nameserver</code> from <code>/etc /resolv.conf</code> (if the file exists), otherwise fallback to the default.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12838">QUARKUS_MONGODB_DNS_SERVER_HOST</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12838" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13514">QUARKUS_MONGODB_DNS_SERVER_HOST</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13514" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.dns.server-port"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.dns.server-port">quarkus.mongodb.dns.server-port</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-34" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>This property configures the DNS server port.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12839">QUARKUS_MONGODB_DNS_SERVER_PORT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12839" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13515">QUARKUS_MONGODB_DNS_SERVER_PORT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13515" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>53</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.dns.lookup-timeout"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.dns.lookup-timeout">quarkus.mongodb.dns.lookup-timeout</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-35" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If <code>native.dns.use-vertx-dns-resolver</code> is set to <code>true</code>, this property configures the DNS lookup timeout duration.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12840">QUARKUS_MONGODB_DNS_LOOKUP_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12840" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13516">QUARKUS_MONGODB_DNS_LOOKUP_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13516" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>5S</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.dns.log-activity"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.dns.log-activity">quarkus.mongodb.dns.log-activity</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-36" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>This property enables the logging ot the DNS lookup. It can be useful to understand why the lookup fails.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12841">QUARKUS_MONGODB_DNS_LOG_ACTIVITY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12841" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13517">QUARKUS_MONGODB_DNS_LOG_ACTIVITY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13517" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-mongodb_quarkus.mongodb.devservices.properties-properties"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.devservices.properties-properties">quarkus.mongodb.devservices.properties</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-37" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Generic properties that are added to the connection URL.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12842">QUARKUS_MONGODB_DEVSERVICES_PROPERTIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12842" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13518">QUARKUS_MONGODB_DEVSERVICES_PROPERTIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13518" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>Map&lt;String,String&gt;</code></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.connection-string"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.connection-string">quarkus.mongodb."mongo-client-configs".connection-string</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-38" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the connection string. The format is: <code>mongodb://[username:password@]host1[:port1][,host2[:port2],&#8230;&#8203;[,hostN[:portN]]][/[database.collection][?options]]</code>
@@ -1960,358 +2058,421 @@ An alternative format, using the <code>mongodb&#43;srv</code> protocol, is:  mon
  - <code>?options</code> are connection options. Note that if <code>database</code> is absent there is still a <code>/</code> required between the last host and the <code>?</code> introducing the options. Options are name=value pairs and the pairs are separated by "&amp;". Additionally with the mongodb&#43;srv protocol, TXT records are looked up from a Domain Name Server for the given host, and the text value of each one is prepended to any options on the URI itself. Because the last specified value for any option wins, that means that options provided on the URI will override any that are provided via TXT records.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12843">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__CONNECTION_STRING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12843" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13519">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__CONNECTION_STRING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13519" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.hosts"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.hosts">quarkus.mongodb."mongo-client-configs".hosts</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-39" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the MongoDB server addressed (one if single mode). The addresses are passed as <code>host:port</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12844">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__HOSTS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12844" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13520">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__HOSTS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13520" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>127.0.0.1:27017</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.database"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.database">quarkus.mongodb."mongo-client-configs".database</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-40" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configure the database name.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12845">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__DATABASE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12845" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13521">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__DATABASE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13521" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.application-name"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.application-name">quarkus.mongodb."mongo-client-configs".application-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-41" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the application name.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12846">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__APPLICATION_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12846" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13522">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__APPLICATION_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13522" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.max-pool-size"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.max-pool-size">quarkus.mongodb."mongo-client-configs".max-pool-size</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-42" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the maximum number of connections in the connection pool.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12847">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__MAX_POOL_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12847" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13523">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__MAX_POOL_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13523" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.min-pool-size"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.min-pool-size">quarkus.mongodb."mongo-client-configs".min-pool-size</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-43" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the minimum number of connections in the connection pool.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12848">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__MIN_POOL_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12848" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13524">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__MIN_POOL_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13524" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.max-connection-idle-time"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.max-connection-idle-time">quarkus.mongodb."mongo-client-configs".max-connection-idle-time</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-44" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Maximum idle time of a pooled connection. A connection that exceeds this limit will be closed.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12849">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__MAX_CONNECTION_IDLE_TIME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12849" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13525">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__MAX_CONNECTION_IDLE_TIME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13525" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.max-connection-life-time"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.max-connection-life-time">quarkus.mongodb."mongo-client-configs".max-connection-life-time</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-45" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Maximum lifetime of a pooled connection. A connection that exceeds this limit will be closed.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12850">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__MAX_CONNECTION_LIFE_TIME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12850" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13526">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__MAX_CONNECTION_LIFE_TIME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13526" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.maintenance-frequency"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.maintenance-frequency">quarkus.mongodb."mongo-client-configs".maintenance-frequency</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-46" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the time period between runs of the maintenance job.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12851">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__MAINTENANCE_FREQUENCY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12851" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13527">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__MAINTENANCE_FREQUENCY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13527" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.maintenance-initial-delay"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.maintenance-initial-delay">quarkus.mongodb."mongo-client-configs".maintenance-initial-delay</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-47" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures period of time to wait before running the first maintenance job on the connection pool.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12852">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__MAINTENANCE_INITIAL_DELAY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12852" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13528">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__MAINTENANCE_INITIAL_DELAY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13528" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.connect-timeout"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.connect-timeout">quarkus.mongodb."mongo-client-configs".connect-timeout</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-48" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>How long a connection can take to be opened before timing out.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12853">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__CONNECT_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12853" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13529">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__CONNECT_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13529" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.read-timeout"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.read-timeout">quarkus.mongodb."mongo-client-configs".read-timeout</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-49" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>How long a socket read can take before timing out.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12854">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__READ_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12854" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13530">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__READ_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13530" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.tls-insecure"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.tls-insecure">quarkus.mongodb."mongo-client-configs".tls-insecure</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-50" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If connecting with TLS, this option enables insecure TLS connections.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12855">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__TLS_INSECURE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12855" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13531">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__TLS_INSECURE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13531" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.tls"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.tls">quarkus.mongodb."mongo-client-configs".tls</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-51" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Whether to connect using TLS.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12856">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__TLS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12856" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13532">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__TLS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13532" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.replica-set-name"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.replica-set-name">quarkus.mongodb."mongo-client-configs".replica-set-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-52" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Implies that the hosts given are a seed list, and the driver will attempt to find all members of the set.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12857">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__REPLICA_SET_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12857" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13533">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__REPLICA_SET_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13533" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.server-selection-timeout"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.server-selection-timeout">quarkus.mongodb."mongo-client-configs".server-selection-timeout</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-53" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>How long the driver will wait for server selection to succeed before throwing an exception.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12858">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__SERVER_SELECTION_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12858" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13534">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__SERVER_SELECTION_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13534" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.local-threshold"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.local-threshold">quarkus.mongodb."mongo-client-configs".local-threshold</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-54" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>When choosing among multiple MongoDB servers to send a request, the driver will only send that request to a server whose ping time is less than or equal to the server with the fastest ping time plus the local threshold.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12859">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__LOCAL_THRESHOLD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12859" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13535">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__LOCAL_THRESHOLD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13535" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.heartbeat-frequency"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.heartbeat-frequency">quarkus.mongodb."mongo-client-configs".heartbeat-frequency</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-55" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The frequency that the driver will attempt to determine the current state of each server in the cluster.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12860">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__HEARTBEAT_FREQUENCY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12860" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13536">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__HEARTBEAT_FREQUENCY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13536" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.read-concern"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.read-concern">quarkus.mongodb."mongo-client-configs".read-concern</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-56" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the read concern. Supported values are: <code>local|majority|linearizable|snapshot|available</code></p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12861">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__READ_CONCERN</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12861" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13537">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__READ_CONCERN</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13537" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.read-preference"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.read-preference">quarkus.mongodb."mongo-client-configs".read-preference</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-57" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the read preferences. Supported values are: <code>primary|primaryPreferred|secondary|secondaryPreferred|nearest</code></p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12862">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__READ_PREFERENCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12862" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13538">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__READ_PREFERENCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13538" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.health.database"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.health.database">quarkus.mongodb."mongo-client-configs".health.database</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-58" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The database used during the readiness health checks</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12863">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__HEALTH_DATABASE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12863" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13539">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__HEALTH_DATABASE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13539" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>admin</code></p></td>
@@ -2321,178 +2482,208 @@ An alternative format, using the <code>mongodb&#43;srv</code> protocol, is:  mon
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.write-concern.safe"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.write-concern.safe">quarkus.mongodb.write-concern.safe</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-59" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the safety. If set to <code>true</code>: the driver ensures that all writes are acknowledged by the MongoDB server, or else throws an exception. (see also <code>w</code> and <code>wtimeoutMS</code>). If set fo
  - <code>false</code>: the driver does not ensure that all writes are acknowledged by the MongoDB server.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12864">QUARKUS_MONGODB_WRITE_CONCERN_SAFE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12864" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13540">QUARKUS_MONGODB_WRITE_CONCERN_SAFE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13540" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.write-concern.journal"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.write-concern.journal">quarkus.mongodb.write-concern.journal</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-60" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the journal writing aspect. If set to <code>true</code>: the driver waits for the server to group commit to the journal file on disk. If set to <code>false</code>: the driver does not wait for the server to group commit to the journal file on disk.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12865">QUARKUS_MONGODB_WRITE_CONCERN_JOURNAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12865" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13541">QUARKUS_MONGODB_WRITE_CONCERN_JOURNAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13541" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.write-concern.w"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.write-concern.w">quarkus.mongodb.write-concern.w</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-61" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>When set, the driver adds <code>w: wValue</code> to all write commands. It requires <code>safe</code> to be <code>true</code>. The value is typically a number, but can also be the <code>majority</code> string.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12866">QUARKUS_MONGODB_WRITE_CONCERN_W</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12866" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13542">QUARKUS_MONGODB_WRITE_CONCERN_W</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13542" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.write-concern.retry-writes"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.write-concern.retry-writes">quarkus.mongodb.write-concern.retry-writes</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-62" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If set to <code>true</code>, the driver will retry supported write operations if they fail due to a network error.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12867">QUARKUS_MONGODB_WRITE_CONCERN_RETRY_WRITES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12867" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13543">QUARKUS_MONGODB_WRITE_CONCERN_RETRY_WRITES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13543" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.write-concern.w-timeout"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.write-concern.w-timeout">quarkus.mongodb.write-concern.w-timeout</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-63" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>When set, the driver adds <code>wtimeout : ms</code> to all write commands. It requires <code>safe</code> to be <code>true</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12868">QUARKUS_MONGODB_WRITE_CONCERN_W_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12868" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13544">QUARKUS_MONGODB_WRITE_CONCERN_W_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13544" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.write-concern.safe"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.write-concern.safe">quarkus.mongodb."mongo-client-configs".write-concern.safe</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-64" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the safety. If set to <code>true</code>: the driver ensures that all writes are acknowledged by the MongoDB server, or else throws an exception. (see also <code>w</code> and <code>wtimeoutMS</code>). If set fo
  - <code>false</code>: the driver does not ensure that all writes are acknowledged by the MongoDB server.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12869">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__WRITE_CONCERN_SAFE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12869" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13545">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__WRITE_CONCERN_SAFE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13545" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.write-concern.journal"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.write-concern.journal">quarkus.mongodb."mongo-client-configs".write-concern.journal</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-65" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the journal writing aspect. If set to <code>true</code>: the driver waits for the server to group commit to the journal file on disk. If set to <code>false</code>: the driver does not wait for the server to group commit to the journal file on disk.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12870">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__WRITE_CONCERN_JOURNAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12870" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13546">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__WRITE_CONCERN_JOURNAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13546" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.write-concern.w"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.write-concern.w">quarkus.mongodb."mongo-client-configs".write-concern.w</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-66" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>When set, the driver adds <code>w: wValue</code> to all write commands. It requires <code>safe</code> to be <code>true</code>. The value is typically a number, but can also be the <code>majority</code> string.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12871">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__WRITE_CONCERN_W</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12871" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13547">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__WRITE_CONCERN_W</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13547" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.write-concern.retry-writes"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.write-concern.retry-writes">quarkus.mongodb."mongo-client-configs".write-concern.retry-writes</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-67" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If set to <code>true</code>, the driver will retry supported write operations if they fail due to a network error.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12872">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__WRITE_CONCERN_RETRY_WRITES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12872" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13548">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__WRITE_CONCERN_RETRY_WRITES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13548" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.write-concern.w-timeout"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.write-concern.w-timeout">quarkus.mongodb."mongo-client-configs".write-concern.w-timeout</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-68" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>When set, the driver adds <code>wtimeout : ms</code> to all write commands. It requires <code>safe</code> to be <code>true</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12873">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__WRITE_CONCERN_W_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12873" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13549">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__WRITE_CONCERN_W_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13549" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-mongodb" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-quarkus-mongodb-config-group-dev-services-build-time-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
 <tr>
@@ -2500,172 +2691,202 @@ An alternative format, using the <code>mongodb&#43;srv</code> protocol, is:  mon
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.credentials.username"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.credentials.username">quarkus.mongodb.credentials.username</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-69" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the username.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12874">QUARKUS_MONGODB_CREDENTIALS_USERNAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12874" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13550">QUARKUS_MONGODB_CREDENTIALS_USERNAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13550" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.credentials.password"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.credentials.password">quarkus.mongodb.credentials.password</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-70" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the password.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12875">QUARKUS_MONGODB_CREDENTIALS_PASSWORD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12875" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13551">QUARKUS_MONGODB_CREDENTIALS_PASSWORD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13551" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.credentials.auth-mechanism"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.credentials.auth-mechanism">quarkus.mongodb.credentials.auth-mechanism</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-71" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the authentication mechanism to use if a credential was supplied. The default is unspecified, in which case the client will pick the most secure mechanism available based on the sever version. For the GSSAPI and MONGODB-X509 mechanisms, no password is accepted, only the username. Supported values: null or <code>GSSAPI|PLAIN|MONGODB-X509|SCRAM_SHA_1|SCRAM_SHA_256|MONGODB_AWS</code></p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12876">QUARKUS_MONGODB_CREDENTIALS_AUTH_MECHANISM</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12876" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13552">QUARKUS_MONGODB_CREDENTIALS_AUTH_MECHANISM</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13552" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.credentials.auth-source"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.credentials.auth-source">quarkus.mongodb.credentials.auth-source</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-72" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the source of the authentication credentials. This is typically the database that the credentials have been created. The value defaults to the database specified in the path portion of the connection string or in the 'database' configuration property. If the database is specified in neither place, the default value is <code>admin</code>. This option is only respected when using the MONGO-CR mechanism (the default).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12877">QUARKUS_MONGODB_CREDENTIALS_AUTH_SOURCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12877" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13553">QUARKUS_MONGODB_CREDENTIALS_AUTH_SOURCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13553" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.credentials.auth-mechanism-properties-auth-mechanism-properties"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.credentials.auth-mechanism-properties-auth-mechanism-properties">quarkus.mongodb.credentials.auth-mechanism-properties</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-73" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Allows passing authentication mechanism properties.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12878">QUARKUS_MONGODB_CREDENTIALS_AUTH_MECHANISM_PROPERTIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12878" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13554">QUARKUS_MONGODB_CREDENTIALS_AUTH_MECHANISM_PROPERTIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13554" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>Map&lt;String,String&gt;</code></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.credentials.username"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.credentials.username">quarkus.mongodb."mongo-client-configs".credentials.username</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-74" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the username.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12879">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__CREDENTIALS_USERNAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12879" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13555">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__CREDENTIALS_USERNAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13555" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.credentials.password"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.credentials.password">quarkus.mongodb."mongo-client-configs".credentials.password</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-75" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the password.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12880">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__CREDENTIALS_PASSWORD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12880" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13556">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__CREDENTIALS_PASSWORD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13556" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.credentials.auth-mechanism"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.credentials.auth-mechanism">quarkus.mongodb."mongo-client-configs".credentials.auth-mechanism</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-76" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the authentication mechanism to use if a credential was supplied. The default is unspecified, in which case the client will pick the most secure mechanism available based on the sever version. For the GSSAPI and MONGODB-X509 mechanisms, no password is accepted, only the username. Supported values: null or <code>GSSAPI|PLAIN|MONGODB-X509|SCRAM_SHA_1|SCRAM_SHA_256|MONGODB_AWS</code></p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12881">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__CREDENTIALS_AUTH_MECHANISM</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12881" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13557">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__CREDENTIALS_AUTH_MECHANISM</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13557" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.credentials.auth-source"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.credentials.auth-source">quarkus.mongodb."mongo-client-configs".credentials.auth-source</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-77" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Configures the source of the authentication credentials. This is typically the database that the credentials have been created. The value defaults to the database specified in the path portion of the connection string or in the 'database' configuration property. If the database is specified in neither place, the default value is <code>admin</code>. This option is only respected when using the MONGO-CR mechanism (the default).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12882">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__CREDENTIALS_AUTH_SOURCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12882" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13558">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__CREDENTIALS_AUTH_SOURCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13558" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.credentials.auth-mechanism-properties-auth-mechanism-properties"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.-mongo-client-configs-.credentials.auth-mechanism-properties-auth-mechanism-properties">quarkus.mongodb."mongo-client-configs".credentials.auth-mechanism-properties</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-78" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Allows passing authentication mechanism properties.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12883">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__CREDENTIALS_AUTH_MECHANISM_PROPERTIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12883" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13559">QUARKUS_MONGODB__MONGO_CLIENT_CONFIGS__CREDENTIALS_AUTH_MECHANISM_PROPERTIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13559" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>Map&lt;String,String&gt;</code></p></td>
 <td class="tableblock halign-left valign-middle"></td>
@@ -2696,8 +2917,42 @@ Otherwise, <code>PT</code> is implicitly prepended to the value to obtain a stan
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#creating-the-maven-project">Creating the Maven project</a></li>
+<li><a href="#creating-your-first-json-rest-service">Creating your first JSON REST service</a></li>
+<li><a href="#configuring-the-mongodb-database">Configuring the MongoDB database</a>
+<ul class="sectlevel2">
+<li><a href="#dev-services">Dev Services (Configuration Free Databases)</a></li>
+</ul>
+</li>
+<li><a href="#multiple-mongodb-clients">Multiple MongoDB Clients</a>
+<ul class="sectlevel2">
+<li><a href="#named-mongo-client-injection">Named Mongo client Injection</a></li>
+</ul>
+</li>
+<li><a href="#running-a-mongodb-database">Running a MongoDB Database</a></li>
+<li><a href="#creating-a-frontend">Creating a frontend</a></li>
+<li><a href="#reactive">Reactive MongoDB Client</a></li>
+<li><a href="#simplifying-mongodb-client-usage-using-bson-codec">Simplifying MongoDB Client usage using BSON codec</a></li>
+<li><a href="#the-pojo-codec">The POJO Codec</a></li>
+<li><a href="#simplifying-mongodb-with-panache">Simplifying MongoDB with Panache</a></li>
+<li><a href="#schema-migration-with-liquibase">Schema migration with Liquibase</a></li>
+<li><a href="#connection-health-check">Connection Health Check</a></li>
+<li><a href="#metrics">Metrics</a></li>
+<li><a href="#tracing">Tracing</a></li>
+<li><a href="#testing-helpers">Testing helpers</a></li>
+<li><a href="#the-legacy-client">The legacy client</a></li>
+<li><a href="#building-a-native-executable">Building a native executable</a></li>
+<li><a href="#using-mongosrv-urls">Using mongo+srv:// urls</a></li>
+<li><a href="#configuration-reference">Configuration Reference</a></li>
+</ul></div>
+    </div>
   </div>
-</div>
+  </div>
 
   </div>
 
@@ -2745,6 +3000,14 @@ Otherwise, <code>PT</code> is implicitly prepended to the value to obtain a stan
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -2825,6 +3088,10 @@ Otherwise, <code>PT</code> is implicitly prepended to the value to obtain a stan
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -2887,12 +3154,12 @@ Otherwise, <code>PT</code> is implicitly prepended to the value to obtain a stan
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -6,10 +6,11 @@
 
 
 <head>
-  <title>Getting Started to SmallRye Reactive Messaging with AMQP 1.0 - main - Quarkus</title>
+  <title>Getting Started to Quarkus Messaging with AMQP 1.0 - main - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -21,7 +22,7 @@
   <meta name="twitter:site" content="@QuarkusIO"> 
   <meta name="twitter:creator" content="@QuarkusIO">
   <meta property="og:url" content="https://quarkus.io/version/main/guides/amqp" />
-  <meta property="og:title" content="Getting Started to SmallRye Reactive Messaging with AMQP 1.0 - main" />
+  <meta property="og:title" content="Getting Started to Quarkus Messaging with AMQP 1.0 - main" />
   <meta property="og:description" content="Quarkus: Supersonic Subatomic Java" />
   <meta property="og:image" content="https://quarkus.io/assets/images/quarkus_card.png" />
   
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/version/main/guides/amqp" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/version/main/guides/amqp" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/version/main/guides/amqp" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/version/main/guides/amqp" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/version/main/guides/amqp" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/version/main/guides/amqp" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/version/main/guides/amqp">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/version/main/guides/amqp">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/version/main/guides/amqp">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/version/main/guides/amqp">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" selected>Main - SNAPSHOT</option>
         
         
-        <option value="latest" >3.0 - Latest</option>
+        
+        <option value="latest" >3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" >2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,30 +178,14 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Getting Started to SmallRye Reactive Messaging with AMQP 1.0 </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#architecture">Architecture</a></li>
-<li><a href="#solution">Solution</a></li>
-<li><a href="#creating-the-maven-project">Creating the Maven Project</a></li>
-<li><a href="#the-quote-object">The Quote object</a></li>
-<li><a href="#sending-quote-request">Sending quote request</a></li>
-<li><a href="#processing-quote-requests">Processing quote requests</a></li>
-<li><a href="#receiving-quotes">Receiving quotes</a></li>
-<li><a href="#the-html-page">The HTML page</a></li>
-<li><a href="#get-it-running">Get it running</a></li>
-<li><a href="#running-in-jvm-or-native-mode">Running in JVM or Native mode</a></li>
-<li><a href="#going-further">Going further</a></li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Getting Started to Quarkus Messaging with AMQP 1.0 </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This guide demonstrates how your Quarkus application can utilize SmallRye Reactive Messaging to interact with AMQP 1.0.</p>
+<p>This guide demonstrates how your Quarkus application can utilize Quarkus Messaging to interact with AMQP 1.0.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -191,7 +194,7 @@
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-If you want to use RabbitMQ, you should use the <a href="rabbitmq">SmallRye Reactive Messaging RabbitMQ extension</a>.
+If you want to use RabbitMQ, you should use the <a href="rabbitmq">Quarkus Messaging RabbitMQ extension</a>.
 Alternatively, if you want to use RabbitMQ with AMQP 1.0 you need to enable the AMQP 1.0 plugin in the RabbitMQ broker;
 check the <a href="https://smallrye.io/smallrye-reactive-messaging/smallrye-reactive-messaging/3.9/amqp/amqp.html#amqp-rabbitmq">connecting to RabbitMQ</a>
 documentation.
@@ -216,10 +219,10 @@ documentation.
 <p>An IDE</p>
 </li>
 <li>
-<p>JDK 11+ installed with <code>JAVA_HOME</code> configured appropriately</p>
+<p>JDK 17+ installed with <code>JAVA_HOME</code> configured appropriately</p>
 </li>
 <li>
-<p>Apache Maven 3.9.1</p>
+<p>Apache Maven 3.9.6</p>
 </li>
 <li>
 <p>Docker and Docker Compose or <a href="podman">Podman</a>, and Docker Compose</p>
@@ -275,10 +278,10 @@ The user will therefore see the quote price updated from <em>pending</em> to the
 However, you can go right to the completed example.</p>
 </div>
 <div class="paragraph">
-<p>Clone the Git repository: <code>git clone <a href="https://github.com/quarkusio/quarkus-quickstarts.git" class="bare">https://github.com/quarkusio/quarkus-quickstarts.git</a></code>, or download an <a href="https://github.com/quarkusio/quarkus-quickstarts/archive/main.zip">archive</a>.</p>
+<p>Clone the Git repository: <code>git clone -b development <a href="https://github.com/quarkusio/quarkus-quickstarts.git" class="bare">https://github.com/quarkusio/quarkus-quickstarts.git</a></code>, or download an <a href="https://github.com/quarkusio/quarkus-quickstarts/archive/development.zip">archive</a>.</p>
 </div>
 <div class="paragraph">
-<p>The solution is located in the <code>amqp-quickstart</code> <a href="https://github.com/quarkusio/quarkus-quickstarts/tree/main/amqp-quickstart">directory</a>.</p>
+<p>The solution is located in the <code>amqp-quickstart</code> <a href="https://github.com/quarkusio/quarkus-quickstarts/tree/development/amqp-quickstart">directory</a>.</p>
 </div>
 </div>
 </div>
@@ -297,7 +300,7 @@ However, you can go right to the completed example.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus create app org.acme:amqp-quickstart-producer \
-    --extension='resteasy-reactive-jackson,smallrye-reactive-messaging-amqp' \
+    --extension='rest-jackson,messaging-amqp' \
     --no-code</code></pre>
 </div>
 </div>
@@ -305,7 +308,7 @@ However, you can go right to the completed example.</p>
 <p>To create a Gradle project, add the <code>--gradle</code> or <code>--gradle-kotlin-dsl</code> option.</p>
 </div>
 <div class="paragraph">
-<p><em>For more information about how to install the Quarkus CLI and use it, please refer to <a href="cli-tooling">the Quarkus CLI guide</a>.</em></p>
+<p>For more information about how to install and use the Quarkus CLI, see the <a href="cli-tooling">Quarkus CLI</a> guide.</p>
 </div>
 </div>
 </div>
@@ -314,10 +317,10 @@ However, you can go right to the completed example.</p>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:999-SNAPSHOT:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus:quarkus-maven-plugin:999-SNAPSHOT:create \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=amqp-quickstart-producer \
-    -Dextensions='resteasy-reactive-jackson,smallrye-reactive-messaging-amqp' \
+    -Dextensions='rest-jackson,messaging-amqp' \
     -DnoCode</code></pre>
 </div>
 </div>
@@ -327,12 +330,25 @@ However, you can go right to the completed example.</p>
 </div>
 </div>
 <div class="paragraph">
+<p>For Windows users:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If using cmd, (don&#8217;t use backward slash <code>\</code> and put everything on the same line)</p>
+</li>
+<li>
+<p>If using Powershell, wrap <code>-D</code> parameters in double quotes e.g. <code>"-DprojectArtifactId=amqp-quickstart-producer"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
 <p>This command creates the project structure and select the two Quarkus extensions we will be using:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>RESTEasy Reactive and its Jackson support to handle JSON payloads</p>
+<p>Quarkus REST (formerly RESTEasy Reactive) and its Jackson support to handle JSON payloads</p>
 </li>
 <li>
 <p>The Reactive Messaging AMQP connector</p>
@@ -348,7 +364,7 @@ However, you can go right to the completed example.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus create app org.acme:amqp-quickstart-processor \
-    --extension='smallrye-reactive-messaging-amqp' \
+    --extension='messaging-amqp' \
     --no-code</code></pre>
 </div>
 </div>
@@ -356,7 +372,7 @@ However, you can go right to the completed example.</p>
 <p>To create a Gradle project, add the <code>--gradle</code> or <code>--gradle-kotlin-dsl</code> option.</p>
 </div>
 <div class="paragraph">
-<p><em>For more information about how to install the Quarkus CLI and use it, please refer to <a href="cli-tooling">the Quarkus CLI guide</a>.</em></p>
+<p>For more information about how to install and use the Quarkus CLI, see the <a href="cli-tooling">Quarkus CLI</a> guide.</p>
 </div>
 </div>
 </div>
@@ -365,10 +381,10 @@ However, you can go right to the completed example.</p>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:999-SNAPSHOT:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus:quarkus-maven-plugin:999-SNAPSHOT:create \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=amqp-quickstart-processor \
-    -Dextensions='smallrye-reactive-messaging-amqp' \
+    -Dextensions='messaging-amqp' \
     -DnoCode</code></pre>
 </div>
 </div>
@@ -376,6 +392,19 @@ However, you can go right to the completed example.</p>
 <p>To create a Gradle project, add the <code>-DbuildTool=gradle</code> or <code>-DbuildTool=gradle-kotlin-dsl</code> option.</p>
 </div>
 </div>
+</div>
+<div class="paragraph">
+<p>For Windows users:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If using cmd, (don&#8217;t use backward slash <code>\</code> and put everything on the same line)</p>
+</li>
+<li>
+<p>If using Powershell, wrap <code>-D</code> parameters in double quotes e.g. <code>"-DprojectArtifactId=amqp-quickstart-processor"</code></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>At that point you should have the following structure:</p>
@@ -622,7 +651,7 @@ Open the <code>src/main/resources/application.properties</code> file and add:</p
 </div>
 </div>
 <div class="paragraph">
-<p>The configuration keys are structured as follows:</p>
+<p>The configuration properties are structured as follows:</p>
 </div>
 <div class="paragraph">
 <p><code>mp.messaging.[outgoing|incoming].{channel-name}.property=value</code></p>
@@ -772,7 +801,7 @@ You can follow the instructions from the <a href="https://activemq.apache.org/co
 services:
 
   artemis:
-    image: quay.io/artemiscloud/activemq-artemis-broker:0.1.2
+    image: quay.io/artemiscloud/activemq-artemis-broker:1.0.25
     ports:
       - "8161:8161"
       - "61616:61616"
@@ -834,8 +863,8 @@ The UI is exposed on <a href="http://localhost:8080/quotes.html" class="bare">ht
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">&gt; mvn -f amqp-quickstart-producer package -Pnative  -Dquarkus.native.container-build=true
-&gt; mvn -f amqp-quickstart-processor package -Pnative -Dquarkus.native.container-build=true</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">&gt; mvn -f amqp-quickstart-producer package -Dnative  -Dquarkus.native.container-build=true
+&gt; mvn -f amqp-quickstart-processor package -Dnative -Dquarkus.native.container-build=true</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -867,8 +896,100 @@ The only difference is the connector configuration and the JSON mapping.</p>
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#creating-the-maven-project">Creating the Maven Project</a></li>
+<li><a href="#the-quote-object">The Quote object</a></li>
+<li><a href="#sending-quote-request">Sending quote request</a></li>
+<li><a href="#processing-quote-requests">Processing quote requests</a></li>
+<li><a href="#receiving-quotes">Receiving quotes</a></li>
+<li><a href="#the-html-page">The HTML page</a></li>
+<li><a href="#get-it-running">Get it running</a></li>
+<li><a href="#running-in-jvm-or-native-mode">Running in JVM or Native mode</a></li>
+<li><a href="#going-further">Going further</a></li>
+</ul></div>
+    </div>
   </div>
-</div>
+  <h2>Related content</h2>
+  <div class="grid-wrapper relations">
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same extensions</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/version/main/guides/amqp-dev-services">Dev Services for AMQP</a></li>
+      
+        
+        <li class="reference"><a href="/version/main/guides/amqp-reference">Reactive Messaging AMQP 1.0 Connector Reference Documentation</a></li>
+      </ul>
+    </div>
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same topics</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/version/main/guides/amqp-dev-services">Dev Services for AMQP</a></li>
+      
+        
+        <li class="reference"><a href="/version/main/guides/amqp-reference">Reactive Messaging AMQP 1.0 Connector Reference Documentation</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka">Apache Kafka Reference Guide</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/pulsar">Apache Pulsar Reference Guide</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/apicurio-registry-dev-services">Dev Services for Apicurio Registry</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka-dev-services">Dev Services for Kafka</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/pulsar-dev-services">Dev Services for Pulsar</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/rabbitmq-dev-services">Dev Services for RabbitMQ</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka-getting-started">Getting Started to Quarkus Messaging with Apache Kafka</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/pulsar-getting-started">Getting Started to Quarkus Messaging with Apache Pulsar</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/rabbitmq">Getting Started to Quarkus Messaging with RabbitMQ</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka-dev-ui">Kafka Dev UI</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/messaging-virtual-threads">Quarkus Virtual Thread support with Reactive Messaging</a></li>
+      
+        
+        <li class="reference"><a href="/version/main/guides/rabbitmq-reference">Reactive Messaging RabbitMQ Connector Reference Documentation</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka-streams">Using Apache Kafka Streams</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka-schema-registry-avro">Using Apache Kafka with Schema Registry and Avro</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka-schema-registry-json-schema">Using Apache Kafka with Schema Registry and JSON Schema</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/jms">Using JMS</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/reactive-event-bus">Using the event bus</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   </div>
 
@@ -916,6 +1037,14 @@ The only difference is the connector configuration and the JSON mapping.</p>
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -996,6 +1125,10 @@ The only difference is the connector configuration and the JSON mapping.</p>
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -1058,12 +1191,12 @@ The only difference is the connector configuration and the JSON mapping.</p>
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

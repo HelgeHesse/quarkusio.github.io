@@ -9,7 +9,8 @@
   <title>Simplified MongoDB with Panache - main - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/version/main/guides/mongodb-panache" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/version/main/guides/mongodb-panache" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/version/main/guides/mongodb-panache" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/version/main/guides/mongodb-panache" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/version/main/guides/mongodb-panache" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/version/main/guides/mongodb-panache" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/version/main/guides/mongodb-panache">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/version/main/guides/mongodb-panache">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/version/main/guides/mongodb-panache">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/version/main/guides/mongodb-panache">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" selected>Main - SNAPSHOT</option>
         
         
-        <option value="latest" >3.0 - Latest</option>
+        
+        <option value="latest" >3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" >2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,64 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Simplified MongoDB with Panache </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#first-an-example">First: an example</a></li>
-<li><a href="#solution">Solution</a></li>
-<li><a href="#creating-the-maven-project">Creating the Maven project</a></li>
-<li><a href="#setting-up-and-configuring-mongodb-with-panache">Setting up and configuring MongoDB with Panache</a></li>
-<li><a href="#solution-1-using-the-active-record-pattern">Solution 1: using the active record pattern</a>
-<ul class="sectlevel2">
-<li><a href="#defining-your-entity">Defining your entity</a></li>
-<li><a href="#most-useful-operations">Most useful operations</a></li>
-<li><a href="#adding-entity-methods">Adding entity methods</a></li>
-</ul>
-</li>
-<li><a href="#solution-2-using-the-repository-pattern">Solution 2: using the repository pattern</a>
-<ul class="sectlevel2">
-<li><a href="#defining-your-entity-2">Defining your entity</a></li>
-<li><a href="#defining-your-repository">Defining your repository</a></li>
-<li><a href="#most-useful-operations-2">Most useful operations</a></li>
-</ul>
-</li>
-<li><a href="#writing-a-jakarta-rest-resource">Writing a Jakarta REST resource</a></li>
-<li><a href="#advanced-query">Advanced Query</a>
-<ul class="sectlevel2">
-<li><a href="#paging">Paging</a></li>
-<li><a href="#using-a-range-instead-of-pages">Using a range instead of pages</a></li>
-<li><a href="#sorting">Sorting</a></li>
-<li><a href="#simplified-queries">Simplified queries</a></li>
-<li><a href="#query-parameters">Query parameters</a></li>
-<li><a href="#query-projection">Query projection</a></li>
-</ul>
-</li>
-<li><a href="#query-debugging">Query debugging</a></li>
-<li><a href="#the-pojocodecprovider-easy-object-to-bson-document-conversion">The PojoCodecProvider: easy object to BSON document conversion.</a></li>
-<li><a href="#transactions">Transactions</a></li>
-<li><a href="#custom-ids">Custom IDs</a></li>
-<li><a href="#working-with-kotlin-data-classes">Working with Kotlin Data classes</a></li>
-<li><a href="#reactive">Reactive Entities and Repositories</a></li>
-<li><a href="#mocking">Mocking</a>
-<ul class="sectlevel2">
-<li><a href="#using-the-active-record-pattern">Using the active-record pattern</a></li>
-<li><a href="#using-the-repository-pattern">Using the repository pattern</a></li>
-</ul>
-</li>
-<li><a href="#how-and-why-we-simplify-mongodb-api">How and why we simplify MongoDB API</a></li>
-<li><a href="#defining-entities-in-external-projects-or-jars">Defining entities in external projects or jars</a></li>
-<li><a href="#multitenancy">Multitenancy</a>
-<ul class="sectlevel2">
-<li><a href="#writing-the-application">Writing the application</a></li>
-<li><a href="#configuring-the-application">Configuring the application</a></li>
-<li><a href="#testing">Testing</a></li>
-</ul>
-</li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Simplified MongoDB with Panache </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -298,10 +263,10 @@ MongoDB with Panache also allows for the use of the more classical <a href="http
 However, you can go right to the completed example.</p>
 </div>
 <div class="paragraph">
-<p>Clone the Git repository: <code>git clone <a href="https://github.com/quarkusio/quarkus-quickstarts.git" class="bare">https://github.com/quarkusio/quarkus-quickstarts.git</a></code>, or download an <a href="https://github.com/quarkusio/quarkus-quickstarts/archive/main.zip">archive</a>.</p>
+<p>Clone the Git repository: <code>git clone -b development <a href="https://github.com/quarkusio/quarkus-quickstarts.git" class="bare">https://github.com/quarkusio/quarkus-quickstarts.git</a></code>, or download an <a href="https://github.com/quarkusio/quarkus-quickstarts/archive/development.zip">archive</a>.</p>
 </div>
 <div class="paragraph">
-<p>The solution is located in the <code>mongodb-panache-quickstart</code> <a href="https://github.com/quarkusio/quarkus-quickstarts/tree/main/mongodb-panache-quickstart">directory</a>.</p>
+<p>The solution is located in the <code>mongodb-panache-quickstart</code> <a href="https://github.com/quarkusio/quarkus-quickstarts/tree/development/mongodb-panache-quickstart">directory</a>.</p>
 </div>
 </div>
 </div>
@@ -317,7 +282,7 @@ However, you can go right to the completed example.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus create app org.acme:mongodb-panache-quickstart \
-    --extension='resteasy-reactive-jackson,mongodb-panache' \
+    --extension='rest-jackson,mongodb-panache' \
     --no-code
 cd mongodb-panache-quickstart</code></pre>
 </div>
@@ -326,7 +291,7 @@ cd mongodb-panache-quickstart</code></pre>
 <p>To create a Gradle project, add the <code>--gradle</code> or <code>--gradle-kotlin-dsl</code> option.</p>
 </div>
 <div class="paragraph">
-<p><em>For more information about how to install the Quarkus CLI and use it, please refer to <a href="cli-tooling">the Quarkus CLI guide</a>.</em></p>
+<p>For more information about how to install and use the Quarkus CLI, see the <a href="cli-tooling">Quarkus CLI</a> guide.</p>
 </div>
 </div>
 </div>
@@ -335,10 +300,10 @@ cd mongodb-panache-quickstart</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:999-SNAPSHOT:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus:quarkus-maven-plugin:999-SNAPSHOT:create \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=mongodb-panache-quickstart \
-    -Dextensions='resteasy-reactive-jackson,mongodb-panache' \
+    -Dextensions='rest-jackson,mongodb-panache' \
     -DnoCode
 cd mongodb-panache-quickstart</code></pre>
 </div>
@@ -349,7 +314,20 @@ cd mongodb-panache-quickstart</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This command generates a Maven structure importing the RESTEasy Reactive Jackson and MongoDB with Panache extensions.
+<p>For Windows users:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If using cmd, (don&#8217;t use backward slash <code>\</code> and put everything on the same line)</p>
+</li>
+<li>
+<p>If using Powershell, wrap <code>-D</code> parameters in double quotes e.g. <code>"-DprojectArtifactId=mongodb-panache-quickstart"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This command generates a Maven structure importing the Quarkus REST (formerly RESTEasy Reactive) Jackson and MongoDB with Panache extensions.
 After this, the <code>quarkus-mongodb-panache</code> extension has been added to your build file.</p>
 </div>
 <div class="paragraph">
@@ -873,7 +851,7 @@ The repository pattern examples have been omitted for brevity.
 <h2 id="writing-a-jakarta-rest-resource"><a class="anchor" href="#writing-a-jakarta-rest-resource"></a>Writing a Jakarta REST resource</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>First, include one of the RESTEasy extensions to enable Jakarta REST endpoints, for example, add the <code>io.quarkus:quarkus-resteasy-reactive-jackson</code> dependency for Jakarta REST and JSON support.</p>
+<p>First, include one of the RESTEasy extensions to enable Jakarta REST endpoints, for example, add the <code>io.quarkus:quarkus-rest-jackson</code> dependency for Jakarta REST and JSON support.</p>
 </div>
 <div class="paragraph">
 <p>Then, you can create the following resource to create/read/update/delete your Person entity:</p>
@@ -1036,7 +1014,7 @@ List&lt;Person&gt; persons = Person.list("status", Sort.by("name").and("birth"),
 <p>Normally, MongoDB queries are of this form: <code>{'firstname': 'John', 'lastname':'Doe'}</code>, this is what we call MongoDB native queries.</p>
 </div>
 <div class="paragraph">
-<p>You can use them if you want, but we also support what we call <strong>PanacheQL</strong> that can be seen as a subset of <a href="https://docs.oracle.com/javaee/7/tutorial/persistence-querylanguage.htm#BNBTG">JPQL</a> (or <a href="https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#hql">HQL</a>) and allows you to easily express a query.
+<p>You can use them if you want, but we also support what we call <strong>PanacheQL</strong> that can be seen as a subset of <a href="https://docs.oracle.com/javaee/7/tutorial/persistence-querylanguage.htm#BNBTG">JPQL</a> (or <a href="https://docs.jboss.org/hibernate/orm/6.4/userguide/html_single/Hibernate_User_Guide.html#hql">HQL</a>) and allows you to easily express a query.
 MongoDB with Panache will then map it to a MongoDB native query.</p>
 </div>
 <div class="paragraph">
@@ -1293,7 +1271,7 @@ If you run Java 17+, records are a good fit for projection classes.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.log.category."io.quarkus.mongodb.panache.runtime".level=DEBUG</code></pre>
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.log.category."io.quarkus.mongodb.panache.common.runtime".level=DEBUG</code></pre>
 </div>
 </div>
 </div>
@@ -1329,20 +1307,11 @@ See <a href="mongodb#simplifying-mongodb-client-usage-using-bson-codec">Using BS
 <p>To use them with MongoDB with Panache you need to annotate the method that starts the transaction with the <code>@Transactional</code> annotation.</p>
 </div>
 <div class="paragraph">
+<p>Inside methods annotated with <code>@Transactional</code> you can access the <code>ClientSession</code> with <code>Panache.getClientSession()</code> if needed.</p>
+</div>
+<div class="paragraph">
 <p>In MongoDB, a transaction is only possible on a replicaset,
 luckily our <a href="mongodb#dev-services">Dev Services for MongoDB</a> setups a single node replicaset so it is compatible with transactions.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Transaction support inside MongoDB with Panache is still experimental.
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
@@ -1399,7 +1368,7 @@ you need to provide the value by yourself.</p>
 </div>
 <div class="paragraph">
 <p><code>ObjectId</code> can be difficult to use if you want to expose its value in your REST service.
-So we created Jackson and JSON-B providers to serialize/deserialize them as a <code>String</code> which are automatically registered if your project depends on either the RESTEasy Reactive Jackson extension or the RESTEasy Reactive JSON-B extension.</p>
+So we created Jackson and JSON-B providers to serialize/deserialize them as a <code>String</code> which are automatically registered if your project depends on either the Quarkus REST Jackson extension or the Quarkus REST JSON-B extension.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -1624,7 +1593,7 @@ Uni&lt;Long&gt; updated = ReactivePerson.update("name", "Mortal").where("status"
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-If you use MongoDB with Panache in conjunction with RESTEasy Reactive, you can directly return a reactive type inside your Jakarta REST resource endpoint.
+If you use MongoDB with Panache in conjunction with Quarkus REST, you can directly return a reactive type inside your Jakarta REST resource endpoint.
 </td>
 </tr>
 </table>
@@ -1633,7 +1602,7 @@ If you use MongoDB with Panache in conjunction with RESTEasy Reactive, you can d
 <p>The same query facility exists for the reactive types, but the <code>stream()</code> methods act differently: they return a <code>Multi</code> (which implement  a reactive stream <code>Publisher</code>) instead of a <code>Stream</code>.</p>
 </div>
 <div class="paragraph">
-<p>It allows more advanced reactive use cases, for example, you can use it to send server-sent events (SSE) via RESTEasy Reactive:</p>
+<p>It allows more advanced reactive use cases, for example, you can use it to send server-sent events (SSE) via Quarkus REST:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1659,10 +1628,34 @@ public Multi&lt;ReactivePerson&gt; streamPersons() {
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-<code>@RestStreamElementType(MediaType.APPLICATION_JSON)</code> tells RESTEasy Reactive to serialize the object in JSON.
+<code>@RestStreamElementType(MediaType.APPLICATION_JSON)</code> tells Quarkus REST to serialize the object in JSON.
 </td>
 </tr>
 </table>
+</div>
+<div class="sect2">
+<h3 id="reactive-transactions"><a class="anchor" href="#reactive-transactions"></a>Reactive transactions</h3>
+<div class="paragraph">
+<p>MongoDB offers ACID transactions since version 4.0.</p>
+</div>
+<div class="paragraph">
+<p>To use them with reactive entities or repositories you need to use <code>io.quarkus.mongodb.panache.common.reactive.Panache.withTransaction()</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@POST
+public Uni&lt;Response&gt; addPerson(ReactiveTransactionPerson person) {
+    return Panache.withTransaction(() -&gt; person.persist().map(v -&gt; {
+        //the ID is populated before sending it to the database
+        String id = person.id.toString();
+        return Response.created(URI.create("/reactive-transaction/" + id)).build();
+    }));
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In MongoDB, a transaction is only possible on a replicaset,
+luckily our <a href="mongodb#dev-services">Dev Services for MongoDB</a> setups a single node replicaset so it is compatible with transactions.</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -1671,10 +1664,11 @@ public Multi&lt;ReactivePerson&gt; streamPersons() {
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-Transactions are not supported for Reactive Entities and Repositories.
+Reactive transaction support inside MongoDB with Panache is still experimental.
 </td>
 </tr>
 </table>
+</div>
 </div>
 </div>
 </div>
@@ -1952,14 +1946,15 @@ Users can just start using your entity <code>Person</code> by typing <code>Perso
 <h2 id="defining-entities-in-external-projects-or-jars"><a class="anchor" href="#defining-entities-in-external-projects-or-jars"></a>Defining entities in external projects or jars</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>MongoDB with Panache relies on compile-time bytecode enhancements to your entities.</p>
+<p>MongoDB with Panache relies on compile-time bytecode enhancements to your entities. If you define your entities in the
+same project where you build your Quarkus application, everything will work fine.</p>
 </div>
 <div class="paragraph">
-<p>It attempts to identity archives with Panache entities (and consumers of Panache entities)
-by the presence of the marker file <code>META-INF/panache-archive.marker</code>. Panache includes an
-annotation processor that will automatically create this file in archives that depend on
-Panache (even indirectly). If you have disabled annotation processors you may need to create
-this file manually in some cases.</p>
+<p>If the entities come from external projects
+or jars, you can make sure that your jar is treated like a Quarkus application library by adding an empty <code>META-INF/beans.xml</code> file.</p>
+</div>
+<div class="paragraph">
+<p>This will allow Quarkus to index and enhance your entities as if they were inside the current project.</p>
 </div>
 </div>
 </div>
@@ -2218,8 +2213,145 @@ public class PanacheMongoMultiTenancyTest {
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#first-an-example">First: an example</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#creating-the-maven-project">Creating the Maven project</a></li>
+<li><a href="#setting-up-and-configuring-mongodb-with-panache">Setting up and configuring MongoDB with Panache</a></li>
+<li><a href="#solution-1-using-the-active-record-pattern">Solution 1: using the active record pattern</a>
+<ul class="sectlevel2">
+<li><a href="#defining-your-entity">Defining your entity</a></li>
+<li><a href="#most-useful-operations">Most useful operations</a></li>
+<li><a href="#adding-entity-methods">Adding entity methods</a></li>
+</ul>
+</li>
+<li><a href="#solution-2-using-the-repository-pattern">Solution 2: using the repository pattern</a>
+<ul class="sectlevel2">
+<li><a href="#defining-your-entity-2">Defining your entity</a></li>
+<li><a href="#defining-your-repository">Defining your repository</a></li>
+<li><a href="#most-useful-operations-2">Most useful operations</a></li>
+</ul>
+</li>
+<li><a href="#writing-a-jakarta-rest-resource">Writing a Jakarta REST resource</a></li>
+<li><a href="#advanced-query">Advanced Query</a>
+<ul class="sectlevel2">
+<li><a href="#paging">Paging</a></li>
+<li><a href="#using-a-range-instead-of-pages">Using a range instead of pages</a></li>
+<li><a href="#sorting">Sorting</a></li>
+<li><a href="#simplified-queries">Simplified queries</a></li>
+<li><a href="#query-parameters">Query parameters</a></li>
+<li><a href="#query-projection">Query projection</a></li>
+</ul>
+</li>
+<li><a href="#query-debugging">Query debugging</a></li>
+<li><a href="#the-pojocodecprovider-easy-object-to-bson-document-conversion">The PojoCodecProvider: easy object to BSON document conversion.</a></li>
+<li><a href="#transactions">Transactions</a></li>
+<li><a href="#custom-ids">Custom IDs</a></li>
+<li><a href="#working-with-kotlin-data-classes">Working with Kotlin Data classes</a></li>
+<li><a href="#reactive">Reactive Entities and Repositories</a>
+<ul class="sectlevel2">
+<li><a href="#reactive-transactions">Reactive transactions</a></li>
+</ul>
+</li>
+<li><a href="#mocking">Mocking</a>
+<ul class="sectlevel2">
+<li><a href="#using-the-active-record-pattern">Using the active-record pattern</a></li>
+<li><a href="#using-the-repository-pattern">Using the repository pattern</a></li>
+</ul>
+</li>
+<li><a href="#how-and-why-we-simplify-mongodb-api">How and why we simplify MongoDB API</a></li>
+<li><a href="#defining-entities-in-external-projects-or-jars">Defining entities in external projects or jars</a></li>
+<li><a href="#multitenancy">Multitenancy</a>
+<ul class="sectlevel2">
+<li><a href="#writing-the-application">Writing the application</a></li>
+<li><a href="#configuring-the-application">Configuring the application</a></li>
+<li><a href="#testing">Testing</a></li>
+</ul>
+</li>
+</ul></div>
+    </div>
   </div>
-</div>
+  <h2>Related content</h2>
+  <div class="grid-wrapper relations">
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same extensions</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/version/main/guides/mongodb-panache-kotlin">Simplified MongoDB with Panache and Kotlin</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/mongodb">Using the MongoDB Client</a></li>
+      </ul>
+    </div>
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same topics</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/version/main/guides/mongodb-panache-kotlin">Simplified MongoDB with Panache and Kotlin</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/rest-data-panache">Generating Jakarta REST resources with Panache</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-orm-panache-kotlin">Simplified Hibernate ORM with Panache and Kotlin</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/mongodb">Using the MongoDB Client</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/elasticsearch">Connecting to an Elasticsearch cluster</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/elasticsearch-dev-services">Dev Services for Elasticsearch</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/redis-dev-services">Dev Services for Redis</a></li>
+      
+        
+        <li class="reference"><a href="/version/main/guides/redis-reference">Redis Extension Reference Guide</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-orm-panache">Simplified Hibernate ORM with Panache</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-reactive-panache">Simplified Hibernate Reactive with Panache</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-search-standalone-elasticsearch">Use Hibernate Search in Standalone mode with Elasticsearch/OpenSearch</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/hibernate-search-orm-elasticsearch">Use Hibernate Search with Hibernate ORM and Elasticsearch/OpenSearch</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/liquibase-mongodb">Using Liquibase MongoDB</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/redis">Using the Redis Client</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/cache">Application Data Caching</a></li>
+      
+        
+        <li class="reference"><a href="/version/main/guides/datasource">Configure data sources in Quarkus</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/databases-dev-services">Dev Services for Databases</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/infinispan-dev-services">Dev Services for Infinispan</a></li>
+      
+        
+        <li class="reference"><a href="/version/main/guides/infinispan-client-reference">Infinispan Client Extension Reference Guide</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/lra">Narayana LRA Participant Support</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   </div>
 
@@ -2267,6 +2399,14 @@ public class PanacheMongoMultiTenancyTest {
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -2347,6 +2487,10 @@ public class PanacheMongoMultiTenancyTest {
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -2409,12 +2553,12 @@ public class PanacheMongoMultiTenancyTest {
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

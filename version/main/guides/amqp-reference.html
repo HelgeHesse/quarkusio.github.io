@@ -9,7 +9,8 @@
   <title>Reactive Messaging AMQP 1.0 Connector Reference Documentation - main - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/version/main/guides/amqp-reference" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/version/main/guides/amqp-reference" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/version/main/guides/amqp-reference" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/version/main/guides/amqp-reference" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/version/main/guides/amqp-reference" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/version/main/guides/amqp-reference" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/version/main/guides/amqp-reference">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/version/main/guides/amqp-reference">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/version/main/guides/amqp-reference">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/version/main/guides/amqp-reference">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" selected>Main - SNAPSHOT</option>
         
         
-        <option value="latest" >3.0 - Latest</option>
+        
+        <option value="latest" >3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" >2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,53 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Reactive Messaging AMQP 1.0 Connector Reference Documentation </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#amqp-connector-extension">AMQP connector extension</a></li>
-<li><a href="#configuring-the-amqp-broker-access">Configuring the AMQP Broker access</a></li>
-<li><a href="#receiving-amqp-messages">Receiving AMQP messages</a>
-<ul class="sectlevel2">
-<li><a href="#inbound-metadata">Inbound Metadata</a></li>
-<li><a href="#deserialization">Deserialization</a></li>
-<li><a href="#acknowledgement">Acknowledgement</a></li>
-<li><a href="#failure-management">Failure Management</a></li>
-</ul>
-</li>
-<li><a href="#sending-amqp-messages">Sending AMQP messages</a>
-<ul class="sectlevel2">
-<li><a href="#serialization">Serialization</a></li>
-<li><a href="#outbound-metadata">Outbound Metadata</a></li>
-<li><a href="#dynamic-address-names">Dynamic address names</a></li>
-<li><a href="#acknowledgement-2">Acknowledgement</a></li>
-<li><a href="#back-pressure-and-credits">Back Pressure and Credits</a></li>
-</ul>
-</li>
-<li><a href="#configuring-the-amqp-address">Configuring the AMQP address</a>
-<ul class="sectlevel2">
-<li><a href="#blocking-processing">Execution model and Blocking processing</a></li>
-</ul>
-</li>
-<li><a href="#customizing-the-underlying-amqp-client">Customizing the underlying AMQP client</a></li>
-<li><a href="#health-reporting">Health reporting</a></li>
-<li><a href="#using-rabbitmq">Using RabbitMQ</a></li>
-<li><a href="#receiving-cloud-events">Receiving Cloud Events</a>
-<ul class="sectlevel2">
-<li><a href="#sending-cloud-events">Sending Cloud Events</a></li>
-</ul>
-</li>
-<li><a href="#configuration-reference">AMQP Connector Configuration Reference</a>
-<ul class="sectlevel2">
-<li><a href="#quarkus-specific-configuration">Quarkus specific configuration</a></li>
-<li><a href="#incoming-channel-configuration">Incoming channel configuration</a></li>
-<li><a href="#outgoing-channel-configuration">Outgoing channel configuration</a></li>
-</ul>
-</li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Reactive Messaging AMQP 1.0 Connector Reference Documentation </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -237,7 +213,7 @@ Check <a href="#using-rabbitmq">Using RabbitMQ</a> to get more details.</p>
 <h2 id="amqp-connector-extension"><a class="anchor" href="#amqp-connector-extension"></a>AMQP connector extension</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use the connector, you need to add the <code>quarkus-smallrye-reactive-messaging-amqp</code> extension.</p>
+<p>To use the connector, you need to add the <code>quarkus-messaging-amqp</code> extension.</p>
 </div>
 <div class="paragraph">
 <p>You can add the extension to your project using:</p>
@@ -245,19 +221,19 @@ Check <a href="#using-rabbitmq">Using RabbitMQ</a> to get more details.</p>
 <div class="listingblock primary asciidoc-tabs-sync-cli">
 <div class="title">CLI</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus extension add 'quarkus-smallrye-reactive-messaging-amqp'</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus extension add quarkus-messaging-amqp</code></pre>
 </div>
 </div>
 <div class="listingblock secondary asciidoc-tabs-sync-maven">
 <div class="title">Maven</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./mvnw quarkus:add-extension -Dextensions='quarkus-smallrye-reactive-messaging-amqp'</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./mvnw quarkus:add-extension -Dextensions='quarkus-messaging-amqp'</code></pre>
 </div>
 </div>
 <div class="listingblock secondary asciidoc-tabs-sync-gradle">
 <div class="title">Gradle</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./gradlew addExtension --extensions='quarkus-smallrye-reactive-messaging-amqp'</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./gradlew addExtension --extensions='quarkus-messaging-amqp'</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -268,14 +244,14 @@ Check <a href="#using-rabbitmq">Using RabbitMQ</a> to get more details.</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
     &lt;groupId&gt;io.quarkus&lt;/groupId&gt;
-    &lt;artifactId&gt;quarkus-smallrye-reactive-messaging-amqp&lt;/artifactId&gt;
+    &lt;artifactId&gt;quarkus-messaging-amqp&lt;/artifactId&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
 <div class="listingblock secondary asciidoc-tabs-target-sync-gradle">
 <div class="title">build.gradle</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.quarkus:quarkus-smallrye-reactive-messaging-amqp")</code></pre>
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">implementation("io.quarkus:quarkus-messaging-amqp")</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -308,7 +284,7 @@ Quarkus automatically associates <em>orphan</em> channels to the (unique) connec
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.reactive-messaging.auto-connector-attachment=false</code></pre>
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.messaging.auto-connector-attachment=false</code></pre>
 </div>
 </div>
 </td>
@@ -845,6 +821,21 @@ The second one, used also with other reactive features of Quarkus, uses the defa
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
+<div class="title">@RunOnVirtualThread</div>
+<div class="paragraph">
+<p>For running the blocking processing on Java <em>virtual threads</em>, see the <a href="messaging-virtual-threads">Quarkus Virtual Thread support with Reactive Messaging documentation</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
 <div class="title">@Transactional</div>
 <div class="paragraph">
 <p>If your method is annotated with <code>@Transactional</code>, it will be considered <em>blocking</em> automatically, even if the method is not annotated with <code>@Blocking</code>.</p>
@@ -881,7 +872,7 @@ public AmqpClientOptions getNamedOptions() {
         .setPemKeyCertOptions(keycert)
         .setPemTrustOptions(trust)
         .addEnabledSaslMechanism("EXTERNAL")
-        .setHostnameVerificationAlgorithm("")
+        .setHostnameVerificationAlgorithm("") // Disables the hostname verification. Defaults is "HTTPS"
         .setConnectTimeout(30000)
         .setReconnectInterval(5000)
         .setContainerId("my-container");
@@ -895,6 +886,22 @@ You need to indicate the name of the client using the <code>client-options-name<
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">mp.messaging.incoming.prices.client-options-name=my-named-options</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you experience frequent disconnections from the broker, the <code>AmqpClientOptions</code> can also be used to set a heartbeat if you need to keep the AMQP connection permanently.
+Some brokers might terminate the AMQP connection after a certain idle timeout.
+You can provide a heartbeat value which will be used by the Vert.x proton client to advertise the idle timeout when opening transport to a remote peer.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Produces
+@Identifier("my-named-options")
+public AmqpClientOptions getNamedOptions() {
+  // set a heartbeat of 30s (in milliseconds)
+  return new AmqpClientOptions()
+        .setHeartbeat(30000);
+}</code></pre>
 </div>
 </div>
 </div>
@@ -1013,10 +1020,10 @@ The connector sends the outbound record as Cloud Events if:</p>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="quarkus-specific-configuration"><a class="anchor" href="#quarkus-specific-configuration"></a>Quarkus specific configuration</h3>
-<div class="paragraph configuration-legend">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime <input type="search" id="config-search-0" placeholder="FILTER CONFIGURATION" disabled></p>
 </div>
-<table class="tableblock frame-all grid-all stretch configuration-reference searchable">
+<table class="tableblock frame-all grid-all stretch configuration-reference searchable configuration-reference-all-rows">
 <colgroup>
 <col style="width: 80%;">
 <col style="width: 10%;">
@@ -1028,111 +1035,160 @@ The connector sends the outbound record as Cloud Events if:</p>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-reactivemessaging-amqp_quarkus.amqp.devservices.enabled"></a><code><a href="#quarkus-smallrye-reactivemessaging-amqp_quarkus.amqp.devservices.enabled">quarkus.amqp.devservices.enabled</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-reactivemessaging-amqp_quarkus-amqp-devservices-enabled"></a><code><a href="#quarkus-smallrye-reactivemessaging-amqp_quarkus-amqp-devservices-enabled">quarkus.amqp.devservices.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-1" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If Dev Services for AMQP has been explicitly enabled or disabled. Dev Services are generally enabled by default, unless there is an existing configuration present. For AMQP, Dev Services starts a broker unless <code>amqp-host</code> or <code>amqp-port</code> are set or if all the Reactive Messaging AMQP channel are configured with <code>host</code> or <code>port</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25028">QUARKUS_AMQP_DEVSERVICES_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25028" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-42207">QUARKUS_AMQP_DEVSERVICES_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42207" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-reactivemessaging-amqp_quarkus.amqp.devservices.port"></a><code><a href="#quarkus-smallrye-reactivemessaging-amqp_quarkus.amqp.devservices.port">quarkus.amqp.devservices.port</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-reactivemessaging-amqp_quarkus-amqp-devservices-port"></a><code><a href="#quarkus-smallrye-reactivemessaging-amqp_quarkus-amqp-devservices-port">quarkus.amqp.devservices.port</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-2" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
-<p>Optional fixed port the dev service will listen to.
-If not defined, the port will be chosen randomly.</p>
+<p>Optional fixed port the dev service will listen to.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25029">QUARKUS_AMQP_DEVSERVICES_PORT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25029" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>If not defined, the port will be chosen randomly.</p>
+</div>
+<div class="paragraph">
+<p>Environment variable: <code id="env-var-42208">QUARKUS_AMQP_DEVSERVICES_PORT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42208" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-reactivemessaging-amqp_quarkus.amqp.devservices.image-name"></a><code><a href="#quarkus-smallrye-reactivemessaging-amqp_quarkus.amqp.devservices.image-name">quarkus.amqp.devservices.image-name</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-reactivemessaging-amqp_quarkus-amqp-devservices-image-name"></a><code><a href="#quarkus-smallrye-reactivemessaging-amqp_quarkus-amqp-devservices-image-name">quarkus.amqp.devservices.image-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-3" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
-<p>The image to use. Note that only ActiveMQ Artemis images are supported. Specifically, the image repository must end with <code>artemiscloud/activemq-artemis-broker</code>. Check <a href="https://quay.io/repository/artemiscloud/activemq-artemis-broker" class="bare">https://quay.io/repository/artemiscloud/activemq-artemis-broker</a> to find the available versions.</p>
+<p>The image to use. Note that only ActiveMQ Artemis images are supported. Specifically, the image repository must end with <code>artemiscloud/activemq-artemis-broker</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25030">QUARKUS_AMQP_DEVSERVICES_IMAGE_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25030" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Check the <a href="https://quay.io/repository/artemiscloud/activemq-artemis-broker">activemq-artemis-broker on Quay page</a> to find the available versions.</p>
+</div>
+<div class="paragraph">
+<p>Environment variable: <code id="env-var-42209">QUARKUS_AMQP_DEVSERVICES_IMAGE_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42209" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>quay.io/artemiscloud/activemq-artemis-broker:1.0.11</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>quay.io/artemiscloud/activemq-artemis-broker:1.0.25</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-reactivemessaging-amqp_quarkus.amqp.devservices.extra-args"></a><code><a href="#quarkus-smallrye-reactivemessaging-amqp_quarkus.amqp.devservices.extra-args">quarkus.amqp.devservices.extra-args</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-reactivemessaging-amqp_quarkus-amqp-devservices-extra-args"></a><code><a href="#quarkus-smallrye-reactivemessaging-amqp_quarkus-amqp-devservices-extra-args">quarkus.amqp.devservices.extra-args</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-4" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
-<p>The value of the <code>AMQ_EXTRA_ARGS</code> environment variable to pass to the container.</p>
+<p>The value of the <code>AMQ_EXTRA_ARGS</code> environment variable to pass to the container. For ActiveMQ Artemis Broker &#8656; 1.0.21, set this property to <code>--no-autotune --mapped --no-fsync --relax-jolokia --http-host 0.0.0.0</code></p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25031">QUARKUS_AMQP_DEVSERVICES_EXTRA_ARGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25031" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-42210">QUARKUS_AMQP_DEVSERVICES_EXTRA_ARGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42210" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>--no-autotune --mapped --no-fsync --relax-jolokia --http-host 0.0.0.0</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>--no-autotune --mapped --no-fsync --relax-jolokia</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-reactivemessaging-amqp_quarkus.amqp.devservices.shared"></a><code><a href="#quarkus-smallrye-reactivemessaging-amqp_quarkus.amqp.devservices.shared">quarkus.amqp.devservices.shared</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-reactivemessaging-amqp_quarkus-amqp-devservices-shared"></a><code><a href="#quarkus-smallrye-reactivemessaging-amqp_quarkus-amqp-devservices-shared">quarkus.amqp.devservices.shared</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-5" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
-<p>Indicates if the AMQP broker managed by Quarkus Dev Services is shared. When shared, Quarkus looks for running containers using label-based service discovery. If a matching container is found, it is used, and so a second one is not started. Otherwise, Dev Services for AMQP starts a new container.
-The discovery uses the <code>quarkus-dev-service-amqp</code> label. The value is configured using the <code>service-name</code> property.
-Container sharing is only used in dev mode.</p>
+<p>Indicates if the AMQP broker managed by Quarkus Dev Services is shared. When shared, Quarkus looks for running containers using label-based service discovery. If a matching container is found, it is used, and so a second one is not started. Otherwise, Dev Services for AMQP starts a new container.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25032">QUARKUS_AMQP_DEVSERVICES_SHARED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25032" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>The discovery uses the <code>quarkus-dev-service-amqp</code> label. The value is configured using the <code>service-name</code> property.</p>
+</div>
+<div class="paragraph">
+<p>Container sharing is only used in dev mode.</p>
+</div>
+<div class="paragraph">
+<p>Environment variable: <code id="env-var-42211">QUARKUS_AMQP_DEVSERVICES_SHARED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42211" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-reactivemessaging-amqp_quarkus.amqp.devservices.service-name"></a><code><a href="#quarkus-smallrye-reactivemessaging-amqp_quarkus.amqp.devservices.service-name">quarkus.amqp.devservices.service-name</a></code></p>
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-reactivemessaging-amqp_quarkus-amqp-devservices-service-name"></a><code><a href="#quarkus-smallrye-reactivemessaging-amqp_quarkus-amqp-devservices-service-name">quarkus.amqp.devservices.service-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-6" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
-<p>The value of the <code>quarkus-dev-service-aqmp</code> label attached to the started container. This property is used when <code>shared</code> is set to <code>true</code>. In this case, before starting a container, Dev Services for AMQP looks for a container with the <code>quarkus-dev-service-amqp</code> label set to the configured value. If found, it will use this container instead of starting a new one. Otherwise, it starts a new container with the <code>quarkus-dev-service-amqp</code> label set to the specified value.
-This property is used when you need multiple shared AMQP brokers.</p>
+<p>The value of the <code>quarkus-dev-service-aqmp</code> label attached to the started container. This property is used when <code>shared</code> is set to <code>true</code>. In this case, before starting a container, Dev Services for AMQP looks for a container with the <code>quarkus-dev-service-amqp</code> label set to the configured value. If found, it will use this container instead of starting a new one. Otherwise, it starts a new container with the <code>quarkus-dev-service-amqp</code> label set to the specified value.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-25033">QUARKUS_AMQP_DEVSERVICES_SERVICE_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-25033" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>This property is used when you need multiple shared AMQP brokers.</p>
+</div>
+<div class="paragraph">
+<p>Environment variable: <code id="env-var-42212">QUARKUS_AMQP_DEVSERVICES_SERVICE_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42212" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>amqp</code></p></td>
+</tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-reactivemessaging-amqp_quarkus-amqp-devservices-container-env-container-env"></a><code><a href="#quarkus-smallrye-reactivemessaging-amqp_quarkus-amqp-devservices-container-env-container-env">quarkus.amqp.devservices.container-env</a></code></p>
+</div>
+<div id="conf-collapsible-desc-7" class="openblock description description-collapsed">
+<div class="content">
+<div class="paragraph">
+<p>Environment variables that are passed to the container.</p>
+</div>
+<div class="paragraph">
+<p>Environment variable: <code id="env-var-42213">QUARKUS_AMQP_DEVSERVICES_CONTAINER_ENV</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-42213" title="Copy to clipboard" do-not-collapse="true"></button></p>
+</div>
+</div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>Map&lt;String,String&gt;</code></p></td>
+<td class="tableblock halign-left valign-middle"></td>
 </tr>
 </tbody>
 </table>
@@ -1578,11 +1634,158 @@ This property is used when you need multiple shared AMQP brokers.</p>
 </tbody>
 </table>
 </div>
+<div class="sect2">
+<h3 id="conditionally-configure-channels"><a class="anchor" href="#conditionally-configure-channels"></a>Conditionally configure channels</h3>
+<div class="paragraph">
+<p>You can configure the channels using a specific profile.
+Thus, the channels are only configured (and added to the application) when the specified profile is enabled.</p>
+</div>
+<div class="paragraph">
+<p>To achieve this, you need:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Prefix the <code>mp.messaging.[incoming|outgoing].$channel</code> entries with <code>%my-profile</code> such as <code>%my-profile.mp.messaging.[incoming|outgoing].$channel.key=value</code></p>
+</li>
+<li>
+<p>Use the <code>@IfBuildProfile("my-profile")</code> on the CDI beans containing <code>@Incoming(channel)</code> and <code>@Outgoing(channel)</code> annotations that need only to be enabled when the profile is enabled.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Note that reactive messaging verifies that the graph is complete.
+So, when using such a conditional configuration, ensure the application works with and without the profile enabled.</p>
+</div>
+<div class="paragraph">
+<p>Note that this approach can also be used to change the channel configuration based on a profile.</p>
+</div>
+</div>
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#amqp-connector-extension">AMQP connector extension</a></li>
+<li><a href="#configuring-the-amqp-broker-access">Configuring the AMQP Broker access</a></li>
+<li><a href="#receiving-amqp-messages">Receiving AMQP messages</a>
+<ul class="sectlevel2">
+<li><a href="#inbound-metadata">Inbound Metadata</a></li>
+<li><a href="#deserialization">Deserialization</a></li>
+<li><a href="#acknowledgement">Acknowledgement</a></li>
+<li><a href="#failure-management">Failure Management</a></li>
+</ul>
+</li>
+<li><a href="#sending-amqp-messages">Sending AMQP messages</a>
+<ul class="sectlevel2">
+<li><a href="#serialization">Serialization</a></li>
+<li><a href="#outbound-metadata">Outbound Metadata</a></li>
+<li><a href="#dynamic-address-names">Dynamic address names</a></li>
+<li><a href="#acknowledgement-2">Acknowledgement</a></li>
+<li><a href="#back-pressure-and-credits">Back Pressure and Credits</a></li>
+</ul>
+</li>
+<li><a href="#configuring-the-amqp-address">Configuring the AMQP address</a>
+<ul class="sectlevel2">
+<li><a href="#blocking-processing">Execution model and Blocking processing</a></li>
+</ul>
+</li>
+<li><a href="#customizing-the-underlying-amqp-client">Customizing the underlying AMQP client</a></li>
+<li><a href="#health-reporting">Health reporting</a></li>
+<li><a href="#using-rabbitmq">Using RabbitMQ</a></li>
+<li><a href="#receiving-cloud-events">Receiving Cloud Events</a>
+<ul class="sectlevel2">
+<li><a href="#sending-cloud-events">Sending Cloud Events</a></li>
+</ul>
+</li>
+<li><a href="#configuration-reference">AMQP Connector Configuration Reference</a>
+<ul class="sectlevel2">
+<li><a href="#quarkus-specific-configuration">Quarkus specific configuration</a></li>
+<li><a href="#incoming-channel-configuration">Incoming channel configuration</a></li>
+<li><a href="#outgoing-channel-configuration">Outgoing channel configuration</a></li>
+<li><a href="#conditionally-configure-channels">Conditionally configure channels</a></li>
+</ul>
+</li>
+</ul></div>
+    </div>
   </div>
-</div>
+  <h2>Related content</h2>
+  <div class="grid-wrapper relations">
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same extensions</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/version/main/guides/amqp-dev-services">Dev Services for AMQP</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/amqp">Getting Started to Quarkus Messaging with AMQP 1.0</a></li>
+      </ul>
+    </div>
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same topics</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/version/main/guides/amqp-dev-services">Dev Services for AMQP</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/amqp">Getting Started to Quarkus Messaging with AMQP 1.0</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka">Apache Kafka Reference Guide</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/pulsar">Apache Pulsar Reference Guide</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/apicurio-registry-dev-services">Dev Services for Apicurio Registry</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka-dev-services">Dev Services for Kafka</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/pulsar-dev-services">Dev Services for Pulsar</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/rabbitmq-dev-services">Dev Services for RabbitMQ</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka-getting-started">Getting Started to Quarkus Messaging with Apache Kafka</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/pulsar-getting-started">Getting Started to Quarkus Messaging with Apache Pulsar</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/rabbitmq">Getting Started to Quarkus Messaging with RabbitMQ</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka-dev-ui">Kafka Dev UI</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/messaging-virtual-threads">Quarkus Virtual Thread support with Reactive Messaging</a></li>
+      
+        
+        <li class="reference"><a href="/version/main/guides/rabbitmq-reference">Reactive Messaging RabbitMQ Connector Reference Documentation</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka-streams">Using Apache Kafka Streams</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka-schema-registry-avro">Using Apache Kafka with Schema Registry and Avro</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/kafka-schema-registry-json-schema">Using Apache Kafka with Schema Registry and JSON Schema</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/jms">Using JMS</a></li>
+      
+        
+        <li class="guide"><a href="/version/main/guides/reactive-event-bus">Using the event bus</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   </div>
 
@@ -1630,6 +1833,14 @@ This property is used when you need multiple shared AMQP brokers.</p>
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -1710,6 +1921,10 @@ This property is used when you need multiple shared AMQP brokers.</p>
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -1772,12 +1987,12 @@ This property is used when you need multiple shared AMQP brokers.</p>
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

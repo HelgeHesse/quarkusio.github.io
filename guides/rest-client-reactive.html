@@ -9,7 +9,8 @@
   <title>Using the REST Client - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/guides/rest-client-reactive" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/guides/rest-client-reactive" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/guides/rest-client-reactive" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/guides/rest-client-reactive" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/guides/rest-client-reactive" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/guides/rest-client-reactive" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/guides/rest-client-reactive">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/guides/rest-client-reactive">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/guides/rest-client-reactive">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/guides/rest-client-reactive">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,28 @@
     <select id="guide-version-dropdown">
       
         
-        <option value="main" >Main - SNAPSHOT</option>
         
         
-        <option value="latest" selected>3.0 - Latest</option>
+        
+        
+        <option value="latest" selected>3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" >2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,66 +177,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Using the REST Client </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#solution">Solution</a></li>
-<li><a href="#creating-the-maven-project">Creating the Maven project</a></li>
-<li><a href="#setting-up-the-model">Setting up the model</a></li>
-<li><a href="#create-the-interface">Create the interface</a>
-<ul class="sectlevel2">
-<li><a href="#query-parameters">Query Parameters</a></li>
-<li><a href="#path-parameters">Path Parameters</a></li>
-</ul>
-</li>
-<li><a href="#create-the-configuration">Create the configuration</a>
-<ul class="sectlevel2">
-<li><a href="#disabling-hostname-verification">Disabling Hostname Verification</a></li>
-<li><a href="#http2-support">HTTP/2 Support</a></li>
-</ul>
-</li>
-<li><a href="#create-the-jakarta-rest-resource">Create the Jakarta REST resource</a></li>
-<li><a href="#programmatic-client-creation-with-restclientbuilder">Programmatic client creation with RestClientBuilder</a></li>
-<li><a href="#use-custom-http-options">Use Custom HTTP Options</a></li>
-<li><a href="#redirection">Redirection</a></li>
-<li><a href="#update-the-test">Update the test</a></li>
-<li><a href="#async-support">Async Support</a></li>
-<li><a href="#custom-headers-support">Custom headers support</a>
-<ul class="sectlevel2">
-<li><a href="#default-header-factory">Default header factory</a></li>
-</ul>
-</li>
-<li><a href="#exception-handling">Exception handling</a>
-<ul class="sectlevel2">
-<li><a href="#using-clientexceptionmapper">Using @ClientExceptionMapper</a></li>
-<li><a href="#using-blocking-annotation-in-exception-mappers">Using @Blocking annotation in exception mappers</a></li>
-</ul>
-</li>
-<li><a href="#multipart">Multipart Form support</a>
-<ul class="sectlevel2">
-<li><a href="#sending-multipart-messages">Sending Multipart messages</a></li>
-<li><a href="#receiving-multipart-messages">Receiving Multipart Messages</a></li>
-<li><a href="#multipart-mixed-odata-usage">Multipart mixed / OData usage</a></li>
-</ul>
-</li>
-<li><a href="#proxy-support">Proxy support</a></li>
-<li><a href="#package-and-run-the-application">Package and run the application</a></li>
-<li><a href="#logging-traffic">Logging traffic</a></li>
-<li><a href="#mocking-the-client-for-tests">Mocking the client for tests</a>
-<ul class="sectlevel2">
-<li><a href="#mocking-with-injectmock">Mocking with InjectMock</a></li>
-<li><a href="#mocking-with-quarkusmock">Mocking with QuarkusMock</a></li>
-</ul>
-</li>
-<li><a href="#using-a-mock-http-server-for-tests">Using a Mock HTTP Server for tests</a></li>
-<li><a href="#known-limitations">Known limitations</a></li>
-<li><a href="#further-reading">Further reading</a></li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Using the REST Client </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -246,10 +208,10 @@ for the server part.</p>
 <p>An IDE</p>
 </li>
 <li>
-<p>JDK 11+ installed with <code>JAVA_HOME</code> configured appropriately</p>
+<p>JDK 17+ installed with <code>JAVA_HOME</code> configured appropriately</p>
 </li>
 <li>
-<p>Apache Maven 3.8.8</p>
+<p>Apache Maven 3.9.6</p>
 </li>
 <li>
 <p>Optionally the <a href="cli-tooling">Quarkus CLI</a> if you want to use it</p>
@@ -297,7 +259,7 @@ cd rest-client-reactive-quickstart</code></pre>
 <p>To create a Gradle project, add the <code>--gradle</code> or <code>--gradle-kotlin-dsl</code> option.</p>
 </div>
 <div class="paragraph">
-<p><em>For more information about how to install the Quarkus CLI and use it, please refer to <a href="cli-tooling">the Quarkus CLI guide</a>.</em></p>
+<p>For more information about how to install and use the Quarkus CLI, see the <a href="cli-tooling">Quarkus CLI</a> guide.</p>
 </div>
 </div>
 </div>
@@ -306,7 +268,7 @@ cd rest-client-reactive-quickstart</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:3.0.3.Final:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:3.8.3:create \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=rest-client-reactive-quickstart \
     -Dextensions='resteasy-reactive-jackson,rest-client-reactive-jackson' \
@@ -318,6 +280,19 @@ cd rest-client-reactive-quickstart</code></pre>
 <p>To create a Gradle project, add the <code>-DbuildTool=gradle</code> or <code>-DbuildTool=gradle-kotlin-dsl</code> option.</p>
 </div>
 </div>
+</div>
+<div class="paragraph">
+<p>For Windows users:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If using cmd, (don&#8217;t use backward slash <code>\</code> and put everything on the same line)</p>
+</li>
+<li>
+<p>If using Powershell, wrap <code>-D</code> parameters in double quotes e.g. <code>"-DprojectArtifactId=rest-client-reactive-quickstart"</code></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>This command generates the Maven project with a REST endpoint and imports:</p>
@@ -339,7 +314,7 @@ to your project by running the following command in your project base directory:
 <div class="listingblock primary asciidoc-tabs-sync-cli">
 <div class="title">CLI</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus extension add 'rest-client-reactive-jackson'</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus extension add rest-client-reactive-jackson</code></pre>
 </div>
 </div>
 <div class="listingblock secondary asciidoc-tabs-sync-maven">
@@ -604,7 +579,87 @@ priority over anything specified in any <code>@ClientQueryParam</code> annotatio
 </table>
 </div>
 <div class="paragraph">
-<p>More information about this annotation can be found on the javadoc of</p>
+<p>More information about this annotation can be found on the javadoc of <a href="https://javadoc.io/doc/io.quarkus/quarkus-rest-client-reactive/latest/io/quarkus/rest/client/reactive/ClientQueryParam.html"><code>@ClientQueryParam</code></a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="form-parameters"><a class="anchor" href="#form-parameters"></a>Form Parameters</h3>
+<div class="paragraph">
+<p>Form parameters can be specified using <code>@RestForm</code> (or <code>@FormParam</code>) annotations:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.acme.rest.client;
+
+import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
+import org.jboss.resteasy.reactive.RestForm;
+
+import jakarta.ws.rs.PORT;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.FormParam;
+import jakarta.ws.rs.core.MultivaluedMap;
+import java.util.Map;
+import java.util.Set;
+
+@Path("/extensions")
+@RegisterRestClient(configKey = "extensions-api")
+public interface ExtensionsService {
+
+    @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    Set&lt;Extension&gt; postId(@FormParam("id") Integer id);
+
+    @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    Set&lt;Extension&gt; postName(@RestForm String name);
+
+    @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    Set&lt;Extension&gt; postFilter(@RestForm Map&lt;String, String&gt; filter);
+
+    @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    Set&lt;Extension&gt; postFilters(@RestForm MultivaluedMap&lt;String, String&gt; filters);
+
+}</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="using-clientformparam"><a class="anchor" href="#using-clientformparam"></a>Using @ClientFormParam</h4>
+<div class="paragraph">
+<p>Form parameters can also be specified using <code>@ClientFormParam</code>, similar to <code>@ClientQueryParam</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@ClientFormParam(name = "my-param", value = "${my.property-value}")
+public interface Client {
+    @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    String postWithParam();
+
+    @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @ClientFormParam(name = "some-other-param", value = "other")
+    String postWithOtherParam();
+
+    @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @ClientFormParam(name = "param-from-method", value = "{with-param}")
+    String postFromMethod();
+
+    default String withParam(String name) {
+        if ("param-from-method".equals(name)) {
+            return "test";
+        }
+        throw new IllegalArgumentException();
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>More information about this annotation can be found on the javadoc of <a href="https://javadoc.io/doc/io.quarkus/quarkus-rest-client-reactive/latest/io/quarkus/rest/client/reactive/ClientFormParam.html"><code>@ClientFormParam</code></a>.</p>
 </div>
 </div>
 </div>
@@ -635,6 +690,137 @@ public interface ExtensionsService {
     Set&lt;Extension&gt; getByStream(@PathParam("stream") String stream, @QueryParam("id") String id);
 }</code></pre>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="using-clientmultipartform"><a class="anchor" href="#using-clientmultipartform"></a>Using ClientMultipartForm</h3>
+<div class="paragraph">
+<p>MultipartForm can be built using the Class <code>ClientMultipartForm</code> which supports building the form as needed:</p>
+</div>
+<div class="paragraph">
+<p><code>ClientMultipartForm</code> can be programmatically created with custom inputs and/or from <code>MultipartFormDataInput</code> and/or from custom Resteasy Reactive Input annotated with <code>@RestForm</code> if received.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface MultipartService {
+
+  @POST
+  @Path("/multipart")
+  @Consumes(MediaType.MULTIPART_FORM_DATA)
+  @Produces(MediaType.APPLICATION_JSON)
+  Map&lt;String, String&gt; multipart(ClientMultipartForm dataParts); <i class="conum" data-value="1"></i><b>(1)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>input to the method is a custom Generic <code>ClientMultipartForm</code> which matches external application api contract.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>More information about this Class and supported methods can be found on the javadoc of <a href="https://javadoc.io/doc/io.quarkus.resteasy.reactive/resteasy-reactive-client/latest/org/jboss/resteasy/reactive/client/api/ClientMultipartForm.html"><code>ClientMultipartForm</code></a>.</p>
+</div>
+<div class="paragraph">
+<p>Build <code>ClientMultipartForm</code> from <code>MultipartFormDataInput</code> programmatically</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public ClientMultipartForm buildClientMultipartForm(MultipartFormDataInput inputForm) <i class="conum" data-value="1"></i><b>(1)</b>
+    throws IOException {
+  ClientMultipartForm multiPartForm = ClientMultipartForm.create(); <i class="conum" data-value="2"></i><b>(2)</b>
+  for (Entry&lt;String, Collection&lt;FormValue&gt;&gt; attribute : inputForm.getValues().entrySet()) {
+    for (FormValue fv : attribute.getValue()) {
+      if (fv.isFileItem()) {
+        final FileItem fi = fv.getFileItem();
+        String mediaType = Objects.toString(fv.getHeaders().getFirst(HttpHeaders.CONTENT_TYPE),
+            MediaType.APPLICATION_OCTET_STREAM);
+        if (fi.isInMemory()) {
+          multiPartForm.binaryFileUpload(attribute.getKey(), fv.getFileName(),
+              Buffer.buffer(IOUtils.toByteArray(fi.getInputStream())), mediaType); <i class="conum" data-value="3"></i><b>(3)</b>
+        } else {
+          multiPartForm.binaryFileUpload(attribute.getKey(), fv.getFileName(),
+              fi.getFile().toString(), mediaType); <i class="conum" data-value="4"></i><b>(4)</b>
+        }
+      } else {
+        multiPartForm.attribute(attribute.getKey(), fv.getValue(), fv.getFileName()); <i class="conum" data-value="5"></i><b>(5)</b>
+      }
+    }
+  }
+  return multiPartForm;
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>MultipartFormDataInput</code> inputForm supported by RestEasy Reactive (Server).</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Creating a <code>ClientMultipartForm</code> object to populate with various dataparts.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Adding InMemory <code>FileItem</code> to <code>ClientMultipartForm</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Adding physical <code>FileItem</code> to <code>ClientMultipartForm</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Adding any attribute directly to <code>ClientMultipartForm</code> if not <code>FileItem</code>.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Build <code>ClientMultipartForm</code> from custom Attributes annotated with <code>@RestForm</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MultiPartPayloadFormData { <i class="conum" data-value="1"></i><b>(1)</b>
+
+  @RestForm("files")
+  @PartType(MediaType.APPLICATION_OCTET_STREAM)
+  List&lt;FileUpload&gt; files;
+
+  @RestForm("jsonPayload")
+  @PartType(MediaType.TEXT_PLAIN)
+  String jsonPayload;
+}
+
+/*
+ * Generate ClientMultipartForm from custom attributes annotated with @RestForm
+ */
+public ClientMultipartForm buildClientMultipartForm(MultiPartPayloadFormData inputForm) { <i class="conum" data-value="1"></i><b>(1)</b>
+  ClientMultipartForm multiPartForm = ClientMultipartForm.create();
+  multiPartForm.attribute("jsonPayload", inputForm.getJsonPayload(), "jsonPayload"); <i class="conum" data-value="2"></i><b>(2)</b>
+  inputForm.getFiles().forEach(fu -&gt; {
+    multiPartForm.binaryFileUpload("file", fu.name(), fu.filePath().toString(), fu.contentType()); <i class="conum" data-value="3"></i><b>(3)</b>
+  });
+  return multiPartForm;
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>MultiPartPayloadFormData</code> custom Object created to match the API contract for calling service which needs to be converted to <code>ClientMultipartForm</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Adding attribute <code>jsonPayload</code> directly to <code>ClientMultipartForm</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Adding <code>FileUpload</code> objects to <code>ClientMultipartForm</code> as binaryFileUpload with contentType.</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -778,12 +964,12 @@ public class ExtensionsResource {
 </div>
 </div>
 <div class="sect1">
-<h2 id="programmatic-client-creation-with-restclientbuilder"><a class="anchor" href="#programmatic-client-creation-with-restclientbuilder"></a>Programmatic client creation with RestClientBuilder</h2>
+<h2 id="programmatic-client-creation-with-quarkusrestclientbuilder"><a class="anchor" href="#programmatic-client-creation-with-quarkusrestclientbuilder"></a>Programmatic client creation with QuarkusRestClientBuilder</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Instead of annotating the client with <code>@RegisterRestClient</code>, and injecting
 a client with <code>@RestClient</code>, you can also create REST Client programmatically.
-You do that with <code>RestClientBuilder</code>.</p>
+You do that with the <code>QuarkusRestClientBuilder</code>.</p>
 </div>
 <div class="paragraph">
 <p>With this approach the client interface could look as follows:</p>
@@ -812,6 +998,46 @@ public interface ExtensionsService {
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.acme.rest.client;
 
+import io.quarkus.rest.client.reactive.QuarkusRestClientBuilder;
+
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import java.net.URI;
+import java.util.Set;
+
+@Path("/extension")
+public class ExtensionsResource {
+
+    private final ExtensionsService extensionsService;
+
+    public ExtensionsResource() {
+        extensionsService = QuarkusRestClientBuilder.newBuilder()
+            .baseUri(URI.create("https://stage.code.quarkus.io/api"))
+            .build(ExtensionsService.class);
+    }
+
+    @GET
+    @Path("/id/{id}")
+    public Set&lt;Extension&gt; id(String id) {
+        return extensionsService.getById(id);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>QuarkusRestClientBuilder</code> interface is a Quarkus-specific API to programmatically create clients with additional configuration options. Otherwise, you can also use the <code>RestClientBuilder</code> interface from the Microprofile API:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.acme.rest.client;
+
 import org.eclipse.microprofile.rest.client.RestClientBuilder;
 
 import jakarta.ws.rs.GET;
@@ -830,13 +1056,13 @@ public class ExtensionsResource {
             .build(ExtensionsService.class);
     }
 
-    @GET
-    @Path("/id/{id}")
-    public Set&lt;Extension&gt; id(String id) {
-        return extensionsService.getById(id);
-    }
+    // ...
 }</code></pre>
 </div>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -897,7 +1123,7 @@ public class CustomHttpClientOptions implements ContextResolver&lt;HttpClientOpt
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.acme.rest.client;
 
-import org.eclipse.microprofile.rest.client.RestClientBuilder;
+import io.quarkus.rest.client.reactive.QuarkusRestClientBuilder;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -912,23 +1138,16 @@ public class ExtensionsResource {
     private final ExtensionsService extensionsService;
 
     public ExtensionsResource() {
-        extensionsService = RestClientBuilder.newBuilder()
+        HttpClientOptions options = new HttpClientOptions();
+        // ...
+
+        extensionsService = QuarkusRestClientBuilder.newBuilder()
             .baseUri(URI.create("https://stage.code.quarkus.io/api"))
-            .register(CustomHttpClientOptions.class) <i class="conum" data-value="1"></i><b>(1)</b>
+            .httpClientOptions(options) <i class="conum" data-value="1"></i><b>(1)</b>
             .build(ExtensionsService.class);
     }
 
     // ...
-}
-
-public class CustomHttpClientOptions implements ContextResolver&lt;HttpClientOptions&gt; {
-
-    @Override
-    public HttpClientOptions getContext(Class&lt;?&gt; aClass) {
-        HttpClientOptions options = new HttpClientOptions();
-        // ...
-        return options;
-    }
 }</code></pre>
 </div>
 </div>
@@ -1033,7 +1252,7 @@ public class ExtensionsResource {
     private final ExtensionsService extensionsService;
 
     public ExtensionsResource() {
-        extensionsService = RestClientBuilder.newBuilder()
+        extensionsService = QuarkusRestClientBuilder.newBuilder()
             .baseUri(URI.create("https://stage.code.quarkus.io/api"))
             .register(AlwaysRedirectHandler.class) <i class="conum" data-value="1"></i><b>(1)</b>
             .build(ExtensionsService.class);
@@ -1279,6 +1498,133 @@ extensionsService.getByIdAsUni(id)
 This difference comes from the laziness aspect of Mutiny and its subscription protocol.
 More details about this can be found in <a href="https://smallrye.io/smallrye-mutiny/latest/reference/uni-and-multi/">the Mutiny documentation</a>.</p>
 </div>
+<div class="sect2">
+<h3 id="server-sent-event-sse-support"><a class="anchor" href="#server-sent-event-sse-support"></a>Server-Sent Event (SSE) support</h3>
+<div class="paragraph">
+<p>Consuming SSE events is possible simply by declaring the result type as a <code>io.smallrye.mutiny.Multi</code>.</p>
+</div>
+<div class="paragraph">
+<p>The simplest example is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.acme.rest.client;
+
+import io.smallrye.mutiny.Multi;
+import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
+
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+
+@Path("/sse")
+@RegisterRestClient(configKey = "some-api")
+public interface SseClient {
+     @GET
+     @Produces(MediaType.SERVER_SENT_EVENTS)
+     Multi&lt;String&gt; get();
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>All the IO involved in streaming the SSE results is done in a non-blocking manner.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Results are not limited to strings - for example when the server returns JSON payload for each event, Quarkus automatically deserializes it into the generic type used in the <code>Multi</code>.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Users can also access the entire SSE event by using the <code>org.jboss.resteasy.reactive.client.SseEvent</code> type.</p>
+</div>
+<div class="paragraph">
+<p>A simple example where the event payloads are <code>Long</code> values is the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.acme.rest.client;
+
+import io.smallrye.mutiny.Uni;
+import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
+import org.jboss.resteasy.reactive.client.SseEvent;
+
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.QueryParam;
+
+@Path("/sse")
+@RegisterRestClient(configKey = "some-api")
+public interface SseClient {
+     @GET
+     @Produces(MediaType.SERVER_SENT_EVENTS)
+     Multi&lt;SseEvent&lt;Long&gt;&gt; get();
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="filtering-out-events"><a class="anchor" href="#filtering-out-events"></a>Filtering out events</h4>
+<div class="paragraph">
+<p>On occasion, the stream of SSE events may contain some events that should not be returned by the client - an example of this is having the server send heartbeat events in order to keep the underlying TCP connection open.
+The REST Client supports filtering out such events by providing the <code>@org.jboss.resteasy.reactive.client.SseEventFilter</code>.</p>
+</div>
+<div class="paragraph">
+<p>Here is an example of filtering out heartbeat events:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.acme.rest.client;
+
+import io.smallrye.mutiny.Uni;
+import java.util.function.Predicate;
+import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
+import org.jboss.resteasy.reactive.client.SseEvent;
+import org.jboss.resteasy.reactive.client.SseEventFilter;
+
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.QueryParam;
+
+@Path("/sse")
+@RegisterRestClient(configKey = "some-api")
+public interface SseClient {
+
+     @GET
+     @Produces(MediaType.SERVER_SENT_EVENTS)
+     @SseEventFilter(HeartbeatFilter.class)
+     Multi&lt;SseEvent&lt;Long&gt;&gt; get();
+
+
+     class HeartbeatFilter implements Predicate&lt;SseEvent&lt;String&gt;&gt; {
+
+        @Override
+        public boolean test(SseEvent&lt;String&gt; event) {
+            return !"heartbeat".equals(event.id());
+        }
+     }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1291,6 +1637,9 @@ More details about this can be found in <a href="https://smallrye.io/smallrye-mu
 <ul>
 <li>
 <p>by registering a <code>ClientHeadersFactory</code> or a <code>ReactiveClientHeadersFactory</code> with the <code>@RegisterClientHeaders</code> annotation</p>
+</li>
+<li>
+<p>by programmatically registering a <code>ClientHeadersFactory</code> or a <code>ReactiveClientHeadersFactory</code> with the <code>QuarkusRestClientBuilder.clientHeadersFactory(factory)</code> method</p>
 </li>
 <li>
 <p>by specifying the value of the header with <code>@ClientHeaderParam</code></p>
@@ -1475,6 +1824,135 @@ public interface ExtensionsService {
 <pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">org.eclipse.microprofile.rest.client.propagateHeaders=Authorization,Proxy-Authorization</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="customizing-the-request"><a class="anchor" href="#customizing-the-request"></a>Customizing the request</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The REST Client Reactive supports further customization of the final request to be sent to the server via filters. The filters must implement either the interface <code>ClientRequestFilter</code> or <code>ResteasyReactiveClientRequestFilter</code>.</p>
+</div>
+<div class="paragraph">
+<p>A simple example of customizing the request would be to add a custom header:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Provider
+public class TestClientRequestFilter implements ClientRequestFilter {
+
+    @Override
+    public void filter(ClientRequestContext requestContext) {
+        requestContext.getHeaders().add("my_header", "value");
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next, you can register your filter using the <code>@RegisterProvider</code> annotation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Path("/extensions")
+@RegisterProvider(TestClientRequestFilter.class)
+public interface ExtensionsService {
+
+    // ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or programmatically using the <code>.register()</code> method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">QuarkusRestClientBuilder.newBuilder()
+    .register(TestClientRequestFilter.class)
+    .build(ExtensionsService.class)</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="injecting-the-jakarta-ws-rs-ext-providers-instance-in-filters"><a class="anchor" href="#injecting-the-jakarta-ws-rs-ext-providers-instance-in-filters"></a>Injecting the <code>jakarta.ws.rs.ext.Providers</code> instance in filters</h3>
+<div class="paragraph">
+<p>The <code>jakarta.ws.rs.ext.Providers</code> is useful when we need to lookup the provider instances of the current client.</p>
+</div>
+<div class="paragraph">
+<p>We can get the <code>Providers</code> instance in our filters from the request context as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Provider
+public class TestClientRequestFilter implements ClientRequestFilter {
+
+    @Override
+    public void filter(ClientRequestContext requestContext) {
+        Providers providers = ((ResteasyReactiveClientRequestContext) requestContext).getProviders();
+        // ...
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can implement the <code>ResteasyReactiveClientRequestFilter</code> interface instead of the <code>ClientRequestFilter</code> interface that will directly provide the <code>ResteasyReactiveClientRequestContext</code> context:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Provider
+public class TestClientRequestFilter implements ResteasyReactiveClientRequestFilter {
+
+    @Override
+    public void filter(ResteasyReactiveClientRequestFilter requestContext) {
+        Providers providers = requestContext.getProviders();
+        // ...
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="customizing-the-objectmapper-in-rest-client-reactive-jackson"><a class="anchor" href="#customizing-the-objectmapper-in-rest-client-reactive-jackson"></a>Customizing the ObjectMapper in REST Client Reactive Jackson</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The REST Client Reactive supports adding a custom ObjectMapper to be used only the Client using the annotation <code>@ClientObjectMapper</code>.</p>
+</div>
+<div class="paragraph">
+<p>A simple example is to provide a custom ObjectMapper to the REST Client Reactive Jackson extension by doing:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Path("/extensions")
+@RegisterRestClient
+public interface ExtensionsService {
+
+    @GET
+    Set&lt;Extension&gt; getById(@QueryParam("id") String id);
+
+    @ClientObjectMapper <i class="conum" data-value="1"></i><b>(1)</b>
+    static ObjectMapper objectMapper(ObjectMapper defaultObjectMapper) { <i class="conum" data-value="2"></i><b>(2)</b>
+        return defaultObjectMapper.copy() <i class="conum" data-value="3"></i><b>(3)</b>
+                .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
+                .disable(DeserializationFeature.UNWRAP_ROOT_VALUE);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The method must be annotated with <code>@ClientObjectMapper</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>It&#8217;s must be a static method. Also, the parameter <code>defaultObjectMapper</code> will be resolved via CDI. If not found, it will throw an exception at runtime.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>In this example, we&#8217;re creating a copy of the default object mapper. You should <strong>NEVER</strong> modify the default object mapper, but create a copy instead.</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -1842,6 +2320,13 @@ public interface CRMService {
 <p>As previously mentioned, the body parameter needs to be properly crafted by the application code to conform to the service&#8217;s requirements.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="receiving-compressed-messages"><a class="anchor" href="#receiving-compressed-messages"></a>Receiving compressed messages</h3>
+<div class="paragraph">
+<p>REST Client Reactive also supports receiving compressed messages using GZIP. You can enable the HTTP compression support by adding the property <code>quarkus.http.enable-compression=true</code>.
+When this feature is enabled and a server returns a response that includes the header <code>Content-Encoding: gzip</code>, REST Client Reactive will automatically decode the content and proceed with the message handling.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -2020,6 +2505,26 @@ quarkus.rest-client.logging.body-limit=50
 quarkus.log.category."org.jboss.resteasy.reactive.client.logging".level=DEBUG</code></pre>
 </div>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>REST Client Reactive uses a default <code>ClientLogger</code> implementation, which can be swapped out for a custom implementation.</p>
+</div>
+<div class="paragraph">
+<p>When setting up the client programmatically using the <code>QuarkusRestClientBuilder</code>, the <code>ClientLogger</code> is set via the <code>clientLogger</code> method.</p>
+</div>
+<div class="paragraph">
+<p>For declarative clients using <code>@RegisterRestClient</code>, simply providing a CDI bean that implements <code>ClientLogger</code> is enough for that logger to be used by said clients.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -2180,13 +2685,170 @@ public class QuarkusMockTest {
 <h2 id="using-a-mock-http-server-for-tests"><a class="anchor" href="#using-a-mock-http-server-for-tests"></a>Using a Mock HTTP Server for tests</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In some cases you may want to mock the remote endpoint - the HTTP server - instead of mocking the client itself.
-This may be especially useful for native tests, or for programmatically created clients.</p>
+<p>Setting up a mock HTTP server, against which tests are run, is a common testing pattern.
+Examples of such servers are <a href="https://wiremock.org/">Wiremock</a> and <a href="https://docs.hoverfly.io/projects/hoverfly-java/en/latest/index.html">Hoverfly</a>.
+In this section we&#8217;ll demonstrate how Wiremock can be leveraged for testing the <code>ExtensionsService</code> which was developed above.</p>
 </div>
 <div class="paragraph">
-<p>You can easily mock an HTTP Server with Wiremock.
-The <a href="rest-client#using-a-mock-http-server-for-tests">Wiremock section of the Quarkus - Using the REST Client</a>
-describes how to set it up in detail.</p>
+<p>First, Wiremock needs to be added as a test dependency. For a Maven project that would happen like so:</p>
+</div>
+<div class="listingblock primary asciidoc-tabs-target-sync-cli asciidoc-tabs-target-sync-maven">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.wiremock&lt;/groupId&gt;
+    &lt;artifactId&gt;wiremock&lt;/artifactId&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+    &lt;version&gt;${wiremock.version}&lt;/version&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Use a proper Wiremock version. All available versions can be found <a href="https://search.maven.org/artifact/org.wiremock/wiremock">here</a>.</td>
+</tr>
+</table>
+</div>
+<div class="listingblock secondary asciidoc-tabs-target-sync-gradle">
+<div class="title">build.gradle</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-gradle hljs" data-lang="gradle">testImplementation("org.wiremock:wiremock:$wiremockVersion") <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Use a proper Wiremock version. All available versions can be found <a href="https://search.maven.org/artifact/org.wiremock/wiremock">here</a>.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In Quarkus tests when some service needs to be started before the Quarkus tests are ran, we utilize the <code>@io.quarkus.test.common.QuarkusTestResource</code>
+annotation to specify a <code>io.quarkus.test.common.QuarkusTestResourceLifecycleManager</code> which can start the service and supply configuration
+values that Quarkus will use.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For more details about <code>@QuarkusTestResource</code> refer to  <a href="getting-started-testing#quarkus-test-resource">this part of the documentation</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s create an implementation of <code>QuarkusTestResourceLifecycleManager</code> called <code>WiremockExtensions</code> like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.acme.rest.client;
+
+import java.util.Map;
+
+import com.github.tomakehurst.wiremock.WireMockServer;
+import io.quarkus.test.common.QuarkusTestResourceLifecycleManager;
+
+import static com.github.tomakehurst.wiremock.client.WireMock.*; <i class="conum" data-value="1"></i><b>(1)</b>
+
+public class WireMockExtensions implements QuarkusTestResourceLifecycleManager {  <i class="conum" data-value="2"></i><b>(2)</b>
+
+    private WireMockServer wireMockServer;
+
+    @Override
+    public Map&lt;String, String&gt; start() {
+        wireMockServer = new WireMockServer();
+        wireMockServer.start(); <i class="conum" data-value="3"></i><b>(3)</b>
+
+        wireMockServer.stubFor(get(urlEqualTo("/extensions?id=io.quarkus:quarkus-rest-client-reactive"))   <i class="conum" data-value="4"></i><b>(4)</b>
+                .willReturn(aResponse()
+                        .withHeader("Content-Type", "application/json")
+                        .withBody(
+                            "[{" +
+                            "\"id\": \"io.quarkus:quarkus-rest-client-reactive\"," +
+                            "\"name\": \"REST Client\"" +
+                            "}]"
+                        )));
+
+        wireMockServer.stubFor(get(urlMatching(".*")).atPriority(10).willReturn(aResponse().proxiedFrom("https://stage.code.quarkus.io/api")));   <i class="conum" data-value="5"></i><b>(5)</b>
+
+        return Map.of("quarkus.rest-client.\"org.acme.rest.client.ExtensionsService\".url", wireMockServer.baseUrl()); <i class="conum" data-value="6"></i><b>(6)</b>
+    }
+
+    @Override
+    public void stop() {
+        if (null != wireMockServer) {
+            wireMockServer.stop();  <i class="conum" data-value="7"></i><b>(7)</b>
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Statically importing the methods in the Wiremock package makes it easier to read the test.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The <code>start</code> method is invoked by Quarkus before any test is run and returns a <code>Map</code> of configuration properties that apply during the test execution.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Launch Wiremock.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Configure Wiremock to stub the calls to <code>/extensions?id=io.quarkus:quarkus-rest-client-reactive</code> by returning a specific canned response.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>All HTTP calls that have not been stubbed are handled by calling the real service. This is done for demonstration purposes, as it is not something that would usually happen in a real test.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>As the <code>start</code> method returns configuration that applies for tests, we set the rest-client property that controls the base URL which is used by the implementation
+of <code>ExtensionsService</code> to the base URL where Wiremock is listening for incoming requests.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>When all tests have finished, shutdown Wiremock.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <code>ExtensionsResourceTest</code> test class needs to be annotated like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@QuarkusTest
+@QuarkusTestResource(WireMockExtensions.class)
+public class ExtensionsResourceTest {
+
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>@QuarkusTestResource</code> applies to all tests, not just <code>ExtensionsResourceTest</code>.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -2226,8 +2888,129 @@ To change this behavior, set the <code>quarkus.rest-client-reactive.scope</code>
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#creating-the-maven-project">Creating the Maven project</a></li>
+<li><a href="#setting-up-the-model">Setting up the model</a></li>
+<li><a href="#create-the-interface">Create the interface</a>
+<ul class="sectlevel2">
+<li><a href="#query-parameters">Query Parameters</a></li>
+<li><a href="#form-parameters">Form Parameters</a></li>
+<li><a href="#path-parameters">Path Parameters</a></li>
+<li><a href="#using-clientmultipartform">Using ClientMultipartForm</a></li>
+</ul>
+</li>
+<li><a href="#create-the-configuration">Create the configuration</a>
+<ul class="sectlevel2">
+<li><a href="#disabling-hostname-verification">Disabling Hostname Verification</a></li>
+<li><a href="#http2-support">HTTP/2 Support</a></li>
+</ul>
+</li>
+<li><a href="#create-the-jakarta-rest-resource">Create the Jakarta REST resource</a></li>
+<li><a href="#programmatic-client-creation-with-quarkusrestclientbuilder">Programmatic client creation with QuarkusRestClientBuilder</a></li>
+<li><a href="#use-custom-http-options">Use Custom HTTP Options</a></li>
+<li><a href="#redirection">Redirection</a></li>
+<li><a href="#update-the-test">Update the test</a></li>
+<li><a href="#async-support">Async Support</a>
+<ul class="sectlevel2">
+<li><a href="#server-sent-event-sse-support">Server-Sent Event (SSE) support</a></li>
+</ul>
+</li>
+<li><a href="#custom-headers-support">Custom headers support</a>
+<ul class="sectlevel2">
+<li><a href="#default-header-factory">Default header factory</a></li>
+</ul>
+</li>
+<li><a href="#customizing-the-request">Customizing the request</a>
+<ul class="sectlevel2">
+<li><a href="#injecting-the-jakarta-ws-rs-ext-providers-instance-in-filters">Injecting the <code>jakarta.ws.rs.ext.Providers</code> instance in filters</a></li>
+</ul>
+</li>
+<li><a href="#customizing-the-objectmapper-in-rest-client-reactive-jackson">Customizing the ObjectMapper in REST Client Reactive Jackson</a></li>
+<li><a href="#exception-handling">Exception handling</a>
+<ul class="sectlevel2">
+<li><a href="#using-clientexceptionmapper">Using @ClientExceptionMapper</a></li>
+<li><a href="#using-blocking-annotation-in-exception-mappers">Using @Blocking annotation in exception mappers</a></li>
+</ul>
+</li>
+<li><a href="#multipart">Multipart Form support</a>
+<ul class="sectlevel2">
+<li><a href="#sending-multipart-messages">Sending Multipart messages</a></li>
+<li><a href="#receiving-multipart-messages">Receiving Multipart Messages</a></li>
+<li><a href="#multipart-mixed-odata-usage">Multipart mixed / OData usage</a></li>
+<li><a href="#receiving-compressed-messages">Receiving compressed messages</a></li>
+</ul>
+</li>
+<li><a href="#proxy-support">Proxy support</a></li>
+<li><a href="#package-and-run-the-application">Package and run the application</a></li>
+<li><a href="#logging-traffic">Logging traffic</a></li>
+<li><a href="#mocking-the-client-for-tests">Mocking the client for tests</a>
+<ul class="sectlevel2">
+<li><a href="#mocking-with-injectmock">Mocking with InjectMock</a></li>
+<li><a href="#mocking-with-quarkusmock">Mocking with QuarkusMock</a></li>
+</ul>
+</li>
+<li><a href="#using-a-mock-http-server-for-tests">Using a Mock HTTP Server for tests</a></li>
+<li><a href="#known-limitations">Known limitations</a></li>
+<li><a href="#further-reading">Further reading</a></li>
+</ul></div>
+    </div>
   </div>
-</div>
+  <h2>Related content</h2>
+  <div class="grid-wrapper relations">
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same extensions</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/guides/resteasy-reactive-migration">Migrating to RESTEasy Reactive</a></li>
+      
+        
+        <li class="howto"><a href="/guides/resteasy-reactive-virtual-threads">Use virtual threads in REST applications</a></li>
+      
+        
+        <li class="guide"><a href="/guides/resteasy-reactive">Writing REST Services with RESTEasy Reactive</a></li>
+      </ul>
+    </div>
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same topics</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/guides/resteasy-reactive-migration">Migrating to RESTEasy Reactive</a></li>
+      
+        
+        <li class="howto"><a href="/guides/resteasy-reactive-virtual-threads">Use virtual threads in REST applications</a></li>
+      
+        
+        <li class="guide"><a href="/guides/resteasy-client">Using the legacy REST Client</a></li>
+      
+        
+        <li class="guide"><a href="/guides/resteasy-client-multipart">Using the legacy REST Client with Multipart</a></li>
+      
+        
+        <li class="guide"><a href="/guides/rest-json">Writing JSON REST Services</a></li>
+      
+        
+        <li class="guide"><a href="/guides/resteasy-reactive">Writing REST Services with RESTEasy Reactive</a></li>
+      
+        
+        <li class="reference"><a href="/guides/security-authorize-web-endpoints-reference">Authorization of web endpoints</a></li>
+      
+        
+        <li class="guide"><a href="/guides/rest-data-panache">Generating Jakarta REST resources with Panache</a></li>
+      
+        
+        <li class="guide"><a href="/guides/resteasy">RESTEasy Classic</a></li>
+      
+        
+        <li class="guide"><a href="/guides/openapi-swaggerui">Using OpenAPI and Swagger UI</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   </div>
 
@@ -2275,6 +3058,14 @@ To change this behavior, set the <code>quarkus.rest-client-reactive.scope</code>
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -2355,6 +3146,10 @@ To change this behavior, set the <code>quarkus.rest-client-reactive.scope</code>
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -2417,12 +3212,12 @@ To change this behavior, set the <code>quarkus.rest-client-reactive.scope</code>
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

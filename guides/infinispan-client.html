@@ -9,7 +9,8 @@
   <title>Using the Infinispan Client - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/guides/infinispan-client" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/guides/infinispan-client" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/guides/infinispan-client" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/guides/infinispan-client" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/guides/infinispan-client" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/guides/infinispan-client" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/guides/infinispan-client">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/guides/infinispan-client">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/guides/infinispan-client">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/guides/infinispan-client">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" >Main - SNAPSHOT</option>
         
         
-        <option value="latest" selected>3.0 - Latest</option>
+        
+        <option value="latest" selected>3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" >2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,34 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Using the Infinispan Client </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#architecture">Architecture</a></li>
-<li><a href="#solution">Solution</a></li>
-<li><a href="#creating-the-maven-project">Creating the Maven Project</a></li>
-<li><a href="#creating-the-greeting-pojo">Creating the Greeting POJO</a></li>
-<li><a href="#creating-the-greeting-schema">Creating the Greeting Schema</a></li>
-<li><a href="#creating-the-infinispan-greeting-resource">Creating the Infinispan Greeting Resource</a></li>
-<li><a href="#creating-the-test-class">Creating the test class</a></li>
-<li><a href="#get-it-running">Get it running</a></li>
-<li><a href="#interacting-with-the-greeting-service">Interacting with the Greeting Service</a>
-<ul class="sectlevel2">
-<li><a href="#creating-a-greeting-message">Creating a Greeting Message</a></li>
-<li><a href="#displaying-a-greeting-message">Displaying a Greeting Message</a></li>
-<li><a href="#display-the-cache-and-content-with-the-infinispan-server-console">Display the cache and content with the Infinispan Server Console</a></li>
-</ul>
-</li>
-<li><a href="#configuring-for-production">Configuring for production</a></li>
-<li><a href="#packaging-and-running-in-jvm-mode">Packaging and running in JVM mode</a></li>
-<li><a href="#running-native">Running Native</a></li>
-<li><a href="#going-further">Going further</a></li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Using the Infinispan Client </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -209,10 +204,10 @@
 <p>An IDE</p>
 </li>
 <li>
-<p>JDK 11+ installed with <code>JAVA_HOME</code> configured appropriately</p>
+<p>JDK 17+ installed with <code>JAVA_HOME</code> configured appropriately</p>
 </li>
 <li>
-<p>Apache Maven 3.8.8</p>
+<p>Apache Maven 3.9.6</p>
 </li>
 <li>
 <p>Optionally the <a href="cli-tooling">Quarkus CLI</a> if you want to use it</p>
@@ -276,7 +271,7 @@ cd infinispan-client-quickstart</code></pre>
 <p>To create a Gradle project, add the <code>--gradle</code> or <code>--gradle-kotlin-dsl</code> option.</p>
 </div>
 <div class="paragraph">
-<p><em>For more information about how to install the Quarkus CLI and use it, please refer to <a href="cli-tooling">the Quarkus CLI guide</a>.</em></p>
+<p>For more information about how to install and use the Quarkus CLI, see the <a href="cli-tooling">Quarkus CLI</a> guide.</p>
 </div>
 </div>
 </div>
@@ -285,7 +280,7 @@ cd infinispan-client-quickstart</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:3.0.3.Final:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:3.8.3:create \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=infinispan-client-quickstart \
     -Dextensions='infinispan-client,resteasy-reactive' \
@@ -299,6 +294,19 @@ cd infinispan-client-quickstart</code></pre>
 </div>
 </div>
 <div class="paragraph">
+<p>For Windows users:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If using cmd, (don&#8217;t use backward slash <code>\</code> and put everything on the same line)</p>
+</li>
+<li>
+<p>If using Powershell, wrap <code>-D</code> parameters in double quotes e.g. <code>"-DprojectArtifactId=infinispan-client-quickstart"</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
 <p>This command generates a new project, importing the Infinispan Client extension.</p>
 </div>
 <div class="paragraph">
@@ -308,7 +316,7 @@ to your project by running the following command in your project base directory:
 <div class="listingblock primary asciidoc-tabs-sync-cli">
 <div class="title">CLI</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus extension add 'infinispan-client'</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus extension add infinispan-client</code></pre>
 </div>
 </div>
 <div class="listingblock secondary asciidoc-tabs-sync-maven">
@@ -705,8 +713,9 @@ However, in production, you will run your own Infinispan (or Red Hat Data Grid).
 %prod.quarkus.infinispan-client.username=admin <i class="conum" data-value="2"></i><b>(2)</b>
 %prod.quarkus.infinispan-client.password=password <i class="conum" data-value="3"></i><b>(3)</b>
 
-## Docker 4 Mac workaround
-%prod.quarkus.infinispan-client.client-intelligence=BASIC <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+## Docker 4 Mac workaround. Uncomment only if you are using Docker for Mac.
+## Read more about it in the Infinispan Reference Guide
+# %prod.quarkus.infinispan-client.client-intelligence=BASIC <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -726,6 +735,22 @@ However, in production, you will run your own Infinispan (or Red Hat Data Grid).
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
 <td>Sets the client intelligence. Use BASIC as a workaround if using Docker for Mac.</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Client intelligence changes impact your performance in production.
+Don&#8217;t change the client intelligence unless strictly necessary for your case.
+Read more in the <a href="infinispan-client-reference">Infinispan Client extension reference guide</a>.</p>
+</div>
+</td>
 </tr>
 </table>
 </div>
@@ -831,8 +856,111 @@ native executable:</p>
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#creating-the-maven-project">Creating the Maven Project</a></li>
+<li><a href="#creating-the-greeting-pojo">Creating the Greeting POJO</a></li>
+<li><a href="#creating-the-greeting-schema">Creating the Greeting Schema</a></li>
+<li><a href="#creating-the-infinispan-greeting-resource">Creating the Infinispan Greeting Resource</a></li>
+<li><a href="#creating-the-test-class">Creating the test class</a></li>
+<li><a href="#get-it-running">Get it running</a></li>
+<li><a href="#interacting-with-the-greeting-service">Interacting with the Greeting Service</a>
+<ul class="sectlevel2">
+<li><a href="#creating-a-greeting-message">Creating a Greeting Message</a></li>
+<li><a href="#displaying-a-greeting-message">Displaying a Greeting Message</a></li>
+<li><a href="#display-the-cache-and-content-with-the-infinispan-server-console">Display the cache and content with the Infinispan Server Console</a></li>
+</ul>
+</li>
+<li><a href="#configuring-for-production">Configuring for production</a></li>
+<li><a href="#packaging-and-running-in-jvm-mode">Packaging and running in JVM mode</a></li>
+<li><a href="#running-native">Running Native</a></li>
+<li><a href="#going-further">Going further</a></li>
+</ul></div>
+    </div>
   </div>
-</div>
+  <h2>Related content</h2>
+  <div class="grid-wrapper relations">
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same extensions</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/guides/infinispan-dev-services">Dev Services for Infinispan</a></li>
+      
+        
+        <li class="reference"><a href="/guides/infinispan-client-reference">Infinispan Client Extension Reference Guide</a></li>
+      </ul>
+    </div>
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same topics</h3>
+      <ul class="related-content">
+      
+        
+        <li class="guide"><a href="/guides/infinispan-dev-services">Dev Services for Infinispan</a></li>
+      
+        
+        <li class="reference"><a href="/guides/infinispan-client-reference">Infinispan Client Extension Reference Guide</a></li>
+      
+        
+        <li class="guide"><a href="/guides/cache">Application Data Caching</a></li>
+      
+        
+        <li class="reference"><a href="/guides/datasource">Configure data sources in Quarkus</a></li>
+      
+        
+        <li class="guide"><a href="/guides/elasticsearch">Connecting to an Elasticsearch cluster</a></li>
+      
+        
+        <li class="guide"><a href="/guides/databases-dev-services">Dev Services for Databases</a></li>
+      
+        
+        <li class="guide"><a href="/guides/elasticsearch-dev-services">Dev Services for Elasticsearch</a></li>
+      
+        
+        <li class="guide"><a href="/guides/redis-dev-services">Dev Services for Redis</a></li>
+      
+        
+        <li class="guide"><a href="/guides/hibernate-search-orm-elasticsearch">Hibernate Search guide</a></li>
+      
+        
+        <li class="guide"><a href="/guides/lra">Narayana LRA Participant Support</a></li>
+      
+        
+        <li class="guide"><a href="/guides/reactive-sql-clients">Reactive SQL Clients</a></li>
+      
+        
+        <li class="reference"><a href="/guides/cache-redis-reference">Redis Cache</a></li>
+      
+        
+        <li class="reference"><a href="/guides/redis-reference">Redis Extension Reference Guide</a></li>
+      
+        
+        <li class="guide"><a href="/guides/hibernate-orm-panache">Simplified Hibernate ORM with Panache</a></li>
+      
+        
+        <li class="guide"><a href="/guides/hibernate-orm-panache-kotlin">Simplified Hibernate ORM with Panache and Kotlin</a></li>
+      
+        
+        <li class="guide"><a href="/guides/hibernate-reactive-panache">Simplified Hibernate Reactive with Panache</a></li>
+      
+        
+        <li class="guide"><a href="/guides/mongodb-panache">Simplified MongoDB with Panache</a></li>
+      
+        
+        <li class="guide"><a href="/guides/mongodb-panache-kotlin">Simplified MongoDB with Panache and Kotlin</a></li>
+      
+        
+        <li class="guide"><a href="/guides/flyway">Using Flyway</a></li>
+      
+        
+        <li class="guide"><a href="/guides/hibernate-orm">Using Hibernate ORM and Jakarta Persistence</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   </div>
 
@@ -880,6 +1008,14 @@ native executable:</p>
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -960,6 +1096,10 @@ native executable:</p>
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -1022,12 +1162,12 @@ native executable:</p>
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

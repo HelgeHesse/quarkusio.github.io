@@ -9,7 +9,8 @@
   <title>Using Security with WebAuthn - 2.16 - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/version/2.16/guides/security-webauthn" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/version/2.16/guides/security-webauthn" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/version/2.16/guides/security-webauthn" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/version/2.16/guides/security-webauthn" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/version/2.16/guides/security-webauthn" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/version/2.16/guides/security-webauthn" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/version/2.16/guides/security-webauthn">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/version/2.16/guides/security-webauthn">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/version/2.16/guides/security-webauthn">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/version/2.16/guides/security-webauthn">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" >Main - SNAPSHOT</option>
         
         
-        <option value="latest" >3.0 - Latest</option>
+        
+        <option value="latest" >3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" selected>2.16</option>
+        
         
         
         <option value="2.13" >2.13</option>
+        
         
         
         </select>
@@ -158,49 +177,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Using Security with WebAuthn </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#introduction-to-webauthn">Introduction to WebAuthn</a></li>
-<li><a href="#architecture">Architecture</a></li>
-<li><a href="#solution">Solution</a></li>
-<li><a href="#creating-the-maven-project">Creating the Maven Project</a></li>
-<li><a href="#writing-the-application">Writing the application</a>
-<ul class="sectlevel2">
-<li><a href="#storing-our-webauthn-credentials">Storing our WebAuthn credentials</a></li>
-<li><a href="#exposing-your-entities-to-quarkus-webauthn">Exposing your entities to Quarkus WebAuthn</a></li>
-</ul>
-</li>
-<li><a href="#writing-the-html-application">Writing the HTML application</a></li>
-<li><a href="#testing-the-application">Testing the application</a></li>
-<li><a href="#webauthn-endpoints">WebAuthn endpoints</a>
-<ul class="sectlevel2">
-<li><a href="#obtain-a-registration-challenge">Obtain a registration challenge</a></li>
-<li><a href="#obtain-a-login-challenge">Obtain a login challenge</a></li>
-<li><a href="#trigger-a-registration">Trigger a registration</a></li>
-<li><a href="#trigger-a-login">Trigger a login</a></li>
-<li><a href="#logout">Logout</a></li>
-</ul>
-</li>
-<li><a href="#webauthn-javascript-library">WebAuthn JavaScript library</a>
-<ul class="sectlevel2">
-<li><a href="#invoke-registration">Invoke registration</a></li>
-<li><a href="#invoke-login">Invoke login</a></li>
-<li><a href="#only-invoke-the-registration-challenge-and-authenticator">Only invoke the registration challenge and authenticator</a></li>
-<li><a href="#only-invoke-the-login-challenge-and-authenticator">Only invoke the login challenge and authenticator</a></li>
-</ul>
-</li>
-<li><a href="#handling-login-and-registration-endpoints-yourself">Handling login and registration endpoints yourself</a></li>
-<li><a href="#blocking-version">Blocking version</a></li>
-<li><a href="#testing-webauthn">Testing WebAuthn</a></li>
-<li><a href="#configuration-reference">Configuration Reference</a></li>
-<li><a href="#references">References</a></li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Using Security with WebAuthn </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -353,10 +333,10 @@ The <code>/api/users/me</code> endpoint is also protected with RBAC (Role-Based 
 However, you can go right to the completed example.</p>
 </div>
 <div class="paragraph">
-<p>Clone the Git repository: <code>git clone <a href="https://github.com/quarkusio/quarkus-quickstarts.git" class="bare">https://github.com/quarkusio/quarkus-quickstarts.git</a></code>, or download an <a href="https://github.com/quarkusio/quarkus-quickstarts/archive/main.zip">archive</a>.</p>
+<p>Clone the Git repository: <code>git clone <a href="https://github.com/quarkusio/quarkus-quickstarts.git" class="bare">https://github.com/quarkusio/quarkus-quickstarts.git</a></code>, or download an <a href="https://github.com/quarkusio/quarkus-quickstarts/archive/2.16.zip">archive</a>.</p>
 </div>
 <div class="paragraph">
-<p>The solution is located in the <code>security-webauthn-quickstart</code> <a href="https://github.com/quarkusio/quarkus-quickstarts/tree/main/security-webauthn-quickstart">directory</a>.</p>
+<p>The solution is located in the <code>security-webauthn-quickstart</code> <a href="https://github.com/quarkusio/quarkus-quickstarts/tree/2.16/security-webauthn-quickstart">directory</a>.</p>
 </div>
 </div>
 </div>
@@ -372,6 +352,7 @@ However, you can go right to the completed example.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus create app org.acme:security-webauthn-quickstart \
+    --stream=2.16 \
     --extension='security-webauthn,reactive-pg-client,resteasy-reactive,hibernate-reactive-panache' \
     --no-code
 cd security-webauthn-quickstart</code></pre>
@@ -390,7 +371,8 @@ cd security-webauthn-quickstart</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.16.7.Final:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.16.12.Final:create \
+    -DplatformVersion=2.16 \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=security-webauthn-quickstart \
     -Dextensions='security-webauthn,reactive-pg-client,resteasy-reactive,hibernate-reactive-panache' \
@@ -1773,10 +1755,10 @@ public class TestUserProvider extends MyWebAuthnSetup {
 <div class="sect1">
 <h2 id="configuration-reference"><a class="anchor" href="#configuration-reference"></a>Configuration Reference</h2>
 <div class="sectionbody">
-<div class="paragraph configuration-legend">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime <input type="search" id="config-search-0" placeholder="FILTER CONFIGURATION" disabled></p>
 </div>
-<table class="tableblock frame-all grid-all stretch configuration-reference searchable">
+<table class="tableblock frame-all grid-all stretch configuration-reference searchable configuration-reference-all-rows">
 <colgroup>
 <col style="width: 80%;">
 <col style="width: 10%;">
@@ -1788,45 +1770,51 @@ public class TestUserProvider extends MyWebAuthnSetup {
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-security-webauthn_quarkus.webauthn.enabled"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.enabled">quarkus.webauthn.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-1" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If the WebAuthn extension is enabled.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21097">QUARKUS_WEBAUTHN_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21097" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21971">QUARKUS_WEBAUTHN_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21971" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.origin"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.origin">quarkus.webauthn.origin</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-2" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The origin of the application. The origin is basically protocol, host and port. If you are calling WebAuthn API while your application is located at <code><a href="https://example.com/login" class="bare">https://example.com/login</a></code>, then origin will be <code><a href="https://example.com" class="bare">https://example.com</a></code>. If you are calling from <code><a href="http://localhost:2823/test" class="bare">http://localhost:2823/test</a></code>, then the origin will be <code><a href="http://localhost:2823" class="bare">http://localhost:2823</a></code>. Please note that WebAuthn API will not work on pages loaded over HTTP, unless it is localhost, which is considered secure context.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21098">QUARKUS_WEBAUTHN_ORIGIN</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21098" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21972">QUARKUS_WEBAUTHN_ORIGIN</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21972" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.transports"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.transports">quarkus.webauthn.transports</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-3" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Authenticator Transports allowed by the application. Authenticators can interact with the user web browser through several transports. Applications may want to restrict the transport protocols for extra security hardening reasons. By default, all transports should be allowed. If your application is to be used by mobile phone users, you may want to restrict only the <code>INTERNAL</code> authenticator to be allowed. Permitted values are:
@@ -1836,52 +1824,61 @@ public class TestUserProvider extends MyWebAuthnSetup {
  - <code>INTERNAL</code> - Hardware security chips (e.g.: Intel TPM2.0)</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21099">QUARKUS_WEBAUTHN_TRANSPORTS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21099" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21973">QUARKUS_WEBAUTHN_TRANSPORTS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21973" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of <a href="https://vertx.io/docs/apidocs/io/vertx/ext/auth/webauthn/AuthenticatorTransport.html">AuthenticatorTransport</a></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>USB,NFC,BLE,INTERNAL</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.relying-party.id"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.relying-party.id">quarkus.webauthn.relying-party.id</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-4" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The id (or domain name of your server)</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21100">QUARKUS_WEBAUTHN_RELYING_PARTY_ID</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21100" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21974">QUARKUS_WEBAUTHN_RELYING_PARTY_ID</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21974" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.relying-party.name"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.relying-party.name">quarkus.webauthn.relying-party.name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-5" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>A user friendly name for your server</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21101">QUARKUS_WEBAUTHN_RELYING_PARTY_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21101" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21975">QUARKUS_WEBAUTHN_RELYING_PARTY_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21975" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>Quarkus server</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.authenticator-attachment"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.authenticator-attachment">quarkus.webauthn.authenticator-attachment</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-6" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Kind of Authenticator Attachment allowed. Authenticators can connect to your device in two forms:
@@ -1889,37 +1886,43 @@ public class TestUserProvider extends MyWebAuthnSetup {
  - <code>CROSS_PLATFORM</code> - The Authenticator can roam across devices (e.g.: USB Authenticator)  For security reasons your application may choose to restrict to a specific attachment mode. If omitted, then any mode is permitted.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21102">QUARKUS_WEBAUTHN_AUTHENTICATOR_ATTACHMENT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21102" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21976">QUARKUS_WEBAUTHN_AUTHENTICATOR_ATTACHMENT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21976" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><code>platform</code>, <code>cross-platform</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.require-resident-key"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.require-resident-key">quarkus.webauthn.require-resident-key</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-7" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Resident key required. A resident (private) key, is a key that cannot leave your authenticator device, this means that you cannot reuse the authenticator to log into a second computer.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21103">QUARKUS_WEBAUTHN_REQUIRE_RESIDENT_KEY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21103" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21977">QUARKUS_WEBAUTHN_REQUIRE_RESIDENT_KEY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21977" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.user-verification"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.user-verification">quarkus.webauthn.user-verification</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-8" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>User Verification requirements. Webauthn applications may choose <code>REQUIRED</code> verification to assert that the user is present during the authentication ceremonies, but in some cases, applications may want to reduce the interactions with the user, i.e.: prevent the use of pop-ups. Valid values are:
@@ -1928,38 +1931,44 @@ public class TestUserProvider extends MyWebAuthnSetup {
  - <code>DISCOURAGED</code> - User should avoid interact with the browser</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21104">QUARKUS_WEBAUTHN_USER_VERIFICATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21104" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21978">QUARKUS_WEBAUTHN_USER_VERIFICATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21978" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><code>required</code>, <code>preferred</code>, <code>discouraged</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>required</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.timeout"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.timeout">quarkus.webauthn.timeout</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-9" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Non-negative User Verification timeout. Authentication must occur within the timeout, this will prevent the user browser from being blocked with a pop-up required user verification, and the whole ceremony must be completed within the timeout period. After the timeout, any previously issued challenge is automatically invalidated.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21105">QUARKUS_WEBAUTHN_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21105" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21979">QUARKUS_WEBAUTHN_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21979" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-security-webauthn" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-{summaryTableId}" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>60s</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.attestation"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.attestation">quarkus.webauthn.attestation</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-10" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Device Attestation Preference. During registration, applications may want to attest the device. Attestation is a cryptographic verification of the authenticator hardware. Attestation implies that the privacy of the users may be exposed and browsers might override the desired configuration on the user&#8217;s behalf. Valid values are:
@@ -1969,151 +1978,178 @@ public class TestUserProvider extends MyWebAuthnSetup {
  - <code>ENTERPRISE</code> - no attestation data is sent with registration. The device AAGUID is returned unaltered.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21106">QUARKUS_WEBAUTHN_ATTESTATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21106" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21980">QUARKUS_WEBAUTHN_ATTESTATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21980" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><code>none</code>, <code>indirect</code>, <code>direct</code>, <code>enterprise</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>none</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.pub-key-cred-params"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.pub-key-cred-params">quarkus.webauthn.pub-key-cred-params</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-11" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Allowed Public Key Credential algorithms by preference order. Webauthn mandates that all authenticators must support at least the following 2 algorithms: <code>ES256</code> and <code>RS256</code>. Applications may require stronger keys and algorithms, for example: <code>ES512</code> or <code>EdDSA</code>. Note that the use of stronger algorithms, e.g.: <code>EdDSA</code> may require Java 15 or a cryptographic <code>JCE</code> provider that implements the algorithms.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21107">QUARKUS_WEBAUTHN_PUB_KEY_CRED_PARAMS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21107" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21981">QUARKUS_WEBAUTHN_PUB_KEY_CRED_PARAMS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21981" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of <a href="https://vertx.io/docs/apidocs/io/vertx/ext/auth/webauthn/PublicKeyCredential.html">PublicKeyCredential</a></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>ES256,RS256</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.challenge-length"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.challenge-length">quarkus.webauthn.challenge-length</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-12" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Length of the challenges exchanged between the application and the browser. Challenges must be at least 32 bytes.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21108">QUARKUS_WEBAUTHN_CHALLENGE_LENGTH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21108" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21982">QUARKUS_WEBAUTHN_CHALLENGE_LENGTH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21982" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>64</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.login-page"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.login-page">quarkus.webauthn.login-page</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-13" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The login page</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21109">QUARKUS_WEBAUTHN_LOGIN_PAGE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21109" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21983">QUARKUS_WEBAUTHN_LOGIN_PAGE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21983" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>/login.html</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.session-timeout"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.session-timeout">quarkus.webauthn.session-timeout</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-14" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The inactivity (idle) timeout When inactivity timeout is reached, cookie is not renewed and a new login is enforced.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21110">QUARKUS_WEBAUTHN_SESSION_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21110" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21984">QUARKUS_WEBAUTHN_SESSION_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21984" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-security-webauthn" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-{summaryTableId}" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>PT30M</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.new-cookie-interval"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.new-cookie-interval">quarkus.webauthn.new-cookie-interval</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-15" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>How old a cookie can get before it will be replaced with a new cookie with an updated timeout, also referred to as "renewal-timeout". Note that smaller values will result in slightly more server load (as new encrypted cookies will be generated more often), however larger values affect the inactivity timeout as the timeout is set when a cookie is generated. For example if this is set to 10 minutes, and the inactivity timeout is 30m, if a users last request is when the cookie is 9m old then the actual timeout will happen 21m after the last request, as the timeout is only refreshed when a new cookie is generated. In other words, no timeout is tracked on the server side; the timestamp is encoded and encrypted in the cookie itself, and it is decrypted and parsed with each request.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21111">QUARKUS_WEBAUTHN_NEW_COOKIE_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21111" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21985">QUARKUS_WEBAUTHN_NEW_COOKIE_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21985" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
-  <a href="#duration-note-anchor-quarkus-security-webauthn" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+  <a href="#duration-note-anchor-{summaryTableId}" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>PT1M</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.cookie-name"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.cookie-name">quarkus.webauthn.cookie-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-16" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The cookie that is used to store the persistent session</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21112">QUARKUS_WEBAUTHN_COOKIE_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21112" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21986">QUARKUS_WEBAUTHN_COOKIE_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21986" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>quarkus-credential</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.cookie-same-site"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.cookie-same-site">quarkus.webauthn.cookie-same-site</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-17" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>SameSite attribute for the session cookie.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21113">QUARKUS_WEBAUTHN_COOKIE_SAME_SITE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21113" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21987">QUARKUS_WEBAUTHN_COOKIE_SAME_SITE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21987" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><code>strict</code>, <code>lax</code>, <code>none</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>strict</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-security-webauthn_quarkus.webauthn.cookie-path"></a><code><a href="#quarkus-security-webauthn_quarkus.webauthn.cookie-path">quarkus.webauthn.cookie-path</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-18" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The cookie path for the session cookies.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-21114">QUARKUS_WEBAUTHN_COOKIE_PATH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21114" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-21988">QUARKUS_WEBAUTHN_COOKIE_PATH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-21988" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>/</code></p></td>
@@ -2156,8 +2192,47 @@ Otherwise, <code>PT</code> is implicitly prepended to the value to obtain a stan
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#introduction-to-webauthn">Introduction to WebAuthn</a></li>
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#creating-the-maven-project">Creating the Maven Project</a></li>
+<li><a href="#writing-the-application">Writing the application</a>
+<ul class="sectlevel2">
+<li><a href="#storing-our-webauthn-credentials">Storing our WebAuthn credentials</a></li>
+<li><a href="#exposing-your-entities-to-quarkus-webauthn">Exposing your entities to Quarkus WebAuthn</a></li>
+</ul>
+</li>
+<li><a href="#writing-the-html-application">Writing the HTML application</a></li>
+<li><a href="#testing-the-application">Testing the application</a></li>
+<li><a href="#webauthn-endpoints">WebAuthn endpoints</a>
+<ul class="sectlevel2">
+<li><a href="#obtain-a-registration-challenge">Obtain a registration challenge</a></li>
+<li><a href="#obtain-a-login-challenge">Obtain a login challenge</a></li>
+<li><a href="#trigger-a-registration">Trigger a registration</a></li>
+<li><a href="#trigger-a-login">Trigger a login</a></li>
+<li><a href="#logout">Logout</a></li>
+</ul>
+</li>
+<li><a href="#webauthn-javascript-library">WebAuthn JavaScript library</a>
+<ul class="sectlevel2">
+<li><a href="#invoke-registration">Invoke registration</a></li>
+<li><a href="#invoke-login">Invoke login</a></li>
+<li><a href="#only-invoke-the-registration-challenge-and-authenticator">Only invoke the registration challenge and authenticator</a></li>
+<li><a href="#only-invoke-the-login-challenge-and-authenticator">Only invoke the login challenge and authenticator</a></li>
+</ul>
+</li>
+<li><a href="#handling-login-and-registration-endpoints-yourself">Handling login and registration endpoints yourself</a></li>
+<li><a href="#blocking-version">Blocking version</a></li>
+<li><a href="#testing-webauthn">Testing WebAuthn</a></li>
+<li><a href="#configuration-reference">Configuration Reference</a></li>
+<li><a href="#references">References</a></li>
+</ul></div>
+    </div>
   </div>
-</div>
+  </div>
 
   </div>
 
@@ -2205,6 +2280,14 @@ Otherwise, <code>PT</code> is implicitly prepended to the value to obtain a stan
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -2285,6 +2368,10 @@ Otherwise, <code>PT</code> is implicitly prepended to the value to obtain a stan
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -2347,12 +2434,12 @@ Otherwise, <code>PT</code> is implicitly prepended to the value to obtain a stan
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

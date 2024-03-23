@@ -9,7 +9,8 @@
   <title>Build Items - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/guides/all-builditems" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/guides/all-builditems" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/guides/all-builditems" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/guides/all-builditems" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/guides/all-builditems" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides-configuration-reference">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/guides/all-builditems" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/guides/all-builditems">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/guides/all-builditems">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/guides/all-builditems">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/guides/all-builditems">日本語</a></li>
@@ -136,23 +138,35 @@
   <h3 class="mb-0"></h3>
 </div>
 
-<div class="full-width-version-bg grey guidebar align-self">
-  <a class="guidebarcol returnlink" href="/guides/"> Back to Guides</a>
-  <div class="guidebarcol version">
-    <label id="guides-version-label" class="guide-dropdown-label">Select Guide Version</label>
-    <select id="guide-version-dropdown" class="guide-dropdown">
+<section class="full-width-version-bg flexfilterbar guides">
+  <div class="guideflexcontainer">
+    <div class="docslink">
+      <a class="returnlink" href="/guides/"> Back to Guides</a>
+    </div>
+    <div class="flexlabel">
+      <label>By Version</label>
+    </div>
+    <div class="guidepulldown version">
+    <select id="guide-version-dropdown">
     
       <option value="main" >Main - SNAPSHOT</option>
     
-      <option value="latest" selected>3.0 - Latest</option>
+      <option value="latest" selected>3.8.3 - Latest</option>
+    
+      <option value="3.8" >3.8</option>
+    
+      <option value="3.2" >3.2</option>
+    
+      <option value="2.16" >2.16</option>
     
       <option value="2.13" >2.13</option>
     
       <option value="2.7" >2.7</option>
     
     </select>
+    </div>
   </div>
-</div>
+</section>
  
 <div class="grid-wrapper guide">
   <div class="width-12-12">
@@ -202,7 +216,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/AdditionalApplicationArchiveMarkerBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.AdditionalApplicationArchiveMarkerBuildItem</code></a> </dt>
 <dd>
-<p>A marker file that if present indicates that a given archive should be treated as an application archive</p>
+<p>A marker file that if present indicates that a given archive should be treated as an application archive.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -238,7 +252,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/AdditionalIndexedClassesBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.AdditionalIndexedClassesBuildItem</code></a> </dt>
 <dd>
-<p>Allows extensions to add classes to the index available via The classes are loaded by the Deployment ClassLoader</p>
+<p>Allows extensions to add classes to the index available via . The classes are loaded by the Deployment ClassLoader.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -434,7 +448,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/ApplicationIndexBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.ApplicationIndexBuildItem</code></a> </dt>
 <dd>
-<p>The Jandex index of the application root</p>
+<p>The Jandex index of the application root.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -474,7 +488,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/ApplicationStartBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.ApplicationStartBuildItem</code></a> </dt>
 <dd>
-<p>A symbolic class that is produced after the startup event has been fired. At this point it should be safe to open sockets and begin processing requests</p>
+<p>A symbolic class that is produced after the startup event has been fired. At this point it should be safe to open sockets and begin processing requests.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -566,19 +580,6 @@
 <p><i>No Javadoc found</i></p>
 </dd>
 </dl>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/BootstrapConfigSetupCompleteBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.BootstrapConfigSetupCompleteBuildItem</code></a> </dt>
-<dd>
-<p>Marker used by Build Steps that consume bootstrap configuration to ensure that they run after the bootstrap config has been set up.</p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>None</p>
 </div></div></td>
 </tr>
 <tr>
@@ -676,11 +677,11 @@
 </dd>
 <dt class="hdlist1"><code>BiFunction inputTransformer</code> </dt>
 <dd>
-<p>Function that can be applied to the inout bytes before it is passed into ASM. This should only be used in very specific circumstances. At the moment the only known valid use case is jacoco, which needs access to the unmodified class file bytes.</p>
+<p>Function that can be applied to the input bytes before it is passed into ASM. This should only be used in very specific circumstances. At the moment the only known valid use case is JaCoCo, which needs access to the unmodified class file bytes.</p>
 </dd>
 <dt class="hdlist1"><code>Set requireConstPoolEntry</code> </dt>
 <dd>
-<p>A set of class names that need to be present in the const pool for the transformation to happen. These need to be in JVM internal format. <p> The transformation is only applied if at least one of the entries in the const pool is present <p> Note that this is an optimisation, and if another transformer is transforming the class anyway then this transformer will always be applied.</p>
+<p>A set of class names that need to be present in the const pool for the transformation to happen. These need to be in JVM internal format. <p> The transformation is only applied if at least one of the entries in the const pool is present. <p> Note that this is an optimisation, and if another transformer is transforming the class anyway then this transformer will always be applied.</p>
 </dd>
 <dt class="hdlist1"><code>boolean cacheable</code> </dt>
 <dd>
@@ -758,7 +759,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/CombinedIndexBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.CombinedIndexBuildItem</code></a> </dt>
 <dd>
-<p>An index of application classes which is built from archives and dependencies that contain a certain marker file. These files include but are not limited to - beans.xml, jandex.idx and config properties. Additional marker files can be declared via . Alternatively, you can index a dependency through . Compared to , this index doesn't contain all CDI-related information. On the other hand, it can contain classes from archives/dependencies that had no CDI component declared within them. The computing index can also be used to index classes on demand. This when is called. Note that this is a mutable index as this will add additional information, so in general this Index should only be used if you actually need it.</p>
+<p>An index of application classes which is built from archives and dependencies that contain a certain marker file. These files include but are not limited to - beans.xml, jandex.idx and config properties. Additional marker files can be declared via . Alternatively, you can index a dependency through . Compared to , this index doesn't contain all CDI-related information. On the other hand, it can contain classes from archives/dependencies that had no CDI component declared within them. The computing index can also be used to index classes on demand, when is called. Note that this is a mutable index as this will add additional information, so in general this Index should only be used if you actually need it.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -836,7 +837,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/ConfigDescriptionBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.ConfigDescriptionBuildItem</code></a> </dt>
 <dd>
-<p>A build item that is not part of the standard build, but is only used to generate example config files and docs</p>
+<p>A build item that is not part of the standard build, but is only used to generate example config files and docs.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -1031,10 +1032,6 @@
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
-<dt class="hdlist1"><code>AppModel effectiveModel</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
 </dl>
 </div></div></td>
 </tr>
@@ -1043,7 +1040,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/CuratedApplicationShutdownBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.CuratedApplicationShutdownBuildItem</code></a> </dt>
 <dd>
-<p>Build Item that can be used to queue shutdown tasks that are run when the is closed. <p> For production applications, this will be at the end of the maven/gradle build. For dev mode applications, this will be when dev mode shuts down. For tests, it will generally be at the end of the test run. However, for continuous testing this will be when the outer dev mode process shuts down. For unit style tests, this will usually be the end of the test.</p>
+<p>Build Item that can be used to queue shutdown tasks that are run when the is closed. <p> For production applications, this will be at the end of the Maven/Gradle build. For dev mode applications, this will be when dev mode shuts down. For tests, it will generally be at the end of the test run. However, for continuous testing this will be when the outer dev mode process shuts down. For unit style tests, this will usually be the end of the test.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -1062,6 +1059,82 @@
 <p><i>No Javadoc found</i></p>
 </dd>
 <dt class="hdlist1"><code>boolean registered</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/cmd/DeployCommandActionBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.cmd.DeployCommandActionBuildItem</code></a> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String commandName</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>boolean successful</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/cmd/DeployCommandActionResultBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.cmd.DeployCommandActionResultBuildItem</code></a> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>List commands</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/cmd/DeployCommandDeclarationBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.cmd.DeployCommandDeclarationBuildItem</code></a> </dt>
+<dd>
+<p>Way for maven and gradle plugins to discover if any declared extensions support quarkus deploy</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String name</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/cmd/DeployCommandDeclarationResultBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.cmd.DeployCommandDeclarationResultBuildItem</code></a> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>List commands</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -1155,7 +1228,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/DevServicesLauncherConfigResultBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.DevServicesLauncherConfigResultBuildItem</code></a> </dt>
 <dd>
-<p>Build item that contains the final results of all</p>
+<p>Build item that contains the final results of all configuration.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -1173,7 +1246,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/DevServicesResultBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.DevServicesResultBuildItem</code></a> </dt>
 <dd>
-<p>BuildItem for running dev services Combines injected configs to the application with container id (if it exists). Processors are expected to return this build item not only when the dev service first starts, but also if a running dev service already exists. helps to manage the lifecycle of the running dev service</p>
+<p>BuildItem for running dev services. Combines injected configs to the application with container id (if it exists). Processors are expected to return this build item not only when the dev service first starts, but also if a running dev service already exists. helps to manage the lifecycle of the running dev service.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -1199,7 +1272,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/DevServicesSharedNetworkBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.DevServicesSharedNetworkBuildItem</code></a> </dt>
 <dd>
-<p>A marker build item that, if any instances are provided during the build, the containers started by DevServices will use a shared network. This is mainly useful in integration tests where the application container needs to be able to communicate with the services containers</p>
+<p>A marker build item that indicates, if any instances are provided during the build, the containers started by DevServices will use a shared network. This is mainly useful in integration tests where the application container needs to be able to communicate with the service containers.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -1352,9 +1425,27 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/execannotations/ExecutionModelAnnotationsAllowedBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.execannotations.ExecutionModelAnnotationsAllowedBuildItem</code></a> </dt>
+<dd>
+<p>Carries a predicate that identifies methods that can have annotations which affect the execution model ( , , ). <p> Used to detect wrong usage of these annotations, as they are implemented directly by the various frameworks and may only be put on "entrypoint" methods. Placing these annotations on methods that can only be invoked by application code is always wrong.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>Predicate predicate</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/ExecutorBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.ExecutorBuildItem</code></a> </dt>
 <dd>
-<p>The main executor for blocking tasks</p>
+<p>The main executor for blocking tasks.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -1390,7 +1481,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/FeatureBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.FeatureBuildItem</code></a> </dt>
 <dd>
-<p>Represents a functionality provided by an extension. The name of the feature gets displayed in the log during application bootstrap. <p> An extension should provide at most one feature. The name must be unique. If multiple extensions register a feature of the same name the build fails. <p> The name of the feature should only contain lowercase characters, words are separated by dash ; e.g. . Features provided by core extensions should be listed in the  enum.</p>
+<p>Represents functionality provided by an extension. The name of the feature gets displayed in the log during application bootstrap. <p> An extension should provide at most one feature. The name must be unique. If multiple extensions register a feature of the same name the build fails. <p> The name of the feature should only contain lowercase characters, words are separated by dash ; e.g. . Features provided by core extensions should be listed in the  enum.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -1456,7 +1547,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/GeneratedFileSystemResourceBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.GeneratedFileSystemResourceBuildItem</code></a> </dt>
 <dd>
-<p>Used when resources generated by the build should not end up in the produced runnable artifact, but in the file system inside the output directory of OutputTargetBuildItem. This is written to the file system for normal and dev mode, but not for test mode</p>
+<p>Used when resources generated by the build should not end up in the produced runnable artifact, but in the file system inside the output directory of OutputTargetBuildItem. This is written to the file system for normal and dev mode, but not for test mode.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -1478,7 +1569,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/GeneratedFileSystemResourceHandledBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.GeneratedFileSystemResourceHandledBuildItem</code></a> </dt>
 <dd>
-<p>Marker used only to ensure that the file system resources where properly written in dev-mode</p>
+<p>Marker used only to ensure that the file system resources where properly written in dev mode.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -1491,7 +1582,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/GeneratedNativeImageClassBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.GeneratedNativeImageClassBuildItem</code></a> </dt>
 <dd>
-<p>A generated class that is only applicable to native images</p>
+<p>A generated class that is only applicable to native images.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -1523,7 +1614,7 @@
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
-<dt class="hdlist1"><code>byte[] classData</code> </dt>
+<dt class="hdlist1"><code>byte[] data</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -1539,13 +1630,17 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/HotDeploymentWatchedFileBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.HotDeploymentWatchedFileBuildItem</code></a> </dt>
 <dd>
-<p>A file that if modified may result in a hot redeployment when in the dev mode.</p>
+<p>Identifies a file from a that, if modified, may result in a hot redeployment when in the dev mode. <p> A file may be identified with an location or a matching predicate. See  and . The location may be: <ul> <li>a relative OS-agnostic file path where  is used as a separator; e.g. </li> <li>an absolute OS-specific file path; e.g. </li> <li>a glob pattern as defined in ; e.g. </li> </ul> <p> If multiple build items match the same file then the final value of  is computed as a logical OR of all the  values.</p>
 </dd>
 </dl>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
 <dt class="hdlist1"><code>String location</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Predicate locationPredicate</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -1561,7 +1656,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/IOThreadDetectorBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.IOThreadDetectorBuildItem</code></a> </dt>
 <dd>
-<p>A build items provides the ability to detect if the current thread is an IO thread</p>
+<p>A build item that provides the ability to detect if the current thread is an IO thread</p>
 </dd>
 </dl>
 </div></div></td>
@@ -1605,7 +1700,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/InitTaskBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.InitTaskBuildItem</code></a> </dt>
 <dd>
-<p>Represents an initialization task for the application. Often extension perform some sort of initialization as part of the application startup. There are cases where we want to externalize the initialization (e.g. in a pipeline). Often the task is run using the same artifact as the application but using a different command or arguments. In the later case it might be deseriable to pass additional environment variable to both the init tasks (to enable init) and the application (to disable the init).</p>
+<p>Represents an initialization task for the application. Often extensions perform some sort of initialization as part of the application startup. There are cases where we want to externalize the initialization (e.g. in a pipeline). Often the task is run using the same artifact as the application but using a different command or arguments. In the later case it might be desirable to pass additional environment variables to both the init tasks (to enable init) and the application (to disable the init).</p>
 </dd>
 </dl>
 </div></div></td>
@@ -1651,7 +1746,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/InitTaskCompletedBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.InitTaskCompletedBuildItem</code></a> </dt>
 <dd>
-<p>A symbolic class that represents that an initialization task has been complete. Similar to  but focused on initialization tasks (e.g. db migrations etc) that are run during runtime just before the application startups. <p> The build item is used, so that we can track when all initialization tasks have been completed.</p>
+<p>A symbolic class that represents that an initialization task has been completed. Similar to  but focused on initialization tasks (e.g. db migrations etc) that are run during runtime just before the application starts. <p> The build item is used, so that we can track when all initialization tasks have been completed.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -1696,7 +1791,7 @@
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
-<dt class="hdlist1"><code>GraalVM.Version exportAfter</code> </dt>
+<dt class="hdlist1"><code>GraalVM.Version exportSince</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -1810,6 +1905,54 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/nativeimage/JniRuntimeAccessFieldBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.nativeimage.JniRuntimeAccessFieldBuildItem</code></a> </dt>
+<dd>
+<p>JNI access registration fine-grained to single fields for a given class.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String declaringClass</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>String name</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/nativeimage/JniRuntimeAccessMethodBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.nativeimage.JniRuntimeAccessMethodBuildItem</code></a> </dt>
+<dd>
+<p>JNI access registration fine-grained to single methods for a given class.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String declaringClass</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>String name</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>String[] params</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/nativeimage/LambdaCapturingTypeBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.nativeimage.LambdaCapturingTypeBuildItem</code></a> </dt>
 <dd>
 <p>Used to register a lambda capturing type in native mode</p>
@@ -1830,7 +1973,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/LaunchModeBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.LaunchModeBuildItem</code></a> </dt>
 <dd>
-<p>indicates the type of launch</p>
+<p>Indicates the type of launch.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -2458,11 +2601,7 @@
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
-<dt class="hdlist1"><code>int minFeature</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>int minUpdate</code> </dt>
+<dt class="hdlist1"><code>Runtime.Version minVersion</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -2478,7 +2617,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/ObjectSubstitutionBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.ObjectSubstitutionBuildItem</code></a> </dt>
 <dd>
-<p>Used to capture object substitution information for non-serializable classes</p>
+<p>Used to capture object substitution information for non-serializable classes.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -2552,7 +2691,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/PreloadClassBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.PreloadClassBuildItem</code></a> </dt>
 <dd>
-<p>Class to be preloaded in static initialization phase of Quarkus</p>
+<p>Class to be preloaded in static initialization phase of Quarkus.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -2570,7 +2709,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/PreloadClassesEnabledBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.PreloadClassesEnabledBuildItem</code></a> </dt>
 <dd>
-<p>Extension build steps can produce this if preloading classes is enabled</p>
+<p>Extension build steps can produce this if preloading classes is enabled.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -2878,6 +3017,62 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/cmd/RunCommandActionBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.cmd.RunCommandActionBuildItem</code></a> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String commandName</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>List args</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Path workingDirectory</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>String startedExpression</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Path logFile</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>boolean needsLogfile</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/cmd/RunCommandActionResultBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.cmd.RunCommandActionResultBuildItem</code></a> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>List commands</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/RunTimeConfigBuilderBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.RunTimeConfigBuilderBuildItem</code></a> </dt>
 <dd>
 <p>Provides a way to register a  in RUNTIME.</p>
@@ -3061,6 +3256,19 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/SetClassPathSystemPropBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.SetClassPathSystemPropBuildItem</code></a> </dt>
+<dd>
+<p>A marker build item to make Quarkus set the  system property. This system property is used in rare by libraries (Truffle for example) to create their own ClassLoaders. The value of the system property is simply best effort, as there is no way to faithfully represent the Quarkus ClassLoader hierarchies in a system property value.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>None</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/ShutdownContextBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.ShutdownContextBuildItem</code></a> </dt>
 <dd>
 <p>A build item that can be used to register shutdown tasks in runtime recorders.</p>
@@ -3094,7 +3302,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/SnapStartDefaultValueBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.SnapStartDefaultValueBuildItem</code></a> </dt>
 <dd>
-<p>Allows extensions to set default value for enabling SnapStart.</p>
+<p>Allows extensions to set a default value for enabling SnapStart.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -3179,7 +3387,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/StreamingLogHandlerBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.StreamingLogHandlerBuildItem</code></a> </dt>
 <dd>
-<p>A build item for adding the dev stream log via mutiny</p>
+<p>A build item for adding the dev stream log via mutiny.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -3197,7 +3405,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/SuppressNonRuntimeConfigChangedWarningBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.SuppressNonRuntimeConfigChangedWarningBuildItem</code></a> </dt>
 <dd>
-<p>Allows extensions to suppress the runtime warning that Quarkus emits on startup when a non-runtime configuration options is different at runtime than build time. An example usage of this is when a user provides some test value in for a build-time only property and only provides the actual value on the command line when starting Quarkus. In such a case we don't want the value set at build time to be revealed at runtime as it could be sensitive.</p>
+<p>Allows extensions to suppress the runtime warning that Quarkus emits on startup when a non-runtime configuration option is different at runtime than build time. An example usage of this is when a user provides some test value in for a build-time only property and only provides the actual value on the command line when starting Quarkus. In such a case we don't want the value set at build time to be revealed at runtime as it could be sensitive.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -3237,7 +3445,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/TestAnnotationBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.TestAnnotationBuildItem</code></a> </dt>
 <dd>
-<p>This is an optional build item that allows us to track annotations that will define test classes It is only available during tests</p>
+<p>This is an optional build item that allows us to track annotations that will define test classes. It is only available during tests.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -3255,7 +3463,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/TestClassBeanBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.TestClassBeanBuildItem</code></a> </dt>
 <dd>
-<p>This is an optional build item that allows us to track additional test classes that will become beans. It is only available during tests</p>
+<p>This is an optional build item that allows us to track additional test classes that will become beans. It is only available during tests.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -3307,6 +3515,24 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/TestProfileBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.TestProfileBuildItem</code></a> </dt>
+<dd>
+<p>This is an optional build item that represents the current test profile. <p> It is only available during tests.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String testProfileClassName</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/dev/testing/TestSetupBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.dev.testing.TestSetupBuildItem</code></a> </dt>
 <dd>
 <p>Virtual build item that is used to signify that a step must be run to set up continuous testing</p>
@@ -3340,7 +3566,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/TransformedClassesBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.TransformedClassesBuildItem</code></a> </dt>
 <dd>
-<p>The results of applying bytecode transformation to a class. Note that this has also been abused somewhat to also represent removed resources, as the logic is the same, and it avoids have two separate mechanisms that essentially do the same thing.</p>
+<p>The results of applying bytecode transformation to a class. Note that this has also been abused somewhat to also represent removed resources, as the logic is the same, and it avoids having two separate mechanisms that essentially do the same thing.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -3463,24 +3689,6 @@
 <p>None</p>
 </div></div></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/core/deployment/src/main/java/io/quarkus/deployment/builditem/WebSocketLogHandlerBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.deployment.builditem.WebSocketLogHandlerBuildItem</code></a> </dt>
-<dd>
-<p>A build item for adding the dev stream log</p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>RuntimeValue handlerValue</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -3520,6 +3728,10 @@
 <p><i>No Javadoc found</i></p>
 </dd>
 <dt class="hdlist1"><code>Optional dbVersion</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>boolean transactionIntegrationEnabled</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -3750,7 +3962,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/arc/deployment/src/main/java/io/quarkus/arc/deployment/AdditionalBeanBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.arc.deployment.AdditionalBeanBuildItem</code></a> </dt>
 <dd>
-<p>This build item is used to specify one or more additional bean classes to be analyzed during bean discovery. <p> By default, the resulting beans may be removed if they are considered unused and  is enabled. You can change the default behavior by setting the  to  and via . <p> An additional bean may have the scope defaulted via  and . The default scope is only used if there is no scope declared on the bean class. The default scope should be used in cases where a bean class source is not controlled by the extension and the scope annotation cannot be declared directly on the class.</p>
+<p>This build item is used to specify one or more additional bean classes to be analyzed during bean discovery. <p> By default, the resulting beans may be removed if they are considered unused and  is enabled. You can change the default behavior by setting the  to  and via . <p> An additional bean may have the scope defaulted via  and . The default scope is only used if there is no scope declared on the bean class. The default scope should be used in cases where a bean class source is not controlled by the extension and the scope annotation cannot be declared directly on the class. <h2>Generated Classes</h2> This build item should never be produced for a generated class -  and should be used instead.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -4095,24 +4307,6 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/arc/deployment/src/main/java/io/quarkus/arc/deployment/ConfigInjectionStaticInitBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.arc.deployment.ConfigInjectionStaticInitBuildItem</code></a> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>DotName declaringCandidate</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/arc/deployment/src/main/java/io/quarkus/arc/deployment/ConfigPropertyBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.arc.deployment.ConfigPropertyBuildItem</code></a> </dt>
 <dd>
 <p>Represents a mandatory config property that needs to be validated at runtime.</p>
@@ -4141,7 +4335,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/arc/deployment/src/main/java/io/quarkus/arc/deployment/ContextRegistrationPhaseBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.arc.deployment.ContextRegistrationPhaseBuildItem</code></a> </dt>
 <dd>
-<p>Context registration phase can be used to register custom CDI contexts. <p> An extension that needs to produce other build items during the "context registration" phase should use this build item. The build step should produce a  or at least inject a  for this build item, otherwise it could be ignored or processed at the wrong time, e.g. after .</p>
+<p>Context registration phase can be used to register custom CDI contexts. <p> An extension that needs to produce other build items during the "context registration" phase should use this build item. The build step should produce a  or at least inject a  for this build item, otherwise it could be ignored or processed at the wrong time, e.g. after . <p> Typical workflow involves obtaining a  via . Note that there is no need to invoke  once you are done as it is performed automatically.</p>
 </dd>
 </dl>
 </div></div></td>
@@ -4502,6 +4696,36 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/arc/deployment/src/main/java/io/quarkus/arc/deployment/RegisteredComponentsBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.arc.deployment.RegisteredComponentsBuildItem</code></a> </dt>
+<dd>
+<p>It's made public so that you can make use of the abstraction. e.g. if you need to do a similar inspection over  and</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>Collection beans</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Collection injectionPoints</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Collection observers</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>BeanResolver beanResolver</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/arc/deployment/src/main/java/io/quarkus/arc/deployment/ResourceAnnotationBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.arc.deployment.ResourceAnnotationBuildItem</code></a> </dt>
 <dd>
 <p>This build item is used to specify resource annotations that makes it possible to resolve non-CDI injection points, such as Java EE resources.</p>
@@ -4646,6 +4870,69 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="azure-functions"><a class="anchor" href="#azure-functions"></a>Azure Functions</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Class Name</th>
+<th class="tableblock halign-left valign-top">Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/azure-functions/deployment/src/main/java/io/quarkus/azure/functions/deployment/AzureFunctionBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.azure.functions.deployment.AzureFunctionBuildItem</code></a> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String functionName</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Class declaring</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Method method</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/azure-functions/deployment/src/main/java/io/quarkus/azure/functions/deployment/AzureFunctionsAppNameBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.azure.functions.deployment.AzureFunctionsAppNameBuildItem</code></a> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String appName</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
 <h2 id="cache"><a class="anchor" href="#cache"></a>Cache</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
@@ -4727,6 +5014,24 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
 <dt class="hdlist1"><code>CacheManagerInfo info</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/cache/deployment-spi/src/main/java/io/quarkus/cache/deployment/spi/CacheTypeBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.cache.deployment.spi.CacheTypeBuildItem</code></a> </dt>
+<dd>
+<p>A build item that can be used by extensions to determine what kind of cache backend is configured. This is useful for cases where caching extensions specific data does not make sense for remote cache backends</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>Type type</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -4852,6 +5157,14 @@
 <dd>
 <p>The container registry to use</p>
 </dd>
+<dt class="hdlist1"><code>Optional username</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Optional password</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
 <dt class="hdlist1"><code>String imagePrefix</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
@@ -4922,6 +5235,19 @@
 <p><i>No Javadoc found</i></p>
 </dd>
 </dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/container-image/spi/src/main/java/io/quarkus/container/spi/SingleSegmentContainerImageRequestBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.container.spi.SingleSegmentContainerImageRequestBuildItem</code></a> </dt>
+<dd>
+<p>There are cases where a single segment image (an image without group) is preferred. This build item is used to express this preferrence.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>None</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -5028,11 +5354,7 @@
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
-<dt class="hdlist1"><code>DbResult defaultDatasource</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>Map namedDatasources</code> </dt>
+<dt class="hdlist1"><code>Map dataSources</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -5211,6 +5533,10 @@
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
+<dt class="hdlist1"><code>String descriptor</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
 <dt class="hdlist1"><code>String functionName</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
@@ -5287,6 +5613,10 @@
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
+<dt class="hdlist1"><code>List virtualMethods</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
 </dl>
 </div></div></td>
 </tr>
@@ -5353,24 +5683,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/hibernate-orm/deployment/src/main/java/io/quarkus/hibernate/orm/deployment/AdditionalJpaModelBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.hibernate.orm.deployment.AdditionalJpaModelBuildItem</code></a> </dt>
-<dd>
-<p>Additional Jpa model class that we need to index</p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>String className</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
@@ -5461,6 +5773,10 @@
 <p><i>No Javadoc found</i></p>
 </dd>
 <dt class="hdlist1"><code>Set entityClassNames</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Set managedClassNames</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -5597,6 +5913,14 @@
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
+<dt class="hdlist1"><code>Optional jsonMapper</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Optional xmlMapper</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
 </dl>
 </div></div></td>
 </tr>
@@ -5637,6 +5961,24 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/hibernate-orm/deployment-spi/src/main/java/io/quarkus/hibernate/orm/deployment/spi/AdditionalJpaModelBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.hibernate.orm.deployment.spi.AdditionalJpaModelBuildItem</code></a> </dt>
+<dd>
+<p>Additional Jpa model class that we need to index</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String className</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
@@ -5931,6 +6273,46 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/infinispan-client/deployment/src/main/java/io/quarkus/infinispan/client/deployment/InfinispanClientBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.infinispan.client.deployment.InfinispanClientBuildItem</code></a> </dt>
+<dd>
+<p>Provide the Infinispan clients as RuntimeValue's.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>RuntimeValue client</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>String name</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/infinispan-client/deployment/src/main/java/io/quarkus/infinispan/client/deployment/InfinispanClientNameBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.infinispan.client.deployment.InfinispanClientNameBuildItem</code></a> </dt>
+<dd>
+<p>Represents the values of the .</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String name</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/infinispan-client/deployment/src/main/java/io/quarkus/infinispan/client/deployment/InfinispanPropertiesBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.infinispan.client.deployment.InfinispanPropertiesBuildItem</code></a> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
@@ -5939,7 +6321,29 @@
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
+<dt class="hdlist1"><code>Map properties</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/infinispan-client/deployment/src/main/java/io/quarkus/infinispan/client/deployment/MarshallingBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.infinispan.client.deployment.MarshallingBuildItem</code></a> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
 <dt class="hdlist1"><code>Properties properties</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Map marshallers</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -6106,44 +6510,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="jax-rs-spi"><a class="anchor" href="#jax-rs-spi"></a>JAX-RS - SPI</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Class Name</th>
-<th class="tableblock halign-left valign-top">Attributes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/jaxrs-spi/deployment/src/main/java/io/quarkus/jaxrs/spi/deployment/AdditionalJaxRsResourceMethodAnnotationsBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.jaxrs.spi.deployment.AdditionalJaxRsResourceMethodAnnotationsBuildItem</code></a> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>List annotationClasses</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="jax-rs-client-reactive"><a class="anchor" href="#jax-rs-client-reactive"></a>JAX-RS Client Reactive</h2>
+<h2 id="jakarta-rest-client-reactive"><a class="anchor" href="#jakarta-rest-client-reactive"></a>Jakarta REST Client Reactive</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -6213,6 +6580,43 @@
 <p><i>No Javadoc found</i></p>
 </dd>
 <dt class="hdlist1"><code>int priority</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jax-rs-spi"><a class="anchor" href="#jax-rs-spi"></a>JAX-RS - SPI</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Class Name</th>
+<th class="tableblock halign-left valign-top">Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/jaxrs-spi/deployment/src/main/java/io/quarkus/jaxrs/spi/deployment/AdditionalJaxRsResourceMethodAnnotationsBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.jaxrs.spi.deployment.AdditionalJaxRsResourceMethodAnnotationsBuildItem</code></a> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>List annotationClasses</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -6904,6 +7308,24 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/kubernetes/spi/src/main/java/io/quarkus/kubernetes/spi/KubernetesOutputDirectoryBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.kubernetes.spi.KubernetesOutputDirectoryBuildItem</code></a> </dt>
+<dd>
+<p>Contains the effective output directory where to find the generated kubernetes resources.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>Path outputDirectory</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/kubernetes/spi/src/main/java/io/quarkus/kubernetes/spi/KubernetesPortBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.kubernetes.spi.KubernetesPortBuildItem</code></a> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
@@ -6917,6 +7339,14 @@
 <p><i>No Javadoc found</i></p>
 </dd>
 <dt class="hdlist1"><code>String name</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>boolean enabled</code> </dt>
+<dd>
+<p>Indicates when the port is enabled vs simply configured. For example the presence `quarkus.http.ssl-port` also is not enought to tell us if enabled. Still, we need to communicate its value and let `quarkus-kubernetes` extension decide.</p>
+</dd>
+<dt class="hdlist1"><code>Optional source</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -6935,6 +7365,10 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
 <dt class="hdlist1"><code>String name</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>String scheme</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -7190,6 +7624,24 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
 <dt class="hdlist1"><code>boolean generateRbac</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/kubernetes-client/spi/src/main/java/io/quarkus/kubernetes/client/spi/KubernetesResourcesBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.kubernetes.client.spi.KubernetesResourcesBuildItem</code></a> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String[] resourceClasses</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -7609,9 +8061,31 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/netty/deployment/src/main/java/io/quarkus/netty/deployment/EventLoopSupplierBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.netty.deployment.EventLoopSupplierBuildItem</code></a> </dt>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/netty/deployment/src/main/java/io/quarkus/netty/deployment/EventLoopGroupBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.netty.deployment.EventLoopGroupBuildItem</code></a> </dt>
+<dd>
+<p>Provides suppliers that return EventLoopGroup used by the application. See EventLoopSupplierBuildItem to register custom EventLoopGroup</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>Supplier bossEventLoopGroup</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Supplier mainEventLoopGroup</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/netty/deployment/src/main/java/io/quarkus/netty/deployment/EventLoopSupplierBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.netty.deployment.EventLoopSupplierBuildItem</code></a> </dt>
+<dd>
+<p>Register EventLoopGroup suppliers to be used to produce main EventLoopGroup and boss EventLoopGroup annotated beans. If not provided, both will be created from a default supplier. See EventLoopGroupBuildItem for actual supplier instances</p>
 </dd>
 </dl>
 </div></div></td>
@@ -7681,6 +8155,10 @@
 <p><i>No Javadoc found</i></p>
 </dd>
 <dt class="hdlist1"><code>Map properties</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>boolean containerRestarted</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -7832,105 +8310,15 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/opentelemetry/deployment/src/main/java/io/quarkus/opentelemetry/deployment/OpenTelemetryBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.opentelemetry.deployment.OpenTelemetryBuildItem</code></a> </dt>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/opentelemetry/deployment/src/main/java/io/quarkus/opentelemetry/deployment/exporter/otlp/ExternalOtelExporterBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.opentelemetry.deployment.exporter.otlp.ExternalOtelExporterBuildItem</code></a> </dt>
 <dd>
-<p><i>No Javadoc found</i></p>
+<p>Build item to be used by Quarkiverse exporters to register themselves as an external exporter.</p>
 </dd>
 </dl>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
-<dt class="hdlist1"><code>RuntimeValue value</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/opentelemetry/deployment/src/main/java/io/quarkus/opentelemetry/deployment/tracing/TracerIdGeneratorBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.opentelemetry.deployment.tracing.TracerIdGeneratorBuildItem</code></a> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>RuntimeValue idGenerator</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/opentelemetry/deployment/src/main/java/io/quarkus/opentelemetry/deployment/tracing/TracerProviderBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.opentelemetry.deployment.tracing.TracerProviderBuildItem</code></a> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>RuntimeValue tracerProvider</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/opentelemetry/deployment/src/main/java/io/quarkus/opentelemetry/deployment/tracing/TracerResourceBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.opentelemetry.deployment.tracing.TracerResourceBuildItem</code></a> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>RuntimeValue resource</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/opentelemetry/deployment/src/main/java/io/quarkus/opentelemetry/deployment/tracing/TracerSpanExportersBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.opentelemetry.deployment.tracing.TracerSpanExportersBuildItem</code></a> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>RuntimeValue spanExporters</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/opentelemetry/deployment/src/main/java/io/quarkus/opentelemetry/deployment/tracing/TracerSpanProcessorsBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.opentelemetry.deployment.tracing.TracerSpanProcessorsBuildItem</code></a> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>RuntimeValue spanProcessors</code> </dt>
+<dt class="hdlist1"><code>String exporterName</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -8053,7 +8441,7 @@
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
-<dt class="hdlist1"><code>Set allModelClassNames</code> </dt>
+<dt class="hdlist1"><code>Set managedClassNames</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -8102,7 +8490,7 @@
 <dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/qute/deployment/src/main/java/io/quarkus/qute/deployment/CheckedTemplateBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.qute.deployment.CheckedTemplateBuildItem</code></a> </dt>
 <dd>
-<p>Represents a method of a class annotated with .</p>
+<p>Represents a method of a class annotated with  or a Java record that implements .</p>
 </dd>
 </dl>
 </div></div></td>
@@ -8120,11 +8508,15 @@
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
+<dt class="hdlist1"><code>boolean requireTypeSafeExpressions</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
 <dt class="hdlist1"><code>MethodInfo method</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
-<dt class="hdlist1"><code>boolean requireTypeSafeExpressions</code> </dt>
+<dt class="hdlist1"><code>ClassInfo recordClass</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -8143,24 +8535,6 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
 <dt class="hdlist1"><code>Collection locationPatterns</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/qute/deployment/src/main/java/io/quarkus/qute/deployment/GeneratedTemplateInitializerBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.qute.deployment.GeneratedTemplateInitializerBuildItem</code></a> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>String className</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -8456,6 +8830,24 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/qute/deployment/src/main/java/io/quarkus/qute/deployment/TemplateGlobalProviderBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.qute.deployment.TemplateGlobalProviderBuildItem</code></a> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String className</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/qute/deployment/src/main/java/io/quarkus/qute/deployment/TemplatePathBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.qute.deployment.TemplatePathBuildItem</code></a> </dt>
 <dd>
 <p>Represents a template path.</p>
@@ -8473,6 +8865,42 @@
 <p><i>No Javadoc found</i></p>
 </dd>
 <dt class="hdlist1"><code>String content</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/qute/deployment/src/main/java/io/quarkus/qute/deployment/TemplateRootBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.qute.deployment.TemplateRootBuildItem</code></a> </dt>
+<dd>
+<p>This build item represents a source of template files. <p> By default, the templates are found in the  directory. However, an extension can produce this build item to register an additional root path. <p> The path is relative to the artifact/project root and OS-agnostic, i.e.  is used as a path separator.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String path</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/qute/deployment/src/main/java/io/quarkus/qute/deployment/TemplateRootsBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.qute.deployment.TemplateRootsBuildItem</code></a> </dt>
+<dd>
+<p>The set of template root paths.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>Set rootPaths</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -8542,51 +8970,6 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="reactive-datasource"><a class="anchor" href="#reactive-datasource"></a>Reactive Datasource</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Class Name</th>
-<th class="tableblock halign-left valign-top">Attributes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/reactive-datasource/deployment/src/main/java/io/quarkus/reactive/datasource/deployment/VertxPoolBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.reactive.datasource.deployment.VertxPoolBuildItem</code></a> </dt>
-<dd>
-<p>A build item for Vertx s. <p> If you inject this build item when recording runtime init template calls, you are guaranteed the Pool configuration has been injected and Pools can be created.</p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>RuntimeValue vertxPool</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>String dbKind</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>boolean isDefault</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
 <h2 id="reactive-db2-client"><a class="anchor" href="#reactive-db2-client"></a>Reactive DB2 Client</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
@@ -8616,7 +8999,7 @@
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
-<dt class="hdlist1"><code>RuntimeValue db2Pool</code> </dt>
+<dt class="hdlist1"><code>Function db2Pool</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -8657,7 +9040,7 @@
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
-<dt class="hdlist1"><code>RuntimeValue mssqlPool</code> </dt>
+<dt class="hdlist1"><code>Function mssqlPool</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -8698,7 +9081,7 @@
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
-<dt class="hdlist1"><code>RuntimeValue mysqlPool</code> </dt>
+<dt class="hdlist1"><code>Function mysqlPool</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -8739,7 +9122,7 @@
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
-<dt class="hdlist1"><code>RuntimeValue oraclePool</code> </dt>
+<dt class="hdlist1"><code>Function oraclePool</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -8780,7 +9163,7 @@
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
-<dt class="hdlist1"><code>RuntimeValue pgPool</code> </dt>
+<dt class="hdlist1"><code>Function pgPool</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -8896,7 +9279,7 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/redis-client/deployment/src/main/java/io/quarkus/redis/client/deployment/RedisMetricsBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.redis.client.deployment.RedisMetricsBuildItem</code></a> </dt>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/redis-client/deployment/src/main/java/io/quarkus/redis/deployment/client/RedisMetricsBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.redis.deployment.client.RedisMetricsBuildItem</code></a> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -8914,7 +9297,7 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/redis-client/deployment/src/main/java/io/quarkus/redis/client/deployment/RequestedRedisClientBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.redis.client.deployment.RequestedRedisClientBuildItem</code></a> </dt>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/redis-client/deployment/src/main/java/io/quarkus/redis/deployment/client/RequestedRedisClientBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.redis.deployment.client.RequestedRedisClientBuildItem</code></a> </dt>
 <dd>
 <p>Request the creation of the Redis client with the given name.</p>
 </dd>
@@ -8923,147 +9306,6 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
 <dt class="hdlist1"><code>String name</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="rest-client"><a class="anchor" href="#rest-client"></a>REST Client</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Class Name</th>
-<th class="tableblock halign-left valign-top">Attributes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/resteasy-classic/rest-client/deployment/src/main/java/io/quarkus/restclient/deployment/RestClientAnnotationProviderBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.restclient.deployment.RestClientAnnotationProviderBuildItem</code></a> </dt>
-<dd>
-<p>Used to mark a custom annotation and its associated JAX-RS client provider</p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>DotName annotationName</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>Class providerClass</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/resteasy-classic/rest-client/deployment/src/main/java/io/quarkus/restclient/deployment/RestClientPredicateProviderBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.restclient.deployment.RestClientPredicateProviderBuildItem</code></a> </dt>
-<dd>
-<p>Register provider against every Rest client matching predicate.</p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>String providerClass</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>Predicate matcher</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="rest-client-reactive"><a class="anchor" href="#rest-client-reactive"></a>REST Client Reactive</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Class Name</th>
-<th class="tableblock halign-left valign-top">Attributes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/resteasy-reactive/rest-client-reactive/deployment/src/main/java/io/quarkus/rest/client/reactive/deployment/RegisterProviderAnnotationInstanceBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.rest.client.reactive.deployment.RegisterProviderAnnotationInstanceBuildItem</code></a> </dt>
-<dd>
-<p>A Build Item that is used to capture the information of usages equivalent to . The use of the build item facilitates support for use cases that need to have the same effect as , but that don't actually use the  annotation.</p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>String targetClass</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>AnnotationInstance annotationInstance</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="rest-client-reactive-spi"><a class="anchor" href="#rest-client-reactive-spi"></a>REST Client Reactive - SPI</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Class Name</th>
-<th class="tableblock halign-left valign-top">Attributes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/resteasy-reactive/rest-client-reactive/spi-deployment/src/main/java/io/quarkus/rest/client/reactive/spi/RestClientAnnotationsTransformerBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.rest.client.reactive.spi.RestClientAnnotationsTransformerBuildItem</code></a> </dt>
-<dd>
-<p>Make it possible to add, remove or alter annotations on various components. The provided transformer uses  to limit the scope of transformer to classes, fields, methods, method params or a combination of those. These metadata changes are not stored in Jandex directly (Jandex is immutable) but instead in an abstraction layer. Users/extensions can access  to view the updated annotation model. NOTE: Extensions that operate purely on Jandex index analysis won't be able to see any changes made via !</p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>AnnotationsTransformer transformer</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -9156,7 +9398,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="resteasy-common"><a class="anchor" href="#resteasy-common"></a>RESTEasy - Common</h2>
+<h2 id="resteasy-classic-common"><a class="anchor" href="#resteasy-classic-common"></a>RESTEasy Classic - Common</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -9241,7 +9483,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="resteasy-common-spi"><a class="anchor" href="#resteasy-common-spi"></a>RESTEasy - Common - SPI</h2>
+<h2 id="resteasy-classic-common-spi"><a class="anchor" href="#resteasy-classic-common-spi"></a>RESTEasy Classic - Common - SPI</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -9296,7 +9538,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="resteasy-server-common"><a class="anchor" href="#resteasy-server-common"></a>RESTEasy - Server common</h2>
+<h2 id="resteasy-classic-server-common"><a class="anchor" href="#resteasy-classic-server-common"></a>RESTEasy Classic - Server common</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -9399,7 +9641,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="resteasy-server-common-spi"><a class="anchor" href="#resteasy-server-common-spi"></a>RESTEasy - Server common - SPI</h2>
+<h2 id="resteasy-classic-server-common-spi"><a class="anchor" href="#resteasy-classic-server-common-spi"></a>RESTEasy Classic - Server common - SPI</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -9476,6 +9718,69 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="resteasy-classics-rest-client"><a class="anchor" href="#resteasy-classics-rest-client"></a>RESTEasy Classic&#8217;s REST Client</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Class Name</th>
+<th class="tableblock halign-left valign-top">Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/resteasy-classic/resteasy-client/deployment/src/main/java/io/quarkus/restclient/deployment/RestClientAnnotationProviderBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.restclient.deployment.RestClientAnnotationProviderBuildItem</code></a> </dt>
+<dd>
+<p>Used to mark a custom annotation and its associated JAX-RS client provider</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>DotName annotationName</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Class providerClass</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/resteasy-classic/resteasy-client/deployment/src/main/java/io/quarkus/restclient/deployment/RestClientPredicateProviderBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.restclient.deployment.RestClientPredicateProviderBuildItem</code></a> </dt>
+<dd>
+<p>Register provider against every Rest client matching predicate.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String providerClass</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Predicate matcher</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
 <h2 id="resteasy-reactive"><a class="anchor" href="#resteasy-reactive"></a>RESTEasy Reactive</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
@@ -9490,6 +9795,28 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/resteasy-reactive/quarkus-resteasy-reactive/deployment/src/main/java/io/quarkus/resteasy/reactive/server/deployment/BuiltInReaderOverrideBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.resteasy.reactive.server.deployment.BuiltInReaderOverrideBuildItem</code></a> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String readerClassName</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>String overrideClassName</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
@@ -9988,6 +10315,28 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/resteasy-reactive/quarkus-resteasy-reactive/spi-deployment/src/main/java/io/quarkus/resteasy/reactive/server/spi/PreExceptionMapperHandlerBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.resteasy.reactive.server.spi.PreExceptionMapperHandlerBuildItem</code></a> </dt>
+<dd>
+<p>A build item that allows extension to define a  that runs write before RESTEasy Reactive attempt to do exception mapping according to the JAX-RS spec. This is only meant to be used in very advanced use cases.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>ServerRestHandler handler</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>int priority</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/resteasy-reactive/quarkus-resteasy-reactive/spi-deployment/src/main/java/io/quarkus/resteasy/reactive/server/spi/ResumeOn404BuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.resteasy.reactive.server.spi.ResumeOn404BuildItem</code></a> </dt>
 <dd>
 <p>A marker build item which extensions can generate when they want to force RESTEasy Reactive to not reply with 404 when it does not handle the path and instead just pass control onto the next Vert.x handler</p>
@@ -10313,6 +10662,19 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/resteasy-reactive/quarkus-resteasy-reactive-common/spi-deployment/src/main/java/io/quarkus/resteasy/reactive/spi/IgnoreStackMixingBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.resteasy.reactive.spi.IgnoreStackMixingBuildItem</code></a> </dt>
+<dd>
+<p>Marker build item that can be used by advanced extensions that can make sure that mixing RESTEasy Classic and RESTEasy Reactive dependencies will not cause problems</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>None</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/resteasy-reactive/quarkus-resteasy-reactive-common/spi-deployment/src/main/java/io/quarkus/resteasy/reactive/spi/JaxrsFeatureBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.resteasy.reactive.spi.JaxrsFeatureBuildItem</code></a> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
@@ -10509,6 +10871,106 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="resteasy-reactives-rest-client"><a class="anchor" href="#resteasy-reactives-rest-client"></a>RESTEasy Reactive&#8217;s REST Client</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Class Name</th>
+<th class="tableblock halign-left valign-top">Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/resteasy-reactive/rest-client-reactive/deployment/src/main/java/io/quarkus/rest/client/reactive/deployment/AnnotationToRegisterIntoClientContextBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.rest.client.reactive.deployment.AnnotationToRegisterIntoClientContextBuildItem</code></a> </dt>
+<dd>
+<p>A Build Item that is used to register annotations that are used by the client to register services into the client context.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>DotName annotation</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Class expectedReturnType</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/resteasy-reactive/rest-client-reactive/deployment/src/main/java/io/quarkus/rest/client/reactive/deployment/RegisterProviderAnnotationInstanceBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.rest.client.reactive.deployment.RegisterProviderAnnotationInstanceBuildItem</code></a> </dt>
+<dd>
+<p>A Build Item that is used to capture the information of usages equivalent to . The use of the build item facilitates support for use cases that need to have the same effect as , but that don't actually use the  annotation.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String targetClass</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>AnnotationInstance annotationInstance</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="resteasy-reactives-rest-client-spi"><a class="anchor" href="#resteasy-reactives-rest-client-spi"></a>RESTEasy Reactive&#8217;s REST Client - SPI</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Class Name</th>
+<th class="tableblock halign-left valign-top">Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/resteasy-reactive/rest-client-reactive/spi-deployment/src/main/java/io/quarkus/rest/client/reactive/spi/RestClientAnnotationsTransformerBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.rest.client.reactive.spi.RestClientAnnotationsTransformerBuildItem</code></a> </dt>
+<dd>
+<p>Make it possible to add, remove or alter annotations on various components. The provided transformer uses  to limit the scope of transformer to classes, fields, methods, method params or a combination of those. These metadata changes are not stored in Jandex directly (Jandex is immutable) but instead in an abstraction layer. Users/extensions can access  to view the updated annotation model. NOTE: Extensions that operate purely on Jandex index analysis won't be able to see any changes made via !</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>AnnotationsTransformer transformer</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
 <h2 id="security"><a class="anchor" href="#security"></a>Security</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
@@ -10679,6 +11141,101 @@
 </dl>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/security/spi/src/main/java/io/quarkus/security/spi/DefaultSecurityCheckBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.security.spi.DefaultSecurityCheckBuildItem</code></a> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>List rolesAllowed</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/security/spi/src/main/java/io/quarkus/security/spi/RolesAllowedConfigExpResolverBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.security.spi.RolesAllowedConfigExpResolverBuildItem</code></a> </dt>
+<dd>
+<p>Provides a way to transform roles allowed specified as configuration expressions in annotations to runtime configuration values.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>String roleConfigExpr</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>BiConsumer configValueRecorder</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="security-jakarta-persistence-common"><a class="anchor" href="#security-jakarta-persistence-common"></a>Security Jakarta Persistence - Common</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Class Name</th>
+<th class="tableblock halign-left valign-top">Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/security-jpa-common/deployment/src/main/java/io/quarkus/security/jpa/common/deployment/JpaSecurityDefinitionBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.security.jpa.common.deployment.JpaSecurityDefinitionBuildItem</code></a> </dt>
+<dd>
+<p>This build items holds  common for reactive and classic Jakarta Persistence Security.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>JpaSecurityDefinition jpaSecurityDefinition</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/security-jpa-common/deployment/src/main/java/io/quarkus/security/jpa/common/deployment/PanacheEntityPredicateBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.security.jpa.common.deployment.PanacheEntityPredicateBuildItem</code></a> </dt>
+<dd>
+<p>Build item to evaluate whether the class is a Panache model class.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>Set modelClasses</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -10751,6 +11308,38 @@
 <p><i>No Javadoc found</i></p>
 </dd>
 </dl>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="smallrye-graphql-client"><a class="anchor" href="#smallrye-graphql-client"></a>SmallRye GraphQL Client</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Class Name</th>
+<th class="tableblock halign-left valign-top">Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/smallrye-graphql-client/deployment/src/main/java/io/quarkus/smallrye/graphql/client/deployment/GraphQLClientConfigInitializedBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.smallrye.graphql.client.deployment.GraphQLClientConfigInitializedBuildItem</code></a> </dt>
+<dd>
+<p>This marks that the SmallRye GraphQL Client configurations have been processed and initialized.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>None</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -11672,6 +12261,24 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/vertx/deployment/src/main/java/io/quarkus/vertx/deployment/LocalCodecSelectorTypesBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.vertx.deployment.LocalCodecSelectorTypesBuildItem</code></a> </dt>
+<dd>
+<p>Carries all types for which the  should be selected automatically.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>Set types</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/vertx/deployment/src/main/java/io/quarkus/vertx/deployment/MessageCodecBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.vertx.deployment.MessageCodecBuildItem</code></a> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
@@ -11689,6 +12296,19 @@
 <p><i>No Javadoc found</i></p>
 </dd>
 </dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/vertx/deployment/src/main/java/io/quarkus/vertx/deployment/ReinitializeVertxJsonBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.vertx.deployment.ReinitializeVertxJsonBuildItem</code></a> </dt>
+<dd>
+<p>Marker build item used to force the re-initialization of Vert.x JSON handling in native-image</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>None</p>
 </div></div></td>
 </tr>
 <tr>
@@ -11807,46 +12427,6 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/vertx-http/deployment/src/main/java/io/quarkus/vertx/http/deployment/devmode/console/DevTemplatePathBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.vertx.http.deployment.devmode.console.DevTemplatePathBuildItem</code></a> </dt>
-<dd>
-<p>Represents a dev template path.</p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>String path</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>String contents</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/vertx-http/deployment/src/main/java/io/quarkus/vertx/http/deployment/devmode/console/DevTemplateVariantsBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem</code></a> </dt>
-<dd>
-<p>Holds all dev template variants found.</p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>Map variants</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/vertx-http/deployment/src/main/java/io/quarkus/devui/deployment/DevUIRoutesBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.devui.deployment.DevUIRoutesBuildItem</code></a> </dt>
 <dd>
 <p>All the routes needed for Dev UI</p>
@@ -11890,6 +12470,54 @@
 <p><i>No Javadoc found</i></p>
 </dd>
 <dt class="hdlist1"><code>String path</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/vertx-http/deployment/src/main/java/io/quarkus/vertx/http/deployment/EagerSecurityInterceptorBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.vertx.http.deployment.EagerSecurityInterceptorBuildItem</code></a> </dt>
+<dd>
+<p>Bears collected security interceptors per method candidate. Methods are candidates because not each of them must be finally resolved to endpoint and invoked. <p> This build item should be consumed by every extension that run s before CDI interceptors when proactive auth is disabled.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>List methodCandidates</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Map methodCandidateToSecurityInterceptor</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/vertx-http/deployment/src/main/java/io/quarkus/vertx/http/deployment/EagerSecurityInterceptorCandidateBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.vertx.http.deployment.EagerSecurityInterceptorCandidateBuildItem</code></a> </dt>
+<dd>
+<p>Vert.X route handlers run before REST layer can't determine which endpoint is going to be invoked, what are endpoint annotations etc. Therefore, security setting that requires knowledge of invoked method (initial intention is to provide this with RESTEasy Reactive resources, however the principle is applicable to other stacks as well) and needs to be run prior to any security check should use this build item. The build item is only required for stacks that do not run security checks via CDI interceptors, as there, you can simply use interceptor with higher priority.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>MethodInfo methodInfo</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>RuntimeValue descriptionRuntimeValue</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Consumer securityInterceptor</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -11966,28 +12594,6 @@
 <dt class="hdlist1"><code>URI rootPath</code> </dt>
 <dd>
 <p>Normalized from quarkus.http.root-path. This path will always end in a slash</p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/vertx-http/deployment/src/main/java/io/quarkus/vertx/http/deployment/HttpSecurityPolicyBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.vertx.http.deployment.HttpSecurityPolicyBuildItem</code></a> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>String name</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>Supplier policySupplier</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
 </dd>
 </dl>
 </div></div></td>
@@ -12406,161 +13012,6 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="vert-x-http-dev-console-spi"><a class="anchor" href="#vert-x-http-dev-console-spi"></a>Vert.x - HTTP - Dev Console SPI</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Class Name</th>
-<th class="tableblock halign-left valign-top">Attributes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/vertx-http/dev-console-spi/src/main/java/io/quarkus/devconsole/spi/DevConsoleRouteBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.devconsole.spi.DevConsoleRouteBuildItem</code></a> </dt>
-<dd>
-<p>A route for handling requests in the dev console. <p> Routes are registered under /q/dev-v1/{groupId</pre>.{artifactId</pre>/ <p> The route is registered: <ul> <li>in the "regular" app router (runtime class loader), if the handler is produced by a recorder (i.e. implements ),</li> <li>in the Dev UI router (deployment class loader).</li> </ul></p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>String groupId</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>String artifactId</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>String path</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>String method</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>Class callerClass</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>Handler handler</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>boolean isBodyHandlerRequired</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>boolean isBlockingHandler</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/vertx-http/dev-console-spi/src/main/java/io/quarkus/devconsole/spi/DevConsoleRuntimeTemplateInfoBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.devconsole.spi.DevConsoleRuntimeTemplateInfoBuildItem</code></a> </dt>
-<dd>
-<p>Information that can be directly displayed in dev console templates, using the info: prefix This is scoped to the extension that produced it, to prevent namespace clashes. This value will be evaluated at runtime, so can contain info that is produced from recorders</p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>String groupId</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>String artifactId</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>String name</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>Supplier object</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/vertx-http/dev-console-spi/src/main/java/io/quarkus/devconsole/spi/DevConsoleTemplateInfoBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.devconsole.spi.DevConsoleTemplateInfoBuildItem</code></a> </dt>
-<dd>
-<p>Information that can be directly displayed in dev console templates, using the info: prefix <p> This is scoped to the extension that produced it, to prevent namespace clashes</p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>String name</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>Object object</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-<dt class="hdlist1"><code>Class callerClass</code> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/vertx-http/dev-console-spi/src/main/java/io/quarkus/devconsole/spi/DevConsoleWebjarBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.devconsole.spi.DevConsoleWebjarBuildItem</code></a> </dt>
-<dd>
-<p><i>No Javadoc found</i></p>
-</dd>
-</dl>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
-<dl>
-<dt class="hdlist1"><code>GACT artifactKey</code> </dt>
-<dd>
-<p>ArtifactKey pointing to the web jar. Has to be one of the applications dependencies.</p>
-</dd>
-<dt class="hdlist1"><code>String root</code> </dt>
-<dd>
-<p>Root inside the webJar starting from which resources are unpacked.</p>
-</dd>
-<dt class="hdlist1"><code>boolean onlyCopyNonArtifactFiles</code> </dt>
-<dd>
-<p>Only copy resources of the webjar which are either user overridden, or contain variables.</p>
-</dd>
-<dt class="hdlist1"><code>boolean useDefaultQuarkusBranding</code> </dt>
-<dd>
-<p>Defines whether Quarkus can override resources of the webjar with Quarkus internal files.</p>
-</dd>
-<dt class="hdlist1"><code>String routeRoot</code> </dt>
-<dd>
-<p>The root of the route to expose resources of the webjar</p>
-</dd>
-</dl>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
 <h2 id="vert-x-http-dev-ui-spi"><a class="anchor" href="#vert-x-http-dev-ui-spi"></a>Vert.x - HTTP - Dev UI SPI</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
@@ -12666,6 +13117,10 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
 <dt class="hdlist1"><code>Class jsonRPCMethodProviderClass</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>DotName defaultBeanScope</code> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
 </dd>
@@ -12783,6 +13238,60 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
 <dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/vertx-http/deployment-spi/src/main/java/io/quarkus/vertx/http/deployment/spi/RouteBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.vertx.http.deployment.spi.RouteBuildItem</code></a> </dt>
+<dd>
+<p>A build item that represents a route that should be added to the router. <p> Producing this build item does not mean the HTTP server is available. It will be consumed if the Quarkus Vert.x HTTP extension is present.</p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>RouteType typeOfRoute</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>OptionalInt order</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>String path</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Consumer customizer</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>boolean isManagement</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>Handler handler</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>HandlerType typeOfHandler</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>boolean displayOnNotFoundPage</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>String notFoundPageTitle</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+<dt class="hdlist1"><code>String routeConfigKey</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
 <dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/vertx-http/deployment-spi/src/main/java/io/quarkus/vertx/http/deployment/spi/StaticResourcesBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.vertx.http.deployment.spi.StaticResourcesBuildItem</code></a> </dt>
 <dd>
 <p><i>No Javadoc found</i></p>
@@ -12809,6 +13318,43 @@
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>None</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webjar-locator"><a class="anchor" href="#webjar-locator"></a>WebJar Locator</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Class Name</th>
+<th class="tableblock halign-left valign-top">Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://github.com/quarkusio/quarkus/blob/main/extensions/webjars-locator/deployment/src/main/java/io/quarkus/webjar/locator/deployment/devui/WebJarLibrariesBuildItem.java" target="_blank" rel="noopener"><code>io.quarkus.webjar.locator.deployment.devui.WebJarLibrariesBuildItem</code></a> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1"><code>List webJarLibraries</code> </dt>
+<dd>
+<p><i>No Javadoc found</i></p>
+</dd>
+</dl>
 </div></div></td>
 </tr>
 </tbody>
@@ -12962,6 +13508,14 @@
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
           
           
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
+          
+          
         </ul>
       </div>
     
@@ -13040,6 +13594,10 @@
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -13102,12 +13660,12 @@
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

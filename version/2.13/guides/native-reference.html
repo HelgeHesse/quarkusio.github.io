@@ -9,7 +9,8 @@
   <title>Native Reference Guide - 2.13 - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/version/2.13/guides/native-reference" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/version/2.13/guides/native-reference" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/version/2.13/guides/native-reference" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/version/2.13/guides/native-reference" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/version/2.13/guides/native-reference" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/version/2.13/guides/native-reference" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/version/2.13/guides/native-reference">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/version/2.13/guides/native-reference">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/version/2.13/guides/native-reference">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/version/2.13/guides/native-reference">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" >Main - SNAPSHOT</option>
         
         
-        <option value="latest" >3.0 - Latest</option>
+        
+        <option value="latest" >3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" selected>2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,51 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Native Reference Guide </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#requirements-and-assumptions">Requirements and Assumptions</a></li>
-<li><a href="#bootstrapping-the-project">Bootstrapping the project</a></li>
-<li><a href="#configure-quarkus-properties">Configure Quarkus properties</a></li>
-<li><a href="#first-debugging-steps">First Debugging Steps</a></li>
-<li><a href="#inspecting-native-executables">Inspecting Native Executables</a></li>
-<li><a href="#native-reports">Native Reports</a>
-<ul class="sectlevel2">
-<li><a href="#call-tree-reports">Call Tree Reports</a></li>
-<li><a href="#used-packagesclassesmethods-reports">Used Packages/Classes/Methods Reports</a></li>
-<li><a href="#further-reports">Further Reports</a></li>
-</ul>
-</li>
-<li><a href="#build-time-vs-run-time-initialization">Build-time vs Run-time Initialization</a></li>
-<li><a href="#profiling">Profile Runtime Behaviour</a>
-<ul class="sectlevel2">
-<li><a href="#single-thread">Single Thread</a></li>
-<li><a href="#multi-thread">Multi-Thread</a></li>
-</ul>
-</li>
-<li><a href="#debug-info">Debugging Native Crashes</a></li>
-<li><a href="#frequently-asked-questions">Frequently Asked Questions</a>
-<ul class="sectlevel2">
-<li><a href="#why-is-the-process-of-generating-a-native-executable-slow">Why is the process of generating a native executable slow?</a></li>
-<li><a href="#i-get-an-outofmemoryerror-oome-building-native-executables-what-can-i-do">I get an <code>OutOfMemoryError</code> (OOME) building native executables, what can I do?</a></li>
-<li><a href="#why-is-runtime-performance-of-a-native-executable-inferior-compared-to-jvm-mode">Why is runtime performance of a native executable inferior compared to JVM mode?</a></li>
-<li><a href="#why-are-native-executables-big">Why are native executables “big”?</a></li>
-<li><a href="#what-version-of-mandrel-was-used-to-generate-a-binary">What version of Mandrel was used to generate a binary?</a></li>
-<li><a href="#how-do-i-enable-gc-logging-in-native-executables">How do I enable GC logging in native executables?</a></li>
-<li><a href="#can-i-get-a-heap-dump-of-a-native-executable-e-g-if-it-runs-out-of-memory">Can I get a heap dump of a native executable? e.g. if it runs out of memory</a></li>
-<li><a href="#can-i-build-and-run-this-examples-outside-a-container-in-linux">Can I build and run this examples outside a container in Linux?</a></li>
-<li><a href="#generating-flame-graphs-is-slow-or-produces-errors-what-can-i-do">Generating flame graphs is slow, or produces errors, what can I do?</a></li>
-<li><a href="#i-think-ive-found-a-bug-in-native-image-how-can-i-debug-it-with-the-ide">I think I’ve found a bug in native-image, how can I debug it with the IDE?</a></li>
-<li><a href="#can-i-use-jfrjmc-to-debug-or-profile-native-binaries">Can I use JFR/JMC to debug or profile native binaries?</a></li>
-<li><a href="#how-can-we-troubleshoot-performance-problems-only-reproducible-in-production">How can we troubleshoot performance problems only reproducible in production?</a></li>
-<li><a href="#what-information-helps-most-debug-issues-that-happen-either-at-build-time-or-run-time">What information helps most debug issues that happen either at build-time or run-time?</a></li>
-</ul>
-</li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Native Reference Guide </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -283,6 +261,7 @@ Open a terminal and run the following command:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus create app org.acme:debugging-native \
+    --stream=2.13 \
     --extension='resteasy-reactive,container-image-docker'
 cd debugging-native</code></pre>
 </div>
@@ -300,7 +279,8 @@ cd debugging-native</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.13.7.Final:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.13.9.Final:create \
+    -DplatformVersion=2.13.9.Final \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=debugging-native \
     -Dextensions='resteasy-reactive,container-image-docker'
@@ -339,7 +319,7 @@ So, go ahead and add the following options to that file:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.native.container-build=true
-quarkus.native.builder-image=quay.io/quarkus/ubi-quarkus-mandrel:22.3-java17
+quarkus.native.builder-image=quay.io/quarkus/ubi-quarkus-mandrel-builder-image:22.3-java17
 quarkus.container-image.build=true
 quarkus.container-image.group=test</code></pre>
 </div>
@@ -868,7 +848,7 @@ These are called expert options and you can learn more about them by running:</p
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker run quay.io/quarkus/ubi-quarkus-mandrel:22.3-java17 --expert-options-all</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker run quay.io/quarkus/ubi-quarkus-mandrel-builder-image:22.3-java17 --expert-options-all</code></pre>
 </div>
 </div>
 <div class="admonitionblock warning">
@@ -2194,7 +2174,7 @@ E.g.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./mvnw package -DskipTests -Dnative -Dquarkus.native.container-build=true \
-    -Dquarkus.native.builder-image=quay.io/quarkus/ubi-quarkus-mandrel:22.3-java17 \
+    -Dquarkus.native.builder-image=quay.io/quarkus/ubi-quarkus-mandrel-builder-image:22.3-java17 \
     -Dquarkus.native.enable-vm-inspection=true</code></pre>
 </div>
 </div>
@@ -2242,8 +2222,49 @@ you will obtain precise <a href="#profiling">profiling information</a> as well.<
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#requirements-and-assumptions">Requirements and Assumptions</a></li>
+<li><a href="#bootstrapping-the-project">Bootstrapping the project</a></li>
+<li><a href="#configure-quarkus-properties">Configure Quarkus properties</a></li>
+<li><a href="#first-debugging-steps">First Debugging Steps</a></li>
+<li><a href="#inspecting-native-executables">Inspecting Native Executables</a></li>
+<li><a href="#native-reports">Native Reports</a>
+<ul class="sectlevel2">
+<li><a href="#call-tree-reports">Call Tree Reports</a></li>
+<li><a href="#used-packagesclassesmethods-reports">Used Packages/Classes/Methods Reports</a></li>
+<li><a href="#further-reports">Further Reports</a></li>
+</ul>
+</li>
+<li><a href="#build-time-vs-run-time-initialization">Build-time vs Run-time Initialization</a></li>
+<li><a href="#profiling">Profile Runtime Behaviour</a>
+<ul class="sectlevel2">
+<li><a href="#single-thread">Single Thread</a></li>
+<li><a href="#multi-thread">Multi-Thread</a></li>
+</ul>
+</li>
+<li><a href="#debug-info">Debugging Native Crashes</a></li>
+<li><a href="#frequently-asked-questions">Frequently Asked Questions</a>
+<ul class="sectlevel2">
+<li><a href="#why-is-the-process-of-generating-a-native-executable-slow">Why is the process of generating a native executable slow?</a></li>
+<li><a href="#i-get-an-outofmemoryerror-oome-building-native-executables-what-can-i-do">I get an <code>OutOfMemoryError</code> (OOME) building native executables, what can I do?</a></li>
+<li><a href="#why-is-runtime-performance-of-a-native-executable-inferior-compared-to-jvm-mode">Why is runtime performance of a native executable inferior compared to JVM mode?</a></li>
+<li><a href="#why-are-native-executables-big">Why are native executables “big”?</a></li>
+<li><a href="#what-version-of-mandrel-was-used-to-generate-a-binary">What version of Mandrel was used to generate a binary?</a></li>
+<li><a href="#how-do-i-enable-gc-logging-in-native-executables">How do I enable GC logging in native executables?</a></li>
+<li><a href="#can-i-get-a-heap-dump-of-a-native-executable-e-g-if-it-runs-out-of-memory">Can I get a heap dump of a native executable? e.g. if it runs out of memory</a></li>
+<li><a href="#can-i-build-and-run-this-examples-outside-a-container-in-linux">Can I build and run this examples outside a container in Linux?</a></li>
+<li><a href="#generating-flame-graphs-is-slow-or-produces-errors-what-can-i-do">Generating flame graphs is slow, or produces errors, what can I do?</a></li>
+<li><a href="#i-think-ive-found-a-bug-in-native-image-how-can-i-debug-it-with-the-ide">I think I’ve found a bug in native-image, how can I debug it with the IDE?</a></li>
+<li><a href="#can-i-use-jfrjmc-to-debug-or-profile-native-binaries">Can I use JFR/JMC to debug or profile native binaries?</a></li>
+<li><a href="#how-can-we-troubleshoot-performance-problems-only-reproducible-in-production">How can we troubleshoot performance problems only reproducible in production?</a></li>
+<li><a href="#what-information-helps-most-debug-issues-that-happen-either-at-build-time-or-run-time">What information helps most debug issues that happen either at build-time or run-time?</a></li>
+</ul>
+</li>
+</ul></div>
+    </div>
   </div>
-</div>
+  </div>
 
   </div>
 
@@ -2291,6 +2312,14 @@ you will obtain precise <a href="#profiling">profiling information</a> as well.<
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -2371,6 +2400,10 @@ you will obtain precise <a href="#profiling">profiling information</a> as well.<
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -2433,12 +2466,12 @@ you will obtain precise <a href="#profiling">profiling information</a> as well.<
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

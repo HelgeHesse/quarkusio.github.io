@@ -9,7 +9,8 @@
   <title>Building applications with Maven - 2.13 - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/version/2.13/guides/maven-tooling" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/version/2.13/guides/maven-tooling" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/version/2.13/guides/maven-tooling" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/version/2.13/guides/maven-tooling" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/version/2.13/guides/maven-tooling" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/version/2.13/guides/maven-tooling" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/version/2.13/guides/maven-tooling">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/version/2.13/guides/maven-tooling">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/version/2.13/guides/maven-tooling">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/version/2.13/guides/maven-tooling">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" >Main - SNAPSHOT</option>
         
         
-        <option value="latest" >3.0 - Latest</option>
+        
+        <option value="latest" >3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" selected>2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,56 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Building applications with Maven </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#project-creation">Creating a new project</a></li>
-<li><a href="#dealing-with-extensions">Dealing with extensions</a></li>
-<li><a href="#dev-mode">Development mode</a>
-<ul class="sectlevel2">
-<li><a href="#remote-development-mode">Remote Development Mode</a></li>
-<li><a href="#configuring-development-mode">Configuring Development Mode</a></li>
-</ul>
-</li>
-<li><a href="#debugging">Debugging</a></li>
-<li><a href="#import-in-your-ide">Import in your IDE</a></li>
-<li><a href="#logging-quarkus-application-build-classpath-tree">Logging Quarkus application build classpath tree</a></li>
-<li><a href="#downloading-maven-artifact-dependencies-for-offline-development-and-testing">Downloading Maven artifact dependencies for offline development and testing</a></li>
-<li><a href="#building-a-native-executable">Building a native executable</a>
-<ul class="sectlevel2">
-<li><a href="#build-a-container-friendly-executable">Build a container friendly executable</a></li>
-</ul>
-</li>
-<li><a href="#build-tool-maven">Maven configuration</a>
-<ul class="sectlevel2">
-<li><a href="#fast-jar">Using fast-jar</a></li>
-<li><a href="#uber-jar-maven">Uber-Jar Creation</a></li>
-<li><a href="#multi-module-maven">Working with multi-module projects</a></li>
-<li><a href="#maven-configuration-profile">Building with a specific configuration profile</a></li>
-<li><a href="#maven-multi-build">Building several artifacts from a single module</a></li>
-</ul>
-</li>
-<li><a href="#configuration-reference">Configuring the Project Output</a>
-<ul class="sectlevel2">
-<li><a href="#custom-test-configuration-profile">Custom test configuration profile in JVM mode</a></li>
-<li><a href="#bootstrap-maven-properties">Bootstrap Maven properties</a></li>
-</ul>
-</li>
-<li><a href="#project-info">Quarkus project info</a>
-<ul class="sectlevel2">
-<li><a href="#project-info-misaligned">Highlighting misaligned versions</a></li>
-</ul>
-</li>
-<li><a href="#project-update">Quarkus project update</a>
-<ul class="sectlevel2">
-<li><a href="#quarkus-project-rectify">Quarkus project rectify</a></li>
-</ul>
-</li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Building applications with Maven </h1>
       <div class="sect1">
 <h2 id="project-creation"><a class="anchor" href="#project-creation"></a>Creating a new project</h2>
 <div class="sectionbody">
@@ -220,7 +193,8 @@
 <div class="title">CLI</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus create app my-groupId:my-artifactId</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus create app my-groupId:my-artifactId \
+    --stream=2.13</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -233,7 +207,8 @@
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.13.7.Final:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.13.9.Final:create \
+    -DplatformVersion=2.13.9.Final \
     -DprojectGroupId=my-groupId \
     -DprojectArtifactId=my-artifactId</code></pre>
 </div>
@@ -318,7 +293,7 @@
 </tbody>
 </table>
 <div class="paragraph">
-<p>By default, the command will target the <code>io.quarkus.platform:quarkus-bom:2.13.7.Final</code> platform release (unless the coordinates of the desired platform release have been specified).</p>
+<p>By default, the command will target the <code>io.quarkus.platform:quarkus-bom:2.13.9.Final</code> platform release (unless the coordinates of the desired platform release have been specified).</p>
 </div>
 <div class="paragraph">
 <p>The project is generated in a directory named after the passed artifactId.
@@ -576,7 +551,7 @@ rsync to sync to the remote application.</p>
 <div class="paragraph configuration-legend">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
 </div>
-<table class="tableblock frame-all grid-all stretch configuration-reference">
+<table class="tableblock frame-all grid-all stretch configuration-reference configuration-reference-all-rows">
 <colgroup>
 <col style="width: 80%;">
 <col style="width: 10%;">
@@ -588,123 +563,144 @@ rsync to sync to the remote application.</p>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-live-reload-live-reload-config_quarkus.live-reload.instrumentation"></a><code><a href="#quarkus-live-reload-live-reload-config_quarkus.live-reload.instrumentation">quarkus.live-reload.instrumentation</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-1" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Whether Quarkus should enable its ability to not do a full restart when changes to classes are compatible with JVM instrumentation. If this is set to true, Quarkus will perform class redefinition when possible.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12751">QUARKUS_LIVE_RELOAD_INSTRUMENTATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12751" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13427">QUARKUS_LIVE_RELOAD_INSTRUMENTATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13427" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-live-reload-live-reload-config_quarkus.live-reload.watched-resources"></a><code><a href="#quarkus-live-reload-live-reload-config_quarkus.live-reload.watched-resources">quarkus.live-reload.watched-resources</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-2" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The names of additional resource files to watch for changes, triggering a reload on change. Directories are <strong>not</strong> supported.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12752">QUARKUS_LIVE_RELOAD_WATCHED_RESOURCES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12752" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13428">QUARKUS_LIVE_RELOAD_WATCHED_RESOURCES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13428" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-live-reload-live-reload-config_quarkus.live-reload.password"></a><code><a href="#quarkus-live-reload-live-reload-config_quarkus.live-reload.password">quarkus.live-reload.password</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-3" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Password used to use to connect to the remote dev-mode application</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12753">QUARKUS_LIVE_RELOAD_PASSWORD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12753" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13429">QUARKUS_LIVE_RELOAD_PASSWORD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13429" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-live-reload-live-reload-config_quarkus.live-reload.url"></a><code><a href="#quarkus-live-reload-live-reload-config_quarkus.live-reload.url">quarkus.live-reload.url</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-4" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>URL used to use to connect to the remote dev-mode application</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12754">QUARKUS_LIVE_RELOAD_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12754" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13430">QUARKUS_LIVE_RELOAD_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13430" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-live-reload-live-reload-config_quarkus.live-reload.connect-timeout"></a><code><a href="#quarkus-live-reload-live-reload-config_quarkus.live-reload.connect-timeout">quarkus.live-reload.connect-timeout</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-5" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The amount of time to wait for a remote dev connect or reconnect</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12755">QUARKUS_LIVE_RELOAD_CONNECT_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12755" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13431">QUARKUS_LIVE_RELOAD_CONNECT_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13431" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
   <a href="#duration-note-anchor-quarkus-live-reload-live-reload-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>30S</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-live-reload-live-reload-config_quarkus.live-reload.retry-interval"></a><code><a href="#quarkus-live-reload-live-reload-config_quarkus.live-reload.retry-interval">quarkus.live-reload.retry-interval</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-6" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The amount of time to wait between attempts when connecting to the server side of remote dev</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12756">QUARKUS_LIVE_RELOAD_RETRY_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12756" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13432">QUARKUS_LIVE_RELOAD_RETRY_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13432" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
   <a href="#duration-note-anchor-quarkus-live-reload-live-reload-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>2S</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-live-reload-live-reload-config_quarkus.live-reload.retry-max-attempts"></a><code><a href="#quarkus-live-reload-live-reload-config_quarkus.live-reload.retry-max-attempts">quarkus.live-reload.retry-max-attempts</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-7" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The maximum number of attempts when connecting to the server side of remote dev</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12757">QUARKUS_LIVE_RELOAD_RETRY_MAX_ATTEMPTS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12757" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13433">QUARKUS_LIVE_RELOAD_RETRY_MAX_ATTEMPTS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13433" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>10</code></p></td>
@@ -989,11 +985,11 @@ Luckily, the <code>quarkus</code> Maven plugin includes the <code>dependency-tre
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">[INFO] --- quarkus-maven-plugin:2.13.7.Final:dependency-tree (default-cli) @ getting-started ---
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">[INFO] --- quarkus-maven-plugin:2.13.9.Final:dependency-tree (default-cli) @ getting-started ---
 [INFO] org.acme:getting-started:jar:1.0.0-SNAPSHOT
-[INFO] └─ io.quarkus:quarkus-resteasy-deployment:jar:2.13.7.Final (compile)
-[INFO]    ├─ io.quarkus:quarkus-resteasy-server-common-deployment:jar:2.13.7.Final (compile)
-[INFO]    │  ├─ io.quarkus:quarkus-core-deployment:jar:2.13.7.Final (compile)
+[INFO] └─ io.quarkus:quarkus-resteasy-deployment:jar:2.13.9.Final (compile)
+[INFO]    ├─ io.quarkus:quarkus-resteasy-server-common-deployment:jar:2.13.9.Final (compile)
+[INFO]    │  ├─ io.quarkus:quarkus-core-deployment:jar:2.13.9.Final (compile)
 [INFO]    │  │  ├─ commons-beanutils:commons-beanutils:jar:1.9.3 (compile)
 [INFO]    │  │  │  ├─ commons-logging:commons-logging:jar:1.2 (compile)
 [INFO]    │  │  │  └─ commons-collections:commons-collections:jar:3.2.2 (compile)
@@ -1132,14 +1128,14 @@ Note that in this case the build itself runs in a Docker container too, so you d
 </td>
 <td class="content">
 <div class="paragraph">
-<p>By default, the native executable will be generated using the <code>quay.io/quarkus/ubi-quarkus-native-image:22.3-java17</code> Docker image.</p>
+<p>By default, the native executable will be generated using the <code>quay.io/quarkus/ubi-quarkus-graalvmce-builder-image:22.3-java17</code> Docker image.</p>
 </div>
 <div class="paragraph">
 <p>If you want to build a native executable with a different Docker image (for instance to use a different GraalVM version),
 use the <code>-Dquarkus.native.builder-image=&lt;image name&gt;</code> build argument.</p>
 </div>
 <div class="paragraph">
-<p>The list of the available Docker images can be found on <a href="https://quay.io/repository/quarkus/ubi-quarkus-native-image?tab=tags">quay.io</a>.
+<p>The list of the available Docker images can be found on <a href="https://quay.io/repository/quarkus/ubi-quarkus-graalvmce-builder-image?tab=tags">quay.io</a>.
 Be aware that a given Quarkus version might not be compatible with all the images available.</p>
 </div>
 </td>
@@ -1699,7 +1695,7 @@ These are provided in <code>application.properties</code> the same as any other 
 <div class="paragraph configuration-legend">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
 </div>
-<table class="tableblock frame-all grid-all stretch configuration-reference">
+<table class="tableblock frame-all grid-all stretch configuration-reference configuration-reference-all-rows">
 <colgroup>
 <col style="width: 80%;">
 <col style="width: 10%;">
@@ -1711,81 +1707,93 @@ These are provided in <code>application.properties</code> the same as any other 
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.type"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.type">quarkus.package.type</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-8" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The requested output type.
 The default built in types are 'jar' (which will use 'fast-jar'), 'legacy-jar' for the pre-1.12 default jar packaging, 'uber-jar', 'native' and 'native-sources'.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12758">QUARKUS_PACKAGE_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12758" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13434">QUARKUS_PACKAGE_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13434" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>jar</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.manifest.add-implementation-entries"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.manifest.add-implementation-entries">quarkus.package.manifest.add-implementation-entries</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-9" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If the Implementation information should be included in the runner jar&#8217;s MANIFEST.MF.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12759">QUARKUS_PACKAGE_MANIFEST_ADD_IMPLEMENTATION_ENTRIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12759" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13435">QUARKUS_PACKAGE_MANIFEST_ADD_IMPLEMENTATION_ENTRIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13435" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.main-class"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.main-class">quarkus.package.main-class</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-10" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The entry point of the application. This can either be a fully qualified name of a standard Java class with a main method, or <code>io.quarkus.runtime.QuarkusApplication</code>.
 If your application has main classes annotated with <code>io.quarkus.runtime.annotations.QuarkusMain</code> then this can also reference the name given in the annotation, to avoid the need to specify fully qualified names in the config.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12760">QUARKUS_PACKAGE_MAIN_CLASS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12760" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13436">QUARKUS_PACKAGE_MAIN_CLASS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13436" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.user-configured-ignored-entries"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.user-configured-ignored-entries">quarkus.package.user-configured-ignored-entries</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-11" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Files that should not be copied to the output artifact</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12761">QUARKUS_PACKAGE_USER_CONFIGURED_IGNORED_ENTRIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12761" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13437">QUARKUS_PACKAGE_USER_CONFIGURED_IGNORED_ENTRIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13437" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.included-optional-dependencies"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.included-optional-dependencies">quarkus.package.included-optional-dependencies</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-12" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>List of all the dependencies that have been defined as optional to include into the final package of the application. Each optional dependency needs to be expressed in the following format:
@@ -1797,138 +1805,162 @@ For backward compatibility reasons, this parameter is ignored by default and can
 This parameter is meant to be used in modules where multi-builds have been configured to avoid getting a final package with unused dependencies.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12762">QUARKUS_PACKAGE_INCLUDED_OPTIONAL_DEPENDENCIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12762" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13438">QUARKUS_PACKAGE_INCLUDED_OPTIONAL_DEPENDENCIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13438" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.filter-optional-dependencies"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.filter-optional-dependencies">quarkus.package.filter-optional-dependencies</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-13" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Flag indicating whether the optional dependencies should be filtered out or not.
 This parameter is meant to be used in modules where multi-builds have been configured to avoid getting a final package with unused dependencies.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12763">QUARKUS_PACKAGE_FILTER_OPTIONAL_DEPENDENCIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12763" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13439">QUARKUS_PACKAGE_FILTER_OPTIONAL_DEPENDENCIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13439" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.runner-suffix"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.runner-suffix">quarkus.package.runner-suffix</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-14" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The suffix that is applied to the runner jar and native images</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12764">QUARKUS_PACKAGE_RUNNER_SUFFIX</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12764" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13440">QUARKUS_PACKAGE_RUNNER_SUFFIX</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13440" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>-runner</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.add-runner-suffix"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.add-runner-suffix">quarkus.package.add-runner-suffix</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-15" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Indicates whether the generated binary file (uber-jar or native image) should have the runner suffix appended. Turning off the runner suffix in case of the uber-jar package type, the original build system (Maven, Gradle, etc) built JAR will be replaced with the Quarkus built uber JAR.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12765">QUARKUS_PACKAGE_ADD_RUNNER_SUFFIX</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12765" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13441">QUARKUS_PACKAGE_ADD_RUNNER_SUFFIX</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13441" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.output-directory"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.output-directory">quarkus.package.output-directory</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-16" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The output folder in which to place the output, this is resolved relative to the build systems target directory.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12766">QUARKUS_PACKAGE_OUTPUT_DIRECTORY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12766" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13442">QUARKUS_PACKAGE_OUTPUT_DIRECTORY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13442" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.output-name"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.output-name">quarkus.package.output-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-17" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The name of the final artifact</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12767">QUARKUS_PACKAGE_OUTPUT_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12767" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13443">QUARKUS_PACKAGE_OUTPUT_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13443" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.create-appcds"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.create-appcds">quarkus.package.create-appcds</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-18" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Whether to automate the creation of AppCDS. This has no effect when a native binary is needed and will be ignored in that case. Furthermore, this option only works for Java 11&#43; and is considered experimental for the time being. Finally, care must be taken to use the same exact JVM version when building and running the application.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12768">QUARKUS_PACKAGE_CREATE_APPCDS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12768" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13444">QUARKUS_PACKAGE_CREATE_APPCDS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13444" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.appcds-builder-image"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.appcds-builder-image">quarkus.package.appcds-builder-image</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-19" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>When AppCDS generation is enabled, if this property is set, then the JVM used to generate the AppCDS file will be the JVM present in the container image. The builder image is expected to have the 'java' binary on its PATH. This flag is useful when the JVM to be used at runtime is not the same exact JVM version as the one used to build the jar. Note that this property is consulted only when <code>quarkus.package.create-appcds=true</code> and it requires having docker available during the build.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12769">QUARKUS_PACKAGE_APPCDS_BUILDER_IMAGE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12769" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13445">QUARKUS_PACKAGE_APPCDS_BUILDER_IMAGE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13445" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.appcds-use-container"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.appcds-use-container">quarkus.package.appcds-use-container</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-20" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Whether creation of the AppCDS archive should run in a container if available.
@@ -1937,18 +1969,21 @@ If this option is set to <code>false</code>, a container will not be used to gen
 Ignored if <code>quarkus.package.create-appcds</code> is set to <code>false</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12770">QUARKUS_PACKAGE_APPCDS_USE_CONTAINER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12770" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13446">QUARKUS_PACKAGE_APPCDS_USE_CONTAINER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13446" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.user-providers-directory"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.user-providers-directory">quarkus.package.user-providers-directory</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-21" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>This is an advanced option that only takes effect for the mutable-jar format.
@@ -1956,128 +1991,152 @@ If this is specified a directory of this name will be created in the jar distrib
 Note that before reaugmentation has been performed these jars will be ignored, and if they are updated the app should be reaugmented again.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12771">QUARKUS_PACKAGE_USER_PROVIDERS_DIRECTORY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12771" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13447">QUARKUS_PACKAGE_USER_PROVIDERS_DIRECTORY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13447" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.include-dependency-list"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.include-dependency-list">quarkus.package.include-dependency-list</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-22" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>This option only applies when using fast-jar or mutable-jar. If this option is true then a list of all the coordinates of the artifacts that made up this image will be included in the quarkus-app directory. This list can be used by vulnerability scanners to determine if your application has any vulnerable dependencies.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12772">QUARKUS_PACKAGE_INCLUDE_DEPENDENCY_LIST</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12772" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13448">QUARKUS_PACKAGE_INCLUDE_DEPENDENCY_LIST</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13448" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.quiltflower.enabled"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.quiltflower.enabled">quarkus.package.quiltflower.enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-23" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>An advanced option that will decompile generated and transformed bytecode into the 'decompiled' directory. This is only taken into account when fast-jar is used.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12773">QUARKUS_PACKAGE_QUILTFLOWER_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12773" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13449">QUARKUS_PACKAGE_QUILTFLOWER_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13449" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.quiltflower.version"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.quiltflower.version">quarkus.package.quiltflower.version</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-24" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The version of Quiltflower to use</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12774">QUARKUS_PACKAGE_QUILTFLOWER_VERSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12774" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13450">QUARKUS_PACKAGE_QUILTFLOWER_VERSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13450" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>1.8.1</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.quiltflower.jar-directory"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.quiltflower.jar-directory">quarkus.package.quiltflower.jar-directory</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-25" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The directory into which to save the fernflower tool if it doesn&#8217;t exist</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12775">QUARKUS_PACKAGE_QUILTFLOWER_JAR_DIRECTORY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12775" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13451">QUARKUS_PACKAGE_QUILTFLOWER_JAR_DIRECTORY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13451" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>${user.home}/.quarkus</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.write-transformed-bytecode-to-build-output"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.write-transformed-bytecode-to-build-output">quarkus.package.write-transformed-bytecode-to-build-output</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-26" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If set to <code>true</code>, it will result in the Quarkus writing the transformed application bytecode to the build tool&#8217;s output directory. This is useful for post-build tools that need to scan the application bytecode - for example for offline code-coverage tools. For example, if using Maven, enabling this feature will result in the classes in <code>target/classes</code> being updated with the versions that result after Quarkus has applied its transformations. Setting this to <code>true</code> however, should be done with a lot of caution and only if subsequent builds are done in a clean environment (i.e. the build tool&#8217;s output directory has been completely cleaned).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12776">QUARKUS_PACKAGE_WRITE_TRANSFORMED_BYTECODE_TO_BUILD_OUTPUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12776" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13452">QUARKUS_PACKAGE_WRITE_TRANSFORMED_BYTECODE_TO_BUILD_OUTPUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13452" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.manifest.attributes-attributes"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.manifest.attributes-attributes">quarkus.package.manifest.attributes</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-27" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Custom manifest attributes to be added to the main section of the MANIFEST.MF file. An example of the user defined property: quarkus.package.manifest.attributes."Entry-key1"=Value1 quarkus.package.manifest.attributes."Entry-key2"=Value2</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12777">QUARKUS_PACKAGE_MANIFEST_ATTRIBUTES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12777" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13453">QUARKUS_PACKAGE_MANIFEST_ATTRIBUTES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13453" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>Map&lt;String,String&gt;</code></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-package-pkg-package-config_quarkus.package.manifest.manifest-sections-manifest-sections"></a><code><a href="#quarkus-package-pkg-package-config_quarkus.package.manifest.manifest-sections-manifest-sections">quarkus.package.manifest.manifest-sections</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-28" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Custom manifest sections to be added to the MANIFEST.MF file. An example of the user defined property: quarkus.package.manifest.manifest-sections."Section-Name"."Entry-Key1"=Value1 quarkus.package.manifest.manifest-sections."Section-Name"."Entry-Key2"=Value2</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12778">QUARKUS_PACKAGE_MANIFEST_MANIFEST_SECTIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12778" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13454">QUARKUS_PACKAGE_MANIFEST_MANIFEST_SECTIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13454" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>Map&lt;String,Map&lt;String,String&gt;&gt;</code></p></td>
 <td class="tableblock halign-left valign-middle"></td>
@@ -2335,12 +2394,12 @@ The report generated by <code>quarkus:info</code> is not currently including the
 [INFO] Building code-with-quarkus 1.0.0-SNAPSHOT
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO]
-[INFO] --- quarkus-maven-plugin:2.13.7.Final:info (default-cli) @ code-with-quarkus ---
+[INFO] --- quarkus-maven-plugin:2.13.9.Final:info (default-cli) @ code-with-quarkus ---
 [WARNING] quarkus:info goal is experimental, its options and output may change in future versions
 [INFO] Quarkus platform BOMs: <i class="conum" data-value="1"></i><b>(1)</b>
-[INFO]   io.quarkus.platform:quarkus-bom:pom:2.13.7.Final
-[INFO]   io.quarkus.platform:quarkus-kogito-bom:pom:2.13.7.Final
-[INFO]   io.quarkus.platform:quarkus-camel-bom:pom:2.13.7.Final
+[INFO]   io.quarkus.platform:quarkus-bom:pom:2.13.9.Final
+[INFO]   io.quarkus.platform:quarkus-kogito-bom:pom:2.13.9.Final
+[INFO]   io.quarkus.platform:quarkus-camel-bom:pom:2.13.9.Final
 [INFO]
 [INFO] Extensions from io.quarkus.platform:quarkus-bom: <i class="conum" data-value="2"></i><b>(2)</b>
 [INFO]   io.quarkus:quarkus-resteasy-reactive
@@ -2398,12 +2457,12 @@ The report generated by <code>quarkus:info</code> is not currently including the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">[INFO] --- quarkus-maven-plugin:2.13.7.Final:info (default-cli) @ code-with-quarkus ---
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">[INFO] --- quarkus-maven-plugin:2.13.9.Final:info (default-cli) @ code-with-quarkus ---
 [WARNING] quarkus:info goal is experimental, its options and output may change in future versions
 [INFO] Quarkus platform BOMs:
-[INFO]   io.quarkus.platform:quarkus-bom:pom:2.13.7.Final
-[INFO]   io.quarkus.platform:quarkus-kogito-bom:pom:2.13.7.Final | unnecessary <i class="conum" data-value="1"></i><b>(1)</b>
-[INFO]   io.quarkus.platform:quarkus-camel-bom:pom:2.13.7.Final
+[INFO]   io.quarkus.platform:quarkus-bom:pom:2.13.9.Final
+[INFO]   io.quarkus.platform:quarkus-kogito-bom:pom:2.13.9.Final | unnecessary <i class="conum" data-value="1"></i><b>(1)</b>
+[INFO]   io.quarkus.platform:quarkus-camel-bom:pom:2.13.9.Final
 [INFO]
 [INFO] Extensions from io.quarkus.platform:quarkus-bom:
 [INFO]   io.quarkus:quarkus-resteasy-reactive:2.6.3.Final | misaligned <i class="conum" data-value="2"></i><b>(2)</b>
@@ -2425,7 +2484,7 @@ The report generated by <code>quarkus:info</code> is not currently including the
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>The version <code>2.6.3.Final</code> of the <code>quarkus-resteasy-reactive</code> is now reported as being misaligned with the version managed by the Quarkus platform BOM imported in the project, which is 2.13.7.Final</td>
+<td>The version <code>2.6.3.Final</code> of the <code>quarkus-resteasy-reactive</code> is now reported as being misaligned with the version managed by the Quarkus platform BOM imported in the project, which is 2.13.9.Final</td>
 </tr>
 </table>
 </div>
@@ -2489,13 +2548,13 @@ The Quarkus Maven plugin version isn&#8217;t currently included in the update re
 [INFO] Building code-with-quarkus 1.0.0-SNAPSHOT
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO]
-[INFO] --- quarkus-maven-plugin:2.13.7.Final:update (default-cli) @ code-with-quarkus ---
+[INFO] --- quarkus-maven-plugin:2.13.9.Final:update (default-cli) @ code-with-quarkus ---
 [WARNING] quarkus:update goal is experimental, its options and output might change in future versions
 [INFO]
 [INFO] Recommended Quarkus platform BOM updates: <i class="conum" data-value="1"></i><b>(1)</b>
-[INFO] Update: io.quarkus.platform:quarkus-bom:pom:2.7.1.Final -&gt; 2.13.7.Final
-[INFO] Update: io.quarkus.platform:quarkus-kogito-bom:pom:2.7.1.Final -&gt; 2.13.7.Final
-[INFO] Update: io.quarkus.platform:quarkus-camel-bom:pom:2.7.1.Final -&gt; 2.13.7.Final</code></pre>
+[INFO] Update: io.quarkus.platform:quarkus-bom:pom:2.7.1.Final -&gt; 2.13.9.Final
+[INFO] Update: io.quarkus.platform:quarkus-kogito-bom:pom:2.7.1.Final -&gt; 2.13.9.Final
+[INFO] Update: io.quarkus.platform:quarkus-camel-bom:pom:2.7.1.Final -&gt; 2.13.9.Final</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -2524,8 +2583,8 @@ Typically, a single project property will be used to manage all the Quarkus plat
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">[INFO] Recommended Quarkus platform BOM updates: <i class="conum" data-value="1"></i><b>(1)</b>
-[INFO] Update: io.quarkus.platform:quarkus-bom:pom:2.7.1.Final -&gt; 2.13.7.Final
-[INFO] Update: io.quarkus.platform:quarkus-camel-bom:pom:2.7.1.Final -&gt; 2.13.7.Final
+[INFO] Update: io.quarkus.platform:quarkus-bom:pom:2.7.1.Final -&gt; 2.13.9.Final
+[INFO] Update: io.quarkus.platform:quarkus-camel-bom:pom:2.7.1.Final -&gt; 2.13.9.Final
 [INFO] Remove: io.quarkus.platform:quarkus-kogito-bom:pom:2.7.1.Final <i class="conum" data-value="2"></i><b>(2)</b>
 [INFO]
 [INFO] Extensions from io.quarkus.platform:quarkus-bom:
@@ -2572,8 +2631,54 @@ Typically, a single project property will be used to manage all the Quarkus plat
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#project-creation">Creating a new project</a></li>
+<li><a href="#dealing-with-extensions">Dealing with extensions</a></li>
+<li><a href="#dev-mode">Development mode</a>
+<ul class="sectlevel2">
+<li><a href="#remote-development-mode">Remote Development Mode</a></li>
+<li><a href="#configuring-development-mode">Configuring Development Mode</a></li>
+</ul>
+</li>
+<li><a href="#debugging">Debugging</a></li>
+<li><a href="#import-in-your-ide">Import in your IDE</a></li>
+<li><a href="#logging-quarkus-application-build-classpath-tree">Logging Quarkus application build classpath tree</a></li>
+<li><a href="#downloading-maven-artifact-dependencies-for-offline-development-and-testing">Downloading Maven artifact dependencies for offline development and testing</a></li>
+<li><a href="#building-a-native-executable">Building a native executable</a>
+<ul class="sectlevel2">
+<li><a href="#build-a-container-friendly-executable">Build a container friendly executable</a></li>
+</ul>
+</li>
+<li><a href="#build-tool-maven">Maven configuration</a>
+<ul class="sectlevel2">
+<li><a href="#fast-jar">Using fast-jar</a></li>
+<li><a href="#uber-jar-maven">Uber-Jar Creation</a></li>
+<li><a href="#multi-module-maven">Working with multi-module projects</a></li>
+<li><a href="#maven-configuration-profile">Building with a specific configuration profile</a></li>
+<li><a href="#maven-multi-build">Building several artifacts from a single module</a></li>
+</ul>
+</li>
+<li><a href="#configuration-reference">Configuring the Project Output</a>
+<ul class="sectlevel2">
+<li><a href="#custom-test-configuration-profile">Custom test configuration profile in JVM mode</a></li>
+<li><a href="#bootstrap-maven-properties">Bootstrap Maven properties</a></li>
+</ul>
+</li>
+<li><a href="#project-info">Quarkus project info</a>
+<ul class="sectlevel2">
+<li><a href="#project-info-misaligned">Highlighting misaligned versions</a></li>
+</ul>
+</li>
+<li><a href="#project-update">Quarkus project update</a>
+<ul class="sectlevel2">
+<li><a href="#quarkus-project-rectify">Quarkus project rectify</a></li>
+</ul>
+</li>
+</ul></div>
+    </div>
   </div>
-</div>
+  </div>
 
   </div>
 
@@ -2621,6 +2726,14 @@ Typically, a single project property will be used to manage all the Quarkus plat
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -2701,6 +2814,10 @@ Typically, a single project property will be used to manage all the Quarkus plat
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -2763,12 +2880,12 @@ Typically, a single project property will be used to manage all the Quarkus plat
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

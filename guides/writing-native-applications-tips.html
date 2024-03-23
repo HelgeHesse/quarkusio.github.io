@@ -9,7 +9,8 @@
   <title>Tips for writing native applications - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/guides/writing-native-applications-tips" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/guides/writing-native-applications-tips" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/guides/writing-native-applications-tips" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/guides/writing-native-applications-tips" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/guides/writing-native-applications-tips" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/guides/writing-native-applications-tips" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/guides/writing-native-applications-tips">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/guides/writing-native-applications-tips">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/guides/writing-native-applications-tips">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/guides/writing-native-applications-tips">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" >Main - SNAPSHOT</option>
         
         
-        <option value="latest" selected>3.0 - Latest</option>
+        
+        <option value="latest" selected>3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" >2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,37 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Tips for writing native applications </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#supporting-native-in-your-application">Supporting native in your application</a>
-<ul class="sectlevel2">
-<li><a href="#including-resources">Including resources</a></li>
-<li><a href="#registering-for-reflection">Registering for reflection</a></li>
-<li><a href="#delay-class-init-in-your-app">Delaying class initialization</a></li>
-<li><a href="#managing-proxy-classes">Managing Proxy Classes</a></li>
-<li><a href="#modularity-benefits">Modularity Benefits</a></li>
-<li><a href="#enforcing-singletons">Enforcing Singletons</a></li>
-<li><a href="#beware-of-common-java-api-overrides">Beware of common Java API overrides</a></li>
-</ul>
-</li>
-<li><a href="#native-in-extension">Supporting native in a Quarkus extension</a>
-<ul class="sectlevel2">
-<li><a href="#register-reflection">Register reflection</a></li>
-<li><a href="#including-resources-2">Including resources</a></li>
-</ul>
-</li>
-<li><a href="#delay-class-initialization">Delay class initialization</a>
-<ul class="sectlevel2">
-<li><a href="#managing-proxy-classes-2">Managing Proxy Classes</a></li>
-<li><a href="#logging-with-native-image">Logging with Native Image</a></li>
-</ul>
-</li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Tips for writing native applications </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -246,6 +238,8 @@ So this directory is not a shortcut for "let&#8217;s automatically include these
 </tr>
 </table>
 </div>
+<div class="sect3">
+<h4 id="using-the-quarkus-native-resources-includes-configuration-property"><a class="anchor" href="#using-the-quarkus-native-resources-includes-configuration-property"></a>Using the <code>quarkus.native.resources.includes</code> configuration property</h4>
 <div class="paragraph">
 <p>To include more resources in the native executable, the easiest way is to use the <code>quarkus.native.resources.includes</code> configuration property,
 and its counterpart to exclude resources <code>quarkus.native.resources.excludes</code>.</p>
@@ -275,9 +269,32 @@ quarkus.native.resources.excludes=foo/private/**</code></pre>
 </li>
 </ul>
 </div>
+</div>
+<div class="sect3">
+<h4 id="using-a-configuration-file"><a class="anchor" href="#using-a-configuration-file"></a>Using a configuration file</h4>
 <div class="paragraph">
 <p>If globs are not sufficiently precise for your use case and you need to rely on regular expressions, or if you prefer relying on the GraalVM infrastructure,
-you can also create a <code>resources-config.json</code> (the most common location is within <code>src/main/resources</code>) JSON file defining which resources should be included:</p>
+you can also create a <code>resources-config.json</code> (the most common location is within <code>src/main/resources</code>) JSON file defining which resources should be included.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Relying on the GraalVM infrastructure means that you are responsible for keeping the configuration file up to date as new Mandrel and GraalVM versions are released.</p>
+</div>
+<div class="paragraph">
+<p>Please also note that the <code>resources-config.json</code> file will be overwritten by Quarkus if placed directly under <code>src/main/resources/META-INF/native-image/</code> as Quarkus generates its own configuration file in this directory.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>An example of such a file is the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -305,7 +322,7 @@ Here we include all the XML files and JSON files into the native executable.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You can find more information about this topic in <a href="https://www.graalvm.org/22.3/reference-manual/native-image/dynamic-features/Resources/">the GraalVM documentation</a>.</p>
+<p>For more information about this topic, see the <a href="https://www.graalvm.org/jdk21/reference-manual/native-image/dynamic-features/Resources/">GraalVM Accessing Resources in Native Image</a> guide.</p>
 </div>
 </td>
 </tr>
@@ -316,8 +333,26 @@ Here we include all the XML files and JSON files into the native executable.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.native.additional-build-args =-H:ResourceConfigurationFiles=resources-config.json</code></pre>
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.native.additional-build-args =\
+    -H:+UnlockExperimentalVMOptions,\
+    -H:ResourceConfigurationFiles=resources-config.json,\
+    -H:-UnlockExperimentalVMOptions</code></pre>
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Starting with Mandrel 23.1 and GraalVM for JDK 21, <code>-H:ResourceConfigurationFiles=resources-config.json</code> results in a warning being shown unless wrapped in <code>-H:+UnlockExperimentalVMOptions</code> and <code>-H:-UnlockExperimentalVMOptions</code>.
+The absence of these options will result in build failures in the future.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>In the previous snippet we were able to simply use <code>resources-config.json</code> instead of specifying the entire path of the file simply because it was added to <code>src/main/resources</code>.
@@ -336,8 +371,10 @@ If the file had been added to another directory, the proper file path would have
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.native.additional-build-args =\
+    -H:+UnlockExperimentalVMOptions,\
     -H:ResourceConfigurationFiles=resources-config.json,\
-    -H:ReflectionConfigurationFiles=reflection-config.json</code></pre>
+    -H:ReflectionConfigurationFiles=reflection-config.json,\
+    -H:-UnlockExperimentalVMOptions</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -360,10 +397,13 @@ If the file had been added to another directory, the proper file path would have
         &lt;id&gt;native&lt;/id&gt;
         &lt;properties&gt;
             &lt;quarkus.package.type&gt;native&lt;/quarkus.package.type&gt;
-            &lt;quarkus.native.additional-build-args&gt;-H:ResourceConfigurationFiles=resources-config.json&lt;/quarkus.native.additional-build-args&gt;
+            &lt;quarkus.native.additional-build-args&gt;
+                -H:+UnlockExperimentalVMOptions,-H:ResourceConfigurationFiles=resources-config.json,-H:-UnlockExperimentalVMOptions
+            &lt;/quarkus.native.additional-build-args&gt;
         &lt;/properties&gt;
     &lt;/profile&gt;
 &lt;/profiles&gt;</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -481,9 +521,23 @@ public class MyReflectionConfiguration {
 </div>
 </div>
 <div class="sect3">
-<h4 id="using-a-configuration-file"><a class="anchor" href="#using-a-configuration-file"></a>Using a configuration file</h4>
+<h4 id="using-a-configuration-file-2"><a class="anchor" href="#using-a-configuration-file-2"></a>Using a configuration file</h4>
 <div class="paragraph">
-<p>You can use a configuration file to register classes for reflection.</p>
+<p>You can also use a configuration file to register classes for reflection, if you prefer relying on the GraalVM infrastructure.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Relying on the GraalVM infrastructure means that you are responsible for keeping the configuration file up to date as new Mandrel and GraalVM versions are released.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>As an example, in order to register all methods of class <code>com.acme.MyClass</code> for reflection, we create <code>reflection-config.json</code> (the most common location is within <code>src/main/resources</code>)</p>
@@ -511,7 +565,7 @@ public class MyReflectionConfiguration {
 </td>
 <td class="content">
 <div class="paragraph">
-<p>For more details on the format of this file, please refer to <a href="https://www.graalvm.org/22.3/reference-manual/native-image/dynamic-features/Reflection/">the GraalVM documentation</a>.</p>
+<p>For more information about the format of this file, see the <a href="https://www.graalvm.org/jdk21/reference-manual/native-image/dynamic-features/Reflection/">GraalVM Reflection in Native Image</a> guide.</p>
 </div>
 </td>
 </tr>
@@ -522,8 +576,26 @@ public class MyReflectionConfiguration {
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.native.additional-build-args =-H:ReflectionConfigurationFiles=reflection-config.json</code></pre>
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.native.additional-build-args =\
+    -H:+UnlockExperimentalVMOptions,\
+    -H:ReflectionConfigurationFiles=reflection-config.json,\
+    -H:-UnlockExperimentalVMOptions</code></pre>
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Starting with Mandrel 23.1 and GraalVM for JDK 21, <code>-H:ResourceConfigurationFiles=resources-config.json</code> results in a warning being shown unless wrapped in <code>-H:+UnlockExperimentalVMOptions</code> and <code>-H:-UnlockExperimentalVMOptions</code>.
+The absence of these options will result in build failures in the future.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>In the previous snippet we were able to simply use <code>reflection-config.json</code> instead of specifying the entire path of the file simply because it was added to <code>src/main/resources</code>.
@@ -542,8 +614,10 @@ If the file had been added to another directory, the proper file path would have
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.native.additional-build-args =\
+    -H:+UnlockExperimentalVMOptions,\
     -H:ResourceConfigurationFiles=resources-config.json,\
-    -H:ReflectionConfigurationFiles=reflection-config.json</code></pre>
+    -H:ReflectionConfigurationFiles=reflection-config.json,\
+    -H:-UnlockExperimentalVMOptions</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -566,7 +640,9 @@ If the file had been added to another directory, the proper file path would have
         &lt;id&gt;native&lt;/id&gt;
         &lt;properties&gt;
             &lt;quarkus.package.type&gt;native&lt;/quarkus.package.type&gt;
-            &lt;quarkus.native.additional-build-args&gt;-H:ReflectionConfigurationFiles=reflection-config.json&lt;/quarkus.native.additional-build-args&gt;
+            &lt;quarkus.native.additional-build-args&gt;
+                -H:+UnlockExperimentalVMOptions,-H:ReflectionConfigurationFiles=reflection-config.json,-H:-UnlockExperimentalVMOptions
+            &lt;/quarkus.native.additional-build-args&gt;
         &lt;/properties&gt;
     &lt;/profile&gt;
 &lt;/profiles&gt;</code></pre>
@@ -632,7 +708,7 @@ you can use the <code>--initialize-at-run-time=&lt;package or class&gt;</code> c
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You can find more information about all this in <a href="https://www.graalvm.org/22.3/reference-manual/native-image/optimizations-and-performance/ClassInitialization/">the GraalVM documentation</a>.</p>
+<p>For more information, see the <a href="https://www.graalvm.org/jdk21/reference-manual/native-image/optimizations-and-performance/ClassInitialization/">GraalVM Class Initialization in Native Image</a> guide.</p>
 </div>
 </td>
 </tr>
@@ -681,8 +757,10 @@ An example of this is the following:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Solving this issue requires adding the <code>-H:DynamicProxyConfigurationResources=&lt;comma-separated-config-resources&gt;</code> option and to provide a dynamic proxy configuration file.
-You can find all the information about the format of this file in <a href="https://www.graalvm.org/22.3/reference-manual/native-image/guides/configure-dynamic-proxies/">the GraalVM documentation</a>.</p>
+<p>Solving this issue requires adding the <code>-H:DynamicProxyConfigurationResources=&lt;comma-separated-config-resources&gt;</code> option and to provide a dynamic proxy configuration file.</p>
+</div>
+<div class="paragraph">
+<p>For more information about the format of this file, see the <a href="https://www.graalvm.org/jdk21/reference-manual/native-image/guides/configure-dynamic-proxies/">GraalVM Configure Dynamic Proxies Manually</a> guide.</p>
 </div>
 </div>
 <div class="sect2">
@@ -981,7 +1059,7 @@ for the analysis to have to pull all implementations of that particular method.<
 </td>
 <td class="content">
 <div class="paragraph">
-<p>More information about reflection in GraalVM can be found <a href="https://www.graalvm.org/22.3/reference-manual/native-image/dynamic-features/Reflection/">here</a>.</p>
+<p>For more information about reflection in GraalVM, see the <a href="https://www.graalvm.org/jdk21/reference-manual/native-image/dynamic-features/Reflection/">GraalVM Reflection in Native Image</a> guide.</p>
 </div>
 </td>
 </tr>
@@ -1013,7 +1091,7 @@ for the analysis to have to pull all implementations of that particular method.<
 </td>
 <td class="content">
 <div class="paragraph">
-<p>For more information about GraalVM resource handling in native executables please refer to <a href="https://www.graalvm.org/22.3/reference-manual/native-image/dynamic-features/Resources/">the GraalVM documentation</a>.</p>
+<p>For more information about GraalVM resource handling in native executables, see the <a href="https://www.graalvm.org/jdk21/reference-manual/native-image/dynamic-features/Resources/">GraalVM Accessing Resources in Native Image</a> guide.</p>
 </div>
 </td>
 </tr>
@@ -1051,7 +1129,7 @@ for the analysis to have to pull all implementations of that particular method.<
 </td>
 <td class="content">
 <div class="paragraph">
-<p>For more information about <code>--initialize-at-run-time</code>, please read <a href="https://www.graalvm.org/22.3/reference-manual/native-image/optimizations-and-performance/ClassInitialization/">the GraalVM documentation</a>.</p>
+<p>For more information about the <code>--initialize-at-run-time</code> option, see the <a href="https://www.graalvm.org/jdk21/reference-manual/native-image/optimizations-and-performance/ClassInitialization/">GraalVM Class Initialization in Native Image</a> guide.</p>
 </div>
 </td>
 </tr>
@@ -1086,7 +1164,7 @@ for the analysis to have to pull all implementations of that particular method.<
 </td>
 <td class="content">
 <div class="paragraph">
-<p>For more information about Proxy Classes you can read <a href="https://www.graalvm.org/22.3/reference-manual/native-image/guides/configure-dynamic-proxies/">the GraalVM documentation</a>.</p>
+<p>For more information about Proxy Classes, see the <a href="https://www.graalvm.org/jdk21/reference-manual/native-image/guides/configure-dynamic-proxies/">GraalVM Configure Dynamic Proxies Manually</a> guide.</p>
 </div>
 </td>
 </tr>
@@ -1099,14 +1177,88 @@ for the analysis to have to pull all implementations of that particular method.<
 <p>If you are using dependencies that require logging components such as Apache Commons Logging or Log4j and are experiencing a <code>ClassNotFoundException</code> when building the native executable, you can resolve this by excluding the logging library and adding the corresponding JBoss Logging adapter.</p>
 </div>
 <div class="paragraph">
-<p>For more details please refer to the <a href="logging#logging-adapters">Logging guide</a>.</p>
+<p>For more details please refer to the <a href="logging#logging-apis">Logging guide</a>.</p>
 </div>
 </div>
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#supporting-native-in-your-application">Supporting native in your application</a>
+<ul class="sectlevel2">
+<li><a href="#including-resources">Including resources</a></li>
+<li><a href="#registering-for-reflection">Registering for reflection</a></li>
+<li><a href="#delay-class-init-in-your-app">Delaying class initialization</a></li>
+<li><a href="#managing-proxy-classes">Managing Proxy Classes</a></li>
+<li><a href="#modularity-benefits">Modularity Benefits</a></li>
+<li><a href="#enforcing-singletons">Enforcing Singletons</a></li>
+<li><a href="#beware-of-common-java-api-overrides">Beware of common Java API overrides</a></li>
+</ul>
+</li>
+<li><a href="#native-in-extension">Supporting native in a Quarkus extension</a>
+<ul class="sectlevel2">
+<li><a href="#register-reflection">Register reflection</a></li>
+<li><a href="#including-resources-2">Including resources</a></li>
+</ul>
+</li>
+<li><a href="#delay-class-initialization">Delay class initialization</a>
+<ul class="sectlevel2">
+<li><a href="#managing-proxy-classes-2">Managing Proxy Classes</a></li>
+<li><a href="#logging-with-native-image">Logging with Native Image</a></li>
+</ul>
+</li>
+</ul></div>
+    </div>
   </div>
-</div>
+  <h2>Related content</h2>
+  <div class="grid-wrapper relations">
+    <div class="grid__item width-6-12 width-12-12-m">
+      <h3>On the same topics</h3>
+      <ul class="related-content">
+      
+        
+        <li class="tutorial"><a href="/guides/building-native-image">Building a Native Executable</a></li>
+      
+        
+        <li class="guide"><a href="/guides/building-my-first-extension">Building my first extension</a></li>
+      
+        
+        <li class="reference"><a href="/guides/class-loading-reference">Class Loading Reference</a></li>
+      
+        
+        <li class="guide"><a href="/guides/upx">Compressing native executables using UPX</a></li>
+      
+        
+        <li class="guide"><a href="/guides/conditional-extension-dependencies">Conditional Extension Dependencies</a></li>
+      
+        
+        <li class="concepts"><a href="/guides/duplicated-context">Duplicated context, context locals, asynchronous processing and propagation</a></li>
+      
+        
+        <li class="guide"><a href="/guides/capabilities">Extension Capabilities</a></li>
+      
+        
+        <li class="guide"><a href="/guides/extension-codestart">Extension codestart</a></li>
+      
+        
+        <li class="reference"><a href="/guides/native-reference">Native Reference Guide</a></li>
+      
+        
+        <li class="guide"><a href="/guides/extension-metadata">Quarkus Extension Metadata</a></li>
+      
+        
+        <li class="guide"><a href="/guides/extension-registry-user">Quarkus Extension Registry</a></li>
+      
+        
+        <li class="guide"><a href="/guides/native-and-ssl">Using SSL With Native Executables</a></li>
+      
+        
+        <li class="guide"><a href="/guides/writing-extensions">Writing Your Own Extension</a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   </div>
 
@@ -1154,6 +1306,14 @@ for the analysis to have to pull all implementations of that particular method.<
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -1234,6 +1394,10 @@ for the analysis to have to pull all implementations of that particular method.<
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -1296,12 +1460,12 @@ for the analysis to have to pull all implementations of that particular method.<
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

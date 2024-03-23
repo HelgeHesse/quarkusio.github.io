@@ -9,7 +9,8 @@
   <title>Application Data Caching - 2.13 - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/version/2.13/guides/cache" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/version/2.13/guides/cache" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/version/2.13/guides/cache" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/version/2.13/guides/cache" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/version/2.13/guides/cache" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/version/2.13/guides/cache" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/version/2.13/guides/cache">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/version/2.13/guides/cache">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/version/2.13/guides/cache">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/version/2.13/guides/cache">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" >Main - SNAPSHOT</option>
         
         
-        <option value="latest" >3.0 - Latest</option>
+        
+        <option value="latest" >3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" selected>2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,61 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Application Data Caching </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#scenario">Scenario</a></li>
-<li><a href="#solution">Solution</a></li>
-<li><a href="#creating-the-maven-project">Creating the Maven project</a></li>
-<li><a href="#creating-the-rest-api">Creating the REST API</a></li>
-<li><a href="#enabling-the-cache">Enabling the cache</a></li>
-<li><a href="#annotations-api">Caching using annotations</a>
-<ul class="sectlevel2">
-<li><a href="#cacheresult">@CacheResult</a></li>
-<li><a href="#cacheinvalidate">@CacheInvalidate</a></li>
-<li><a href="#cacheinvalidateall">@CacheInvalidateAll</a></li>
-<li><a href="#cachekey">@CacheKey</a></li>
-<li><a href="#cache-keys-building-logic">Cache keys building logic</a></li>
-<li><a href="#generating-a-cache-key-with-cachekeygenerator">Generating a cache key with <code>CacheKeyGenerator</code></a></li>
-</ul>
-</li>
-<li><a href="#programmatic-api">Caching using the programmatic API</a>
-<ul class="sectlevel2">
-<li><a href="#injecting-a-cache-with-the-cachename-annotation">Injecting a <code>Cache</code> with the <code>@CacheName</code> annotation</a></li>
-<li><a href="#retrieving-a-cache-from-the-cachemanager">Retrieving a <code>Cache</code> from the <code>CacheManager</code></a></li>
-<li><a href="#building-a-programmatic-cache-key">Building a programmatic cache key</a></li>
-<li><a href="#retrieving-all-keys-from-a-caffeinecache">Retrieving all keys from a <code>CaffeineCache</code></a></li>
-<li><a href="#populating-a-caffeinecache">Populating a <code>CaffeineCache</code></a></li>
-<li><a href="#retrieving-a-value-if-a-key-is-present-from-a-caffeinecache">Retrieving a value if a key is present from a <code>CaffeineCache</code></a></li>
-</ul>
-</li>
-<li><a href="#configuring-the-underlying-caching-provider">Configuring the underlying caching provider</a>
-<ul class="sectlevel2">
-<li><a href="#caffeine-configuration-properties">Caffeine configuration properties</a></li>
-</ul>
-</li>
-<li><a href="#enabling-micrometer-metrics">Enabling Micrometer metrics</a></li>
-<li><a href="#annotated-beans-examples">Annotated beans examples</a>
-<ul class="sectlevel2">
-<li><a href="#implicit-simple-cache-key">Implicit simple cache key</a></li>
-<li><a href="#explicit-composite-cache-key">Explicit composite cache key</a></li>
-<li><a href="#default-cache-key">Default cache key</a></li>
-<li><a href="#multiple-annotations-on-a-single-method">Multiple annotations on a single method</a></li>
-<li><a href="#clear-all-application-caches">Clear all application caches</a></li>
-</ul>
-</li>
-<li><a href="#negative-cache">Negative caching and nulls</a>
-<ul class="sectlevel2">
-<li><a href="#let-exceptions-bubble-up">Let exceptions bubble up</a></li>
-</ul>
-</li>
-<li><a href="#going-native">Going native</a></li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Application Data Caching </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -227,12 +195,7 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>This technology is considered preview.</p>
-</div>
-<div class="paragraph">
-<p>In <em>preview</em>, backward compatibility and presence in the ecosystem is not guaranteed.
-Specific improvements might require changing configuration or APIs, and plans to become <em>stable</em> are under way.
-Feedback is welcome on our <a href="https://groups.google.com/d/forum/quarkus-dev">mailing list</a> or as issues in our <a href="https://github.com/quarkusio/quarkus/issues">GitHub issue tracker</a>.</p>
+<p>This technology is considered {extension-status}.</p>
 </div>
 <div class="paragraph">
 <p>For a full list of possible statuses, check our <a href="https://quarkus.io/faq/#what-are-the-extension-statuses">FAQ entry</a>.</p>
@@ -313,6 +276,7 @@ However, you can go right to the completed example.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus create app org.acme:cache-quickstart \
+    --stream=2.13 \
     --extension='cache,resteasy-reactive-jackson' \
     --no-code
 cd cache-quickstart</code></pre>
@@ -331,7 +295,8 @@ cd cache-quickstart</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.13.7.Final:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.13.9.Final:create \
+    -DplatformVersion=2.13.9.Final \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=cache-quickstart \
     -Dextensions='cache,resteasy-reactive-jackson' \
@@ -1229,7 +1194,7 @@ properties in the <code>application.properties</code> file. By default, caches d
 <div class="paragraph configuration-legend">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
 </div>
-<table class="tableblock frame-all grid-all stretch configuration-reference">
+<table class="tableblock frame-all grid-all stretch configuration-reference configuration-reference-all-rows">
 <colgroup>
 <col style="width: 80%;">
 <col style="width: 10%;">
@@ -1241,84 +1206,96 @@ properties in the <code>application.properties</code> file. By default, caches d
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-cache-config-group-cache-config-caffeine-config_quarkus.cache.caffeine.-cache-name-.initial-capacity"></a><code><a href="#quarkus-cache-config-group-cache-config-caffeine-config_quarkus.cache.caffeine.-cache-name-.initial-capacity">quarkus.cache.caffeine."cache-name".initial-capacity</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-1" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Minimum total size for the internal data structures. Providing a large enough estimate at construction time avoids the need for expensive resizing operations later, but setting this value unnecessarily high wastes memory.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-10690">QUARKUS_CACHE_CAFFEINE__CACHE_NAME__INITIAL_CAPACITY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-10690" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-11302">QUARKUS_CACHE_CAFFEINE__CACHE_NAME__INITIAL_CAPACITY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-11302" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-cache-config-group-cache-config-caffeine-config_quarkus.cache.caffeine.-cache-name-.maximum-size"></a><code><a href="#quarkus-cache-config-group-cache-config-caffeine-config_quarkus.cache.caffeine.-cache-name-.maximum-size">quarkus.cache.caffeine."cache-name".maximum-size</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-2" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Maximum number of entries the cache may contain. Note that the cache <strong>may evict an entry before this limit is exceeded or temporarily exceed the threshold while evicting</strong>. As the cache size grows close to the maximum, the cache evicts entries that are less likely to be used again. For example, the cache may evict an entry because it hasn&#8217;t been used recently or very often.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-10691">QUARKUS_CACHE_CAFFEINE__CACHE_NAME__MAXIMUM_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-10691" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-11303">QUARKUS_CACHE_CAFFEINE__CACHE_NAME__MAXIMUM_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-11303" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">long</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-cache-config-group-cache-config-caffeine-config_quarkus.cache.caffeine.-cache-name-.expire-after-write"></a><code><a href="#quarkus-cache-config-group-cache-config-caffeine-config_quarkus.cache.caffeine.-cache-name-.expire-after-write">quarkus.cache.caffeine."cache-name".expire-after-write</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-3" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Specifies that each entry should be automatically removed from the cache once a fixed duration has elapsed after the entry&#8217;s creation, or the most recent replacement of its value.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-10692">QUARKUS_CACHE_CAFFEINE__CACHE_NAME__EXPIRE_AFTER_WRITE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-10692" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-11304">QUARKUS_CACHE_CAFFEINE__CACHE_NAME__EXPIRE_AFTER_WRITE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-11304" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
   <a href="#duration-note-anchor-quarkus-cache-config-group-cache-config-caffeine-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-cache-config-group-cache-config-caffeine-config_quarkus.cache.caffeine.-cache-name-.expire-after-access"></a><code><a href="#quarkus-cache-config-group-cache-config-caffeine-config_quarkus.cache.caffeine.-cache-name-.expire-after-access">quarkus.cache.caffeine."cache-name".expire-after-access</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-4" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Specifies that each entry should be automatically removed from the cache once a fixed duration has elapsed after the entry&#8217;s creation, the most recent replacement of its value, or its last read.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-10693">QUARKUS_CACHE_CAFFEINE__CACHE_NAME__EXPIRE_AFTER_ACCESS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-10693" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-11305">QUARKUS_CACHE_CAFFEINE__CACHE_NAME__EXPIRE_AFTER_ACCESS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-11305" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
   <a href="#duration-note-anchor-quarkus-cache-config-group-cache-config-caffeine-config" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class=" odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-cache-config-group-cache-config-caffeine-config_quarkus.cache.caffeine.-cache-name-.metrics-enabled"></a><code><a href="#quarkus-cache-config-group-cache-config-caffeine-config_quarkus.cache.caffeine.-cache-name-.metrics-enabled">quarkus.cache.caffeine."cache-name".metrics-enabled</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-non-collapsible-desc-5" class="openblock description">
 <div class="content">
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-10694">QUARKUS_CACHE_CAFFEINE__CACHE_NAME__METRICS_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-10694" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-11306">QUARKUS_CACHE_CAFFEINE__CACHE_NAME__METRICS_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-11306" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div></div></td>
@@ -1819,8 +1796,59 @@ We are not registering all of them for reflection
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#scenario">Scenario</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#creating-the-maven-project">Creating the Maven project</a></li>
+<li><a href="#creating-the-rest-api">Creating the REST API</a></li>
+<li><a href="#enabling-the-cache">Enabling the cache</a></li>
+<li><a href="#annotations-api">Caching using annotations</a>
+<ul class="sectlevel2">
+<li><a href="#cacheresult">@CacheResult</a></li>
+<li><a href="#cacheinvalidate">@CacheInvalidate</a></li>
+<li><a href="#cacheinvalidateall">@CacheInvalidateAll</a></li>
+<li><a href="#cachekey">@CacheKey</a></li>
+<li><a href="#cache-keys-building-logic">Cache keys building logic</a></li>
+<li><a href="#generating-a-cache-key-with-cachekeygenerator">Generating a cache key with <code>CacheKeyGenerator</code></a></li>
+</ul>
+</li>
+<li><a href="#programmatic-api">Caching using the programmatic API</a>
+<ul class="sectlevel2">
+<li><a href="#injecting-a-cache-with-the-cachename-annotation">Injecting a <code>Cache</code> with the <code>@CacheName</code> annotation</a></li>
+<li><a href="#retrieving-a-cache-from-the-cachemanager">Retrieving a <code>Cache</code> from the <code>CacheManager</code></a></li>
+<li><a href="#building-a-programmatic-cache-key">Building a programmatic cache key</a></li>
+<li><a href="#retrieving-all-keys-from-a-caffeinecache">Retrieving all keys from a <code>CaffeineCache</code></a></li>
+<li><a href="#populating-a-caffeinecache">Populating a <code>CaffeineCache</code></a></li>
+<li><a href="#retrieving-a-value-if-a-key-is-present-from-a-caffeinecache">Retrieving a value if a key is present from a <code>CaffeineCache</code></a></li>
+</ul>
+</li>
+<li><a href="#configuring-the-underlying-caching-provider">Configuring the underlying caching provider</a>
+<ul class="sectlevel2">
+<li><a href="#caffeine-configuration-properties">Caffeine configuration properties</a></li>
+</ul>
+</li>
+<li><a href="#enabling-micrometer-metrics">Enabling Micrometer metrics</a></li>
+<li><a href="#annotated-beans-examples">Annotated beans examples</a>
+<ul class="sectlevel2">
+<li><a href="#implicit-simple-cache-key">Implicit simple cache key</a></li>
+<li><a href="#explicit-composite-cache-key">Explicit composite cache key</a></li>
+<li><a href="#default-cache-key">Default cache key</a></li>
+<li><a href="#multiple-annotations-on-a-single-method">Multiple annotations on a single method</a></li>
+<li><a href="#clear-all-application-caches">Clear all application caches</a></li>
+</ul>
+</li>
+<li><a href="#negative-cache">Negative caching and nulls</a>
+<ul class="sectlevel2">
+<li><a href="#let-exceptions-bubble-up">Let exceptions bubble up</a></li>
+</ul>
+</li>
+<li><a href="#going-native">Going native</a></li>
+</ul></div>
+    </div>
   </div>
-</div>
+  </div>
 
   </div>
 
@@ -1868,6 +1896,14 @@ We are not registering all of them for reflection
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -1948,6 +1984,10 @@ We are not registering all of them for reflection
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -2010,12 +2050,12 @@ We are not registering all of them for reflection
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>

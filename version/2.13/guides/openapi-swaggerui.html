@@ -9,7 +9,8 @@
   <title>Using OpenAPI and Swagger UI - 2.13 - Quarkus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://www.googletagmanager.com https://www.google-analytics.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self' *; media-src 'self'; frame-src https://www.googletagmanager.com https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src https://dpm.demdex.net https://analytics.ossupstream.org https://search.quarkus.io/; script-src 'self' 'unsafe-eval' 'sha256-ANpuoVzuSex6VhqpYgsG25OHWVA1I+F6aGU04LoI+5s=' 'sha256-ipy9P/3rZZW06mTLAR0EnXvxSNcnfSDPLDuh3kzbB1w=' js.bizographics.com https://www.redhat.com https://static.redhat.com assets.adobedtm.com jsonip.com https://ajax.googleapis.com https://use.fontawesome.com https://app.mailjet.com http://www.youtube.com http://www.googleadservices.com https://googleads.g.doubleclick.net https://dpm.demdex.net https://giscus.app https://analytics.ossupstream.org; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; img-src 'self'
+  https://analytics.ossupstream.org *; media-src 'self'; frame-src  https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -31,7 +32,6 @@
   <link rel="stylesheet" href="/assets/css/main.css?2021-07-29" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="alternate" type="application/rss+xml"  href="/feed.xml" title="Quarkus">
-  <script src="/assets/javascript/goan.js" type="text/javascript"></script>
   <script src="/assets/javascript/hl.js" type="text/javascript"></script>
   
   
@@ -39,20 +39,20 @@
   
   <link rel="alternate" hreflang="en" href="https://quarkus.io/version/2.13/guides/openapi-swaggerui" />
   
+  <link rel="alternate" hreflang="pt-br" href="https://pt.quarkus.io/version/2.13/guides/openapi-swaggerui" />
+  
   <link rel="alternate" hreflang="es" href="https://es.quarkus.io/version/2.13/guides/openapi-swaggerui" />
   
   <link rel="alternate" hreflang="zh" href="https://cn.quarkus.io/version/2.13/guides/openapi-swaggerui" />
   
   <link rel="alternate" hreflang="ja" href="https://ja.quarkus.io/version/2.13/guides/openapi-swaggerui" />
   
-  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://quarkus.io/" />  
+  <script src="/assets/javascript/tracking.js"></script>
+  <script src="https://analytics.ossupstream.org/matomo.js" async defer></script>
 </head>
 
 <body class="guides">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJWS5L"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   
   <div class="nav-wrapper">
@@ -68,7 +68,7 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">About<i class="fas fa-chevron-down"></i></span>
+        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
           <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
@@ -94,6 +94,7 @@
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
           <li><a href="/faq/#what-is-a-quarkus-extension" class="">USE EXTENSIONS</a></li>
           <li><a href="/guides/writing-extensions" class="">CREATE EXTENSIONS</a></li>
+          <li><a href="https://hub.quarkiverse.io" class="">SHARE EXTENSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -115,6 +116,7 @@
         <span href="/language/"><div class="fas fa-globe langicon"></div><i class="fas fa-chevron-down"></i></span>
         <ul class="submenu">
           <li><a href="https://quarkus.io/version/2.13/guides/openapi-swaggerui" >OFFICIAL (ENGLISH)</a></li>
+          <li><a href="https://pt.quarkus.io/version/2.13/guides/openapi-swaggerui">PORTUGUÊS (BR)</a></li>
           <li><a href="https://es.quarkus.io/version/2.13/guides/openapi-swaggerui">ESPAÑOL</a></li>
           <li><a href="https://cn.quarkus.io/version/2.13/guides/openapi-swaggerui">简体中文</a></li>
           <li><a href="https://ja.quarkus.io/version/2.13/guides/openapi-swaggerui">日本語</a></li>
@@ -132,6 +134,7 @@
 
 
 
+
 <section class="full-width-version-bg flexfilterbar guides">
   <div class="guideflexcontainer">
     <div class="docslink">
@@ -144,13 +147,29 @@
     <select id="guide-version-dropdown">
       
         
+        
         <option value="main" >Main - SNAPSHOT</option>
         
         
-        <option value="latest" >3.0 - Latest</option>
+        
+        <option value="latest" >3.8.3 - Latest</option>
+        
+        
+        
+        <option value="3.8" >3.8</option>
+        
+        
+        
+        <option value="3.2" >3.2</option>
+        
+        
+        
+        <option value="2.16" >2.16</option>
+        
         
         
         <option value="2.13" selected>2.13</option>
+        
         
         
         <option value="2.7" >2.7</option>
@@ -159,36 +178,10 @@
   </div>
 </section>
 
-<div class="grid-wrapper guide">
-  <div class="grid__item width-12-12 width-12-12-mobile">
-    <h1 class="text-caps">Using OpenAPI and Swagger UI </h1>
-  </div>
-  <div class="width-12-12">
-    <div class="hide-mobile toc"><ul class="sectlevel1">
-<li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#architecture">Architecture</a></li>
-<li><a href="#solution">Solution</a></li>
-<li><a href="#creating-the-maven-project">Creating the Maven project</a></li>
-<li><a href="#expose-a-rest-resource">Expose a REST Resource</a></li>
-<li><a href="#expose-openapi-specifications">Expose OpenAPI Specifications</a></li>
-<li><a href="#providing-application-level-openapi-annotations">Providing Application Level OpenAPI Annotations</a></li>
-<li><a href="#loading-openapi-schema-from-static-files">Loading OpenAPI Schema From Static Files</a></li>
-<li><a href="#changing-the-openapi-version">Changing the OpenAPI version</a></li>
-<li><a href="#auto-generation-of-operation-id">Auto-generation of Operation Id</a></li>
-<li><a href="#dev-mode">Use Swagger UI for development</a>
-<ul class="sectlevel2">
-<li><a href="#styling">Styling</a></li>
-<li><a href="#cross-origin-resource-sharing">Cross Origin Resource Sharing</a></li>
-</ul>
-</li>
-<li><a href="#configuration-reference">Configuration Reference</a>
-<ul class="sectlevel2">
-<li><a href="#openapi">OpenAPI</a></li>
-<li><a href="#swagger-ui">Swagger UI</a></li>
-</ul>
-</li>
-</ul></div>
-    <div>
+<div class="guide">
+  <div class="grid-wrapper">
+    <div class="grid__item width-8-12 width-12-12-m">
+      <h1 class="text-caps">Using OpenAPI and Swagger UI </h1>
       <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -263,6 +256,7 @@ However, you can skip right to the completed example.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">quarkus create app org.acme:openapi-swaggerui-quickstart \
+    --stream=2.13 \
     --extension='resteasy-reactive-jackson' \
     --no-code
 cd openapi-swaggerui-quickstart</code></pre>
@@ -281,7 +275,8 @@ cd openapi-swaggerui-quickstart</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.13.7.Final:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.13.9.Final:create \
+    -DplatformVersion=2.13.9.Final \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=openapi-swaggerui-quickstart \
     -Dextensions='resteasy-reactive-jackson' \
@@ -979,10 +974,10 @@ rather than <code>style.css</code>.</p>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="openapi"><a class="anchor" href="#openapi"></a>OpenAPI</h3>
-<div class="paragraph configuration-legend">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime <input type="search" id="config-search-0" placeholder="FILTER CONFIGURATION" disabled></p>
 </div>
-<table class="tableblock frame-all grid-all stretch configuration-reference searchable">
+<table class="tableblock frame-all grid-all stretch configuration-reference searchable configuration-reference-all-rows">
 <colgroup>
 <col style="width: 80%;">
 <col style="width: 10%;">
@@ -994,99 +989,114 @@ rather than <code>style.css</code>.</p>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.path"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.path">quarkus.smallrye-openapi.path</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-1" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The path at which to register the OpenAPI Servlet.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12884">QUARKUS_SMALLRYE_OPENAPI_PATH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12884" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13562">QUARKUS_SMALLRYE_OPENAPI_PATH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13562" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>openapi</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.store-schema-directory"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.store-schema-directory">quarkus.smallrye-openapi.store-schema-directory</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-2" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If set, the generated OpenAPI schema documents will be stored here on build. Both openapi.json and openapi.yaml will be stored here if this is set.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12885">QUARKUS_SMALLRYE_OPENAPI_STORE_SCHEMA_DIRECTORY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12885" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13563">QUARKUS_SMALLRYE_OPENAPI_STORE_SCHEMA_DIRECTORY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13563" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">path</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.always-run-filter"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.always-run-filter">quarkus.smallrye-openapi.always-run-filter</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-3" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Do not run the filter only at startup, but every time the document is requested (dynamic).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12886">QUARKUS_SMALLRYE_OPENAPI_ALWAYS_RUN_FILTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12886" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13564">QUARKUS_SMALLRYE_OPENAPI_ALWAYS_RUN_FILTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13564" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.ignore-static-document"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.ignore-static-document">quarkus.smallrye-openapi.ignore-static-document</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-4" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Do not include the provided static openapi document (eg. META-INF/openapi.yaml)</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12887">QUARKUS_SMALLRYE_OPENAPI_IGNORE_STATIC_DOCUMENT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12887" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13565">QUARKUS_SMALLRYE_OPENAPI_IGNORE_STATIC_DOCUMENT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13565" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.additional-docs-directory"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.additional-docs-directory">quarkus.smallrye-openapi.additional-docs-directory</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-5" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>A list of local directories that should be scanned for yaml and/or json files to be included in the static model. Example: <code>META-INF/openapi/</code></p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12888">QUARKUS_SMALLRYE_OPENAPI_ADDITIONAL_DOCS_DIRECTORY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12888" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13566">QUARKUS_SMALLRYE_OPENAPI_ADDITIONAL_DOCS_DIRECTORY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13566" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of path</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.security-scheme"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.security-scheme">quarkus.smallrye-openapi.security-scheme</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-non-collapsible-desc-6" class="openblock description">
 <div class="content">
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12889">QUARKUS_SMALLRYE_OPENAPI_SECURITY_SCHEME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12889" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13567">QUARKUS_SMALLRYE_OPENAPI_SECURITY_SCHEME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13567" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div></div></td>
@@ -1095,480 +1105,564 @@ rather than <code>style.css</code>.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.security-scheme-name"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.security-scheme-name">quarkus.smallrye-openapi.security-scheme-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-7" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Add a Security Scheme name to the generated OpenAPI document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12890">QUARKUS_SMALLRYE_OPENAPI_SECURITY_SCHEME_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12890" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13568">QUARKUS_SMALLRYE_OPENAPI_SECURITY_SCHEME_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13568" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>SecurityScheme</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.security-scheme-description"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.security-scheme-description">quarkus.smallrye-openapi.security-scheme-description</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-8" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Add a description to the Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12891">QUARKUS_SMALLRYE_OPENAPI_SECURITY_SCHEME_DESCRIPTION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12891" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13569">QUARKUS_SMALLRYE_OPENAPI_SECURITY_SCHEME_DESCRIPTION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13569" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>Authentication</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.auto-add-security-requirement"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.auto-add-security-requirement">quarkus.smallrye-openapi.auto-add-security-requirement</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-9" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>This will automatically add the security requirement to all methods/classes that has a <code>RolesAllowed</code> annotation.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12892">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_SECURITY_REQUIREMENT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12892" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13570">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_SECURITY_REQUIREMENT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13570" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.auto-add-tags"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.auto-add-tags">quarkus.smallrye-openapi.auto-add-tags</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-10" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>This will automatically add tags to operations based on the Java class name.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12893">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_TAGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12893" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13571">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_TAGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13571" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.auto-add-server"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.auto-add-server">quarkus.smallrye-openapi.auto-add-server</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-11" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Setting it to <code>true</code> will automatically add a default server to the schema if none is provided, using the current running server host and port.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12894">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_SERVER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12894" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13572">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_SERVER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13572" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.auto-add-security"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.auto-add-security">quarkus.smallrye-openapi.auto-add-security</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-12" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>This will automatically add security based on the security extension included (if any).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12895">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_SECURITY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12895" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13573">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_SECURITY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13573" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.basic-security-scheme-value"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.basic-security-scheme-value">quarkus.smallrye-openapi.basic-security-scheme-value</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-13" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Add a scheme value to the Basic HTTP Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12896">QUARKUS_SMALLRYE_OPENAPI_BASIC_SECURITY_SCHEME_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12896" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13574">QUARKUS_SMALLRYE_OPENAPI_BASIC_SECURITY_SCHEME_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13574" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>basic</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.jwt-security-scheme-value"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.jwt-security-scheme-value">quarkus.smallrye-openapi.jwt-security-scheme-value</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-14" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Add a scheme value to the JWT Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12897">QUARKUS_SMALLRYE_OPENAPI_JWT_SECURITY_SCHEME_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12897" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13575">QUARKUS_SMALLRYE_OPENAPI_JWT_SECURITY_SCHEME_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13575" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>bearer</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.jwt-bearer-format"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.jwt-bearer-format">quarkus.smallrye-openapi.jwt-bearer-format</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-15" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Add a bearer format the JWT Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12898">QUARKUS_SMALLRYE_OPENAPI_JWT_BEARER_FORMAT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12898" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13576">QUARKUS_SMALLRYE_OPENAPI_JWT_BEARER_FORMAT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13576" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>JWT</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.oauth2-security-scheme-value"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.oauth2-security-scheme-value">quarkus.smallrye-openapi.oauth2-security-scheme-value</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-16" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Add a scheme value to the OAuth2 opaque token Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12899">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_SECURITY_SCHEME_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12899" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13577">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_SECURITY_SCHEME_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13577" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>bearer</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.oauth2-bearer-format"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.oauth2-bearer-format">quarkus.smallrye-openapi.oauth2-bearer-format</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-17" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Add a scheme value to OAuth2 opaque token Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12900">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_BEARER_FORMAT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12900" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13578">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_BEARER_FORMAT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13578" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>Opaque</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.oidc-open-id-connect-url"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.oidc-open-id-connect-url">quarkus.smallrye-openapi.oidc-open-id-connect-url</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-18" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Add a openIdConnectUrl value to the OIDC Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12901">QUARKUS_SMALLRYE_OPENAPI_OIDC_OPEN_ID_CONNECT_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12901" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13579">QUARKUS_SMALLRYE_OPENAPI_OIDC_OPEN_ID_CONNECT_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13579" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.oauth2-implicit-refresh-url"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.oauth2-implicit-refresh-url">quarkus.smallrye-openapi.oauth2-implicit-refresh-url</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-19" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Add a implicit flow refreshUrl value to the OAuth2 Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12902">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_IMPLICIT_REFRESH_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12902" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13580">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_IMPLICIT_REFRESH_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13580" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.oauth2-implicit-authorization-url"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.oauth2-implicit-authorization-url">quarkus.smallrye-openapi.oauth2-implicit-authorization-url</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-20" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Add an implicit flow authorizationUrl value to the OAuth2 Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12903">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_IMPLICIT_AUTHORIZATION_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12903" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13581">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_IMPLICIT_AUTHORIZATION_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13581" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.oauth2-implicit-token-url"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.oauth2-implicit-token-url">quarkus.smallrye-openapi.oauth2-implicit-token-url</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-21" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Add an implicit flow tokenUrl value to the OAuth2 Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12904">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_IMPLICIT_TOKEN_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12904" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13582">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_IMPLICIT_TOKEN_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13582" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.open-api-version"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.open-api-version">quarkus.smallrye-openapi.open-api-version</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-22" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Override the openapi version in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12905">QUARKUS_SMALLRYE_OPENAPI_OPEN_API_VERSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12905" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13583">QUARKUS_SMALLRYE_OPENAPI_OPEN_API_VERSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13583" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-title"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-title">quarkus.smallrye-openapi.info-title</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-23" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Set the title in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12906">QUARKUS_SMALLRYE_OPENAPI_INFO_TITLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12906" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13584">QUARKUS_SMALLRYE_OPENAPI_INFO_TITLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13584" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-version"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-version">quarkus.smallrye-openapi.info-version</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-24" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Set the version in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12907">QUARKUS_SMALLRYE_OPENAPI_INFO_VERSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12907" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13585">QUARKUS_SMALLRYE_OPENAPI_INFO_VERSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13585" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-description"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-description">quarkus.smallrye-openapi.info-description</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-25" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Set the description in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12908">QUARKUS_SMALLRYE_OPENAPI_INFO_DESCRIPTION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12908" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13586">QUARKUS_SMALLRYE_OPENAPI_INFO_DESCRIPTION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13586" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-terms-of-service"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-terms-of-service">quarkus.smallrye-openapi.info-terms-of-service</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-26" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Set the terms of the service in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12909">QUARKUS_SMALLRYE_OPENAPI_INFO_TERMS_OF_SERVICE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12909" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13587">QUARKUS_SMALLRYE_OPENAPI_INFO_TERMS_OF_SERVICE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13587" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-contact-email"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-contact-email">quarkus.smallrye-openapi.info-contact-email</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-27" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Set the contact email in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12910">QUARKUS_SMALLRYE_OPENAPI_INFO_CONTACT_EMAIL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12910" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13588">QUARKUS_SMALLRYE_OPENAPI_INFO_CONTACT_EMAIL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13588" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-contact-name"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-contact-name">quarkus.smallrye-openapi.info-contact-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-28" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Set the contact name in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12911">QUARKUS_SMALLRYE_OPENAPI_INFO_CONTACT_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12911" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13589">QUARKUS_SMALLRYE_OPENAPI_INFO_CONTACT_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13589" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-contact-url"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-contact-url">quarkus.smallrye-openapi.info-contact-url</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-29" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Set the contact url in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12912">QUARKUS_SMALLRYE_OPENAPI_INFO_CONTACT_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12912" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13590">QUARKUS_SMALLRYE_OPENAPI_INFO_CONTACT_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13590" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-license-name"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-license-name">quarkus.smallrye-openapi.info-license-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-30" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Set the license name in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12913">QUARKUS_SMALLRYE_OPENAPI_INFO_LICENSE_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12913" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13591">QUARKUS_SMALLRYE_OPENAPI_INFO_LICENSE_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13591" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-license-url"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.info-license-url">quarkus.smallrye-openapi.info-license-url</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-31" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Set the license url in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12914">QUARKUS_SMALLRYE_OPENAPI_INFO_LICENSE_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12914" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13592">QUARKUS_SMALLRYE_OPENAPI_INFO_LICENSE_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13592" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.operation-id-strategy"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.operation-id-strategy">quarkus.smallrye-openapi.operation-id-strategy</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-32" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Set the strategy to automatically create an operation Id</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12915">QUARKUS_SMALLRYE_OPENAPI_OPERATION_ID_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12915" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13593">QUARKUS_SMALLRYE_OPENAPI_OPERATION_ID_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13593" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><code>method</code>, <code>class-method</code>, <code>package-class-method</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.enable"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.enable">quarkus.smallrye-openapi.enable</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-33" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Enable the openapi endpoint. By default it&#8217;s enabled.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12916">QUARKUS_SMALLRYE_OPENAPI_ENABLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12916" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13594">QUARKUS_SMALLRYE_OPENAPI_ENABLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13594" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-smallrye-openapi_quarkus.smallrye-openapi.servers"></a><code><a href="#quarkus-smallrye-openapi_quarkus.smallrye-openapi.servers">quarkus.smallrye-openapi.servers</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-34" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Specify the list of global servers that provide connectivity information</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12917">QUARKUS_SMALLRYE_OPENAPI_SERVERS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12917" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13595">QUARKUS_SMALLRYE_OPENAPI_SERVERS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13595" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
@@ -1578,10 +1672,10 @@ rather than <code>style.css</code>.</p>
 </div>
 <div class="sect2">
 <h3 id="swagger-ui"><a class="anchor" href="#swagger-ui"></a>Swagger UI</h3>
-<div class="paragraph configuration-legend">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime <input type="search" id="config-search-1" placeholder="FILTER CONFIGURATION" disabled></p>
 </div>
-<table class="tableblock frame-all grid-all stretch configuration-reference searchable">
+<table class="tableblock frame-all grid-all stretch configuration-reference searchable configuration-reference-all-rows">
 <colgroup>
 <col style="width: 80%;">
 <col style="width: 10%;">
@@ -1593,874 +1687,1027 @@ rather than <code>style.css</code>.</p>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.path"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.path">quarkus.swagger-ui.path</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-35" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The path where Swagger UI is available.
 The value <code>/</code> is not allowed as it blocks the application from serving anything else. By default, this value will be resolved as a path relative to <code>${quarkus.http.non-application-root-path}</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12918">QUARKUS_SWAGGER_UI_PATH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12918" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13596">QUARKUS_SWAGGER_UI_PATH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13596" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>swagger-ui</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.always-include"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.always-include">quarkus.swagger-ui.always-include</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-36" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If this should be included every time. By default, this is only included when the application is running in dev mode.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12919">QUARKUS_SWAGGER_UI_ALWAYS_INCLUDE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12919" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13597">QUARKUS_SWAGGER_UI_ALWAYS_INCLUDE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13597" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.urls-primary-name"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.urls-primary-name">quarkus.swagger-ui.urls-primary-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-37" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If urls option is used, this will be the name of the default selection.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12920">QUARKUS_SWAGGER_UI_URLS_PRIMARY_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12920" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13598">QUARKUS_SWAGGER_UI_URLS_PRIMARY_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13598" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.title"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.title">quarkus.swagger-ui.title</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-38" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The html title for the page.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12921">QUARKUS_SWAGGER_UI_TITLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12921" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13599">QUARKUS_SWAGGER_UI_TITLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13599" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.theme"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.theme">quarkus.swagger-ui.theme</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-39" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Swagger UI theme to be used.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12922">QUARKUS_SWAGGER_UI_THEME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12922" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13600">QUARKUS_SWAGGER_UI_THEME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13600" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><code>original</code>, <code>feeling-blue</code>, <code>flattop</code>, <code>material</code>, <code>monokai</code>, <code>muted</code>, <code>newspaper</code>, <code>outline</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.footer"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.footer">quarkus.swagger-ui.footer</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-40" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>A footer for the html page. Nothing by default.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12923">QUARKUS_SWAGGER_UI_FOOTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12923" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13601">QUARKUS_SWAGGER_UI_FOOTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13601" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.deep-linking"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.deep-linking">quarkus.swagger-ui.deep-linking</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-41" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If set to true, enables deep linking for tags and operations.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12924">QUARKUS_SWAGGER_UI_DEEP_LINKING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12924" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13602">QUARKUS_SWAGGER_UI_DEEP_LINKING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13602" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.display-operation-id"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.display-operation-id">quarkus.swagger-ui.display-operation-id</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-42" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Controls the display of operationId in operations list. The default is false.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12925">QUARKUS_SWAGGER_UI_DISPLAY_OPERATION_ID</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12925" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13603">QUARKUS_SWAGGER_UI_DISPLAY_OPERATION_ID</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13603" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.default-models-expand-depth"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.default-models-expand-depth">quarkus.swagger-ui.default-models-expand-depth</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-43" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The default expansion depth for models (set to -1 completely hide the models).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12926">QUARKUS_SWAGGER_UI_DEFAULT_MODELS_EXPAND_DEPTH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12926" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13604">QUARKUS_SWAGGER_UI_DEFAULT_MODELS_EXPAND_DEPTH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13604" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.default-model-expand-depth"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.default-model-expand-depth">quarkus.swagger-ui.default-model-expand-depth</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-44" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The default expansion depth for the model on the model-example section.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12927">QUARKUS_SWAGGER_UI_DEFAULT_MODEL_EXPAND_DEPTH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12927" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13605">QUARKUS_SWAGGER_UI_DEFAULT_MODEL_EXPAND_DEPTH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13605" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.default-model-rendering"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.default-model-rendering">quarkus.swagger-ui.default-model-rendering</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-45" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Controls how the model is shown when the API is first rendered.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12928">QUARKUS_SWAGGER_UI_DEFAULT_MODEL_RENDERING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12928" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13606">QUARKUS_SWAGGER_UI_DEFAULT_MODEL_RENDERING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13606" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.display-request-duration"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.display-request-duration">quarkus.swagger-ui.display-request-duration</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-46" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Controls the display of the request duration (in milliseconds) for "Try it out" requests.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12929">QUARKUS_SWAGGER_UI_DISPLAY_REQUEST_DURATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12929" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13607">QUARKUS_SWAGGER_UI_DISPLAY_REQUEST_DURATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13607" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.doc-expansion"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.doc-expansion">quarkus.swagger-ui.doc-expansion</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-47" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Controls the default expansion setting for the operations and tags.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12930">QUARKUS_SWAGGER_UI_DOC_EXPANSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12930" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13608">QUARKUS_SWAGGER_UI_DOC_EXPANSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13608" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><code>list</code>, <code>full</code>, <code>none</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.filter"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.filter">quarkus.swagger-ui.filter</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-48" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If set, enables filtering. The top bar will show an edit box that you can use to filter the tagged operations that are shown. Can be Boolean to enable or disable, or a string, in which case filtering will be enabled using that string as the filter expression. Filtering is case-sensitive matching the filter expression anywhere inside the tag.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12931">QUARKUS_SWAGGER_UI_FILTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12931" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13609">QUARKUS_SWAGGER_UI_FILTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13609" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.max-displayed-tags"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.max-displayed-tags">quarkus.swagger-ui.max-displayed-tags</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-49" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If set, limits the number of tagged operations displayed to at most this many. The default is to show all operations.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12932">QUARKUS_SWAGGER_UI_MAX_DISPLAYED_TAGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12932" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13610">QUARKUS_SWAGGER_UI_MAX_DISPLAYED_TAGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13610" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.operations-sorter"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.operations-sorter">quarkus.swagger-ui.operations-sorter</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-50" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Apply a sort to the operation list of each API. It can be 'alpha' (sort by paths alphanumerically), 'method' (sort by HTTP method) or a function (see Array.prototype.sort() to know how sort function works). Default is the order returned by the server unchanged.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12933">QUARKUS_SWAGGER_UI_OPERATIONS_SORTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12933" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13611">QUARKUS_SWAGGER_UI_OPERATIONS_SORTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13611" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.show-extensions"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.show-extensions">quarkus.swagger-ui.show-extensions</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-51" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Controls the display of vendor extension (x-) fields and values for Operations, Parameters, and Schema.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12934">QUARKUS_SWAGGER_UI_SHOW_EXTENSIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12934" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13612">QUARKUS_SWAGGER_UI_SHOW_EXTENSIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13612" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.show-common-extensions"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.show-common-extensions">quarkus.swagger-ui.show-common-extensions</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-52" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Controls the display of extensions (pattern, maxLength, minLength, maximum, minimum) fields and values for Parameters.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12935">QUARKUS_SWAGGER_UI_SHOW_COMMON_EXTENSIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12935" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13613">QUARKUS_SWAGGER_UI_SHOW_COMMON_EXTENSIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13613" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.tags-sorter"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.tags-sorter">quarkus.swagger-ui.tags-sorter</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-53" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Apply a sort to the tag list of each API. It can be 'alpha' (sort by paths alphanumerically) or a function (see Array.prototype.sort() to learn how to write a sort function). Two tag name strings are passed to the sorter for each pass. Default is the order determined by Swagger UI.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12936">QUARKUS_SWAGGER_UI_TAGS_SORTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12936" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13614">QUARKUS_SWAGGER_UI_TAGS_SORTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13614" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.on-complete"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.on-complete">quarkus.swagger-ui.on-complete</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-54" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Provides a mechanism to be notified when Swagger UI has finished rendering a newly provided definition.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12937">QUARKUS_SWAGGER_UI_ON_COMPLETE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12937" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13615">QUARKUS_SWAGGER_UI_ON_COMPLETE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13615" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.syntax-highlight"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.syntax-highlight">quarkus.swagger-ui.syntax-highlight</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-55" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Set to <code>false</code> to deactivate syntax highlighting of payloads and cURL command. Can be otherwise an object with the <code>activate</code> and <code>theme</code> properties.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12938">QUARKUS_SWAGGER_UI_SYNTAX_HIGHLIGHT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12938" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13616">QUARKUS_SWAGGER_UI_SYNTAX_HIGHLIGHT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13616" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.oauth2-redirect-url"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.oauth2-redirect-url">quarkus.swagger-ui.oauth2-redirect-url</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-56" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>OAuth redirect URL.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12939">QUARKUS_SWAGGER_UI_OAUTH2_REDIRECT_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12939" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13617">QUARKUS_SWAGGER_UI_OAUTH2_REDIRECT_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13617" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.request-interceptor"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.request-interceptor">quarkus.swagger-ui.request-interceptor</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-57" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>MUST be a function. Function to intercept remote definition, "Try it out", and OAuth 2.0 requests. Accepts one argument requestInterceptor(request) and must return the modified request, or a Promise that resolves to the modified request.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12940">QUARKUS_SWAGGER_UI_REQUEST_INTERCEPTOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12940" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13618">QUARKUS_SWAGGER_UI_REQUEST_INTERCEPTOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13618" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.request-curl-options"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.request-curl-options">quarkus.swagger-ui.request-curl-options</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-58" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If set, MUST be an array of command line options available to the curl command. This can be set on the mutated request in the requestInterceptor function.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12941">QUARKUS_SWAGGER_UI_REQUEST_CURL_OPTIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12941" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13619">QUARKUS_SWAGGER_UI_REQUEST_CURL_OPTIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13619" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.response-interceptor"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.response-interceptor">quarkus.swagger-ui.response-interceptor</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-59" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>MUST be a function. Function to intercept remote definition, "Try it out", and OAuth 2.0 responses. Accepts one argument responseInterceptor(response) and must return the modified response, or a Promise that resolves to the modified response.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12942">QUARKUS_SWAGGER_UI_RESPONSE_INTERCEPTOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12942" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13620">QUARKUS_SWAGGER_UI_RESPONSE_INTERCEPTOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13620" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.show-mutated-request"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.show-mutated-request">quarkus.swagger-ui.show-mutated-request</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-60" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If set to true, uses the mutated request returned from a requestInterceptor to produce the curl command in the UI, otherwise the request before the requestInterceptor was applied is used.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12943">QUARKUS_SWAGGER_UI_SHOW_MUTATED_REQUEST</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12943" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13621">QUARKUS_SWAGGER_UI_SHOW_MUTATED_REQUEST</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13621" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.supported-submit-methods"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.supported-submit-methods">quarkus.swagger-ui.supported-submit-methods</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-61" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>List of HTTP methods that have the "Try it out" feature enabled. An empty array disables "Try it out" for all operations. This does not filter the operations from the display.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12944">QUARKUS_SWAGGER_UI_SUPPORTED_SUBMIT_METHODS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12944" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13622">QUARKUS_SWAGGER_UI_SUPPORTED_SUBMIT_METHODS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13622" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of HttpMethod</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.validator-url"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.validator-url">quarkus.swagger-ui.validator-url</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-62" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>By default, Swagger UI attempts to validate specs against swagger.io&#8217;s online validator. You can use this parameter to set a different validator URL, for example for locally deployed validators (Validator Badge). Setting it to either none, 127.0.0.1 or localhost will disable validation.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12945">QUARKUS_SWAGGER_UI_VALIDATOR_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12945" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13623">QUARKUS_SWAGGER_UI_VALIDATOR_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13623" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.with-credentials"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.with-credentials">quarkus.swagger-ui.with-credentials</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-63" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If set to true, enables passing credentials, as defined in the Fetch standard, in CORS requests that are sent by the browser.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12946">QUARKUS_SWAGGER_UI_WITH_CREDENTIALS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12946" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13624">QUARKUS_SWAGGER_UI_WITH_CREDENTIALS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13624" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.model-property-macro"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.model-property-macro">quarkus.swagger-ui.model-property-macro</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-64" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Function to set default values to each property in model. Accepts one argument modelPropertyMacro(property), property is immutable</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12947">QUARKUS_SWAGGER_UI_MODEL_PROPERTY_MACRO</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12947" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13625">QUARKUS_SWAGGER_UI_MODEL_PROPERTY_MACRO</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13625" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.parameter-macro"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.parameter-macro">quarkus.swagger-ui.parameter-macro</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-65" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Function to set default value to parameters. Accepts two arguments parameterMacro(operation, parameter). Operation and parameter are objects passed for context, both remain immutable</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12948">QUARKUS_SWAGGER_UI_PARAMETER_MACRO</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12948" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13626">QUARKUS_SWAGGER_UI_PARAMETER_MACRO</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13626" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.persist-authorization"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.persist-authorization">quarkus.swagger-ui.persist-authorization</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-66" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If set to true, it persists authorization data and it would not be lost on browser close/refresh</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12949">QUARKUS_SWAGGER_UI_PERSIST_AUTHORIZATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12949" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13627">QUARKUS_SWAGGER_UI_PERSIST_AUTHORIZATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13627" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.layout"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.layout">quarkus.swagger-ui.layout</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-67" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The name of a component available via the plugin system to use as the top-level layout for Swagger UI.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12950">QUARKUS_SWAGGER_UI_LAYOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12950" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13628">QUARKUS_SWAGGER_UI_LAYOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13628" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.plugins"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.plugins">quarkus.swagger-ui.plugins</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-68" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>A list of plugin functions to use in Swagger UI.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12951">QUARKUS_SWAGGER_UI_PLUGINS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12951" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13629">QUARKUS_SWAGGER_UI_PLUGINS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13629" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.presets"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.presets">quarkus.swagger-ui.presets</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-69" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>A list of presets to use in Swagger UI.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12952">QUARKUS_SWAGGER_UI_PRESETS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12952" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13630">QUARKUS_SWAGGER_UI_PRESETS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13630" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.oauth-client-id"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.oauth-client-id">quarkus.swagger-ui.oauth-client-id</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-70" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>OAuth default clientId - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12953">QUARKUS_SWAGGER_UI_OAUTH_CLIENT_ID</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12953" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13631">QUARKUS_SWAGGER_UI_OAUTH_CLIENT_ID</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13631" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.oauth-client-secret"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.oauth-client-secret">quarkus.swagger-ui.oauth-client-secret</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-71" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>OAuth default clientSecret - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12954">QUARKUS_SWAGGER_UI_OAUTH_CLIENT_SECRET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12954" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13632">QUARKUS_SWAGGER_UI_OAUTH_CLIENT_SECRET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13632" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.oauth-realm"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.oauth-realm">quarkus.swagger-ui.oauth-realm</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-72" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>OAuth1 Realm query parameter added to authorizationUrl and tokenUrl - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12955">QUARKUS_SWAGGER_UI_OAUTH_REALM</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12955" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13633">QUARKUS_SWAGGER_UI_OAUTH_REALM</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13633" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.oauth-app-name"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.oauth-app-name">quarkus.swagger-ui.oauth-app-name</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-73" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>OAuth application name, displayed in authorization popup - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12956">QUARKUS_SWAGGER_UI_OAUTH_APP_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12956" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13634">QUARKUS_SWAGGER_UI_OAUTH_APP_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13634" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.oauth-scope-separator"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.oauth-scope-separator">quarkus.swagger-ui.oauth-scope-separator</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-74" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>OAuth scope separator for passing scopes - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12957">QUARKUS_SWAGGER_UI_OAUTH_SCOPE_SEPARATOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12957" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13635">QUARKUS_SWAGGER_UI_OAUTH_SCOPE_SEPARATOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13635" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.oauth-scopes"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.oauth-scopes">quarkus.swagger-ui.oauth-scopes</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-75" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>OAuth Scopes, separated using the oauthScopeSeparator - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12958">QUARKUS_SWAGGER_UI_OAUTH_SCOPES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12958" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13636">QUARKUS_SWAGGER_UI_OAUTH_SCOPES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13636" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.oauth-additional-query-string-params"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.oauth-additional-query-string-params">quarkus.swagger-ui.oauth-additional-query-string-params</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-76" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>OAuth additional query parameters added to authorizationUrl and tokenUrl - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12959">QUARKUS_SWAGGER_UI_OAUTH_ADDITIONAL_QUERY_STRING_PARAMS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12959" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13637">QUARKUS_SWAGGER_UI_OAUTH_ADDITIONAL_QUERY_STRING_PARAMS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13637" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.oauth-use-basic-authentication-with-access-code-grant"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.oauth-use-basic-authentication-with-access-code-grant">quarkus.swagger-ui.oauth-use-basic-authentication-with-access-code-grant</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-77" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>OAuth only activated for the accessCode flow. During the authorization_code request to the tokenUrl, pass the Client Password using the HTTP Basic Authentication scheme - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12960">QUARKUS_SWAGGER_UI_OAUTH_USE_BASIC_AUTHENTICATION_WITH_ACCESS_CODE_GRANT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12960" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13638">QUARKUS_SWAGGER_UI_OAUTH_USE_BASIC_AUTHENTICATION_WITH_ACCESS_CODE_GRANT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13638" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.oauth-use-pkce-with-authorization-code-grant"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.oauth-use-pkce-with-authorization-code-grant">quarkus.swagger-ui.oauth-use-pkce-with-authorization-code-grant</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-78" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>OAuth only applies to authorization code flows. Proof Key for Code Exchange brings enhanced security for OAuth public clients - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12961">QUARKUS_SWAGGER_UI_OAUTH_USE_PKCE_WITH_AUTHORIZATION_CODE_GRANT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12961" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13639">QUARKUS_SWAGGER_UI_OAUTH_USE_PKCE_WITH_AUTHORIZATION_CODE_GRANT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13639" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.preauthorize-basic-auth-definition-key"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.preauthorize-basic-auth-definition-key">quarkus.swagger-ui.preauthorize-basic-auth-definition-key</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-79" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Pre-authorize Basic Auth, programmatically set DefinitionKey for a Basic authorization scheme - Used in the preauthorizeBasic method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12962">QUARKUS_SWAGGER_UI_PREAUTHORIZE_BASIC_AUTH_DEFINITION_KEY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12962" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13640">QUARKUS_SWAGGER_UI_PREAUTHORIZE_BASIC_AUTH_DEFINITION_KEY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13640" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.preauthorize-basic-username"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.preauthorize-basic-username">quarkus.swagger-ui.preauthorize-basic-username</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-80" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Pre-authorize Basic Auth, programmatically set Username for a Basic authorization scheme - Used in the preauthorizeBasic method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12963">QUARKUS_SWAGGER_UI_PREAUTHORIZE_BASIC_USERNAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12963" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13641">QUARKUS_SWAGGER_UI_PREAUTHORIZE_BASIC_USERNAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13641" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.preauthorize-basic-password"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.preauthorize-basic-password">quarkus.swagger-ui.preauthorize-basic-password</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-81" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Pre-authorize Basic Auth, programmatically set Password for a Basic authorization scheme - Used in the preauthorizeBasic method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12964">QUARKUS_SWAGGER_UI_PREAUTHORIZE_BASIC_PASSWORD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12964" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13642">QUARKUS_SWAGGER_UI_PREAUTHORIZE_BASIC_PASSWORD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13642" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.preauthorize-api-key-auth-definition-key"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.preauthorize-api-key-auth-definition-key">quarkus.swagger-ui.preauthorize-api-key-auth-definition-key</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-82" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Pre-authorize ApiKey Auth, programmatically set DefinitionKey for an API key or Bearer authorization scheme - Used in the preauthorizeApiKey method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12965">QUARKUS_SWAGGER_UI_PREAUTHORIZE_API_KEY_AUTH_DEFINITION_KEY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12965" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13643">QUARKUS_SWAGGER_UI_PREAUTHORIZE_API_KEY_AUTH_DEFINITION_KEY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13643" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.preauthorize-api-key-api-key-value"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.preauthorize-api-key-api-key-value">quarkus.swagger-ui.preauthorize-api-key-api-key-value</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-83" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>Pre-authorize ApiKey Auth, programmatically set ApiKeyValue for an API key or Bearer authorization scheme - Used in the preauthorizeApiKey method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12966">QUARKUS_SWAGGER_UI_PREAUTHORIZE_API_KEY_API_KEY_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12966" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13644">QUARKUS_SWAGGER_UI_PREAUTHORIZE_API_KEY_API_KEY_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13644" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-swaggerui_quarkus.swagger-ui.enable"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.enable">quarkus.swagger-ui.enable</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-84" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>If Swagger UI is included, it should be enabled/disabled. By default, Swagger UI is enabled if it is included (see <code>always-include</code>).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12967">QUARKUS_SWAGGER_UI_ENABLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12967" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13645">QUARKUS_SWAGGER_UI_ENABLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13645" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
-<tr>
+<tr class="row-collapsible row-collapsed row-with-desc row-hidden odd">
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-swaggerui_quarkus.swagger-ui.urls-urls"></a><code><a href="#quarkus-swaggerui_quarkus.swagger-ui.urls-urls">quarkus.swagger-ui.urls</a></code></p>
 </div>
-<div class="openblock description">
+<div id="conf-collapsible-desc-85" class="openblock description description-collapsed">
 <div class="content">
 <div class="paragraph">
 <p>The urls that will be included as options. By default, the OpenAPI path will be used. Here you can override that and supply multiple urls that will appear in the TopBar plugin.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-12968">QUARKUS_SWAGGER_UI_URLS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-12968" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-13646">QUARKUS_SWAGGER_UI_URLS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13646" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
+</div>
+<div class="paragraph description-decoration">
+<p><i class="fa fa-chevron-down"></i><span>Show more</span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>Map&lt;String,String&gt;</code></p></td>
 <td class="tableblock halign-left valign-middle"></td>
@@ -2471,8 +2718,34 @@ The value <code>/</code> is not allowed as it blocks the application from servin
 </div>
 </div>
     </div>
+    <div class="grid__item width-4-12 width-12-12-m tocwrapper">
+      <div class="hide-mobile toc"><ul class="sectlevel1">
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#creating-the-maven-project">Creating the Maven project</a></li>
+<li><a href="#expose-a-rest-resource">Expose a REST Resource</a></li>
+<li><a href="#expose-openapi-specifications">Expose OpenAPI Specifications</a></li>
+<li><a href="#providing-application-level-openapi-annotations">Providing Application Level OpenAPI Annotations</a></li>
+<li><a href="#loading-openapi-schema-from-static-files">Loading OpenAPI Schema From Static Files</a></li>
+<li><a href="#changing-the-openapi-version">Changing the OpenAPI version</a></li>
+<li><a href="#auto-generation-of-operation-id">Auto-generation of Operation Id</a></li>
+<li><a href="#dev-mode">Use Swagger UI for development</a>
+<ul class="sectlevel2">
+<li><a href="#styling">Styling</a></li>
+<li><a href="#cross-origin-resource-sharing">Cross Origin Resource Sharing</a></li>
+</ul>
+</li>
+<li><a href="#configuration-reference">Configuration Reference</a>
+<ul class="sectlevel2">
+<li><a href="#openapi">OpenAPI</a></li>
+<li><a href="#swagger-ui">Swagger UI</a></li>
+</ul>
+</li>
+</ul></div>
+    </div>
   </div>
-</div>
+  </div>
 
   </div>
 
@@ -2520,6 +2793,14 @@ The value <code>/</code> is not allowed as it blocks the application from servin
           
           
             <li><a href="/security" target="_blank">Security&nbsp;policy</a></li>
+          
+          
+          
+            <li><a href="/usage" target="_blank">Usage</a></li>
+          
+          
+          
+            <li><a href="/brand" target="_blank">Brand</a></li>
           
           
         </ul>
@@ -2600,6 +2881,10 @@ The value <code>/</code> is not allowed as it blocks the application from servin
           
           
           
+            <li><a href="https://pt.quarkus.io/" target="_blank">Português(Brasileiro)</a></li>
+          
+          
+          
             <li><a href="https://es.quarkus.io/" target="_blank">Español</a></li>
           
           
@@ -2662,12 +2947,12 @@ The value <code>/</code> is not allowed as it blocks the application from servin
   <script type="text/javascript" src="/assets/javascript/scroll-down.js"></script>
   <script src="/assets/javascript/satellite.js" type="text/javascript"></script>
   <script src="/guides/javascript/config.js" type="text/javascript"></script>
-  <script src="/assets/javascript/search-filter.js" type="text/javascript"></script>
   <script src="/assets/javascript/guides-version-dropdown.js" type="text/javascript"></script>
   <script src="/assets/javascript/back-to-top.js" type="text/javascript"></script>
   <script src="/assets/javascript/clipboard.min.js" type="text/javascript"></script>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
+  <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
 </body>
 
 </html>
