@@ -1,11 +1,10 @@
 //usr/bin/env jbang "$0" "$@" ; exit $?
-//JAVA 21
 //JAVAC_OPTIONS -parameters
 //DEPS io.quarkus.platform:quarkus-bom:3.12.1@pom
 //DEPS io.quarkus:quarkus-picocli
 //DEPS io.quarkus:quarkus-smallrye-graphql-client
 //DEPS io.quarkus:quarkus-qute
-//DEPS org.commonmark:commonmark:0.22.0
+//DEPS org.commonmark:commonmark:0.23.0
 //DEPS io.quarkus:quarkus-config-yaml
 //FILES templates/=templates/*
 //FILES application.yaml
@@ -24,8 +23,34 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.atomic.AtomicReference;
 
+import org.commonmark.node.AbstractVisitor;
+import org.commonmark.node.BlockQuote;
+import org.commonmark.node.BulletList;
+import org.commonmark.node.Code;
+import org.commonmark.node.CustomBlock;
+import org.commonmark.node.CustomNode;
+import org.commonmark.node.Document;
+import org.commonmark.node.Emphasis;
+import org.commonmark.node.FencedCodeBlock;
+import org.commonmark.node.HardLineBreak;
+import org.commonmark.node.Heading;
+import org.commonmark.node.HtmlBlock;
+import org.commonmark.node.HtmlInline;
+import org.commonmark.node.Image;
+import org.commonmark.node.IndentedCodeBlock;
+import org.commonmark.node.Link;
+import org.commonmark.node.LinkReferenceDefinition;
+import org.commonmark.node.ListItem;
 import org.commonmark.node.Node;
+import org.commonmark.node.OrderedList;
+import org.commonmark.node.Paragraph;
+import org.commonmark.node.SoftLineBreak;
+import org.commonmark.node.StrongEmphasis;
+import org.commonmark.node.Text;
+import org.commonmark.node.ThematicBreak;
+import org.commonmark.node.Visitor;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.HtmlRenderer;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
@@ -118,10 +143,10 @@ public class main implements Callable<Integer> {
                    }
                 """, variables);
 
-
-        System.out.println("Response: " + response);        
-        System.out.println("Errors: " + response.getErrors());
-        System.out.println("Data:\n" + response.getData());        
+        if (response.hasError()) {
+            System.out.println("Errors:\n" + response.getErrors());
+        }
+        System.out.println("Data:\n" + response.getData());
         JsonArray array = response.getData().getJsonObject("organization").getJsonObject("projectsV2")
                 .getJsonArray("nodes");
         for (JsonValue value : array) {
@@ -164,7 +189,7 @@ public class main implements Callable<Integer> {
             List<Update> statusUpdates) {
 
         public enum Status {
-            INACTIVE,
+            PAUSED,
             ON_TRACK,
             AT_RISK,
             OFF_TRACK,
@@ -198,6 +223,112 @@ public class main implements Callable<Integer> {
             return renderer.render(document);
         }
 
+        private static boolean isMetadata(String singular, String plural, String line) {
+            var l = line.toLowerCase().trim();
+            return l.startsWith("* " + singular.toLowerCase() + ":")
+                    || l.startsWith("* " + plural.toLowerCase() + ":");
+        }
+
+        private static boolean isMetadata(String singular, String line) {
+            var l = line.toLowerCase().trim();
+            return l.startsWith("* " + singular.toLowerCase() + ":");
+        }
+
+        public String getDeliverable() {
+            String line = longDescription().lines()
+                    .filter(s -> isMetadata("Deliverable", "Deliverables", s))
+                    .findFirst()
+                    .orElse(null);
+
+            if (line != null) {
+                var content = line.substring(line.indexOf(":") + 1).trim();
+                Parser parser = Parser.builder().build();
+                Node document = parser.parse(content);
+                HtmlRenderer renderer = HtmlRenderer.builder()
+                        .omitSingleParagraphP(true)
+                        .escapeHtml(false)
+                        .sanitizeUrls(true)
+                        .build();
+                return renderer.render(document);
+            }
+
+            return null;
+        }
+
+        public String getPointOfContact() {
+            String line = longDescription().lines()
+                    .filter(s -> isMetadata("Point of contact", "Points of contact", s))
+                    .findFirst()
+                    .orElse(null);
+
+            return extractLinkFromLine(line);
+        }
+
+        public String getProposal() {
+            String line = longDescription().lines()
+                    .filter(s -> isMetadata("Proposal", s))
+                    .findFirst()
+                    .orElse(null);
+
+            return extractLinkFromLine(line);
+        }
+
+        public String getBackportsGithubProject() {
+            String line = longDescription().lines()
+                    .filter(s -> isMetadata("Backports", s))
+                    .findFirst()
+                    .orElse(null);
+
+            return extractLinkFromLine(line);
+        }
+
+        private String extractLinkFromLine(String line) {
+            if (line != null) {
+                var content = line.substring(line.indexOf(":") + 1).trim();
+                Parser parser = Parser.builder().build();
+                Node document = parser.parse(content);
+                HtmlRenderer renderer = HtmlRenderer.builder()
+                        .omitSingleParagraphP(true)
+                        .build();
+                return renderer.render(document);
+            }
+
+            return null;
+        }
+
+        public String getDiscussionLink() {
+            String line = longDescription().lines()
+                    .filter(s -> isMetadata("Discussion", s))
+                    .findFirst()
+                    .orElse(null);
+
+            if (line != null) {
+                var content = line.substring(line.indexOf(":") + 1).trim();
+                Parser parser = Parser.builder().build();
+                Node document = parser.parse(content);
+                AtomicReference<String> dest = new AtomicReference<>();
+                document.accept(new AbstractVisitor() {
+
+                    @Override
+                    public void visit(Link link) {
+                        dest.compareAndSet(null, link.getDestination());
+                    }
+
+                });
+
+                if (dest.get() != null) {
+                    return dest.get();
+                } else {
+                    HtmlRenderer renderer = HtmlRenderer.builder()
+                            .omitSingleParagraphP(true)
+                            .build();
+                    return renderer.render(document);
+                }
+            }
+
+            return null;
+        }
+
         public String getIndentedReadme() {
             String readme = getReadme();
             return readme.replaceAll("\n", "\n        ").trim();
@@ -215,7 +346,7 @@ public class main implements Callable<Integer> {
 
         public Status getStatus() {
             if (statusUpdates.isEmpty()) {
-                return Status.INACTIVE;
+                return Status.PAUSED;
             }
 
             statusUpdates.sort(Comparator.comparing(Update::updateAt).reversed());
@@ -228,12 +359,12 @@ public class main implements Callable<Integer> {
 
             // Is it inactive?
             if (update.status().equals("INACTIVE")) {
-                return Status.INACTIVE;
+                return Status.PAUSED;
             }
 
             // Is it staled?
             // Months is an unsupported unit, so using days
-            if (update.updateAt().isBefore(Instant.now().minus(60, ChronoUnit.DAYS))) {
+            if (! isLTS()  && update.updateAt().isBefore(Instant.now().minus(60, ChronoUnit.DAYS))) {
                 return Status.STALED;
             }
 
@@ -249,14 +380,15 @@ public class main implements Callable<Integer> {
                 return Status.OFF_TRACK;
             }
 
+
             Log.warn("Unable to determine status of working group " + url + ", using INACTIVE as default");
-            return Status.INACTIVE;
+            return Status.OFF_TRACK;
 
         }
 
         public String getBadgeClass() {
             return switch (getStatus()) {
-                case INACTIVE -> "text-bg-secondary";
+                case PAUSED -> "text-bg-secondary";
                 case ON_TRACK -> "text-bg-success";
                 case AT_RISK, STALED -> "text-bg-warning";
                 case OFF_TRACK -> "text-bg-danger";
@@ -268,10 +400,23 @@ public class main implements Callable<Integer> {
             return getStatus().name().toLowerCase().replace("_", " ");
         }
 
+        public boolean isLTS() {
+            return title.trim().toLowerCase().endsWith("lts");
+        }
+
     }
 
     record Update(String id, String body, String bodyHtml, String status, Instant updateAt) {
 
+        public String getUpdateDate() {
+            LocalDateTime dateTime = LocalDateTime.ofInstant(updateAt, ZoneId.of("UTC"));
+
+            // Define the formatter
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+            // Format the LocalDateTime
+            return dateTime.format(formatter);
+        }
     }
 
 }

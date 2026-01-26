@@ -12,7 +12,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="
-  connect-src 'self' https://dpm.demdex.net https://adobedc.demdex.net https://route-default-test-mscherer-matamo.apps.ospo-osci.z3b1.p1.openshiftapps.com/ https://search.quarkus.io https://smetrics.redhat.com; 
+  connect-src 'self' https://dpm.demdex.net https://adobedc.demdex.net https://analytics.ossupstream.org/ https://search.quarkus.io https://smetrics.redhat.com https://ajax.googleapis.com; 
   script-src 'self' 'unsafe-inline' 'unsafe-eval'
       
       https://assets.adobedtm.com
@@ -27,17 +27,18 @@
       http://www.googleadservices.com
       https://googleads.g.doubleclick.net
       https://giscus.app
-      https://route-default-test-mscherer-matamo.apps.ospo-osci.z3b1.p1.openshiftapps.com/
+      https://analytics.ossupstream.org/
       https://app.mailjet.com;
 
   style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; 
   img-src 'self' * data:; 
   media-src 'self'; 
-  frame-src https://redhat.demdex.net https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; 
+  frame-src https://redhat.demdex.net https://www.youtube.com https://player.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; 
   base-uri 'none'; 
   object-src 'none'; 
   form-action 'none'; 
   font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -97,27 +98,39 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
+        <span href="#">Why<i class="fas fa-chevron-down firsti"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
-          <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
-          <li><a href="/continuum" class="">VERSATILITY</a></li>
           <li><a href="/developer-joy" class="">DEVELOPER JOY</a></li>
+          <li><a href="/performance" class="">PERFORMANCE</a></li>
           <li><a href="/kubernetes-native" class="">KUBERNETES NATIVE</a></li>
           <li><a href="/standards" class="">STANDARDS</a></li>
+          <li><a href="/versatility" class="">VERSATILITY</a></li>
+          <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
+          <li><a href="/spring" class="">USING SPRING?</a></li>
+          <li class="tertiarydropdown">
+            <span href="#">AI<i class="fas fa-chevron-down"></i></span>
+            <ul class="tertiarymenu">
+              <li><a href="/ai" class="">AI OVERVIEW</a></li>
+              <li><a href="/java-for-ai" class="">JAVA FOR AI</a></li>
+              <li><a href="/quarkus-for-ai" class="">WHY QUARKUS FOR AI</a></li>
+              <li><a href="/ai-blueprints" class="">AI BLUEPRINTS</a></li>
+            </ul>
+          </li>
         </ul>
       </li>
       <li class="dropdown">
-        <span href="/learn/">Learn<i class="fas fa-chevron-down"></i></span>
+        <span href="#">Learn<i class="fas fa-chevron-down firsti"></i></span>
         <ul class="submenu">
           <li><a href="/get-started" class="">GET STARTED</a></li>
           <li><a href="/guides" class="active">DOCUMENTATION</a></li>
+          <li><a href="/userstories/" class="">USER STORIES</a></li>  
           <li><a href="/qtips" class="">"Q" TIP VIDEOS</a></li>          
           <li><a href="/books" class="">BOOKS</a></li>
           </ul>
       </li>
       <li class="dropdown">
-        <span href="https://quarkus.io/extensions/">Extensions<i class="fas fa-chevron-down"></i></span>
+        <span href="#">Extensions<i class="fas fa-chevron-down firsti"></i></span>
         <ul class="submenu">
           <!-- Note that quarkus.io is hardcoded here, because it is the only url which supports extensions -->
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
@@ -127,7 +140,7 @@
         </ul>
       </li>
       <li class="dropdown">
-        <span href="/community/">Community<i class="fas fa-chevron-down"></i></span>
+        <span href="#">Community<i class="fas fa-chevron-down firsti"></i></span>
         <ul class="submenu">
           <li><a href="/support/" class="">SUPPORT</a></li>
           <li><a href="/blog" class="">BLOG</a></li>
@@ -137,6 +150,7 @@
           <li><a href="/events" class="">EVENTS</a></li>
           <li><a href="/newsletter" class="">NEWSLETTER</a></li>
           <li><a href="https://github.com/orgs/quarkusio/projects/13/views/1" class="">ROADMAP</a></li>
+          <li><a href="/benefactors" class="">BENEFACTORS</a></li>
           </ul>
       </li>
       <li>
@@ -187,7 +201,15 @@
         
         
         
-        <option value="latest" >3.16.2 - Latest</option>
+        <option value="latest" >3.30.8 - Latest</option>
+        
+        
+        
+        <option value="3.27" >3.27</option>
+        
+        
+        
+        <option value="3.20" >3.20</option>
         
         
         
@@ -196,18 +218,6 @@
         
         
         <option value="3.8" >3.8</option>
-        
-        
-        
-        <option value="3.2" >3.2</option>
-        
-        
-        
-        <option value="2.16" >2.16</option>
-        
-        
-        
-        <option value="2.13" >2.13</option>
         </select>
     </div>
   </div>
@@ -310,7 +320,7 @@ cd openapi-swaggerui-quickstart</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:3.15.1:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:3.15.7:create \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=openapi-swaggerui-quickstart \
     -Dextensions='rest-jackson' \
@@ -468,7 +478,7 @@ public class FruitResourceTest {
 <h2 id="expose-openapi-specifications"><a class="anchor" href="#expose-openapi-specifications"></a>Expose OpenAPI Specifications</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Quarkus provides the <a href="https://github.com/smallrye/smallrye-open-api/">Smallrye OpenAPI</a> extension compliant with the
+<p>Quarkus provides the <a href="https://github.com/smallrye/smallrye-open-api/">SmallRye OpenAPI</a> extension compliant with the
 <a href="https://github.com/eclipse/microprofile-open-api/">MicroProfile OpenAPI</a>
 specification in order to generate your API
 <a href="https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.0.md">OpenAPI v3 specification</a>.</p>
@@ -1083,6 +1093,13 @@ rather than <code>style.css</code>.</p>
 <h2 id="configuration-reference"><a class="anchor" href="#configuration-reference"></a>Configuration Reference</h2>
 <div class="sectionbody">
 <div class="sect2">
+<h3 id="microprofile-openapi"><a class="anchor" href="#microprofile-openapi"></a>MicroProfile OpenAPI</h3>
+<div class="paragraph">
+<p>MicroProfile OpenAPI Core configuration is defined in <a href="https://download.eclipse.org/microprofile/microprofile-open-api-3.1.1/microprofile-openapi-spec-3.1.1.html#_core_configurations">MicroProfile OpenAPI Specification</a>.
+More information about the MicroProfile OpenAPI annotations can be found in the <a href="https://download.eclipse.org/microprofile/microprofile-open-api-3.1.1/apidocs/org/eclipse/microprofile/openapi/annotations/package-summary.html">MicroProfile OpenAPI API Javadoc</a>.</p>
+</div>
+</div>
+<div class="sect2">
 <h3 id="openapi"><a class="anchor" href="#openapi"></a>OpenAPI</h3>
 <div class="paragraph">
 <p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime <input type="search" id="config-search-0" placeholder="FILTER CONFIGURATION" disabled></p>
@@ -1109,7 +1126,7 @@ rather than <code>style.css</code>.</p>
 <p>The path at which to register the OpenAPI Servlet.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30028">QUARKUS_SMALLRYE_OPENAPI_PATH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30028" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30695">QUARKUS_SMALLRYE_OPENAPI_PATH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30695" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1129,7 +1146,7 @@ rather than <code>style.css</code>.</p>
 <p>If set, the generated OpenAPI schema documents will be stored here on build. Both openapi.json and openapi.yaml will be stored here if this is set.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30029">QUARKUS_SMALLRYE_OPENAPI_STORE_SCHEMA_DIRECTORY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30029" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30696">QUARKUS_SMALLRYE_OPENAPI_STORE_SCHEMA_DIRECTORY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30696" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1149,7 +1166,7 @@ rather than <code>style.css</code>.</p>
 <p>Do not run the filter only at startup, but every time the document is requested (dynamic).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30030">QUARKUS_SMALLRYE_OPENAPI_ALWAYS_RUN_FILTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30030" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30697">QUARKUS_SMALLRYE_OPENAPI_ALWAYS_RUN_FILTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30697" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1169,7 +1186,7 @@ rather than <code>style.css</code>.</p>
 <p>Do not include the provided static openapi document (eg. META-INF/openapi.yaml)</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30031">QUARKUS_SMALLRYE_OPENAPI_IGNORE_STATIC_DOCUMENT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30031" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30698">QUARKUS_SMALLRYE_OPENAPI_IGNORE_STATIC_DOCUMENT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30698" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1189,7 +1206,7 @@ rather than <code>style.css</code>.</p>
 <p>If management interface is turned on the openapi schema document will be published under the management interface. This allows you to exclude OpenAPI from management by setting the value to false</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30032">QUARKUS_SMALLRYE_OPENAPI_MANAGEMENT_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30032" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30699">QUARKUS_SMALLRYE_OPENAPI_MANAGEMENT_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30699" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1209,7 +1226,7 @@ rather than <code>style.css</code>.</p>
 <p>A list of local directories that should be scanned for yaml and/or json files to be included in the static model. Example: <code>META-INF/openapi/</code></p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30033">QUARKUS_SMALLRYE_OPENAPI_ADDITIONAL_DOCS_DIRECTORY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30033" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30700">QUARKUS_SMALLRYE_OPENAPI_ADDITIONAL_DOCS_DIRECTORY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30700" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1229,7 +1246,7 @@ rather than <code>style.css</code>.</p>
 <p>Add a certain SecurityScheme with config</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30034">QUARKUS_SMALLRYE_OPENAPI_SECURITY_SCHEME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30034" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30701">QUARKUS_SMALLRYE_OPENAPI_SECURITY_SCHEME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30701" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1251,7 +1268,7 @@ rather than <code>style.css</code>.</p>
 <p>Add a Security Scheme name to the generated OpenAPI document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30035">QUARKUS_SMALLRYE_OPENAPI_SECURITY_SCHEME_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30035" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30702">QUARKUS_SMALLRYE_OPENAPI_SECURITY_SCHEME_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30702" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1271,7 +1288,7 @@ rather than <code>style.css</code>.</p>
 <p>Add a description to the Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30036">QUARKUS_SMALLRYE_OPENAPI_SECURITY_SCHEME_DESCRIPTION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30036" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30703">QUARKUS_SMALLRYE_OPENAPI_SECURITY_SCHEME_DESCRIPTION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30703" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1291,7 +1308,7 @@ rather than <code>style.css</code>.</p>
 <p>Add one or more extensions to the security scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30037">QUARKUS_SMALLRYE_OPENAPI_SECURITY_SCHEME_EXTENSIONS__EXTENSION_NAME_</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30037" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30704">QUARKUS_SMALLRYE_OPENAPI_SECURITY_SCHEME_EXTENSIONS__EXTENSION_NAME_</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30704" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1311,7 +1328,7 @@ rather than <code>style.css</code>.</p>
 <p>This will automatically add the security requirement to all methods/classes that has a <code>RolesAllowed</code> annotation.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30038">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_SECURITY_REQUIREMENT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30038" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30705">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_SECURITY_REQUIREMENT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30705" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1331,7 +1348,7 @@ rather than <code>style.css</code>.</p>
 <p>This will automatically add tags to operations based on the Java class name.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30039">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_TAGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30039" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30706">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_TAGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30706" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1351,7 +1368,7 @@ rather than <code>style.css</code>.</p>
 <p>Setting it to <code>true</code> will automatically add a default server to the schema if none is provided, using the current running server host and port.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30040">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_SERVER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30040" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30707">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_SERVER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30707" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1371,7 +1388,7 @@ rather than <code>style.css</code>.</p>
 <p>This will automatically add security based on the security extension included (if any).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30041">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_SECURITY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30041" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30708">QUARKUS_SMALLRYE_OPENAPI_AUTO_ADD_SECURITY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30708" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1391,7 +1408,7 @@ rather than <code>style.css</code>.</p>
 <p>Required when using <code>apiKey</code> security. The location of the API key. Valid values are "query", "header" or "cookie".</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30042">QUARKUS_SMALLRYE_OPENAPI_API_KEY_PARAMETER_IN</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30042" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30709">QUARKUS_SMALLRYE_OPENAPI_API_KEY_PARAMETER_IN</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30709" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1411,7 +1428,7 @@ rather than <code>style.css</code>.</p>
 <p>Required when using <code>apiKey</code> security. The name of the header, query or cookie parameter to be used.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30043">QUARKUS_SMALLRYE_OPENAPI_API_KEY_PARAMETER_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30043" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30710">QUARKUS_SMALLRYE_OPENAPI_API_KEY_PARAMETER_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30710" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1431,7 +1448,7 @@ rather than <code>style.css</code>.</p>
 <p>Add a scheme value to the Basic HTTP Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30044">QUARKUS_SMALLRYE_OPENAPI_BASIC_SECURITY_SCHEME_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30044" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30711">QUARKUS_SMALLRYE_OPENAPI_BASIC_SECURITY_SCHEME_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30711" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1451,7 +1468,7 @@ rather than <code>style.css</code>.</p>
 <p>Add a scheme value to the JWT Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30045">QUARKUS_SMALLRYE_OPENAPI_JWT_SECURITY_SCHEME_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30045" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30712">QUARKUS_SMALLRYE_OPENAPI_JWT_SECURITY_SCHEME_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30712" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1471,7 +1488,7 @@ rather than <code>style.css</code>.</p>
 <p>Add a bearer format the JWT Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30046">QUARKUS_SMALLRYE_OPENAPI_JWT_BEARER_FORMAT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30046" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30713">QUARKUS_SMALLRYE_OPENAPI_JWT_BEARER_FORMAT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30713" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1491,7 +1508,7 @@ rather than <code>style.css</code>.</p>
 <p>Add a scheme value to the OAuth2 opaque token Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30047">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_SECURITY_SCHEME_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30047" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30714">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_SECURITY_SCHEME_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30714" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1511,7 +1528,7 @@ rather than <code>style.css</code>.</p>
 <p>Add a scheme value to OAuth2 opaque token Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30048">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_BEARER_FORMAT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30048" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30715">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_BEARER_FORMAT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30715" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1531,7 +1548,7 @@ rather than <code>style.css</code>.</p>
 <p>Add a openIdConnectUrl value to the OIDC Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30049">QUARKUS_SMALLRYE_OPENAPI_OIDC_OPEN_ID_CONNECT_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30049" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30716">QUARKUS_SMALLRYE_OPENAPI_OIDC_OPEN_ID_CONNECT_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30716" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1551,7 +1568,7 @@ rather than <code>style.css</code>.</p>
 <p>Add a implicit flow refreshUrl value to the OAuth2 Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30050">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_IMPLICIT_REFRESH_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30050" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30717">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_IMPLICIT_REFRESH_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30717" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1571,7 +1588,7 @@ rather than <code>style.css</code>.</p>
 <p>Add an implicit flow authorizationUrl value to the OAuth2 Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30051">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_IMPLICIT_AUTHORIZATION_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30051" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30718">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_IMPLICIT_AUTHORIZATION_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30718" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1591,7 +1608,7 @@ rather than <code>style.css</code>.</p>
 <p>Add an implicit flow tokenUrl value to the OAuth2 Security Scheme</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30052">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_IMPLICIT_TOKEN_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30052" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30719">QUARKUS_SMALLRYE_OPENAPI_OAUTH2_IMPLICIT_TOKEN_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30719" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1611,7 +1628,7 @@ rather than <code>style.css</code>.</p>
 <p>Override the openapi version in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30053">QUARKUS_SMALLRYE_OPENAPI_OPEN_API_VERSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30053" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30720">QUARKUS_SMALLRYE_OPENAPI_OPEN_API_VERSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30720" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1631,7 +1648,7 @@ rather than <code>style.css</code>.</p>
 <p>Set the title in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30054">QUARKUS_SMALLRYE_OPENAPI_INFO_TITLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30054" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30721">QUARKUS_SMALLRYE_OPENAPI_INFO_TITLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30721" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1651,7 +1668,7 @@ rather than <code>style.css</code>.</p>
 <p>Set the version in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30055">QUARKUS_SMALLRYE_OPENAPI_INFO_VERSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30055" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30722">QUARKUS_SMALLRYE_OPENAPI_INFO_VERSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30722" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1671,7 +1688,7 @@ rather than <code>style.css</code>.</p>
 <p>Set the description in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30056">QUARKUS_SMALLRYE_OPENAPI_INFO_DESCRIPTION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30056" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30723">QUARKUS_SMALLRYE_OPENAPI_INFO_DESCRIPTION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30723" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1691,7 +1708,7 @@ rather than <code>style.css</code>.</p>
 <p>Set the terms of the service in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30057">QUARKUS_SMALLRYE_OPENAPI_INFO_TERMS_OF_SERVICE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30057" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30724">QUARKUS_SMALLRYE_OPENAPI_INFO_TERMS_OF_SERVICE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30724" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1711,7 +1728,7 @@ rather than <code>style.css</code>.</p>
 <p>Set the contact email in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30058">QUARKUS_SMALLRYE_OPENAPI_INFO_CONTACT_EMAIL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30058" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30725">QUARKUS_SMALLRYE_OPENAPI_INFO_CONTACT_EMAIL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30725" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1731,7 +1748,7 @@ rather than <code>style.css</code>.</p>
 <p>Set the contact name in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30059">QUARKUS_SMALLRYE_OPENAPI_INFO_CONTACT_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30059" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30726">QUARKUS_SMALLRYE_OPENAPI_INFO_CONTACT_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30726" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1751,7 +1768,7 @@ rather than <code>style.css</code>.</p>
 <p>Set the contact url in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30060">QUARKUS_SMALLRYE_OPENAPI_INFO_CONTACT_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30060" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30727">QUARKUS_SMALLRYE_OPENAPI_INFO_CONTACT_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30727" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1771,7 +1788,7 @@ rather than <code>style.css</code>.</p>
 <p>Set the license name in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30061">QUARKUS_SMALLRYE_OPENAPI_INFO_LICENSE_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30061" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30728">QUARKUS_SMALLRYE_OPENAPI_INFO_LICENSE_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30728" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1791,7 +1808,7 @@ rather than <code>style.css</code>.</p>
 <p>Set the license url in Info tag in the Schema document</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30062">QUARKUS_SMALLRYE_OPENAPI_INFO_LICENSE_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30062" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30729">QUARKUS_SMALLRYE_OPENAPI_INFO_LICENSE_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30729" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1811,7 +1828,7 @@ rather than <code>style.css</code>.</p>
 <p>Set the strategy to automatically create an operation Id</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30063">QUARKUS_SMALLRYE_OPENAPI_OPERATION_ID_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30063" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30730">QUARKUS_SMALLRYE_OPENAPI_OPERATION_ID_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30730" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1833,7 +1850,7 @@ rather than <code>style.css</code>.</p>
 <p>Enable the openapi endpoint. By default it&#8217;s enabled.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30064">QUARKUS_SMALLRYE_OPENAPI_ENABLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30064" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30731">QUARKUS_SMALLRYE_OPENAPI_ENABLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30731" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1853,7 +1870,7 @@ rather than <code>style.css</code>.</p>
 <p>Specify the list of global servers that provide connectivity information</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30065">QUARKUS_SMALLRYE_OPENAPI_SERVERS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30065" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30732">QUARKUS_SMALLRYE_OPENAPI_SERVERS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30732" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1896,7 +1913,7 @@ rather than <code>style.css</code>.</p>
 <p>The value <code>/</code> is not allowed as it blocks the application from serving anything else. By default, this value will be resolved as a path relative to <code>${quarkus.http.non-application-root-path}</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30066">QUARKUS_SWAGGER_UI_PATH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30066" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30733">QUARKUS_SWAGGER_UI_PATH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30733" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1916,7 +1933,7 @@ rather than <code>style.css</code>.</p>
 <p>If this should be included every time. By default, this is only included when the application is running in dev mode.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30067">QUARKUS_SWAGGER_UI_ALWAYS_INCLUDE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30067" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30734">QUARKUS_SWAGGER_UI_ALWAYS_INCLUDE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30734" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1936,7 +1953,7 @@ rather than <code>style.css</code>.</p>
 <p>The urls that will be included as options. By default, the OpenAPI path will be used. Here you can override that and supply multiple urls that will appear in the TopBar plugin.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30068">QUARKUS_SWAGGER_UI_URLS__NAME_</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30068" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30735">QUARKUS_SWAGGER_UI_URLS__NAME_</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30735" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1956,7 +1973,7 @@ rather than <code>style.css</code>.</p>
 <p>If urls option is used, this will be the name of the default selection.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30069">QUARKUS_SWAGGER_UI_URLS_PRIMARY_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30069" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30736">QUARKUS_SWAGGER_UI_URLS_PRIMARY_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30736" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1976,7 +1993,7 @@ rather than <code>style.css</code>.</p>
 <p>The html title for the page.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30070">QUARKUS_SWAGGER_UI_TITLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30070" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30737">QUARKUS_SWAGGER_UI_TITLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30737" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1996,7 +2013,7 @@ rather than <code>style.css</code>.</p>
 <p>Swagger UI theme to be used.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30071">QUARKUS_SWAGGER_UI_THEME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30071" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30738">QUARKUS_SWAGGER_UI_THEME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30738" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2018,7 +2035,7 @@ rather than <code>style.css</code>.</p>
 <p>A footer for the html page. Nothing by default.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30072">QUARKUS_SWAGGER_UI_FOOTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30072" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30739">QUARKUS_SWAGGER_UI_FOOTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30739" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2038,7 +2055,7 @@ rather than <code>style.css</code>.</p>
 <p>If set to true, enables deep linking for tags and operations.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30073">QUARKUS_SWAGGER_UI_DEEP_LINKING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30073" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30740">QUARKUS_SWAGGER_UI_DEEP_LINKING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30740" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2058,7 +2075,7 @@ rather than <code>style.css</code>.</p>
 <p>Controls the display of operationId in operations list. The default is false.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30074">QUARKUS_SWAGGER_UI_DISPLAY_OPERATION_ID</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30074" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30741">QUARKUS_SWAGGER_UI_DISPLAY_OPERATION_ID</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30741" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2078,7 +2095,7 @@ rather than <code>style.css</code>.</p>
 <p>The default expansion depth for models (set to -1 completely hide the models).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30075">QUARKUS_SWAGGER_UI_DEFAULT_MODELS_EXPAND_DEPTH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30075" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30742">QUARKUS_SWAGGER_UI_DEFAULT_MODELS_EXPAND_DEPTH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30742" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2098,7 +2115,7 @@ rather than <code>style.css</code>.</p>
 <p>The default expansion depth for the model on the model-example section.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30076">QUARKUS_SWAGGER_UI_DEFAULT_MODEL_EXPAND_DEPTH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30076" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30743">QUARKUS_SWAGGER_UI_DEFAULT_MODEL_EXPAND_DEPTH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30743" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2118,7 +2135,7 @@ rather than <code>style.css</code>.</p>
 <p>Controls how the model is shown when the API is first rendered.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30077">QUARKUS_SWAGGER_UI_DEFAULT_MODEL_RENDERING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30077" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30744">QUARKUS_SWAGGER_UI_DEFAULT_MODEL_RENDERING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30744" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2138,7 +2155,7 @@ rather than <code>style.css</code>.</p>
 <p>Controls the display of the request duration (in milliseconds) for "Try it out" requests.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30078">QUARKUS_SWAGGER_UI_DISPLAY_REQUEST_DURATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30078" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30745">QUARKUS_SWAGGER_UI_DISPLAY_REQUEST_DURATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30745" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2158,7 +2175,7 @@ rather than <code>style.css</code>.</p>
 <p>Controls the default expansion setting for the operations and tags.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30079">QUARKUS_SWAGGER_UI_DOC_EXPANSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30079" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30746">QUARKUS_SWAGGER_UI_DOC_EXPANSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30746" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2180,7 +2197,7 @@ rather than <code>style.css</code>.</p>
 <p>If set, enables filtering. The top bar will show an edit box that you can use to filter the tagged operations that are shown. Can be Boolean to enable or disable, or a string, in which case filtering will be enabled using that string as the filter expression. Filtering is case-sensitive matching the filter expression anywhere inside the tag.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30080">QUARKUS_SWAGGER_UI_FILTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30080" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30747">QUARKUS_SWAGGER_UI_FILTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30747" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2200,7 +2217,7 @@ rather than <code>style.css</code>.</p>
 <p>If set, limits the number of tagged operations displayed to at most this many. The default is to show all operations.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30081">QUARKUS_SWAGGER_UI_MAX_DISPLAYED_TAGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30081" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30748">QUARKUS_SWAGGER_UI_MAX_DISPLAYED_TAGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30748" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2220,7 +2237,7 @@ rather than <code>style.css</code>.</p>
 <p>Apply a sort to the operation list of each API. It can be 'alpha' (sort by paths alphanumerically), 'method' (sort by HTTP method) or a function (see Array.prototype.sort() to know how sort function works). Default is the order returned by the server unchanged.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30082">QUARKUS_SWAGGER_UI_OPERATIONS_SORTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30082" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30749">QUARKUS_SWAGGER_UI_OPERATIONS_SORTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30749" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2240,7 +2257,7 @@ rather than <code>style.css</code>.</p>
 <p>Controls the display of vendor extension (x-) fields and values for Operations, Parameters, and Schema.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30083">QUARKUS_SWAGGER_UI_SHOW_EXTENSIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30083" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30750">QUARKUS_SWAGGER_UI_SHOW_EXTENSIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30750" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2260,7 +2277,7 @@ rather than <code>style.css</code>.</p>
 <p>Controls the display of extensions (pattern, maxLength, minLength, maximum, minimum) fields and values for Parameters.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30084">QUARKUS_SWAGGER_UI_SHOW_COMMON_EXTENSIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30084" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30751">QUARKUS_SWAGGER_UI_SHOW_COMMON_EXTENSIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30751" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2280,7 +2297,7 @@ rather than <code>style.css</code>.</p>
 <p>Apply a sort to the tag list of each API. It can be 'alpha' (sort by paths alphanumerically) or a function (see Array.prototype.sort() to learn how to write a sort function). Two tag name strings are passed to the sorter for each pass. Default is the order determined by Swagger UI.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30085">QUARKUS_SWAGGER_UI_TAGS_SORTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30085" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30752">QUARKUS_SWAGGER_UI_TAGS_SORTER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30752" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2300,7 +2317,7 @@ rather than <code>style.css</code>.</p>
 <p>Provides a mechanism to be notified when Swagger UI has finished rendering a newly provided definition.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30086">QUARKUS_SWAGGER_UI_ON_COMPLETE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30086" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30753">QUARKUS_SWAGGER_UI_ON_COMPLETE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30753" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2320,7 +2337,7 @@ rather than <code>style.css</code>.</p>
 <p>Set to <code>false</code> to deactivate syntax highlighting of payloads and cURL command. Can be otherwise an object with the <code>activate</code> and <code>theme</code> properties.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30087">QUARKUS_SWAGGER_UI_SYNTAX_HIGHLIGHT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30087" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30754">QUARKUS_SWAGGER_UI_SYNTAX_HIGHLIGHT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30754" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2340,7 +2357,7 @@ rather than <code>style.css</code>.</p>
 <p>OAuth redirect URL.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30088">QUARKUS_SWAGGER_UI_OAUTH2_REDIRECT_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30088" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30755">QUARKUS_SWAGGER_UI_OAUTH2_REDIRECT_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30755" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2360,7 +2377,7 @@ rather than <code>style.css</code>.</p>
 <p>MUST be a function. Function to intercept remote definition, "Try it out", and OAuth 2.0 requests. Accepts one argument requestInterceptor(request) and must return the modified request, or a Promise that resolves to the modified request.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30089">QUARKUS_SWAGGER_UI_REQUEST_INTERCEPTOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30089" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30756">QUARKUS_SWAGGER_UI_REQUEST_INTERCEPTOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30756" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2380,7 +2397,7 @@ rather than <code>style.css</code>.</p>
 <p>If set, MUST be an array of command line options available to the curl command. This can be set on the mutated request in the requestInterceptor function.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30090">QUARKUS_SWAGGER_UI_REQUEST_CURL_OPTIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30090" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30757">QUARKUS_SWAGGER_UI_REQUEST_CURL_OPTIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30757" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2400,7 +2417,7 @@ rather than <code>style.css</code>.</p>
 <p>MUST be a function. Function to intercept remote definition, "Try it out", and OAuth 2.0 responses. Accepts one argument responseInterceptor(response) and must return the modified response, or a Promise that resolves to the modified response.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30091">QUARKUS_SWAGGER_UI_RESPONSE_INTERCEPTOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30091" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30758">QUARKUS_SWAGGER_UI_RESPONSE_INTERCEPTOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30758" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2420,7 +2437,7 @@ rather than <code>style.css</code>.</p>
 <p>If set to true, uses the mutated request returned from a requestInterceptor to produce the curl command in the UI, otherwise the request before the requestInterceptor was applied is used.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30092">QUARKUS_SWAGGER_UI_SHOW_MUTATED_REQUEST</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30092" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30759">QUARKUS_SWAGGER_UI_SHOW_MUTATED_REQUEST</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30759" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2440,7 +2457,7 @@ rather than <code>style.css</code>.</p>
 <p>List of HTTP methods that have the "Try it out" feature enabled. An empty array disables "Try it out" for all operations. This does not filter the operations from the display.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30093">QUARKUS_SWAGGER_UI_SUPPORTED_SUBMIT_METHODS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30093" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30760">QUARKUS_SWAGGER_UI_SUPPORTED_SUBMIT_METHODS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30760" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2462,7 +2479,7 @@ rather than <code>style.css</code>.</p>
 <p>By default, Swagger UI attempts to validate specs against swagger.io&#8217;s online validator. You can use this parameter to set a different validator URL, for example for locally deployed validators (Validator Badge). Setting it to either none, 127.0.0.1 or localhost will disable validation.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30094">QUARKUS_SWAGGER_UI_VALIDATOR_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30094" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30761">QUARKUS_SWAGGER_UI_VALIDATOR_URL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30761" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2482,7 +2499,7 @@ rather than <code>style.css</code>.</p>
 <p>If set to true, enables passing credentials, as defined in the Fetch standard, in CORS requests that are sent by the browser.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30095">QUARKUS_SWAGGER_UI_WITH_CREDENTIALS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30095" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30762">QUARKUS_SWAGGER_UI_WITH_CREDENTIALS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30762" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2502,7 +2519,7 @@ rather than <code>style.css</code>.</p>
 <p>Function to set default values to each property in model. Accepts one argument modelPropertyMacro(property), property is immutable</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30096">QUARKUS_SWAGGER_UI_MODEL_PROPERTY_MACRO</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30096" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30763">QUARKUS_SWAGGER_UI_MODEL_PROPERTY_MACRO</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30763" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2522,7 +2539,7 @@ rather than <code>style.css</code>.</p>
 <p>Function to set default value to parameters. Accepts two arguments parameterMacro(operation, parameter). Operation and parameter are objects passed for context, both remain immutable</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30097">QUARKUS_SWAGGER_UI_PARAMETER_MACRO</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30097" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30764">QUARKUS_SWAGGER_UI_PARAMETER_MACRO</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30764" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2542,7 +2559,7 @@ rather than <code>style.css</code>.</p>
 <p>If set to true, it persists authorization data and it would not be lost on browser close/refresh</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30098">QUARKUS_SWAGGER_UI_PERSIST_AUTHORIZATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30098" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30765">QUARKUS_SWAGGER_UI_PERSIST_AUTHORIZATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30765" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2562,7 +2579,7 @@ rather than <code>style.css</code>.</p>
 <p>The name of a component available via the plugin system to use as the top-level layout for Swagger UI.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30099">QUARKUS_SWAGGER_UI_LAYOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30099" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30766">QUARKUS_SWAGGER_UI_LAYOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30766" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2582,7 +2599,7 @@ rather than <code>style.css</code>.</p>
 <p>A list of plugin functions to use in Swagger UI.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30100">QUARKUS_SWAGGER_UI_PLUGINS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30100" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30767">QUARKUS_SWAGGER_UI_PLUGINS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30767" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2602,7 +2619,7 @@ rather than <code>style.css</code>.</p>
 <p>A list of presets to use in Swagger UI.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30101">QUARKUS_SWAGGER_UI_PRESETS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30101" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30768">QUARKUS_SWAGGER_UI_PRESETS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30768" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2622,7 +2639,7 @@ rather than <code>style.css</code>.</p>
 <p>OAuth default clientId - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30102">QUARKUS_SWAGGER_UI_OAUTH_CLIENT_ID</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30102" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30769">QUARKUS_SWAGGER_UI_OAUTH_CLIENT_ID</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30769" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2642,7 +2659,7 @@ rather than <code>style.css</code>.</p>
 <p>OAuth default clientSecret - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30103">QUARKUS_SWAGGER_UI_OAUTH_CLIENT_SECRET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30103" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30770">QUARKUS_SWAGGER_UI_OAUTH_CLIENT_SECRET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30770" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2662,7 +2679,7 @@ rather than <code>style.css</code>.</p>
 <p>OAuth1 Realm query parameter added to authorizationUrl and tokenUrl - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30104">QUARKUS_SWAGGER_UI_OAUTH_REALM</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30104" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30771">QUARKUS_SWAGGER_UI_OAUTH_REALM</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30771" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2682,7 +2699,7 @@ rather than <code>style.css</code>.</p>
 <p>OAuth application name, displayed in authorization popup - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30105">QUARKUS_SWAGGER_UI_OAUTH_APP_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30105" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30772">QUARKUS_SWAGGER_UI_OAUTH_APP_NAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30772" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2702,7 +2719,7 @@ rather than <code>style.css</code>.</p>
 <p>OAuth scope separator for passing scopes - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30106">QUARKUS_SWAGGER_UI_OAUTH_SCOPE_SEPARATOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30106" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30773">QUARKUS_SWAGGER_UI_OAUTH_SCOPE_SEPARATOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30773" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2722,7 +2739,7 @@ rather than <code>style.css</code>.</p>
 <p>OAuth Scopes, separated using the oauthScopeSeparator - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30107">QUARKUS_SWAGGER_UI_OAUTH_SCOPES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30107" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30774">QUARKUS_SWAGGER_UI_OAUTH_SCOPES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30774" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2742,7 +2759,7 @@ rather than <code>style.css</code>.</p>
 <p>OAuth additional query parameters added to authorizationUrl and tokenUrl - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30108">QUARKUS_SWAGGER_UI_OAUTH_ADDITIONAL_QUERY_STRING_PARAMS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30108" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30775">QUARKUS_SWAGGER_UI_OAUTH_ADDITIONAL_QUERY_STRING_PARAMS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30775" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2762,7 +2779,7 @@ rather than <code>style.css</code>.</p>
 <p>OAuth only activated for the accessCode flow. During the authorization_code request to the tokenUrl, pass the Client Password using the HTTP Basic Authentication scheme - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30109">QUARKUS_SWAGGER_UI_OAUTH_USE_BASIC_AUTHENTICATION_WITH_ACCESS_CODE_GRANT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30109" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30776">QUARKUS_SWAGGER_UI_OAUTH_USE_BASIC_AUTHENTICATION_WITH_ACCESS_CODE_GRANT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30776" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2782,7 +2799,7 @@ rather than <code>style.css</code>.</p>
 <p>OAuth only applies to authorization code flows. Proof Key for Code Exchange brings enhanced security for OAuth public clients - Used in the initOAuth method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30110">QUARKUS_SWAGGER_UI_OAUTH_USE_PKCE_WITH_AUTHORIZATION_CODE_GRANT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30110" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30777">QUARKUS_SWAGGER_UI_OAUTH_USE_PKCE_WITH_AUTHORIZATION_CODE_GRANT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30777" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2802,7 +2819,7 @@ rather than <code>style.css</code>.</p>
 <p>Pre-authorize Basic Auth, programmatically set DefinitionKey for a Basic authorization scheme - Used in the preauthorizeBasic method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30111">QUARKUS_SWAGGER_UI_PREAUTHORIZE_BASIC_AUTH_DEFINITION_KEY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30111" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30778">QUARKUS_SWAGGER_UI_PREAUTHORIZE_BASIC_AUTH_DEFINITION_KEY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30778" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2822,7 +2839,7 @@ rather than <code>style.css</code>.</p>
 <p>Pre-authorize Basic Auth, programmatically set Username for a Basic authorization scheme - Used in the preauthorizeBasic method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30112">QUARKUS_SWAGGER_UI_PREAUTHORIZE_BASIC_USERNAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30112" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30779">QUARKUS_SWAGGER_UI_PREAUTHORIZE_BASIC_USERNAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30779" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2842,7 +2859,7 @@ rather than <code>style.css</code>.</p>
 <p>Pre-authorize Basic Auth, programmatically set Password for a Basic authorization scheme - Used in the preauthorizeBasic method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30113">QUARKUS_SWAGGER_UI_PREAUTHORIZE_BASIC_PASSWORD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30113" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30780">QUARKUS_SWAGGER_UI_PREAUTHORIZE_BASIC_PASSWORD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30780" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2862,7 +2879,7 @@ rather than <code>style.css</code>.</p>
 <p>Pre-authorize ApiKey Auth, programmatically set DefinitionKey for an API key or Bearer authorization scheme - Used in the preauthorizeApiKey method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30114">QUARKUS_SWAGGER_UI_PREAUTHORIZE_API_KEY_AUTH_DEFINITION_KEY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30114" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30781">QUARKUS_SWAGGER_UI_PREAUTHORIZE_API_KEY_AUTH_DEFINITION_KEY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30781" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2882,7 +2899,7 @@ rather than <code>style.css</code>.</p>
 <p>Pre-authorize ApiKey Auth, programmatically set ApiKeyValue for an API key or Bearer authorization scheme - Used in the preauthorizeApiKey method.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30115">QUARKUS_SWAGGER_UI_PREAUTHORIZE_API_KEY_API_KEY_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30115" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30782">QUARKUS_SWAGGER_UI_PREAUTHORIZE_API_KEY_API_KEY_VALUE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30782" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2902,7 +2919,7 @@ rather than <code>style.css</code>.</p>
 <p>If set to true, this allows the user to modify and test different query parameters in the API request</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30116">QUARKUS_SWAGGER_UI_QUERY_CONFIG_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30116" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30783">QUARKUS_SWAGGER_UI_QUERY_CONFIG_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30783" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2922,7 +2939,7 @@ rather than <code>style.css</code>.</p>
 <p>If try it out should be enabled by default</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30117">QUARKUS_SWAGGER_UI_TRY_IT_OUT_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30117" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30784">QUARKUS_SWAGGER_UI_TRY_IT_OUT_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30784" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2942,7 +2959,7 @@ rather than <code>style.css</code>.</p>
 <p>If Swagger UI is included, it should be enabled/disabled. By default, Swagger UI is enabled if it is included (see <code>always-include</code>).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-30118">QUARKUS_SWAGGER_UI_ENABLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30118" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-30785">QUARKUS_SWAGGER_UI_ENABLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-30785" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2983,6 +3000,7 @@ rather than <code>style.css</code>.</p>
 </li>
 <li><a href="#configuration-reference">Configuration Reference</a>
 <ul class="sectlevel2">
+<li><a href="#microprofile-openapi">MicroProfile OpenAPI</a></li>
 <li><a href="#openapi">OpenAPI</a></li>
 <li><a href="#swagger-ui">Swagger UI</a></li>
 </ul>
@@ -3048,7 +3066,7 @@ rather than <code>style.css</code>.</p>
     </div>
   </div>
   <div class="grid-wrapper">
-    <p class="grid__item width-3-12">Quarkus is open. All dependencies of this project are available under the <a href='https://www.apache.org/licenses/LICENSE-2.0' target='_blank'>Apache Software License 2.0</a> or compatible license.<br /><br />This website was built with <a href='https://jekyllrb.com/' target='_blank'>Jekyll</a>, is hosted on <a href='https://pages.github.com/' target='_blank'>GitHub Pages</a> and is completely open source. If you want to make it better, <a href='https://github.com/quarkusio/quarkusio.github.io' target='_blank'>fork the website</a> and show us what you’ve got.</p>
+    <p class="grid__item width-3-12">Quarkus is open. All dependencies of this project are available under the <a href='https://www.apache.org/licenses/LICENSE-2.0' target='_blank'>Apache Software License 2.0</a> or compatible license. <i class='fab fa-creative-commons'></i><i class='fab fa-creative-commons-by'></i> <a href='https://creativecommons.org/licenses/by/3.0/' target='_blank'>CC by 3.0</a><br /><br />This website was built with <a href='https://jekyllrb.com/' target='_blank'>Jekyll</a>, is hosted on <a href='https://pages.github.com/' target='_blank'>GitHub Pages</a> and is completely open source. If you want to make it better, <a href='https://github.com/quarkusio/quarkusio.github.io' target='_blank'>fork the website</a> and show us what you’ve got.</p>
 
     
       <div class="width-1-12 project-links">
@@ -3080,6 +3098,10 @@ rather than <code>style.css</code>.</p>
           
           
           
+            <li><a href="/userstories" target="_blank">User Stories</a></li>
+          
+          
+          
             <li><a href="https://github.com/orgs/quarkusio/projects/13/views/1" target="_blank">Roadmap</a></li>
           
           
@@ -3099,6 +3121,10 @@ rather than <code>style.css</code>.</p>
             <li><a href="/desktopwallpapers" target="_blank">Wallpapers</a></li>
           
           
+          
+            <li><a href="https://www.redhat.com/en/about/privacy-policy" target="_blank">Privacy Policy</a></li>
+          
+          
         </ul>
       </div>
     
@@ -3111,8 +3137,16 @@ rather than <code>style.css</code>.</p>
           
           
           
+            <li><a href="https://bsky.app/profile/quarkus.io" target="_blank">Bluesky</a></li>
+          
+          
+          
             <li><a rel="me" href="https://fosstodon.org/@quarkusio" target="_blank">Mastodon</a></li>
             
+          
+          
+            <li><a href="https://www.threads.com/@quarkusio" target="_blank">Threads</a></li>
+          
           
           
             <li><a href="https://www.facebook.com/quarkusio" target="_blank">Facebook</a></li>
@@ -3163,6 +3197,10 @@ rather than <code>style.css</code>.</p>
           
           
             <li><a href="https://groups.google.com/forum/#!forum/quarkus-dev" target="_blank">Development mailing list</a></li>
+          
+          
+          
+            <li><a href="https://stats.uptimerobot.com/ze1PfweT2p" target="_blank">Quarkus Service Status</a></li>
           
           
         </ul>
@@ -3223,17 +3261,14 @@ rather than <code>style.css</code>.</p>
   </div>
 </div>
 
-  <div class="content redhat-footer">
-  <div class="grid-wrapper">
-    <span class="licence">
-      <i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by"></i> <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC by 3.0</a> | <a href="https://www.redhat.com/en/about/privacy-policy">Privacy Policy</a>
-    </span>
-    <span class="redhat">
-      Sponsored by
-    </span>
-    <span class="redhat-logo">
-      <a href="https://www.redhat.com/" target="_blank"><img src="/assets/images/redhat_reversed.svg"></a>
-    </span>
+  <div class="content cf-footer">
+  <div class="flexcontainer">
+    <div class="cf-logo">
+      <a class="cf-logo" href="https://www.commonhaus.org/" target="_blank"><img src="https://raw.githubusercontent.com/commonhaus/artwork/main/foundation/brand/svg/CF_logo_horizontal_single_reverse.svg"/></a>
+    </div>
+    <div class="license">
+      Copyright © Quarkus. All rights reserved. For details on our trademarks, please visit our <a href="https://www.commonhaus.org/policies/trademark-policy/">Trademark Policy</a> and <a href="https://www.commonhaus.org/trademarks/">Trademark List</a>. Trademarks of third parties are owned by their respective holders and their mention here does not suggest any endorsement or association.
+    </div>
   </div>
 </div>
 
@@ -3249,6 +3284,8 @@ rather than <code>style.css</code>.</p>
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
   <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
+  <script src="/assets/javascript/randomize.js" type="text/javascript"></script>
+  <script src="/assets/javascript/time.js" type="text/javascript"></script>
 </body>
 
 </html>

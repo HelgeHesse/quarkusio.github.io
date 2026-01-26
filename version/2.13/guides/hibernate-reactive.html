@@ -12,7 +12,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="
-  connect-src 'self' https://dpm.demdex.net https://adobedc.demdex.net https://route-default-test-mscherer-matamo.apps.ospo-osci.z3b1.p1.openshiftapps.com/ https://search.quarkus.io https://smetrics.redhat.com; 
+  connect-src 'self' https://dpm.demdex.net https://adobedc.demdex.net https://analytics.ossupstream.org/ https://search.quarkus.io https://smetrics.redhat.com https://ajax.googleapis.com; 
   script-src 'self' 'unsafe-inline' 'unsafe-eval'
       
       https://assets.adobedtm.com
@@ -27,17 +27,18 @@
       http://www.googleadservices.com
       https://googleads.g.doubleclick.net
       https://giscus.app
-      https://route-default-test-mscherer-matamo.apps.ospo-osci.z3b1.p1.openshiftapps.com/
+      https://analytics.ossupstream.org/
       https://app.mailjet.com;
 
   style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; 
   img-src 'self' * data:; 
   media-src 'self'; 
-  frame-src https://redhat.demdex.net https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; 
+  frame-src https://redhat.demdex.net https://www.youtube.com https://player.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; 
   base-uri 'none'; 
   object-src 'none'; 
   form-action 'none'; 
   font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -97,27 +98,39 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
+        <span href="#">Why<i class="fas fa-chevron-down firsti"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
-          <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
-          <li><a href="/continuum" class="">VERSATILITY</a></li>
           <li><a href="/developer-joy" class="">DEVELOPER JOY</a></li>
+          <li><a href="/performance" class="">PERFORMANCE</a></li>
           <li><a href="/kubernetes-native" class="">KUBERNETES NATIVE</a></li>
           <li><a href="/standards" class="">STANDARDS</a></li>
+          <li><a href="/versatility" class="">VERSATILITY</a></li>
+          <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
+          <li><a href="/spring" class="">USING SPRING?</a></li>
+          <li class="tertiarydropdown">
+            <span href="#">AI<i class="fas fa-chevron-down"></i></span>
+            <ul class="tertiarymenu">
+              <li><a href="/ai" class="">AI OVERVIEW</a></li>
+              <li><a href="/java-for-ai" class="">JAVA FOR AI</a></li>
+              <li><a href="/quarkus-for-ai" class="">WHY QUARKUS FOR AI</a></li>
+              <li><a href="/ai-blueprints" class="">AI BLUEPRINTS</a></li>
+            </ul>
+          </li>
         </ul>
       </li>
       <li class="dropdown">
-        <span href="/learn/">Learn<i class="fas fa-chevron-down"></i></span>
+        <span href="#">Learn<i class="fas fa-chevron-down firsti"></i></span>
         <ul class="submenu">
           <li><a href="/get-started" class="">GET STARTED</a></li>
           <li><a href="/guides" class="active">DOCUMENTATION</a></li>
+          <li><a href="/userstories/" class="">USER STORIES</a></li>  
           <li><a href="/qtips" class="">"Q" TIP VIDEOS</a></li>          
           <li><a href="/books" class="">BOOKS</a></li>
           </ul>
       </li>
       <li class="dropdown">
-        <span href="https://quarkus.io/extensions/">Extensions<i class="fas fa-chevron-down"></i></span>
+        <span href="#">Extensions<i class="fas fa-chevron-down firsti"></i></span>
         <ul class="submenu">
           <!-- Note that quarkus.io is hardcoded here, because it is the only url which supports extensions -->
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
@@ -127,7 +140,7 @@
         </ul>
       </li>
       <li class="dropdown">
-        <span href="/community/">Community<i class="fas fa-chevron-down"></i></span>
+        <span href="#">Community<i class="fas fa-chevron-down firsti"></i></span>
         <ul class="submenu">
           <li><a href="/support/" class="">SUPPORT</a></li>
           <li><a href="/blog" class="">BLOG</a></li>
@@ -137,6 +150,7 @@
           <li><a href="/events" class="">EVENTS</a></li>
           <li><a href="/newsletter" class="">NEWSLETTER</a></li>
           <li><a href="https://github.com/orgs/quarkusio/projects/13/views/1" class="">ROADMAP</a></li>
+          <li><a href="/benefactors" class="">BENEFACTORS</a></li>
           </ul>
       </li>
       <li>
@@ -187,7 +201,15 @@
         
         
         
-        <option value="latest" >3.16.2 - Latest</option>
+        <option value="latest" >3.30.8 - Latest</option>
+        
+        
+        
+        <option value="3.27" >3.27</option>
+        
+        
+        
+        <option value="3.20" >3.20</option>
         
         
         
@@ -196,18 +218,6 @@
         
         
         <option value="3.8" >3.8</option>
-        
-        
-        
-        <option value="3.2" >3.2</option>
-        
-        
-        
-        <option value="2.16" >2.16</option>
-        
-        
-        
-        <option value="2.13" selected>2.13</option>
         </select>
     </div>
   </div>
@@ -218,7 +228,8 @@
     <div class="grid__item width-8-12 width-12-12-m">
       
       <h1 class="text-caps">Using Hibernate Reactive </h1>
-      <div id="preamble">
+      <a class="status-label status-preview" title="This extension's backward compatibility and presence in the ecosystem is not guaranteed" href="#extension-status-note">preview</a>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="https://hibernate.org/reactive/">Hibernate Reactive</a> is a reactive API for Hibernate ORM, supporting non-blocking database drivers
@@ -539,7 +550,7 @@ but it will not be possible to activate Hibernate ORM at runtime:
 <code>quarkus.hibernate-orm.active</code> will default to <code>false</code> and setting it to <code>true</code> will lead to an error.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13556">QUARKUS_HIBERNATE_ORM_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13556" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14214">QUARKUS_HIBERNATE_ORM_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14214" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -556,7 +567,7 @@ but it will not be possible to activate Hibernate ORM at runtime:
 <div id="conf-non-collapsible-desc-2" class="openblock description">
 <div class="content">
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13557">QUARKUS_HIBERNATE_ORM_DATASOURCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13557" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14215">QUARKUS_HIBERNATE_ORM_DATASOURCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14215" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div></div></td>
@@ -570,7 +581,7 @@ but it will not be possible to activate Hibernate ORM at runtime:
 <div id="conf-non-collapsible-desc-3" class="openblock description">
 <div class="content">
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13558">QUARKUS_HIBERNATE_ORM_PACKAGES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13558" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14216">QUARKUS_HIBERNATE_ORM_PACKAGES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14216" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div></div></td>
@@ -636,7 +647,7 @@ Each SQL statement must be terminated by a semicolon.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13559">QUARKUS_HIBERNATE_ORM_SQL_LOAD_SCRIPT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13559" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14217">QUARKUS_HIBERNATE_ORM_SQL_LOAD_SCRIPT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14217" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -656,7 +667,7 @@ Each SQL statement must be terminated by a semicolon.</p>
 <p>Pluggable strategy contract for applying physical naming rules for database object names. Class name of the Hibernate PhysicalNamingStrategy implementation</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13560">QUARKUS_HIBERNATE_ORM_PHYSICAL_NAMING_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13560" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14218">QUARKUS_HIBERNATE_ORM_PHYSICAL_NAMING_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14218" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -676,7 +687,7 @@ Each SQL statement must be terminated by a semicolon.</p>
 <p>Pluggable strategy for applying implicit naming rules when an explicit name is not given. Class name of the Hibernate ImplicitNamingStrategy implementation</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13561">QUARKUS_HIBERNATE_ORM_IMPLICIT_NAMING_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13561" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14219">QUARKUS_HIBERNATE_ORM_IMPLICIT_NAMING_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14219" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -717,7 +728,7 @@ will work correctly. Stay clear of options related to classpath scanning in part
 </table>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13562">QUARKUS_HIBERNATE_ORM_METADATA_BUILDER_CONTRIBUTOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13562" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14220">QUARKUS_HIBERNATE_ORM_METADATA_BUILDER_CONTRIBUTOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14220" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -738,7 +749,7 @@ will work correctly. Stay clear of options related to classpath scanning in part
 Defaults to <code>META-INF/orm.xml</code> if it exists. Pass <code>no-file</code> to force Hibernate ORM to ignore <code>META-INF/orm.xml</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13563">QUARKUS_HIBERNATE_ORM_MAPPING_FILES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13563" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14221">QUARKUS_HIBERNATE_ORM_MAPPING_FILES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14221" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -760,7 +771,7 @@ Just cherry-pick which entities should be using the cache.
 Set this to false to disable all 2nd level caches.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13564">QUARKUS_HIBERNATE_ORM_SECOND_LEVEL_CACHING_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13564" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14222">QUARKUS_HIBERNATE_ORM_SECOND_LEVEL_CACHING_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14222" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -783,7 +794,7 @@ JavaDoc</a>.
 The type DISCRIMINATOR is currently not supported. The default value is NONE (no multi-tenancy).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13565">QUARKUS_HIBERNATE_ORM_MULTITENANT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13565" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14223">QUARKUS_HIBERNATE_ORM_MULTITENANT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14223" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -803,7 +814,7 @@ The type DISCRIMINATOR is currently not supported. The default value is NONE (no
 <p>Defines the name of the datasource to use in case of SCHEMA approach. The datasource of the persistence unit will be used if not set.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13566">QUARKUS_HIBERNATE_ORM_MULTITENANT_SCHEMA_DATASOURCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13566" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14224">QUARKUS_HIBERNATE_ORM_MULTITENANT_SCHEMA_DATASOURCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14224" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -823,7 +834,7 @@ The type DISCRIMINATOR is currently not supported. The default value is NONE (no
 <p>If hibernate is not auto generating the schema, and Quarkus is running in development mode then Quarkus will attempt to validate the database after startup and print a log message if there are any problems.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13567">QUARKUS_HIBERNATE_ORM_VALIDATE_IN_DEV_MODE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13567" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14225">QUARKUS_HIBERNATE_ORM_VALIDATE_IN_DEV_MODE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14225" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -843,7 +854,7 @@ The type DISCRIMINATOR is currently not supported. The default value is NONE (no
 <p>Whether statistics collection is enabled. If 'metrics.enabled' is true, then the default here is considered true, otherwise the default is false.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13568">QUARKUS_HIBERNATE_ORM_STATISTICS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13568" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14226">QUARKUS_HIBERNATE_ORM_STATISTICS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14226" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -863,7 +874,7 @@ The type DISCRIMINATOR is currently not supported. The default value is NONE (no
 <p>Whether session metrics should be appended into the server log for each Hibernate session. This only has effect if statistics are enabled (<code>quarkus.hibernate-orm.statistics</code>). The default is false (which means both <code>statistics</code> and <code>log-session-metrics</code> need to be enabled for the session metrics to appear in the log).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13569">QUARKUS_HIBERNATE_ORM_LOG_SESSION_METRICS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13569" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14227">QUARKUS_HIBERNATE_ORM_LOG_SESSION_METRICS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14227" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -883,7 +894,7 @@ The type DISCRIMINATOR is currently not supported. The default value is NONE (no
 <p>Whether metrics are published if a metrics extension is enabled.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13570">QUARKUS_HIBERNATE_ORM_METRICS_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13570" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14228">QUARKUS_HIBERNATE_ORM_METRICS_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14228" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -912,7 +923,7 @@ will not be possible.</p>
 all persistence units are deactivated, and setting this property to <code>true</code> will fail.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13571">QUARKUS_HIBERNATE_ORM_ACTIVE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13571" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14229">QUARKUS_HIBERNATE_ORM_ACTIVE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14229" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -957,7 +968,7 @@ If none exists, make sure to file a feature request so that a supported configur
 and more importantly so that the configuration property is tested regularly.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13572">QUARKUS_HIBERNATE_ORM_UNSUPPORTED_PROPERTIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13572" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14230">QUARKUS_HIBERNATE_ORM_UNSUPPORTED_PROPERTIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14230" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1000,7 +1011,7 @@ MariaDB, Microsoft SQL Server and H2.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13573">QUARKUS_HIBERNATE_ORM_DIALECT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13573" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14231">QUARKUS_HIBERNATE_ORM_DIALECT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14231" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1023,7 +1034,7 @@ MariaDB, Microsoft SQL Server and H2.</p>
 <p>E.g. <code>MyISAM</code> or <code>InnoDB</code> for MySQL.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13574">QUARKUS_HIBERNATE_ORM_DIALECT_STORAGE_ENGINE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13574" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14232">QUARKUS_HIBERNATE_ORM_DIALECT_STORAGE_ENGINE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14232" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1048,7 +1059,7 @@ MariaDB, Microsoft SQL Server and H2.</p>
 <p>The maximum size of the query plan cache. see #<code>QueryPlanCache#DEFAULT_QUERY_PLAN_MAX_COUNT</code></p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13575">QUARKUS_HIBERNATE_ORM_QUERY_QUERY_PLAN_CACHE_MAX_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13575" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14233">QUARKUS_HIBERNATE_ORM_QUERY_QUERY_PLAN_CACHE_MAX_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14233" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1071,7 +1082,7 @@ MariaDB, Microsoft SQL Server and H2.</p>
 <p>Valid values are: <code>none</code>, <code>first</code>, <code>last</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13576">QUARKUS_HIBERNATE_ORM_QUERY_DEFAULT_NULL_ORDERING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13576" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14234">QUARKUS_HIBERNATE_ORM_QUERY_DEFAULT_NULL_ORDERING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14234" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1099,7 +1110,7 @@ MariaDB, Microsoft SQL Server and H2.</p>
 Used for DDL generation and also for the SQL import scripts.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13577">QUARKUS_HIBERNATE_ORM_DATABASE_CHARSET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13577" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14235">QUARKUS_HIBERNATE_ORM_DATABASE_CHARSET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14235" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1119,7 +1130,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>Whether Hibernate should quote all identifiers.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13578">QUARKUS_HIBERNATE_ORM_DATABASE_GLOBALLY_QUOTED_IDENTIFIERS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13578" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14236">QUARKUS_HIBERNATE_ORM_DATABASE_GLOBALLY_QUOTED_IDENTIFIERS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14236" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1139,7 +1150,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>Select whether the database schema is generated or not. <code>drop-and-create</code> is awesome in development mode. This defaults to 'none', however if Dev Services is in use and no other extensions that manage the schema are present this will default to 'drop-and-create'. Accepted values: <code>none</code>, <code>create</code>, <code>drop-and-create</code>, <code>drop</code>, <code>update</code>, <code>validate</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13579">QUARKUS_HIBERNATE_ORM_DATABASE_GENERATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13579" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14237">QUARKUS_HIBERNATE_ORM_DATABASE_GENERATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14237" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1159,7 +1170,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>If Hibernate ORM should create the schemas automatically (for databases supporting them).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13580">QUARKUS_HIBERNATE_ORM_DATABASE_GENERATION_CREATE_SCHEMAS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13580" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14238">QUARKUS_HIBERNATE_ORM_DATABASE_GENERATION_CREATE_SCHEMAS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14238" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1179,7 +1190,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>Whether we should stop on the first error when applying the schema.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13581">QUARKUS_HIBERNATE_ORM_DATABASE_GENERATION_HALT_ON_ERROR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13581" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14239">QUARKUS_HIBERNATE_ORM_DATABASE_GENERATION_HALT_ON_ERROR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14239" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1199,7 +1210,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>The default catalog to use for the database objects.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13582">QUARKUS_HIBERNATE_ORM_DATABASE_DEFAULT_CATALOG</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13582" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14240">QUARKUS_HIBERNATE_ORM_DATABASE_DEFAULT_CATALOG</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14240" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1219,7 +1230,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>The default schema to use for the database objects.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13583">QUARKUS_HIBERNATE_ORM_DATABASE_DEFAULT_SCHEMA</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13583" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14241">QUARKUS_HIBERNATE_ORM_DATABASE_DEFAULT_SCHEMA</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14241" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1244,7 +1255,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>The time zone pushed to the JDBC driver.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13584">QUARKUS_HIBERNATE_ORM_JDBC_TIMEZONE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13584" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14242">QUARKUS_HIBERNATE_ORM_JDBC_TIMEZONE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14242" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1264,7 +1275,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>How many rows are fetched at a time by the JDBC driver.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13585">QUARKUS_HIBERNATE_ORM_JDBC_STATEMENT_FETCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13585" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14243">QUARKUS_HIBERNATE_ORM_JDBC_STATEMENT_FETCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14243" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1284,7 +1295,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>The number of updates (inserts, updates and deletes) that are sent by the JDBC driver at one time for execution.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13586">QUARKUS_HIBERNATE_ORM_JDBC_STATEMENT_BATCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13586" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14244">QUARKUS_HIBERNATE_ORM_JDBC_STATEMENT_BATCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14244" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1312,7 +1323,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p><code>-1</code> means batch loading is disabled.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13587">QUARKUS_HIBERNATE_ORM_FETCH_BATCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13587" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14245">QUARKUS_HIBERNATE_ORM_FETCH_BATCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14245" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1335,7 +1346,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>A <code>0</code> disables default outer join fetching.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13588">QUARKUS_HIBERNATE_ORM_FETCH_MAX_DEPTH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13588" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14246">QUARKUS_HIBERNATE_ORM_FETCH_MAX_DEPTH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14246" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1360,7 +1371,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>The maximum time before an object of the cache is considered expired.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13589">QUARKUS_HIBERNATE_ORM_CACHE__CACHE__EXPIRATION_MAX_IDLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13589" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14247">QUARKUS_HIBERNATE_ORM_CACHE__CACHE__EXPIRATION_MAX_IDLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14247" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1381,7 +1392,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>The maximum number of objects kept in memory in the cache.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13590">QUARKUS_HIBERNATE_ORM_CACHE__CACHE__MEMORY_OBJECT_COUNT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13590" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14248">QUARKUS_HIBERNATE_ORM_CACHE__CACHE__MEMORY_OBJECT_COUNT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14248" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1406,7 +1417,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>Existing applications rely (implicitly or explicitly) on Hibernate ignoring any DiscriminatorColumn declarations on joined inheritance hierarchies. This setting allows these applications to maintain the legacy behavior of DiscriminatorColumn annotations being ignored when paired with joined inheritance.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13591">QUARKUS_HIBERNATE_ORM_DISCRIMINATOR_IGNORE_EXPLICIT_FOR_JOINED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13591" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14249">QUARKUS_HIBERNATE_ORM_DISCRIMINATOR_IGNORE_EXPLICIT_FOR_JOINED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14249" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1428,7 +1439,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <div id="conf-non-collapsible-desc-37" class="openblock description">
 <div class="content">
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13592">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATASOURCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13592" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14250">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATASOURCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14250" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div></div></td>
@@ -1442,7 +1453,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <div id="conf-non-collapsible-desc-38" class="openblock description">
 <div class="content">
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13593">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__PACKAGES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13593" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14251">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__PACKAGES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14251" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div></div></td>
@@ -1508,7 +1519,7 @@ Each SQL statement must be terminated by a semicolon.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13594">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__SQL_LOAD_SCRIPT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13594" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14252">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__SQL_LOAD_SCRIPT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14252" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1528,7 +1539,7 @@ Each SQL statement must be terminated by a semicolon.</p>
 <p>Pluggable strategy contract for applying physical naming rules for database object names. Class name of the Hibernate PhysicalNamingStrategy implementation</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13595">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__PHYSICAL_NAMING_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13595" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14253">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__PHYSICAL_NAMING_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14253" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1548,7 +1559,7 @@ Each SQL statement must be terminated by a semicolon.</p>
 <p>Pluggable strategy for applying implicit naming rules when an explicit name is not given. Class name of the Hibernate ImplicitNamingStrategy implementation</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13596">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__IMPLICIT_NAMING_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13596" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14254">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__IMPLICIT_NAMING_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14254" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1589,7 +1600,7 @@ will work correctly. Stay clear of options related to classpath scanning in part
 </table>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13597">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__METADATA_BUILDER_CONTRIBUTOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13597" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14255">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__METADATA_BUILDER_CONTRIBUTOR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14255" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1610,7 +1621,7 @@ will work correctly. Stay clear of options related to classpath scanning in part
 Defaults to <code>META-INF/orm.xml</code> if it exists. Pass <code>no-file</code> to force Hibernate ORM to ignore <code>META-INF/orm.xml</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13598">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__MAPPING_FILES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13598" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14256">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__MAPPING_FILES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14256" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1632,7 +1643,7 @@ Just cherry-pick which entities should be using the cache.
 Set this to false to disable all 2nd level caches.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13599">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__SECOND_LEVEL_CACHING_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13599" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14257">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__SECOND_LEVEL_CACHING_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14257" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1655,7 +1666,7 @@ JavaDoc</a>.
 The type DISCRIMINATOR is currently not supported. The default value is NONE (no multi-tenancy).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13600">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__MULTITENANT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13600" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14258">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__MULTITENANT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14258" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1675,7 +1686,7 @@ The type DISCRIMINATOR is currently not supported. The default value is NONE (no
 <p>Defines the name of the datasource to use in case of SCHEMA approach. The datasource of the persistence unit will be used if not set.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13601">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__MULTITENANT_SCHEMA_DATASOURCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13601" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14259">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__MULTITENANT_SCHEMA_DATASOURCE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14259" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1695,7 +1706,7 @@ The type DISCRIMINATOR is currently not supported. The default value is NONE (no
 <p>If hibernate is not auto generating the schema, and Quarkus is running in development mode then Quarkus will attempt to validate the database after startup and print a log message if there are any problems.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13602">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__VALIDATE_IN_DEV_MODE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13602" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14260">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__VALIDATE_IN_DEV_MODE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14260" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1724,7 +1735,7 @@ will not be possible.</p>
 all persistence units are deactivated, and setting this property to <code>true</code> will fail.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13603">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__ACTIVE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13603" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14261">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__ACTIVE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14261" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1769,7 +1780,7 @@ If none exists, make sure to file a feature request so that a supported configur
 and more importantly so that the configuration property is tested regularly.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13604">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__UNSUPPORTED_PROPERTIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13604" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14262">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__UNSUPPORTED_PROPERTIES</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14262" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1812,7 +1823,7 @@ MariaDB, Microsoft SQL Server and H2.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13605">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DIALECT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13605" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14263">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DIALECT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14263" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1835,7 +1846,7 @@ MariaDB, Microsoft SQL Server and H2.</p>
 <p>E.g. <code>MyISAM</code> or <code>InnoDB</code> for MySQL.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13606">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DIALECT_STORAGE_ENGINE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13606" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14264">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DIALECT_STORAGE_ENGINE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14264" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1860,7 +1871,7 @@ MariaDB, Microsoft SQL Server and H2.</p>
 <p>The maximum size of the query plan cache. see #<code>QueryPlanCache#DEFAULT_QUERY_PLAN_MAX_COUNT</code></p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13607">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__QUERY_QUERY_PLAN_CACHE_MAX_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13607" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14265">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__QUERY_QUERY_PLAN_CACHE_MAX_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14265" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1883,7 +1894,7 @@ MariaDB, Microsoft SQL Server and H2.</p>
 <p>Valid values are: <code>none</code>, <code>first</code>, <code>last</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13608">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__QUERY_DEFAULT_NULL_ORDERING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13608" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14266">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__QUERY_DEFAULT_NULL_ORDERING</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14266" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1911,7 +1922,7 @@ MariaDB, Microsoft SQL Server and H2.</p>
 Used for DDL generation and also for the SQL import scripts.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13609">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATABASE_CHARSET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13609" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14267">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATABASE_CHARSET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14267" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1931,7 +1942,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>Whether Hibernate should quote all identifiers.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13610">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATABASE_GLOBALLY_QUOTED_IDENTIFIERS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13610" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14268">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATABASE_GLOBALLY_QUOTED_IDENTIFIERS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14268" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1951,7 +1962,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>Select whether the database schema is generated or not. <code>drop-and-create</code> is awesome in development mode. This defaults to 'none', however if Dev Services is in use and no other extensions that manage the schema are present this will default to 'drop-and-create'. Accepted values: <code>none</code>, <code>create</code>, <code>drop-and-create</code>, <code>drop</code>, <code>update</code>, <code>validate</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13611">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATABASE_GENERATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13611" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14269">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATABASE_GENERATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14269" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1971,7 +1982,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>If Hibernate ORM should create the schemas automatically (for databases supporting them).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13612">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATABASE_GENERATION_CREATE_SCHEMAS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13612" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14270">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATABASE_GENERATION_CREATE_SCHEMAS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14270" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -1991,7 +2002,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>Whether we should stop on the first error when applying the schema.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13613">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATABASE_GENERATION_HALT_ON_ERROR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13613" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14271">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATABASE_GENERATION_HALT_ON_ERROR</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14271" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2011,7 +2022,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>The default catalog to use for the database objects.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13614">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATABASE_DEFAULT_CATALOG</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13614" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14272">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATABASE_DEFAULT_CATALOG</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14272" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2031,7 +2042,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>The default schema to use for the database objects.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13615">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATABASE_DEFAULT_SCHEMA</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13615" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14273">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DATABASE_DEFAULT_SCHEMA</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14273" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2056,7 +2067,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>The time zone pushed to the JDBC driver.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13616">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__JDBC_TIMEZONE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13616" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14274">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__JDBC_TIMEZONE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14274" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2076,7 +2087,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>How many rows are fetched at a time by the JDBC driver.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13617">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__JDBC_STATEMENT_FETCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13617" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14275">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__JDBC_STATEMENT_FETCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14275" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2096,7 +2107,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>The number of updates (inserts, updates and deletes) that are sent by the JDBC driver at one time for execution.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13618">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__JDBC_STATEMENT_BATCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13618" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14276">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__JDBC_STATEMENT_BATCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14276" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2124,7 +2135,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p><code>-1</code> means batch loading is disabled.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13619">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__FETCH_BATCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13619" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14277">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__FETCH_BATCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14277" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2147,7 +2158,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>A <code>0</code> disables default outer join fetching.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13620">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__FETCH_MAX_DEPTH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13620" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14278">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__FETCH_MAX_DEPTH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14278" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2172,7 +2183,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>The maximum time before an object of the cache is considered expired.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13621">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__CACHE__CACHE__EXPIRATION_MAX_IDLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13621" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14279">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__CACHE__CACHE__EXPIRATION_MAX_IDLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14279" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2193,7 +2204,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>The maximum number of objects kept in memory in the cache.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13622">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__CACHE__CACHE__MEMORY_OBJECT_COUNT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13622" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14280">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__CACHE__CACHE__MEMORY_OBJECT_COUNT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14280" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2218,7 +2229,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>Existing applications rely (implicitly or explicitly) on Hibernate ignoring any DiscriminatorColumn declarations on joined inheritance hierarchies. This setting allows these applications to maintain the legacy behavior of DiscriminatorColumn annotations being ignored when paired with joined inheritance.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13623">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DISCRIMINATOR_IGNORE_EXPLICIT_FOR_JOINED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13623" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14281">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__DISCRIMINATOR_IGNORE_EXPLICIT_FOR_JOINED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14281" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2243,7 +2254,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>Select whether the database schema DDL files are generated or not. Accepted values: <code>none</code>, <code>create</code>, <code>drop-and-create</code>, <code>drop</code>, <code>update</code>, <code>validate</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13624">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__SCRIPTS_GENERATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13624" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14282">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__SCRIPTS_GENERATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14282" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2263,7 +2274,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>Filename or URL where the database create DDL file should be generated.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13625">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__SCRIPTS_GENERATION_CREATE_TARGET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13625" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14283">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__SCRIPTS_GENERATION_CREATE_TARGET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14283" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2283,7 +2294,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 <p>Filename or URL where the database drop DDL file should be generated.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13626">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__SCRIPTS_GENERATION_DROP_TARGET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13626" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14284">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__SCRIPTS_GENERATION_DROP_TARGET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14284" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2309,7 +2320,7 @@ Used for DDL generation and also for the SQL import scripts.</p>
 Setting it to true is obviously not recommended in production.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13627">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__LOG_SQL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13627" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14285">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__LOG_SQL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14285" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2329,7 +2340,7 @@ Setting it to true is obviously not recommended in production.</p>
 <p>Format the SQL logs if SQL log is enabled</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13628">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__LOG_FORMAT_SQL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13628" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14286">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__LOG_FORMAT_SQL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14286" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2349,7 +2360,7 @@ Setting it to true is obviously not recommended in production.</p>
 <p>Whether JDBC warnings should be collected and logged.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13629">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__LOG_JDBC_WARNINGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13629" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14287">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__LOG_JDBC_WARNINGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14287" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2369,7 +2380,7 @@ Setting it to true is obviously not recommended in production.</p>
 <p>If set, Hibernate will log queries that took more than specified number of milliseconds to execute.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13630">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__LOG_QUERIES_SLOWER_THAN_MS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13630" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14288">QUARKUS_HIBERNATE_ORM__PERSISTENCE_UNIT_NAME__LOG_QUERIES_SLOWER_THAN_MS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14288" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2395,7 +2406,7 @@ Setting it to true is obviously not recommended in production.</p>
 Setting it to true is obviously not recommended in production.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13631">QUARKUS_HIBERNATE_ORM_LOG_BIND_PARAMETERS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13631" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14289">QUARKUS_HIBERNATE_ORM_LOG_BIND_PARAMETERS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14289" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2416,7 +2427,7 @@ Setting it to true is obviously not recommended in production.</p>
 Setting it to true is obviously not recommended in production.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13632">QUARKUS_HIBERNATE_ORM_LOG_SQL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13632" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14290">QUARKUS_HIBERNATE_ORM_LOG_SQL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14290" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2436,7 +2447,7 @@ Setting it to true is obviously not recommended in production.</p>
 <p>Format the SQL logs if SQL log is enabled</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13633">QUARKUS_HIBERNATE_ORM_LOG_FORMAT_SQL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13633" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14291">QUARKUS_HIBERNATE_ORM_LOG_FORMAT_SQL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14291" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2456,7 +2467,7 @@ Setting it to true is obviously not recommended in production.</p>
 <p>Whether JDBC warnings should be collected and logged.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13634">QUARKUS_HIBERNATE_ORM_LOG_JDBC_WARNINGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13634" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14292">QUARKUS_HIBERNATE_ORM_LOG_JDBC_WARNINGS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14292" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2476,7 +2487,7 @@ Setting it to true is obviously not recommended in production.</p>
 <p>If set, Hibernate will log queries that took more than specified number of milliseconds to execute.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13635">QUARKUS_HIBERNATE_ORM_LOG_QUERIES_SLOWER_THAN_MS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13635" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14293">QUARKUS_HIBERNATE_ORM_LOG_QUERIES_SLOWER_THAN_MS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14293" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2501,7 +2512,7 @@ Setting it to true is obviously not recommended in production.</p>
 <p>Select whether the database schema DDL files are generated or not. Accepted values: <code>none</code>, <code>create</code>, <code>drop-and-create</code>, <code>drop</code>, <code>update</code>, <code>validate</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13636">QUARKUS_HIBERNATE_ORM_SCRIPTS_GENERATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13636" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14294">QUARKUS_HIBERNATE_ORM_SCRIPTS_GENERATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14294" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2521,7 +2532,7 @@ Setting it to true is obviously not recommended in production.</p>
 <p>Filename or URL where the database create DDL file should be generated.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13637">QUARKUS_HIBERNATE_ORM_SCRIPTS_GENERATION_CREATE_TARGET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13637" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14295">QUARKUS_HIBERNATE_ORM_SCRIPTS_GENERATION_CREATE_TARGET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14295" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2541,7 +2552,7 @@ Setting it to true is obviously not recommended in production.</p>
 <p>Filename or URL where the database drop DDL file should be generated.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-13638">QUARKUS_HIBERNATE_ORM_SCRIPTS_GENERATION_DROP_TARGET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-13638" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-14296">QUARKUS_HIBERNATE_ORM_SCRIPTS_GENERATION_DROP_TARGET</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-14296" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2692,7 +2703,7 @@ by providing active record style entities (and repositories) and focuses on maki
     </div>
   </div>
   <div class="grid-wrapper">
-    <p class="grid__item width-3-12">Quarkus is open. All dependencies of this project are available under the <a href='https://www.apache.org/licenses/LICENSE-2.0' target='_blank'>Apache Software License 2.0</a> or compatible license.<br /><br />This website was built with <a href='https://jekyllrb.com/' target='_blank'>Jekyll</a>, is hosted on <a href='https://pages.github.com/' target='_blank'>GitHub Pages</a> and is completely open source. If you want to make it better, <a href='https://github.com/quarkusio/quarkusio.github.io' target='_blank'>fork the website</a> and show us what you’ve got.</p>
+    <p class="grid__item width-3-12">Quarkus is open. All dependencies of this project are available under the <a href='https://www.apache.org/licenses/LICENSE-2.0' target='_blank'>Apache Software License 2.0</a> or compatible license. <i class='fab fa-creative-commons'></i><i class='fab fa-creative-commons-by'></i> <a href='https://creativecommons.org/licenses/by/3.0/' target='_blank'>CC by 3.0</a><br /><br />This website was built with <a href='https://jekyllrb.com/' target='_blank'>Jekyll</a>, is hosted on <a href='https://pages.github.com/' target='_blank'>GitHub Pages</a> and is completely open source. If you want to make it better, <a href='https://github.com/quarkusio/quarkusio.github.io' target='_blank'>fork the website</a> and show us what you’ve got.</p>
 
     
       <div class="width-1-12 project-links">
@@ -2724,6 +2735,10 @@ by providing active record style entities (and repositories) and focuses on maki
           
           
           
+            <li><a href="/userstories" target="_blank">User Stories</a></li>
+          
+          
+          
             <li><a href="https://github.com/orgs/quarkusio/projects/13/views/1" target="_blank">Roadmap</a></li>
           
           
@@ -2743,6 +2758,10 @@ by providing active record style entities (and repositories) and focuses on maki
             <li><a href="/desktopwallpapers" target="_blank">Wallpapers</a></li>
           
           
+          
+            <li><a href="https://www.redhat.com/en/about/privacy-policy" target="_blank">Privacy Policy</a></li>
+          
+          
         </ul>
       </div>
     
@@ -2755,8 +2774,16 @@ by providing active record style entities (and repositories) and focuses on maki
           
           
           
+            <li><a href="https://bsky.app/profile/quarkus.io" target="_blank">Bluesky</a></li>
+          
+          
+          
             <li><a rel="me" href="https://fosstodon.org/@quarkusio" target="_blank">Mastodon</a></li>
             
+          
+          
+            <li><a href="https://www.threads.com/@quarkusio" target="_blank">Threads</a></li>
+          
           
           
             <li><a href="https://www.facebook.com/quarkusio" target="_blank">Facebook</a></li>
@@ -2807,6 +2834,10 @@ by providing active record style entities (and repositories) and focuses on maki
           
           
             <li><a href="https://groups.google.com/forum/#!forum/quarkus-dev" target="_blank">Development mailing list</a></li>
+          
+          
+          
+            <li><a href="https://stats.uptimerobot.com/ze1PfweT2p" target="_blank">Quarkus Service Status</a></li>
           
           
         </ul>
@@ -2867,17 +2898,14 @@ by providing active record style entities (and repositories) and focuses on maki
   </div>
 </div>
 
-  <div class="content redhat-footer">
-  <div class="grid-wrapper">
-    <span class="licence">
-      <i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by"></i> <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC by 3.0</a> | <a href="https://www.redhat.com/en/about/privacy-policy">Privacy Policy</a>
-    </span>
-    <span class="redhat">
-      Sponsored by
-    </span>
-    <span class="redhat-logo">
-      <a href="https://www.redhat.com/" target="_blank"><img src="/assets/images/redhat_reversed.svg"></a>
-    </span>
+  <div class="content cf-footer">
+  <div class="flexcontainer">
+    <div class="cf-logo">
+      <a class="cf-logo" href="https://www.commonhaus.org/" target="_blank"><img src="https://raw.githubusercontent.com/commonhaus/artwork/main/foundation/brand/svg/CF_logo_horizontal_single_reverse.svg"/></a>
+    </div>
+    <div class="license">
+      Copyright © Quarkus. All rights reserved. For details on our trademarks, please visit our <a href="https://www.commonhaus.org/policies/trademark-policy/">Trademark Policy</a> and <a href="https://www.commonhaus.org/trademarks/">Trademark List</a>. Trademarks of third parties are owned by their respective holders and their mention here does not suggest any endorsement or association.
+    </div>
   </div>
 </div>
 
@@ -2893,6 +2921,8 @@ by providing active record style entities (and repositories) and focuses on maki
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
   <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
+  <script src="/assets/javascript/randomize.js" type="text/javascript"></script>
+  <script src="/assets/javascript/time.js" type="text/javascript"></script>
 </body>
 
 </html>

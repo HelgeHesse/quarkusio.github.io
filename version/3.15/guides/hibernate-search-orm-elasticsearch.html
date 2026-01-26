@@ -12,7 +12,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="
-  connect-src 'self' https://dpm.demdex.net https://adobedc.demdex.net https://route-default-test-mscherer-matamo.apps.ospo-osci.z3b1.p1.openshiftapps.com/ https://search.quarkus.io https://smetrics.redhat.com; 
+  connect-src 'self' https://dpm.demdex.net https://adobedc.demdex.net https://analytics.ossupstream.org/ https://search.quarkus.io https://smetrics.redhat.com https://ajax.googleapis.com; 
   script-src 'self' 'unsafe-inline' 'unsafe-eval'
       
       https://assets.adobedtm.com
@@ -27,17 +27,18 @@
       http://www.googleadservices.com
       https://googleads.g.doubleclick.net
       https://giscus.app
-      https://route-default-test-mscherer-matamo.apps.ospo-osci.z3b1.p1.openshiftapps.com/
+      https://analytics.ossupstream.org/
       https://app.mailjet.com;
 
   style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; 
   img-src 'self' * data:; 
   media-src 'self'; 
-  frame-src https://redhat.demdex.net https://www.youtube.com https://embed.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; 
+  frame-src https://redhat.demdex.net https://www.youtube.com https://player.restream.io https://app.mailjet.com http://xy0p2.mjt.lu https://mj.quarkus.io https://giscus.app; 
   base-uri 'none'; 
   object-src 'none'; 
   form-action 'none'; 
   font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;" />
+
   <script id="adobe_dtm" src="https://www.redhat.com/dtm.js" type="text/javascript"></script>
   <script src="/assets/javascript/highlight.pack.js" type="text/javascript"></script>
   <META HTTP-EQUIV='X-XSS-Protection' CONTENT="1; mode=block">
@@ -97,27 +98,39 @@
     </label>
     <ul id="menu" class="menu">
       <li class="dropdown">
-        <span href="/about/">Why<i class="fas fa-chevron-down"></i></span>
+        <span href="#">Why<i class="fas fa-chevron-down firsti"></i></span>
         <ul class="submenu">
           <li><a href="/about" class="">WHAT IS QUARKUS?</a></li>
-          <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
-          <li><a href="/continuum" class="">VERSATILITY</a></li>
           <li><a href="/developer-joy" class="">DEVELOPER JOY</a></li>
+          <li><a href="/performance" class="">PERFORMANCE</a></li>
           <li><a href="/kubernetes-native" class="">KUBERNETES NATIVE</a></li>
           <li><a href="/standards" class="">STANDARDS</a></li>
+          <li><a href="/versatility" class="">VERSATILITY</a></li>
+          <li><a href="/container-first" class="">CONTAINER FIRST</a></li>
+          <li><a href="/spring" class="">USING SPRING?</a></li>
+          <li class="tertiarydropdown">
+            <span href="#">AI<i class="fas fa-chevron-down"></i></span>
+            <ul class="tertiarymenu">
+              <li><a href="/ai" class="">AI OVERVIEW</a></li>
+              <li><a href="/java-for-ai" class="">JAVA FOR AI</a></li>
+              <li><a href="/quarkus-for-ai" class="">WHY QUARKUS FOR AI</a></li>
+              <li><a href="/ai-blueprints" class="">AI BLUEPRINTS</a></li>
+            </ul>
+          </li>
         </ul>
       </li>
       <li class="dropdown">
-        <span href="/learn/">Learn<i class="fas fa-chevron-down"></i></span>
+        <span href="#">Learn<i class="fas fa-chevron-down firsti"></i></span>
         <ul class="submenu">
           <li><a href="/get-started" class="">GET STARTED</a></li>
           <li><a href="/guides" class="active">DOCUMENTATION</a></li>
+          <li><a href="/userstories/" class="">USER STORIES</a></li>  
           <li><a href="/qtips" class="">"Q" TIP VIDEOS</a></li>          
           <li><a href="/books" class="">BOOKS</a></li>
           </ul>
       </li>
       <li class="dropdown">
-        <span href="https://quarkus.io/extensions/">Extensions<i class="fas fa-chevron-down"></i></span>
+        <span href="#">Extensions<i class="fas fa-chevron-down firsti"></i></span>
         <ul class="submenu">
           <!-- Note that quarkus.io is hardcoded here, because it is the only url which supports extensions -->
           <li><a href="https://quarkus.io/extensions/" class="">BROWSE EXTENSIONS</a></li>
@@ -127,7 +140,7 @@
         </ul>
       </li>
       <li class="dropdown">
-        <span href="/community/">Community<i class="fas fa-chevron-down"></i></span>
+        <span href="#">Community<i class="fas fa-chevron-down firsti"></i></span>
         <ul class="submenu">
           <li><a href="/support/" class="">SUPPORT</a></li>
           <li><a href="/blog" class="">BLOG</a></li>
@@ -137,6 +150,7 @@
           <li><a href="/events" class="">EVENTS</a></li>
           <li><a href="/newsletter" class="">NEWSLETTER</a></li>
           <li><a href="https://github.com/orgs/quarkusio/projects/13/views/1" class="">ROADMAP</a></li>
+          <li><a href="/benefactors" class="">BENEFACTORS</a></li>
           </ul>
       </li>
       <li>
@@ -187,7 +201,15 @@
         
         
         
-        <option value="latest" >3.16.2 - Latest</option>
+        <option value="latest" >3.30.8 - Latest</option>
+        
+        
+        
+        <option value="3.27" >3.27</option>
+        
+        
+        
+        <option value="3.20" >3.20</option>
         
         
         
@@ -196,18 +218,6 @@
         
         
         <option value="3.8" >3.8</option>
-        
-        
-        
-        <option value="3.2" >3.2</option>
-        
-        
-        
-        <option value="2.16" >2.16</option>
-        
-        
-        
-        <option value="2.13" >2.13</option>
         </select>
     </div>
   </div>
@@ -347,7 +357,7 @@ cd hibernate-search-orm-elasticsearch-quickstart</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:3.15.1:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:3.15.7:create \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=hibernate-search-orm-elasticsearch-quickstart \
     -Dextensions='hibernate-orm-panache,jdbc-postgresql,hibernate-search-orm-elasticsearch,rest-jackson' \
@@ -2026,7 +2036,7 @@ you will find it requires a proprietary authentication method involving request 
 <p>You can enable AWS request signing in Hibernate Search by adding a dedicated extension to your project and configuring it.</p>
 </div>
 <div class="paragraph">
-<p>See <a href="https://quarkiverse.github.io/quarkiverse-docs/quarkus-hibernate-search-extras/dev/index.html#aws-configuration-reference">the documentation for the Hibernate Search ORM + Elasticsearch AWS extension</a>
+<p>See <a href="https://docs.quarkiverse.io/quarkus-hibernate-search-extras/dev/index.html#aws-configuration-reference">the documentation for the Hibernate Search ORM + Elasticsearch AWS extension</a>
 for more information.</p>
 </div>
 </div>
@@ -2295,7 +2305,7 @@ but it will not be possible to activate Hibernate Search at runtime:
 <code>quarkus.hibernate-search-orm.active</code> will default to <code>false</code> and setting it to <code>true</code> will lead to an error.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29223">QUARKUS_HIBERNATE_SEARCH_ORM_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29223" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29889">QUARKUS_HIBERNATE_SEARCH_ORM_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29889" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2349,7 +2359,7 @@ for more information.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29224">QUARKUS_HIBERNATE_SEARCH_ORM_BACKGROUND_FAILURE_HANDLER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29224" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29890">QUARKUS_HIBERNATE_SEARCH_ORM_BACKGROUND_FAILURE_HANDLER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29890" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2376,7 +2386,7 @@ in particular in automatic indexing.</p>
 <p>See <a href="#coordination">coordination</a> for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29225">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29225" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29891">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29891" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2429,7 +2439,7 @@ for more information.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29226">QUARKUS_HIBERNATE_SEARCH_ORM_MAPPING_CONFIGURER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29226" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29892">QUARKUS_HIBERNATE_SEARCH_ORM_MAPPING_CONFIGURER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29892" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2461,7 +2471,7 @@ for search or other operation will not be possible.</p>
 it won&#8217;t be active for any persistence unit, and setting this property to <code>true</code> will fail.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29227">QUARKUS_HIBERNATE_SEARCH_ORM_ACTIVE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29227" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29893">QUARKUS_HIBERNATE_SEARCH_ORM_ACTIVE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29893" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2544,7 +2554,7 @@ but can be useful when developing.</p></td>
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29228">QUARKUS_HIBERNATE_SEARCH_ORM_SCHEMA_MANAGEMENT_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29228" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29894">QUARKUS_HIBERNATE_SEARCH_ORM_SCHEMA_MANAGEMENT_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29894" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2569,7 +2579,7 @@ for more information.</p>
 <p>The strategy to use when loading entities during the execution of a search query.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29229">QUARKUS_HIBERNATE_SEARCH_ORM_QUERY_LOADING_CACHE_LOOKUP_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29229" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29895">QUARKUS_HIBERNATE_SEARCH_ORM_QUERY_LOADING_CACHE_LOOKUP_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29895" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2594,7 +2604,7 @@ for more information.</p>
 <p>The fetch size to use when loading entities during the execution of a search query.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29230">QUARKUS_HIBERNATE_SEARCH_ORM_QUERY_LOADING_FETCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29230" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29896">QUARKUS_HIBERNATE_SEARCH_ORM_QUERY_LOADING_FETCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29896" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2724,7 +2734,7 @@ for more information.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29231">QUARKUS_HIBERNATE_SEARCH_ORM_INDEXING_PLAN_SYNCHRONIZATION_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29231" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29897">QUARKUS_HIBERNATE_SEARCH_ORM_INDEXING_PLAN_SYNCHRONIZATION_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29897" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2751,7 +2761,7 @@ for more information.</p>
 since it involves setting up one background processor per tenant.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29232">QUARKUS_HIBERNATE_SEARCH_ORM_MULTI_TENANCY_TENANT_IDS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29232" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29898">QUARKUS_HIBERNATE_SEARCH_ORM_MULTI_TENANCY_TENANT_IDS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29898" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2797,7 +2807,7 @@ to communicate with Elasticsearch).</p>
 any case, if there is a problem, you will have an error when Hibernate Search tries to connect to the cluster.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29233">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_VERSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29233" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29899">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_VERSION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29899" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2875,7 +2885,7 @@ for more information.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29234">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_LAYOUT_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29234" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29900">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_LAYOUT_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29900" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2914,7 +2924,7 @@ it should not be relied upon.</p>
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29235">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_SCHEMA_MANAGEMENT_SETTINGS_FILE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29235" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29901">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_SCHEMA_MANAGEMENT_SETTINGS_FILE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29901" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -2952,7 +2962,7 @@ Hibernate Search will automatically inject missing properties (index fields) in 
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29236">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_SCHEMA_MANAGEMENT_MAPPING_FILE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29236" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29902">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_SCHEMA_MANAGEMENT_MAPPING_FILE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29902" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3010,7 +3020,7 @@ for more information.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29237">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_ANALYSIS_CONFIGURER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29237" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29903">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_ANALYSIS_CONFIGURER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29903" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3039,7 +3049,7 @@ for more information.</p>
 <p>The list of hosts of the Elasticsearch servers.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29238">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_HOSTS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29238" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29904">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_HOSTS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29904" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3068,7 +3078,7 @@ for more information.</p>
 <p>The protocol to use when contacting Elasticsearch servers. Set to "https" to enable SSL/TLS.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29239">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_PROTOCOL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29239" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29905">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_PROTOCOL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29905" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3099,7 +3109,7 @@ for more information.</p>
 <p>The username used for authentication.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29240">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_USERNAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29240" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29906">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_USERNAME</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29906" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3128,7 +3138,7 @@ for more information.</p>
 <p>The password used for authentication.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29241">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_PASSWORD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29241" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29907">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_PASSWORD</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29907" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3157,7 +3167,7 @@ for more information.</p>
 <p>The timeout when establishing a connection to an Elasticsearch server.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29242">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_CONNECTION_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29242" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29908">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_CONNECTION_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29908" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3186,7 +3196,7 @@ for more information.</p>
 <p>The timeout when reading responses from an Elasticsearch server.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29243">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_READ_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29243" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29909">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_READ_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29909" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3219,7 +3229,7 @@ for more information.</p>
 send the request and read the response.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29244">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_REQUEST_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29244" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29910">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_REQUEST_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29910" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3248,7 +3258,7 @@ send the request and read the response.</p>
 <p>The maximum number of connections to all the Elasticsearch servers.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29245">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_MAX_CONNECTIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29245" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29911">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_MAX_CONNECTIONS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29911" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3277,7 +3287,7 @@ send the request and read the response.</p>
 <p>The maximum number of connections per Elasticsearch server.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29246">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_MAX_CONNECTIONS_PER_ROUTE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29246" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29912">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_MAX_CONNECTIONS_PER_ROUTE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29912" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3306,7 +3316,7 @@ send the request and read the response.</p>
 <p>Defines if automatic discovery is enabled.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29247">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_DISCOVERY_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29247" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29913">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_DISCOVERY_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29913" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3335,7 +3345,7 @@ send the request and read the response.</p>
 <p>Refresh interval of the node list.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29248">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_DISCOVERY_REFRESH_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29248" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29914">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_DISCOVERY_REFRESH_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29914" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3380,7 +3390,7 @@ you might want to bring down the number of threads.</p>
 <p>Defaults to the number of processor cores available to the JVM on startup.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29249">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_THREAD_POOL_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29249" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29915">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_THREAD_POOL_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29915" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3409,7 +3419,7 @@ you might want to bring down the number of threads.</p>
 <p>Whether partial shard failures are ignored (<code>true</code>) or lead to Hibernate Search throwing an exception (<code>false</code>).</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29250">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_QUERY_SHARD_FAILURE_IGNORE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29250" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29916">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_QUERY_SHARD_FAILURE_IGNORE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29916" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3441,7 +3451,7 @@ you might want to bring down the number of threads.</p>
 <p>Set to <code>false</code> if the Elasticsearch cluster may not be available on startup.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29251">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_VERSION_CHECK_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29251" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29917">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_VERSION_CHECK_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29917" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3471,7 +3481,7 @@ you might want to bring down the number of threads.</p>
 status</a> required on startup.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29252">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_SCHEMA_MANAGEMENT_REQUIRED_STATUS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29252" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29918">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_SCHEMA_MANAGEMENT_REQUIRED_STATUS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29918" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3502,7 +3512,7 @@ status</a> required on startup.</p>
 <p>How long we should wait for the status before failing the bootstrap.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29253">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_SCHEMA_MANAGEMENT_REQUIRED_STATUS_WAIT_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29253" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29919">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_SCHEMA_MANAGEMENT_REQUIRED_STATUS_WAIT_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29919" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3539,7 +3549,7 @@ i.e. of overflowing its HTTP request buffers and tripping
 leading to Elasticsearch giving up on some request and resulting in indexing failures.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29254">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXING_QUEUE_COUNT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29254" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29920">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXING_QUEUE_COUNT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29920" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3574,7 +3584,7 @@ and increase the likeliness of application threads blocking because the queue is
 which may lead to lower indexing throughput.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29255">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXING_QUEUE_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29255" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29921">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXING_QUEUE_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29921" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3615,7 +3625,7 @@ leading to Elasticsearch giving up on some request and resulting in indexing fai
 as bulks cannot include more requests than are contained in the queue.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29256">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXING_MAX_BULK_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29256" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29922">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXING_MAX_BULK_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29922" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3659,7 +3669,7 @@ it should not be relied upon.</p>
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29257">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__SCHEMA_MANAGEMENT_SETTINGS_FILE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29257" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29923">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__SCHEMA_MANAGEMENT_SETTINGS_FILE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29923" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3697,7 +3707,7 @@ Hibernate Search will automatically inject missing properties (index fields) in 
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29258">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__SCHEMA_MANAGEMENT_MAPPING_FILE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29258" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29924">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__SCHEMA_MANAGEMENT_MAPPING_FILE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29924" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3755,7 +3765,7 @@ for more information.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29259">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__ANALYSIS_CONFIGURER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29259" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29925">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__ANALYSIS_CONFIGURER</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29925" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3785,7 +3795,7 @@ for more information.</p>
 status</a> required on startup.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29260">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__SCHEMA_MANAGEMENT_REQUIRED_STATUS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29260" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29926">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__SCHEMA_MANAGEMENT_REQUIRED_STATUS</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29926" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3816,7 +3826,7 @@ status</a> required on startup.</p>
 <p>How long we should wait for the status before failing the bootstrap.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29261">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__SCHEMA_MANAGEMENT_REQUIRED_STATUS_WAIT_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29261" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29927">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__SCHEMA_MANAGEMENT_REQUIRED_STATUS_WAIT_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29927" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3853,7 +3863,7 @@ i.e. of overflowing its HTTP request buffers and tripping
 leading to Elasticsearch giving up on some request and resulting in indexing failures.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29262">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__INDEXING_QUEUE_COUNT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29262" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29928">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__INDEXING_QUEUE_COUNT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29928" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3888,7 +3898,7 @@ and increase the likeliness of application threads blocking because the queue is
 which may lead to lower indexing throughput.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29263">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__INDEXING_QUEUE_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29263" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29929">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__INDEXING_QUEUE_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29929" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3929,7 +3939,7 @@ leading to Elasticsearch giving up on some request and resulting in indexing fai
 as bulks cannot include more requests than are contained in the queue.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29264">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__INDEXING_MAX_BULK_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29264" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29930">QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_INDEXES__INDEX_NAME__INDEXING_MAX_BULK_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29930" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3955,7 +3965,7 @@ as bulks cannot include more requests than are contained in the queue.</p>
 This value will be resolved as a path relative to <code>${quarkus.management.root-path}</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29265">QUARKUS_HIBERNATE_SEARCH_ORM_MANAGEMENT_ROOT_PATH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29265" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29931">QUARKUS_HIBERNATE_SEARCH_ORM_MANAGEMENT_ROOT_PATH</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29931" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -3976,7 +3986,7 @@ This value will be resolved as a path relative to <code>${quarkus.management.roo
 This property allows to enable this functionality by setting it to <code>`true</code>.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29266">QUARKUS_HIBERNATE_SEARCH_ORM_MANAGEMENT_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29266" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29932">QUARKUS_HIBERNATE_SEARCH_ORM_MANAGEMENT_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29932" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4128,7 +4138,7 @@ for example to dedicate some nodes to HTTP request processing and other nodes to
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29267">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29267" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29933">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29933" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4164,7 +4174,7 @@ is necessary.</p>
 for more information about event processor sharding.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29268">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_SHARDS_TOTAL_COUNT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29268" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29934">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_SHARDS_TOTAL_COUNT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29934" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4206,7 +4216,7 @@ by setting <code>shards.assigned</code> to a comma-separated list, e.g. <code>0,
 for more information about event processor sharding.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29269">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_SHARDS_ASSIGNED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29269" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29935">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_SHARDS_ASSIGNED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29935" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4238,7 +4248,7 @@ but will increase the stress on the database when there are no new events.</p>
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29270">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_POLLING_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29270" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29936">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_POLLING_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29936" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4285,7 +4295,7 @@ but less stress on the database because of less frequent checks of the list of a
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29271">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_PULSE_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29271" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29937">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_PULSE_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29937" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4329,7 +4339,7 @@ because an event processor is incorrectly considered disconnected.</p>
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29272">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_PULSE_EXPIRATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29272" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29938">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_PULSE_EXPIRATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29938" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4362,7 +4372,7 @@ but will increase memory usage and in extreme cases may lead to <code>OutOfMemor
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29273">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_BATCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29273" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29939">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_BATCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29939" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4396,7 +4406,7 @@ If this happens, set a higher transaction timeout for event processing using thi
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29274">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_TRANSACTION_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29274" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29940">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_TRANSACTION_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29940" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4427,7 +4437,7 @@ for more information.</p>
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29275">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_RETRY_DELAY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29275" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29941">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_EVENT_PROCESSOR_RETRY_DELAY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29941" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4466,7 +4476,7 @@ but will reduce the stress on the database while the mass indexer agent is activ
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29276">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_MASS_INDEXER_POLLING_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29276" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29942">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_MASS_INDEXER_POLLING_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29942" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4511,7 +4521,7 @@ but less stress on the database because of less frequent updates of the mass ind
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29277">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_MASS_INDEXER_PULSE_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29277" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29943">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_MASS_INDEXER_PULSE_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29943" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4555,7 +4565,7 @@ because a mass indexer agent is incorrectly considered disconnected.</p>
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29278">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_MASS_INDEXER_PULSE_EXPIRATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29278" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29944">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_MASS_INDEXER_PULSE_EXPIRATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29944" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4588,7 +4598,7 @@ for more information.</p>
 <p>The database catalog to use for the agent table.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29279">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_AGENT_CATALOG</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29279" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29945">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_AGENT_CATALOG</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29945" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4611,7 +4621,7 @@ for more information.</p>
 <p>The schema catalog to use for the agent table.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29280">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_AGENT_SCHEMA</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29280" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29946">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_AGENT_SCHEMA</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29946" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4634,7 +4644,7 @@ for more information.</p>
 <p>The name of the agent table.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29281">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_AGENT_TABLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29281" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29947">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_AGENT_TABLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29947" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4670,7 +4680,7 @@ for more information.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29282">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_AGENT_UUID_GEN_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29282" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29948">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_AGENT_UUID_GEN_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29948" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4704,7 +4714,7 @@ to see the possible UUID representations.</p>
 depending on the database kind.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29283">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_AGENT_UUID_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29283" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29949">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_AGENT_UUID_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29949" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4727,7 +4737,7 @@ depending on the database kind.</p>
 <p>The database catalog to use for the outbox event table.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29284">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_OUTBOX_EVENT_CATALOG</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29284" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29950">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_OUTBOX_EVENT_CATALOG</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29950" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4750,7 +4760,7 @@ depending on the database kind.</p>
 <p>The schema catalog to use for the outbox event table.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29285">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_OUTBOX_EVENT_SCHEMA</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29285" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29951">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_OUTBOX_EVENT_SCHEMA</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29951" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4773,7 +4783,7 @@ depending on the database kind.</p>
 <p>The name of the outbox event table.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29286">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_OUTBOX_EVENT_TABLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29286" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29952">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_OUTBOX_EVENT_TABLE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29952" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4809,7 +4819,7 @@ depending on the database kind.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29287">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_OUTBOX_EVENT_UUID_GEN_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29287" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29953">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_OUTBOX_EVENT_UUID_GEN_STRATEGY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29953" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4843,7 +4853,7 @@ to see the possible UUID representations.</p>
 depending on the database kind.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29288">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_OUTBOX_EVENT_UUID_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29288" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29954">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_ENTITY_MAPPING_OUTBOX_EVENT_UUID_TYPE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29954" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4881,7 +4891,7 @@ for example to dedicate some nodes to HTTP request processing and other nodes to
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29289">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29289" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29955">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_ENABLED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29955" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4917,7 +4927,7 @@ is necessary.</p>
 for more information about event processor sharding.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29290">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_SHARDS_TOTAL_COUNT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29290" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29956">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_SHARDS_TOTAL_COUNT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29956" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4959,7 +4969,7 @@ by setting <code>shards.assigned</code> to a comma-separated list, e.g. <code>0,
 for more information about event processor sharding.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29291">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_SHARDS_ASSIGNED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29291" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29957">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_SHARDS_ASSIGNED</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29957" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -4991,7 +5001,7 @@ but will increase the stress on the database when there are no new events.</p>
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29292">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_POLLING_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29292" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29958">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_POLLING_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29958" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -5038,7 +5048,7 @@ but less stress on the database because of less frequent checks of the list of a
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29293">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_PULSE_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29293" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29959">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_PULSE_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29959" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -5082,7 +5092,7 @@ because an event processor is incorrectly considered disconnected.</p>
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29294">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_PULSE_EXPIRATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29294" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29960">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_PULSE_EXPIRATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29960" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -5115,7 +5125,7 @@ but will increase memory usage and in extreme cases may lead to <code>OutOfMemor
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29295">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_BATCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29295" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29961">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_BATCH_SIZE</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29961" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -5149,7 +5159,7 @@ If this happens, set a higher transaction timeout for event processing using thi
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29296">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_TRANSACTION_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29296" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29962">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_TRANSACTION_TIMEOUT</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29962" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -5180,7 +5190,7 @@ for more information.</p>
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29297">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_RETRY_DELAY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29297" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29963">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__EVENT_PROCESSOR_RETRY_DELAY</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29963" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -5219,7 +5229,7 @@ but will reduce the stress on the database while the mass indexer agent is activ
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29298">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__MASS_INDEXER_POLLING_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29298" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29964">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__MASS_INDEXER_POLLING_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29964" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -5264,7 +5274,7 @@ but less stress on the database because of less frequent updates of the mass ind
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29299">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__MASS_INDEXER_PULSE_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29299" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29965">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__MASS_INDEXER_PULSE_INTERVAL</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29965" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -5308,7 +5318,7 @@ because a mass indexer agent is incorrectly considered disconnected.</p>
 for more information.</p>
 </div>
 <div class="paragraph">
-<p>Environment variable: <code id="env-var-29300">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__MASS_INDEXER_PULSE_EXPIRATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29300" title="Copy to clipboard" do-not-collapse="true"></button></p>
+<p>Environment variable: <code id="env-var-29966">QUARKUS_HIBERNATE_SEARCH_ORM_COORDINATION_TENANTS__TENANT_ID__MASS_INDEXER_PULSE_EXPIRATION</code><button class="btn-copy fa fa-clipboard inline-btn-copy" data-clipboard-action="copy" data-clipboard-target="#env-var-29966" title="Copy to clipboard" do-not-collapse="true"></button></p>
 </div>
 </div>
 </div>
@@ -5509,7 +5519,7 @@ See the <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
     </div>
   </div>
   <div class="grid-wrapper">
-    <p class="grid__item width-3-12">Quarkus is open. All dependencies of this project are available under the <a href='https://www.apache.org/licenses/LICENSE-2.0' target='_blank'>Apache Software License 2.0</a> or compatible license.<br /><br />This website was built with <a href='https://jekyllrb.com/' target='_blank'>Jekyll</a>, is hosted on <a href='https://pages.github.com/' target='_blank'>GitHub Pages</a> and is completely open source. If you want to make it better, <a href='https://github.com/quarkusio/quarkusio.github.io' target='_blank'>fork the website</a> and show us what you’ve got.</p>
+    <p class="grid__item width-3-12">Quarkus is open. All dependencies of this project are available under the <a href='https://www.apache.org/licenses/LICENSE-2.0' target='_blank'>Apache Software License 2.0</a> or compatible license. <i class='fab fa-creative-commons'></i><i class='fab fa-creative-commons-by'></i> <a href='https://creativecommons.org/licenses/by/3.0/' target='_blank'>CC by 3.0</a><br /><br />This website was built with <a href='https://jekyllrb.com/' target='_blank'>Jekyll</a>, is hosted on <a href='https://pages.github.com/' target='_blank'>GitHub Pages</a> and is completely open source. If you want to make it better, <a href='https://github.com/quarkusio/quarkusio.github.io' target='_blank'>fork the website</a> and show us what you’ve got.</p>
 
     
       <div class="width-1-12 project-links">
@@ -5541,6 +5551,10 @@ See the <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
           
           
           
+            <li><a href="/userstories" target="_blank">User Stories</a></li>
+          
+          
+          
             <li><a href="https://github.com/orgs/quarkusio/projects/13/views/1" target="_blank">Roadmap</a></li>
           
           
@@ -5560,6 +5574,10 @@ See the <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
             <li><a href="/desktopwallpapers" target="_blank">Wallpapers</a></li>
           
           
+          
+            <li><a href="https://www.redhat.com/en/about/privacy-policy" target="_blank">Privacy Policy</a></li>
+          
+          
         </ul>
       </div>
     
@@ -5572,8 +5590,16 @@ See the <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
           
           
           
+            <li><a href="https://bsky.app/profile/quarkus.io" target="_blank">Bluesky</a></li>
+          
+          
+          
             <li><a rel="me" href="https://fosstodon.org/@quarkusio" target="_blank">Mastodon</a></li>
             
+          
+          
+            <li><a href="https://www.threads.com/@quarkusio" target="_blank">Threads</a></li>
+          
           
           
             <li><a href="https://www.facebook.com/quarkusio" target="_blank">Facebook</a></li>
@@ -5624,6 +5650,10 @@ See the <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
           
           
             <li><a href="https://groups.google.com/forum/#!forum/quarkus-dev" target="_blank">Development mailing list</a></li>
+          
+          
+          
+            <li><a href="https://stats.uptimerobot.com/ze1PfweT2p" target="_blank">Quarkus Service Status</a></li>
           
           
         </ul>
@@ -5684,17 +5714,14 @@ See the <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
   </div>
 </div>
 
-  <div class="content redhat-footer">
-  <div class="grid-wrapper">
-    <span class="licence">
-      <i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by"></i> <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC by 3.0</a> | <a href="https://www.redhat.com/en/about/privacy-policy">Privacy Policy</a>
-    </span>
-    <span class="redhat">
-      Sponsored by
-    </span>
-    <span class="redhat-logo">
-      <a href="https://www.redhat.com/" target="_blank"><img src="/assets/images/redhat_reversed.svg"></a>
-    </span>
+  <div class="content cf-footer">
+  <div class="flexcontainer">
+    <div class="cf-logo">
+      <a class="cf-logo" href="https://www.commonhaus.org/" target="_blank"><img src="https://raw.githubusercontent.com/commonhaus/artwork/main/foundation/brand/svg/CF_logo_horizontal_single_reverse.svg"/></a>
+    </div>
+    <div class="license">
+      Copyright © Quarkus. All rights reserved. For details on our trademarks, please visit our <a href="https://www.commonhaus.org/policies/trademark-policy/">Trademark Policy</a> and <a href="https://www.commonhaus.org/trademarks/">Trademark List</a>. Trademarks of third parties are owned by their respective holders and their mention here does not suggest any endorsement or association.
+    </div>
   </div>
 </div>
 
@@ -5710,6 +5737,8 @@ See the <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/ja
   <script src="/assets/javascript/copy.js" type="text/javascript"></script>
   <script src="/assets/javascript/asciidoc-tabs.js" type="text/javascript"></script>
   <script src="/assets/javascript/future-date.js" type="text/javascript"></script>
+  <script src="/assets/javascript/randomize.js" type="text/javascript"></script>
+  <script src="/assets/javascript/time.js" type="text/javascript"></script>
 </body>
 
 </html>
